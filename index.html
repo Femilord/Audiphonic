@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audiphonic | Audio, Visuals, Soundproofing, Acoustics</title>
+
+    <link rel="icon" type="image/x-icon" href="img/favicon.png" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="body.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="left-group">
+                <div class="audi-logo">
+                    <a href="#"><img src="img/audiphonic-weblogo.png" alt="Audiphonic Logo" /></a>
+                </div>
+                <nav class="nav-menu">
+                    <ul class="menu">
+                        <li><a href="/services.html">Services</a></li>
+                        <li><a href="/Projects.html">Projects</a></li>
+                        <li><a href="/about.html">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="right-group">
+                <a href="/contact.html" class="btn">Contact Us</a>
+                <button class="hamburger" id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <nav class="mobile-menu" id="mobile-menu">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/Projects.html">Projects</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="first-section">git
+        <div class="head-banner">
+            <div class="banner-inner">
+                <div class="content-block">
+                    <div class="av-clipart">
+                        <img src="img/audio-visuals-clipart.webp" alt="Audio Visual Clipart" />
+                    </div>
+
+                    <div class="object-clause-group">
+                        <div class="object-clause">
+                            <h1>Noise Control and<br>Audio-Visual Systems</h1>
+                        </div>
+
+                        <div class="tag-line">
+                            <h2>
+                                <span id="line1"></span><br>
+                                <span id="line2"></span>
+                            </h2>
+                        </div>
+
+                        <div class="cta-button">
+                            <a href="/about.html" class="learn-more-btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JS: MOBILE MENU TOGGLE -->
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuToggle.addEventListener("click", () => {
+            mobileMenu.classList.toggle("active");
+        });
+    </script>
+
+    <!-- JS: TYPING EFFECT -->
+    <script>
+        const text1 = '“Whether for corporate spaces, controlled environments like studios,';
+        const text2 = 'movie cinema or worship auditoriums — we are your premier choice.”';
+        const line1 = document.getElementById('line1');
+        const line2 = document.getElementById('line2');
+        const learnMoreBtn = document.getElementById('learnMoreBtn');
+
+        let i = 0, j = 0;
+
+        function typeLine1() {
+            if (i < text1.length) {
+                line1.textContent += text1.charAt(i);
+                i++;
+                setTimeout(typeLine1, 25);
+            } else {
+                setTimeout(typeLine2, 200);
+            }
+        }
+
+        function typeLine2() {
+            if (j < text2.length) {
+                line2.textContent += text2.charAt(j);
+                j++;
+                setTimeout(typeLine2, 25);
+            } else {
+                // Fade in button after typing
+                learnMoreBtn.style.opacity = '1';
+                learnMoreBtn.style.transform = 'translateY(0)';
+            }
+        }
+
+        window.addEventListener('load', typeLine1);
+    </script>
+
+</body>
+
+</html>

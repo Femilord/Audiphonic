@@ -1,0 +1,240 @@
+body {
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 3000px;
+    overflow-x: hidden;
+}
+
+.first-section {
+    width: 100vw;
+}
+
+/* Head Banner */
+.head-banner {
+    background: radial-gradient(circle at center,
+            #f0fbfe 0%,
+            #ccdfe3 60%,
+            #e2f0f3 100%);
+    min-height: 795px;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-inner {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 40px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+/* AV Clipart */
+.av-clipart {
+    flex-shrink: 0;
+    animation: wiggle 4s ease-in-out infinite;
+}
+
+.av-clipart img {
+    width: 520px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Text Group */
+.object-clause-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 700px;
+    gap: 20px;
+    /* spacing between h1, h2, button */
+}
+
+.object-clause h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #002b36;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.tag-line h2 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #333;
+    margin-top: 20px;
+    line-height: 1.6;
+    max-width: 1000px;
+    min-height: 4.5rem;
+}
+
+/* CTA Button */
+.cta-button {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.learn-more-btn {
+    background-color: #035f73;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 300ms ease, box-shadow 300ms ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #023d4e;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.content-block {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+/* Wiggle Animation */
+@keyframes wiggle {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(-4deg);
+    }
+
+    40% {
+        transform: rotate(4deg);
+    }
+
+    60% {
+        transform: rotate(-2deg);
+    }
+
+    80% {
+        transform: rotate(2deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .banner-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .object-clause-group {
+        align-items: center;
+    }
+
+    .object-clause h1 {
+        font-size: 2.5rem;
+    }
+
+    .tag-line h2 {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .av-clipart img {
+        width: 260px;
+    }
+
+    .learn-more-btn {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .av-clipart img {
+        width: 200px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .content-block {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    @media (max-width: 1024px) {
+        .object-clause-group {
+            align-items: center;
+            text-align: center;
+        }
+
+        .cta-button {
+            justify-content: center;
+        }
+    }
+
+    .object-clause-group {
+        align-items: center;
+    }
+
+    .object-clause h1 {
+        font-size: 2.4rem;
+    }
+
+    .tag-line h2 {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .av-clipart img {
+        width: 240px;
+    }
+}
+
+@media (max-width: 1350px) {
+    .content-block {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .object-clause-group {
+        align-items: center;
+        text-align: center;
+    }
+
+    .object-clause h1 {
+        font-size: 2.8rem;
+    }
+
+    .tag-line h2 {
+        font-size: 1.1rem;
+        padding: 0 20px;
+    }
+
+    .cta-button {
+        justify-content: center;
+    }
+
+    .av-clipart img {
+        width: 320px;
+    }
+}
