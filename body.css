@@ -69,6 +69,16 @@ body {
     margin: 0;
 }
 
+
+.animated-line {
+    width: 0;
+    height: 3px;
+    background: linear-gradient(to right, #035f73, #00bcd4);
+    margin: 20px 0;
+    border-radius: 2px;
+    animation: growLine 1.2s ease-out forwards;
+}
+
 .tag-line h2 {
     font-size: 1.25rem;
     font-weight: 400;
@@ -236,5 +246,22 @@ body {
 
     .av-clipart img {
         width: 320px;
+    }
+}
+
+@keyframes growLine {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+
+    50% {
+        width: 50%;
+        opacity: 1;
+    }
+
+    100% {
+        width: 100%;
+        opacity: 1;
     }
 }
