@@ -1,0 +1,412 @@
+/* Basic Global Styles (Optional, for presentation) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+.animation-section {
+    background-color: #2a2a2a;
+    margin-bottom: 40px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.animation-section h2 {
+    color: #00bcd4;
+    /* Accent color */
+    margin-bottom: 20px;
+}
+
+/* --- 1. Soundproofing Corporate Styles --- */
+.soundproofing-animation-container {
+    width: 100%;
+    max-width: 400px;
+    /* Constrain size for better viewing */
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background-color: #333;
+}
+
+.sound-wave-svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.wave {
+    fill: none;
+    stroke: rgba(100, 150, 255, 0.5);
+    /* Semi-transparent blue */
+    stroke-width: 0.5;
+    transform-origin: center center;
+    /* Basic CSS animation - JavaScript/GSAP would control more complex behavior */
+    animation: expandAndFade 3s ease-out infinite;
+}
+
+.wave-1 {
+    animation-delay: 0s;
+}
+
+.wave-2 {
+    animation-delay: 0.5s;
+}
+
+.wave-3 {
+    animation-delay: 1s;
+}
+
+@keyframes expandAndFade {
+    0% {
+        r: 0;
+        opacity: 1;
+        stroke-width: 0.5;
+    }
+
+    50% {
+        r: 40;
+        opacity: 0.5;
+        stroke-width: 0.2;
+    }
+
+    100% {
+        r: 80;
+        opacity: 0;
+        stroke-width: 0;
+    }
+}
+
+.building-outline {
+    fill: none;
+    stroke: #fff;
+    /* White outline */
+    stroke-width: 0.2;
+    opacity: 0;
+    /* Hidden initially, controlled by JS */
+    transition: opacity 1s ease-in-out;
+}
+
+/* --- 2. Acoustics Styles --- */
+.acoustics-animation-container {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background-color: #333;
+}
+
+.acoustic-wave-svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.raw-wave {
+    fill: none;
+    stroke: #FFD700;
+    /* Gold */
+    stroke-width: 0.5;
+    /* JavaScript/GSAP will morph this path */
+}
+
+.refined-wave {
+    fill: none;
+    stroke: #32CD32;
+    /* Lime Green */
+    stroke-width: 0.5;
+    opacity: 0;
+    /* Hidden initially, controlled by JS */
+}
+
+.acoustic-panel {
+    fill: #555;
+    stroke: #666;
+    stroke-width: 0.1;
+    transform-origin: center center;
+    /* JS/GSAP will animate scaling/movement */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* --- 3. Audio-Visuals Styles --- */
+.av-animation-container {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background-color: #333;
+}
+
+.stream {
+    width: 2px;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    transform-origin: bottom;
+}
+
+.audio-stream {
+    background-color: #007bff;
+    /* Blue */
+    left: 45%;
+    animation: growStream 1.5s ease-out forwards;
+}
+
+.video-stream {
+    background-color: #dc3545;
+    /* Red */
+    left: 55%;
+    animation: growStream 1.5s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes growStream {
+    0% {
+        height: 0;
+        opacity: 1;
+    }
+
+    100% {
+        height: 120px;
+        opacity: 1;
+    }
+}
+
+.merged-stream {
+    width: 0;
+    height: 10px;
+    background: linear-gradient(to right, #007bff, #dc3545);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    /* Hidden initially, controlled by JS */
+}
+
+.projection-area {
+    border: 1px dashed rgba(255, 255, 255, 0.5);
+    position: absolute;
+    opacity: 0;
+    /* Hidden initially, controlled by JS */
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.05);
+    /* Subtle fill */
+}
+
+/* Specific positioning for each projection area */
+.meeting-room-area {
+    top: 20%;
+    left: 10%;
+    width: 150px;
+    height: 100px;
+}
+
+.event-space-area {
+    top: 30%;
+    right: 10%;
+    width: 180px;
+    height: 120px;
+}
+
+.broadcast-area {
+    bottom: 20%;
+    left: 30%;
+    width: 200px;
+    height: 80px;
+}
+
+/* --- 4. Live Sound and Video Services Styles --- */
+.installation-container {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background-color: #333;
+}
+
+.blueprint-stage {
+    position: absolute;
+    width: 80%;
+    height: 60%;
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+}
+
+.equipment {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(50px) scale(0.5);
+    /* Start off-screen/small */
+    transition: all 0.8s ease-out;
+    /* General transition for quick appearance */
+    filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.3));
+    /* Subtle glow */
+}
+
+.speaker-icon {
+    width: 30px;
+    height: 40px;
+    background-color: #00bfff;
+    /* Deep Sky Blue */
+    border-radius: 4px;
+    top: 60%;
+    left: 20%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    /* Example shape */
+}
+
+.speaker-icon::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.screen-icon {
+    width: 100px;
+    height: 60px;
+    background-color: #ff4500;
+    /* Orange Red */
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 4px;
+}
+
+.screen-icon::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 80%;
+    background-color: #333;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.cable-line {
+    width: 100px;
+    height: 2px;
+    background-color: #00ff00;
+    /* Lime Green */
+    top: 80%;
+    left: 10%;
+    transform-origin: left center;
+    transform: scaleX(0);
+    /* Hidden initially */
+    transition: transform 0.8s ease-out;
+}
+
+.burst-effect {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 0, 0.5);
+    /* Yellow glow */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: burstGlow 1s forwards;
+    animation-play-state: paused;
+    /* Controlled by JS */
+}
+
+@keyframes burstGlow {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.5;
+    }
+
+    100% {
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+    }
+}
+
+/* --- 5. Design and Procurement Styles --- */
+.design-procurement-container {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background-color: #333;
+}
+
+.design-svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.idea-shape {
+    fill: #f0f0f0;
+    opacity: 0;
+    transform-origin: center center;
+    /* JS/GSAP will animate these */
+}
+
+.connection-line {
+    fill: none;
+    stroke: #888;
+    stroke-width: 0.2;
+    /* JS/GSAP will animate stroke-dashoffset */
+}
+
+.component-icon {
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: center center;
+    /* JS/GSAP will animate these */
+}
+
+/* Basic positioning for SVG components, will be animated by JS */
+.speaker-component {
+    transform: translate(15px, 60px) scale(0);
+}
+
+.projector-component {
+    transform: translate(65px, 50px) scale(0);
+}

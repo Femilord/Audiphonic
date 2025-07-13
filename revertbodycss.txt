@@ -1,0 +1,291 @@
+body {
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 3000px;
+    overflow-x: hidden;
+}
+
+.first-section-background {
+    width: 100vw;
+    background-image: url(img/first-section-background-02.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+/* Head Banner */
+.head-banner {
+    min-height: 795px;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 20px;
+}
+
+/* former. New one below
+.object-clause-group {
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+*/
+
+
+.object-clause-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* ✅ keeps everything centered */
+    flex-wrap: nowrap;
+    gap: 40px;
+    /* ✅ adds breathing space */
+    max-width: 100%;
+    padding: 0 5vw;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.object-clause-01,
+.object-clause-02 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.2;
+    margin: 0 0 20px 0;
+    white-space: nowrap;
+        /* ✅ no line breaks */
+        flex-shrink: 1;
+        min-width: 0;
+}
+
+.object-clause-01 {
+
+    text-align: right;
+
+}
+
+.object-clause-02 {
+    text-align: left;
+}
+
+.vertical-line {
+    width: 2px;
+    height: 120px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.tag-line h2 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #ffffff;
+    margin-top: 20px;
+    line-height: 1.6;
+    max-width: 1000px;
+    min-height: 4.5rem;
+    text-align: center;
+}
+
+/* First Section Layout */
+
+/* CTA Button in New Layout */
+.banner-inner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+}
+
+/* CTA Button */
+.learn-more-btn {
+    background-color: #035f73;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 300ms ease, box-shadow 300ms ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #023d4e;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1024px) {
+    .banner-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .learn-more-btn {
+        font-size: 0.95rem;
+        padding: 10px 20px;
+    }
+}
+
+
+_______________________________________
+
+
+
+
+body {
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 3000px;
+    overflow-x: hidden;
+}
+
+.first-section-background {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/first-section-background-02.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+/* Head Banner */
+.head-banner {
+    min-height: 795px;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.content-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 20px;
+}
+
+.object-clause-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: clamp(16px, 5vw, 60px);
+    width: 100%;
+    max-width: 1000px;
+    height: 120;
+    padding: 0 clamp(10px, 5vw, 60px);
+
+    box-sizing: border-box;
+}
+
+
+
+
+.object-clause-01,
+.object-clause-02 {
+    font-size: 2rem;
+    font-weight: 800;
+    font-optical-sizing: auto;
+    color: #ffffff;
+    line-height: 1.2;
+    margin: 0 0 20px 0;
+    white-space: nowrap;
+
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+
+
+
+
+.object-clause-01 {
+
+    text-align: right;
+
+}
+
+.object-clause-02 {
+    text-align: left;
+}
+
+
+.vertical-line {
+    width: 2px;
+    height: 120px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+
+
+.tag-line h2 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #ffffff;
+    margin-top: 20px;
+    line-height: 1.6;
+    max-width: 1000px;
+    min-height: 4.5rem;
+    text-align: center;
+}
+
+
+
+
+
+/* CTA Button in New Layout */
+.banner-inner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+}
+
+/* CTA Button */
+.learn-more-btn {
+    background-color: #035f73;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 300ms ease, box-shadow 300ms ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #023d4e;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1024px) {
+    .banner-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .learn-more-btn {
+        font-size: 0.95rem;
+        padding: 10px 20px;
+    }
+}
+
+

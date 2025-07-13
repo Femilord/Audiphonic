@@ -1,0 +1,171 @@
+
+body {
+    background-color: #000;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    max-width: 100%;
+}
+
+
+@font-face {
+    font-family: 'blair';
+    src: url(/blairfonts/BlairMdITCTTMedium.ttf);
+}
+
+.first-section-wrapper {
+
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+   
+}
+
+.first-section-background {
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 130vw;
+    height: 130vh;
+    background-image: url(img/audiphonic-BG.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(1);
+    transform-origin: top left;
+    transition: transform 0.2s ease-out;
+    will-change: transform;
+    z-index: 1;
+}
+
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.head-banner {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+    overflow: hidden;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-block {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 100px;
+    box-sizing: border-box;
+    transform: translateY(-5%);
+}
+
+.object-clause-group {
+    flex-direction: column;
+    align-items: left;
+    gap: 12px;
+    padding: 50px 10px 50px 10px;
+    
+    margin-top: 100px;
+}
+
+.object-clause-01,
+.object-clause-02 {
+    font-size: clamp(1.6rem, 2.2vw, 2.8rem);
+    font-weight: 100;
+    color: #000000;
+    line-height: 1.2;
+    margin: 0;
+    white-space: nowrap;
+    flex-shrink: 1;
+    min-width: 0;
+    text-align: left;
+}
+
+.blair-heading {
+    font-family: 'blair', 'Montserrat', sans-serif;
+}
+
+.vertical-line {
+    width: 220px;
+    height: 2px;
+    margin: 10px auto;
+    display: block;
+    background: linear-gradient(120deg, teal, #00ffcc, white);
+    background-size: 300% 300%;
+    background-position: 0% 50%;
+    transform: scaleX(0);
+    transform-origin: left center;
+    opacity: 0;
+    animation:
+        lineExpand 1s ease-out forwards,
+       
+        gradientShift 6s ease-in-out infinite 1s;
+   
+}
+
+.tag-line {
+    padding: 0 20px;
+    width: 70%;
+    max-width: 900px;
+    text-align: left;
+}
+
+
+.tag-line h1 {
+    font-size: clamp(1.0rem, 1.4vw, 1.5rem);
+    font-weight: 350;
+    color: #000000;
+    line-height: 1.6;
+    margin: 20px auto 0;
+    white-space: normal;
+    word-break: break-word;
+}
+
+.banner-inner {
+    position: relative;
+    z-index: 3;
+    margin-top: 50px;
+    display: flex;
+    justify-content: left;
+    flex-wrap: nowrap;
+}
+
+.learn-more-btn {
+    width: 170px;
+    text-align: center;
+    color: #000000;
+    padding: 12px 24px;
+    text-decoration: none;
+    border: 1px solid #000000;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background-color 300ms ease, box-shadow 300ms ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #000000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}

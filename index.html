@@ -5,11 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Audiphonic | Audio, Visuals, Soundproofing, Acoustics, Sound Reinforcement</title>
-
     <link rel="icon" type="image/x-icon" href="img/audiphonic-favicon.png" />
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="body.css" />
-    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="general.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -17,7 +16,6 @@
 </head>
 
 <body>
-    <!-- HEADER -->
     <header>
         <div class="container">
             <div class="left-group">
@@ -26,10 +24,11 @@
                 </div>
                 <nav class="nav-menu">
                     <ul class="menu">
-                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/index.html" class="active">Home</a></li>
                         <li><a href="/services.html">Services</a></li>
                         <li><a href="/Projects.html">Projects</a></li>
                         <li><a href="/about.html">About</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
                     </ul>
                 </nav>
             </div>
@@ -40,94 +39,184 @@
         </div>
     </header>
 
-    <!-- MOBILE MENU -->
     <nav class="mobile-menu" id="mobile-menu">
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/services.html">Services</a></li>
             <li><a href="/Projects.html">Projects</a></li>
             <li><a href="/about.html">About</a></li>
+            <li><a href="/blog.html">Blog</a></li>
             <li><a href="/contact.html">Contact Us</a></li>
         </ul>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section class="first-section">
-        <div class="head-banner">
-            <div class="banner-inner">
-                <div class="content-block">
-                    <div class="av-clipart">
-                        <img src="img/audio-visuals-clipart.webp" alt="Audio Visual Clipart" />
+    <!--   -------------------first section strarts hear-------------   -->
+    <section>
+        <div class="first-section-background">
+            <div class="section-wrapper">
+                <div class="left-section-content">
+                    <div class="object-clause">
+                        <h2>NOISE<br>CONTROL</h2>
+                        <div class="line-divider"></div>
+                        <h2>AUDIO-VISUAL<br>SYSTEMS</h2>
                     </div>
-
-                    <div class="object-clause-group">
-                        <div class="object-clause">
-                            <h1>Noise Control and<br>Audio-Visual Systems</h1>
-                        </div>
-                        <div class="animated-line">
-
-                        </div> <!-- Animated Line -->
-                        <div class="tag-line">
-                            <h2>
-                                <span id="line1"></span><br>
-                                <span id="line2"></span>
-                            </h2>
-                        </div>
-
-                        <div class="cta-button">
-                            <a href="/about.html" class="learn-more-btn">Learn More</a>
-                        </div>
+                    <div class="tag-line">
+                        <p>
+                            “Our services span soundproofing, acoustics, and audio-visual systems — offering end-to-end
+                            solutions from consultation and design to procurement and implementation.”
+                        </p>
+                    </div>
+                    <div class="learn-more-btn">
+                        <a href="/blog.html" class="learn-more-btn">Learn More</a>
                     </div>
                 </div>
+            </div>
+
+            <!-- Right section scroll area -->
+            <div class="right-section-content">
+                <div class="scrolling-mask"> <!-- NEW WRAPPER -->
+                    <div class="scrolling-track">
+                        <img src="/img/noisy/new-girl-covers-ears.webp" alt="" />
+                        <img src="/img/noisy/new-noisy-airplane.webp" alt="" />
+                        <img src="/img/noisy/new-noisy-band.webp" alt="" />
+                        <img src="/img/noisy/new-noisy-bus-transportation.webp" alt="" />
+                        <img src="/img/noisy/new-noisy-gen.webp" alt="" />
+                        <img src="/img/noisy/new-noisy-horn.webp" alt="" />
+                        <img src="/img/noisy/new-noisy-loud-music.webp" alt="" />
+                        <img src="/img/noisy/new-noisy-phone-ring.webp" alt="" />
+
+                        <!-- duplicates for seamless loop -->
+                        <img src="/img/noisy/new-girl-covers-ears.webp" alt="" />
+                        <img src="/img/noisy/new-noisy-airplane.webp" alt="" />
+                        <img src="/img/noisy/new-noisy-band.webp" alt="" />
+                        <img src="/img/noisy/new-noisy-bus-transportation.webp" alt="" />
+                        <img src="/img/noisy/new-noisy-gen.webp" alt="" />
+                        <img src="/img/noisy/new-noisy-horn.webp" alt="" />
+                        <img src="/img/noisy/new-noisy-loud-music.webp" alt="" />
+                        <img src="/img/noisy/new-noisy-phone-ring.webp" alt="" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="third-section">
+        <div class="scroll-container" id="section2">
+            <div class="sticky-headroom">
+                <div class="sticky-side">
+
+                    <div class="panel-content" data-index="0">
+                        <img src="/img/soundproofing-acoustic-consultation.webp" class="girl-covers-ears" alt="">
+                        <!-- <p>Sticky content for: Silence Where Needed.</p> -->
+                    </div>
+
+                    <div class="panel-content" data-index="2">
+                        <img src="/img/design-implementation.webp" alt="">
+                        <!--   <p>Sticky content for: Echo to Excellence.</p> -->
+                    </div>
+                    <div class="panel-content" data-index="1">
+                        <img src="/img/audio-visual-systems.webp" alt="">
+                        <!--   <p>Sticky content for: Acoustic Environment.</p> -->
+                    </div>
+
+                    <div class="panel-content" data-index="3">
+                        <img src="/img/procurement-installation.webp" alt="">
+                        <!--  <p>Sticky content for: Engineered Sound.</p> -->
+                    </div>
+                    ;''
+                </div>
+            </div>
+
+            <div class="text-side">
+
+                <div class="text-content-block">
+                    <div class="first-text">
+                        <h3>Soundproofing<br>and Acoustic Consultation</h3>
+                        <p>Achieve acoustic harmony and noise control with our integrated soundproofing and acoustics
+                            consultation services. We
+                            assess your space to identify noise challenges and reverberation issues, then develop
+                            tailored solutions that enhance
+                            sound clarity, eliminate disturbances, and create environments optimized for focus, comfort,
+                            and performance — whether
+                            for work, leisure, or specialized use.</p>
+
+                        <a href="#" class="third-section-learn-more-btn">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="text-content-block">
+                    <h3>Design and Implementation</h3>
+                    <p>From vision to execution, we offer end-to-end design and implementation services that turn your
+                        ideas into fully
+                        realized, functional spaces. Our multidisciplinary team combines creative planning with
+                        technical precision, ensuring
+                        each solution is tailored to your needs — blending form and function with seamless integration
+                        and long-term performance
+                        in mind.</p>
+                    <a href="#" class="third-section-learn-more-btn">Learn More</a>
+                </div>
+
+                <div class="text-content-block">
+                    <h3>Audio-Visual<br>Systems</h3>
+                    <p>Bring your space to life with intelligent audio-visual system design and integration. From
+                        immersive sound to
+                        crystal-clear visuals, we engineer solutions that align with your purpose — be it corporate
+                        presentations,
+                        entertainment, education, or worship. Our seamless approach covers system design, equipment
+                        selection, installation, and
+                        fine-tuning to deliver intuitive, high-performance AV experiences.
+                    </p>
+
+                    <a href="#" class="third-section-learn-more-btn">Learn More</a>
+                </div>
+
+                <div class="text-content-block">
+                    <h3>Procurement<br>and Installation</h3>
+                    <p>Access reliable equipment and expert execution through our procurement and installation services.
+                        We source premium
+                        sound, acoustic, and AV components aligned with your requirements and budget, then ensure they
+                        are installed and
+                        configured professionally — minimizing downtime and maximizing system effectiveness from day
+                        one.</p>
+                    <a href="#" class="third-section-learn-more-btn">Learn More</a>
+                </div>
+
+
+
             </div>
         </div>
     </section>
 
 
-
-    <!-- JS: MOBILE MENU TOGGLE -->
     <script>
-        const menuToggle = document.getElementById("menu-toggle");
-        const mobileMenu = document.getElementById("mobile-menu");
+        document.addEventListener("DOMContentLoaded", () => {
+            const textBlocks = document.querySelectorAll(".text-content-block");
+            const panelContents = document.querySelectorAll(".panel-content");
+            const stickyPanel = document.querySelector(".sticky-panel"); // Get the sticky panel container
 
-        menuToggle.addEventListener("click", () => {
-            mobileMenu.classList.toggle("active");
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            const index = Array.from(textBlocks).indexOf(entry.target);
+
+                            // Remove 'active' from all, then apply to the one that matches
+                            panelContents.forEach((panel, i) => {
+                                panel.classList.toggle("active", i === index);
+                            });
+                        }
+                    });
+                },
+                {
+                    root: null,
+                    threshold: 0.5,
+                }
+            );
+
+            textBlocks.forEach((block) => observer.observe(block));
         });
-    </script>
-
-    <!-- JS: TYPING EFFECT -->
-    <script>
-        const text1 = '“Whether for corporate spaces, controlled environments like studios,';
-        const text2 = 'movie cinema or worship auditoriums — we are your premier choice.”';
-        const line1 = document.getElementById('line1');
-        const line2 = document.getElementById('line2');
-        const learnMoreBtn = document.getElementById('learnMoreBtn');
-
-        let i = 0, j = 0;
-
-        function typeLine1() {
-            if (i < text1.length) {
-                line1.textContent += text1.charAt(i);
-                i++;
-                setTimeout(typeLine1, 25);
-            } else {
-                setTimeout(typeLine2, 200);
-            }
-        }
-
-        function typeLine2() {
-            if (j < text2.length) {
-                line2.textContent += text2.charAt(j);
-                j++;
-                setTimeout(typeLine2, 25);
-            } else {
-                // Fade in button after typing
-                learnMoreBtn.style.opacity = '1';
-                learnMoreBtn.style.transform = 'translateY(0)';
-            }
-        }
-
-        window.addEventListener('load', typeLine1);
     </script>
 
 </body>

@@ -9,6 +9,8 @@
     <link rel="icon" type="image/x-icon" href="img/audiphonic-favicon.png" />
     <link rel="stylesheet" href="services.css" />
     <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="body.css" />
+    <link rel="stylesheet" href="general.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -39,45 +41,10 @@
             </div>
         </div>
     </header>
-    <section class="first-section">
-        <div class="first-section-wrapper">
-            <div class="first-section-background" id="parallax-bg"> </div>
-            <div class="background-overlay">
-                <div class="head-banner">
-                    <div class="content-block">
-                        <div class="object-clause-group">
-                            <div class="object-clause-01">
-                                <h2 class="blair-heading">NOISE</h1>
-                                    <h2 class="blair-heading">CONTROL</h1>
-                            </div>
 
-                            <div class="vertical-line"></div>
-
-                            <div class="object-clause-02">
-                                <h2 class="blair-heading">AUDIO-VISUAL</h1>
-                                    <h2 class="blair-heading">SYSTEMS</h1>
-                            </div>
-                        </div>
-
-                        <div class="tag-line">
-                            <h1 id="typewriter-text">
-                                “Our services span soundproofing, acoustics, and audio-visual systems — offering
-                                end-to-end
-                                solutions from consultation
-                                and design to procurement and implementation.”
-                            </h1>
-                        </div>
-
-                        <div class="banner-inner">
-                            <a href="/blog.html" class="learn-more-btn">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-    </section>
+    <div class="background-container" id="parallax-bg">
+        <h1>MY BACKGROUND</h1>
+    </div>
 
 
 </body>

@@ -85,7 +85,7 @@ header {
 .nav-menu a:hover,
 .nav-menu a.active {
     /* background-color: #f0f0f0;    */
-    background-color: #00F0FF;
+    background-color: #00ffcc;
     transform: translateY(-1px);
 }
 
@@ -113,7 +113,7 @@ header {
 }
 
 .btn:hover {
-    background-color: #00F0FF;
+    background-color: #00ffcc;
     color: black;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
