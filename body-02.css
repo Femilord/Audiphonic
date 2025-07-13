@@ -747,3 +747,348 @@ font-size: clamp(2rem, 3vw, 4rem);
 
 
 */
+
+
+--------------------------------------------------------------------
+
+.second-section {
+    width: 100%;
+    background: #ffffff;
+    color: black;
+    padding: 0;
+    /* Ensure no extra padding on the section itself */
+}
+
+/* Scroll Container - The main layout for sticky and scrolling content */
+.scroll-container {
+    display: flex;
+    width: 1200px;
+    /* Fixed width for desktop */
+    margin: 0 auto;
+    /* Removed min-height: 100vh here. The text-side content will define the scrollable height. */
+    padding: 0;
+    /* Remove invalid padding syntax */
+    align-items: flex-start;
+    /* Align items to the top */
+}
+
+/* Sticky Side - Contains the images that stick */
+.sticky-side {
+    width: 640px;
+    /* Fixed width for desktop */
+    position: sticky;
+    /* Makes this element sticky */
+    top: 0;
+    /* Sticks to the top of the viewport */
+    height: 100vh;
+    /* Occupies full viewport height when sticky */
+    display: flex;
+    align-items: center;
+    /* Vertically center image within the sticky side */
+    justify-content: center;
+    /* Horizontally center image */
+    overflow: hidden;
+    /* Hide overflow if images are too large */
+    flex-shrink: 0;
+    /* Prevent shrinking in flex container */
+}
+
+/* Panel Content - Individual image containers within sticky-side */
+.panel-content {
+    position: absolute;
+    /* Position absolutely within sticky-side */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    /* Slightly scaled down by default */
+    opacity: 0;
+    /* Hidden by default */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    /* Smooth transitions */
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    /* Max width for images */
+    pointer-events: none;
+    /* Not clickable when inactive */
+    border: 1px solid transparent;
+    /* Border for active state */
+}
+
+/* Active Panel Content - When the image is visible and active */
+.panel-content.active {
+    animation: borderPulse 1.5s ease-in-out;
+    /* Animation for active state */
+    animation-iteration-count: 1;
+    border-radius: 12px;
+    padding: 20px;
+    opacity: 1;
+    /* Fully visible */
+    transform: translate(-50%, -50%) scale(1);
+    /* Full scale */
+    pointer-events: auto;
+    /* Clickable when active */
+}
+
+/* Image Styling */
+.panel-content img {
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    /* Ensure image fits without cropping */
+    border-radius: 8px;
+    /* Rounded corners for images */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+/* Text Side - Contains the scrolling text content */
+.text-side {
+    width: 700px;
+    /* Fixed width for desktop */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    /* Stretch content to fill width */
+    flex-grow: 1;
+    /* Allow text-side to grow and take available space */
+}
+
+/* Text Spacer - Creates initial and final scroll padding */
+.text-spacer {
+    /* This height needs to be carefully tuned. It ensures the first text block
+       can scroll into the center of the viewport for alignment. */
+    height: 50vh;
+    /* Example: half viewport height. Adjust as needed. */
+    flex-shrink: 0;
+    /* Prevent shrinking */
+}
+
+/* Text Content Block - Individual scrolling text sections */
+.text-content-block {
+    padding-left: 64px;
+    /* Left padding for text */
+    box-sizing: border-box;
+    text-align: right;
+    /* Text aligned to the right */
+
+    /* Crucial: Each text block occupies a significant portion of the viewport */
+    min-height: 80vh;
+    /* Make each text block at least 80% of viewport height */
+    display: flex;
+    /* Use flexbox to center content */
+    flex-direction: column;
+    justify-content: center;
+    /* Vertically center content within the block */
+
+    /* Remove fixed margins, min-height now dictates vertical spacing */
+    margin-top: 0;
+    margin-bottom: 0;
+
+    scroll-snap-align: center;
+    /* Snap to the center of the viewport */
+    transition: opacity 0.3s ease;
+    /* Smooth transition for text opacity */
+}
+
+/* Active Text Content Block - Can be used for additional styling */
+.text-content-block.active {
+    opacity: 1;
+    /* Ensure active text is fully visible */
+}
+
+/* Inactive Text Content Block - Make inactive text slightly transparent */
+.text-content-block:not(.active) {
+    opacity: 0.4;
+    /* Dim inactive text */
+}
+
+/* Headings in text blocks */
+.text-content-block h3 {
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    /* Adjust line height for multi-line headings */
+}
+
+/* Paragraphs in text blocks */
+.text-content-block p {
+    font-size: 1.2rem;
+    font-weight: 350;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Learn More Button */
+.third-section-learn-more-btn {
+    display: inline-block;
+    background-color: #00F0FF;
+    /* Bright cyan */
+    color: #000;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 10px;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Button shadow */
+}
+
+.third-section-learn-more-btn:hover {
+    background-color: #000000;
+    color: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframe for borderPulse animation */
+@keyframes borderPulse {
+    0% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #00F0FF;
+        /* Pulse color */
+    }
+
+    100% {
+        border-color: transparent;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1080px) {
+    .scroll-container {
+        flex-direction: column;
+        /* Stack elements vertically */
+        width: 100%;
+        /* Full width */
+        padding: 40px 20px;
+        /* Adjust padding for mobile */
+        position: relative;
+        /* No longer sticky on mobile */
+    }
+
+    .sticky-side {
+        width: 100%;
+        /* Full width */
+        position: relative;
+        /* Not sticky on mobile */
+        height: auto;
+        /* Height determined by content */
+        min-height: auto;
+        /* Remove min-height */
+        padding: 20px 0;
+        /* Padding for mobile */
+    }
+
+    .panel-content {
+        position: relative;
+        /* Allow content to flow naturally */
+        top: auto;
+        left: auto;
+        transform: none;
+        /* Remove transforms */
+        opacity: 1;
+        /* Always visible on mobile */
+        pointer-events: auto;
+        padding: 0;
+        /* Remove padding */
+        margin-bottom: 20px;
+        /* Space between images on mobile */
+    }
+
+    .panel-content.active {
+        animation: none;
+        /* Remove animation for mobile */
+        border: none;
+        /* Remove border for mobile */
+        padding: 0;
+        transform: none;
+    }
+
+    .panel-content img {
+        max-height: 30vh;
+        /* Adjust image height for mobile */
+    }
+
+    .text-side {
+        width: 100%;
+        /* Full width */
+        align-items: center;
+        /* Center text content */
+    }
+
+    .text-spacer {
+        height: 20px;
+        /* Smaller spacer on mobile */
+    }
+
+    .text-content-block {
+        width: 90%;
+        /* Adjust width for text blocks */
+        padding: 0 10px;
+        /* Adjust padding */
+        text-align: center;
+        /* Center text */
+        margin-bottom: 40px;
+        /* Space between text blocks */
+        min-height: auto;
+        /* No min-height on mobile */
+        padding-top: 20px;
+        /* Adjust padding */
+        padding-bottom: 20px;
+        justify-content: flex-start;
+        /* Align content to start on mobile */
+        scroll-snap-align: none;
+        /* Disable scroll-snap on mobile */
+        opacity: 1;
+        /* All text visible on mobile */
+    }
+
+    .text-content-block h3 {
+        font-size: 1.8rem;
+        /* Adjust font size for mobile */
+    }
+
+    .text-content-block p {
+        font-size: 1rem;
+        /* Adjust font size for mobile */
+    }
+}
+
+/* Specific adjustments for very large screens (e.g., 1600px and up) */
+@media (min-width: 1600px) {
+    .scroll-container {
+        width: 1400px;
+        /* Increase width for very large screens */
+    }
+
+    .sticky-side {
+        width: 700px;
+        /* Adjust sticky side width */
+    }
+
+    .text-side {
+        width: 700px;
+        /* Adjust text side width */
+    }
+
+    .text-spacer {
+        height: 40vh;
+        /* Fine-tune spacer for very large screens */
+    }
+
+    .text-content-block {
+        min-height: 70vh;
+        /* Adjust min-height for very large screens */
+        padding-left: 80px;
+        /* More padding for text */
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Image on Scroll</title>
+    <link rel="stylesheet" href="testing.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sticky Image Column -->
+        <div class="image-column">
+            <img id="sticky-image" src="/img/procurement-installation.webp" alt="Sticky Image" />
+        </div>
+
+        <!-- Scrolling Content Column -->
+        <div class="text-column">
+            <section data-img="/img/procurement-installation.webp">
+                <h2>Section 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </section>
+            <section data-img="/img/soundproofing-acoustic-consultation.webp">
+                <h2>Section 2</h2>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+            </section>
+            <section data-img="/img/speaker-sound-audio-white.webp">
+                <h2>Section 3</h2>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus.</p>
+            </section>
+            <section data-img="/img/speaker-sound-audio.webp">
+                <h2>Section 4</h2>
+                <p>Temporibus autem quibusdam et aut officiis debitis aut rerum.</p>
+            </section>
+        </div>
+
+        <script>
+            const stickyImage = document.getElementById('sticky-image');
+                const sections = document.querySelectorAll('section');
+
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                const imgSrc = entry.target.getAttribute('data-img');
+                                stickyImage.src = imgSrc;
+                            }
+                        });
+                    },
+                    {
+                        root: null,
+                        threshold: 0.5,
+                    }
+                );
+
+                sections.forEach((section) => observer.observe(section));
+
+        </script>
+    </div>
+</body>
+
+</html>
