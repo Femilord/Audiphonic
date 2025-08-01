@@ -2,6 +2,13 @@
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+    max-width: 100%;
+
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 
@@ -10,11 +17,17 @@ body {
     src: url(/blairfonts/BlairMdITCTTMedium.ttf);
 }
 
+.first-section-wrapper {
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+}
+
 .first-section-background {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url(img/first-section-bg.webp);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(img/first-section-bg.webp);
     background-position: center center;
     background-size: cover;
     width: 110vw;
@@ -22,7 +35,7 @@ body {
     left: -5vw;
     top: -3vh;
     transition: transform 0.4s ease-out;
-    */ padding: 16px;
+    padding: 16px;
     position: relative;
     overflow: hidden;
 }
@@ -79,6 +92,13 @@ z-index: 1;
     font-family: 'blair', 'Montserrat', sans-serif;
 }
 
+.tag-line h1 {
+    padding-bottom: 20px;
+    color: aliceblue;
+    font-size: clamp(1.0rem, 1.4vw, 1.1rem);
+
+}
+
 .tag-line p {
     color: aliceblue;
     font-size: clamp(1.0rem, 1.4vw, 1.5rem);
@@ -126,6 +146,7 @@ z-index: 1;
     pointer-events: none;
     background-color: transparent;
     border-left: 2.2px solid rgb(255, 255, 255);
+
     border-top: none;
     border-right: none;
     border-bottom: none;
@@ -248,7 +269,7 @@ z-index: 1;
 }
 
 
-/* Medium Devices (e.g., Tablets, 769px to 991px) */
+/* Medium Devices (e.g., Tablets, 769px to 991px)  */
 @media (min-width: 769px) and (max-width: 991px) {
     .first-section-background {
         flex-direction: column;
@@ -310,6 +331,8 @@ z-index: 1;
         /* Smaller margin */
     }
 
+
+
     @keyframes scroll-horizontal {
         0% {
             transform: translateX(0%);
@@ -356,6 +379,8 @@ z-index: 1;
         width: 80%;
         margin: 0.8rem 0;
     }
+
+
 
     .tag-line p {
         font-size: 1.2rem;
@@ -408,13 +433,14 @@ z-index: 1;
     .first-section-background {
         flex-direction: column;
         min-height: 50vh;
-        padding: 8px;
+        /* padding: 8px; */
     }
 
     .section-wrapper {
         flex-direction: column;
         text-align: left;
         align-items: center;
+        padding-left: 1.0rem;
     }
 
     .left-section-content {
@@ -518,65 +544,55 @@ z-index: 1;
 
 
 
-
-/* ------------------------ Second section -------------------------- */
-
-.second-section-top-cta {
-    width: 100%;
-    background-color: #ffffff;
-    padding: 10px 20px 0;
+/* ------------------------ Second-section email input ------------------------- */
+.drop-email-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
     position: relative;
-    z-index: 5;
+    padding: 60px 20px;
+    overflow: hidden;
+
 }
 
-.cta-wrapper {
+
+
+
+.drop-email-box {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     max-width: 1080px;
     width: 100%;
-    gap: 60px;
+
     flex-wrap: wrap;
+    gap: 60px;
 }
 
-.cta-column-01 {
-    flex: 1;
-    min-width: 280px;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    gap: 14px;
-}
 
+.cta-column-01,
 .cta-column-02 {
     flex: 1;
     min-width: 280px;
-    max-width: 400px;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
-    align-content: center;
     gap: 14px;
 }
 
-.cta-title,
-.cta-subtext {
-    font-size: 1.1rem;
+.cta-title {
+    *-+font-size: 1.1rem;
     font-weight: 400;
     color: #111;
     margin: 0;
 }
-
 
 .email-form {
     display: flex;
     flex-wrap: nowrap;
     align-self: flex-end;
     gap: 10px;
-
 }
 
 .email-form input[type="email"] {
@@ -605,57 +621,228 @@ z-index: 1;
 }
 
 
-/*.   _____________________________________________________________________________  */
-
-
-.second-section {
-    width: 100%;
-    background: #ffffff;
-    color: black;
-}
-
-.scroll-container {
+/* ------------------------- Services --------------------------*/
+.services-section {
+    display: block;
+    background-color: #ffffff;
+    /* You might want to remove this fixed height or adjust it if content overflows,
+       especially since service boxes might now vary in height */
+    height: 600px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    color: #000;
     display: flex;
-    position: sticky;
-    width: 1200px;
-    margin: -5vh auto;
-    /*  min-height: 100vh; 
-    padding: 0, 0, 80px, 0; */
-    overflow: ;
-    position: relative;
-    /* or keep as sticky */
-    z-index: 1;
+    justify-content: center;
+    box-sizing: border-box;
+
 }
 
+.section-lines-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 
+    border-left: 1px solid #f3f3f3;
+    border-right: 1px solid #f3f3f3;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+.services-box {
+    max-width: 1080px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 16px;
+    /* Keep horizontal padding for spacing between wrapper lines and cards */
+    gap: 40px;
+    box-sizing: border-box;
+    /* REMOVED: box-shadow, border-radius, padding-top, padding-bottom, background-color from here */
+    /* The shadow and related styles are now on .services-icon */
+}
+
+.services-icon {
+    width: 350px;
+    text-align: center;
+    /* --- IMPORTANT: Padding includes space for the button now --- */
+    padding: 30px 20px 30px 20px;
+    /* Top:30px, Right:20px, Bottom:30px, Left:20px */
+    border-radius: 20px;
+   
+    /* Ensure it has a background for the shadow to work well */
+    box-sizing: border-box;
+
+    /* --- NEW: Floating Background Shadow for individual cards --- */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    /* X-offset Y-offset Blur-radius Spread-radius Color */
+
+    /* Flexbox properties to push the button to the bottom */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styles for the top clickable area (image, h3, .about p) */
+.services-icon .services-link-top {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    text-align: left;
+    align-items: flex-start;
+}
+
+.services-icon img {
+    width: 40%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Hover effect for the image */
+.services-icon:hover .services-img {
+    transform: scale(1.1);
+}
+
+.services-icon h3 {
+    font-size: 1.1rem;
+    color: #00C1CF;
+    margin: 24px 0 6px;
+    padding-top: 2px;
+    padding-left: 12px;
+    border-left: 2px solid #00F0FF;
+}
+
+/* This targets the main description paragraph */
+.services-icon p {
+    font-size: 1rem;
+    color: #000000;
+    margin-top: 10px;
+    text-align: left;
+    flex-grow: 1;
+    /* This makes the paragraph take up available space, pushing content below it */
+    margin-bottom: 20px;
+    /* Adds space above the "See More" button */
+}
+
+.services-icon .about {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #000000;
+    margin: 6px 0 6px;
+    padding-top: 10px;
+}
+
+.see-more-services {
+    display: inline-block;
+    background-color: #00F0FF;
+    color: #000;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: auto;
+    /* This is the key property to push it to the bottom */
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+}
+
+.see-more-services:hover {
+    background-color: black;
+    color: white;
+}
 
 /*
-
-.scrolling-images-wrapper {
-    width: 100vw;
-    overflow: hidden;
-    margin: 40px 0;
-    position: relative;
+.line-divide {
+    border-left: 1px solid #f3f3f3;
 }
 */
 
-.sticky-headroom {
-    position: relative;
 
+@media (min-width: 1600px) {
+    .services-section {
+        height: 600px;
+        /*    margin-bottom: 100px; */
+    }
+}
+
+
+@media (max-width: 900px) {
+    .services-box {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .services-icon {
+        width: 90%;
+        max-width: 320px;
+    }
+}
+
+
+
+/*.   _______________________third-section - scrolling section ______________________________  */
+
+/* General Styles (unchanged, just for context) */
+.third-section {
+    background-color: #ffffff;
+
+    box-sizing: border-box;
+
+
+
+}
+
+.sroll-container-wrapper {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+/*
+------- I was trying to creat something at the top. I also wanted it to be within  the wrapper -----
+
+.third-section-top-spacer {
+    width: 100%;
+    height: 200px;
+    background-color: #00F0FF;;
+}
+*/
+
+.scroll-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: sticky;
+    max-width: 1200px;
+    /* Changed */
+    width: 100%;
+    /* Changed */
+    padding: 0 16px;
+    /* Added */
+    border-left: 1px solid #f3f3f3;
+    border-right: 1px solid #f3f3f3;
+    box-sizing: border-box;
+    margin: 0 auto;
 }
 
 
 .sticky-side {
-
-    width: 640px;
+    width: 540px;
     position: sticky;
     top: 0;
-    height: 110vh;
+    height: 800px;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    z-index: 1;
+    overflow: visible;
 }
 
 .panel-content {
@@ -664,21 +851,16 @@ z-index: 1;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.95);
     opacity: 0;
-    transition: opacity 0.6s ease, transform 0.6s ease;
-    text-align: center;
-    width: 100%;
+    transition: opacity 0.8s ease, transform 0.6s ease;
+    width: 90%;
     max-width: 600px;
     pointer-events: none;
-    border: 1px solid transparent;
+    /*  border: 1px solid transparent; */
 }
 
 .panel-content.active {
-
     animation: borderPulse 1.5s ease-in-out;
     animation-iteration-count: 1;
-    border-radius: 12px;
-    /*  padding: 20px; */
-
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
     pointer-events: auto;
@@ -688,59 +870,55 @@ z-index: 1;
     width: auto;
     height: auto;
     max-height: 100%;
-
     max-width: 100%;
     object-fit: contain;
+    z-index: 20;
 }
-
-
-/*
-.text-spacer {
-    height: 40vh;
-   
-}
-*/
-
 
 .text-side {
-    width: 650px;
+    width: 540px;
+    height: 3270px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
 
+    gap: 40px;
+    /*  border-left: 1px solid #f3f3f3; */
+    margin-bottom: 10px;
+    border-left: 1px solid #f3f3f3;
 
 }
 
 .text-content-block {
-    padding-left: 64px;
-
     box-sizing: border-box;
-    margin-top: 200px;
-    margin-bottom: 150px;
-    text-align: right;
+    margin-top: 180px;
+    margin-bottom: 200px;
+    text-align: left;
+    padding-left: 5rem;
     scroll-margin-top: 20vh;
 }
 
-
-
-.first-text {
-    margin-top: 0;
-
-}
-
 .text-content-block h3 {
-    font-size: 2.1rem;
+    font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 15px;
+
 }
 
 .text-content-block p {
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     font-weight: 350;
     line-height: 1.6;
     margin-bottom: 20px;
+
+
 }
 
+h4 {
+    color: #00a9b5;
+    /* This might be a global h4 style. We'll override specifically for .solutions-side-texts h4. */
+    padding-bottom: 30px;
+}
 
 .second-section-learn-more-btn {
     display: inline-block;
@@ -758,43 +936,1183 @@ z-index: 1;
 
 .second-section-learn-more-btn:hover {
     background-color: #000000;
-    color: white;
+    color: rgb(255, 255, 255);
+}
+
+/* ------------------------ Solutions Image Gallery and Animation Styles ------------------------ */
+/* Full width layout */
+.img-carousel-section {
+    width: 100%;
+    overflow: hidden;
+    background: #ffffff;
+
+    padding-bottom: 7rem;
+    position: relative;
+    perspective: 1000px;
+}
+
+/* --- NEW: Outer wrapper for 1200px centered content --- */
+.main-content-wrapper {
+    max-width: 1200px;
+    /* Sets the maximum width to 1200px */
+    margin: 0 auto;
+    /* Centers this wrapper horizontally on the page */
+    padding: 0 15px;
+    /* Optional: Adds slight padding on smaller screens to prevent content touching edges */
+    box-sizing: border-box;
+    border-left: 1px solid #f3f3f3;
+        border-right: 1px solid #f3f3f3;
+}
+
+/* --- MODIFIED: Wrapper for the main title (now centered within 1200px) --- */
+.carousel-title-wrapper {
+    max-width: 1080px;
+    /* Sets the maximum width for the title content */
+    margin: 0 auto;
+    /* Centers this 1080px wrapper within its 1200px parent */
+    padding: 0 1vw;
+    /* Adds slight horizontal padding for responsiveness */
+    box-sizing: border-box;
+    /* Ensures padding is included in the width */
+
+    margin-bottom: 50px;
+}
+
+/* --- MODIFIED: Styling for the main title (left-aligned within 1080px wrapper) --- */
+
+.carousel-main-title,
+.carousel-title-wrapper p {
+    max-width: 810px;
+        width: 100%;
+        /* Allow it to shrink */
+        text-align: left;
+        align-items: center;
+        word-wrap: break-word;
+}
+
+.carousel-main-title {
+padding-top: 0;
+    padding-bottom: 0;
+  /*  padding-left: 16px; */
+    padding-right: 32px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #00C1CF;
+ /*   border-left: 2px solid #00F0FF; */
+    margin-bottom: 2rem;
+}
+
+.carousel-title-wrapper span {
+color: #00C1CF;
+}
+
+.carousel-title-wrapper p {
+    padding-top: 0;
+        padding-bottom: 0;
+      /*  padding-left: 16px; */
+        padding-right: 32px;
+        font-size: 1.0rem;
+        font-weight: 350;
+        line-height: 1.6;
+}
+
+.gallery-carousel {
+    overflow: visible;
+    width: 100%;
+    /* Takes 100% width of its .main-content-wrapper (1200px) */
+    position: relative;
+}
+
+.gallery-track {
+    display: flex;
+    width: max-content;
+    /* Allows all slides to be in one row */
+    animation: scroll 60s linear infinite;
+    /* Total animation duration */
+}
+
+.gallery-slider {
+    flex: 0 0 auto;
+    width: 40vw;
+    /* Each slide takes 40% of viewport width */
+    margin: 0 1vw;
+    /* Space between slides */
+    border-radius: 16px;
+    border: 3px solid white;
+    overflow: hidden;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    transform-origin: center center;
+    position: relative;
+    /* Crucial for positioning text overlay */
+    z-index: 1;
+    background: #ffffff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-slider img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+    pointer-events: none;
+}
+
+/* Hover: pop out beyond container */
+.gallery-slider:hover {
+    transform: scale(1.15);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+}
+
+.gallery-slider:hover img {
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for the text overlay on images (no animation) */
+.gallery-text {
+    position: absolute;
+    bottom: 15px;
+    /* Distance from the bottom of the image */
+    left: 15px;
+    /* Distance from the left of the image */
+    color: #fff;
+   
+    /* Added font-family */
+    font-size: 1.2em;
+    /* Adjust font size as needed */
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    padding: 8px 18px;
+   margin-left: 20px;
+    /* Semi-transparent background */
+   
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+   
+    /* Always visible */
+    transform: translateX(0);
+    border-left: 2px solid #00F0FF;
+    /* Always in place */
+}
+
+/* Dots (Optional Scroll Indicators) */
+.carousel-dots {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.carousel-dots button {
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 50%;
+    background: #ffffff;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.carousel-dots button.active {
+    background: #333;
+}
+
+/* Keyframes for infinite scroll (unchanged) */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+        /* Moves half the track width for seamless loop */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+
+    /* Adjust this breakpoint if 1200px is too tight on slightly smaller desktops */
+    .main-content-wrapper {
+        max-width: 95%;
+        /* Allow the main content wrapper to shrink proportionally */
+    }
+}
+
+@media (max-width: 1100px) {
+    .carousel-title-wrapper {
+        max-width: 90%;
+        /* Allow the 1080px wrapper to shrink proportionally within the 1200px parent */
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-track {
+        width: 200%;
+    }
+
+    .img-carousel-section {
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    .gallery-carousel {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .gallery-slider {
+        min-width: 80vw;
+        margin: 0 4vw;
+    }
+
+    .carousel-main-title {
+        font-size: 1.8em;
+        /* Adjust for smaller screens */
+    }
+
+    .gallery-text {
+        font-size: 1em;
+        /* Adjust for smaller screens */
+        bottom: 10px;
+        left: 10px;
+        padding: 6px 10px;
+    }
+}
+
+/* --------------------------- Av-header ------------------------------- */
+.av-heading-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 
+.av-heading-main {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    border-left: 1px solid #f3f3f3;
+    border-right: 1px solid #f3f3f3;
+    margin: 40px auto;
+}
+
+
+
+.av-heading-wrapper {
+    width: 100%;
+    /* previously fixed 1080px */
+    max-width: 1080px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+
+}
+
+.av-texts-container {
+    width: 100%;
+    /* previously fixed 1080px */
+    max-width: 760px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 30px;
+}
+
+.av-title,
+.av-paragraph {
+    max-width: 810px;
+    width: 100%;
+    /* Allow it to shrink */
+    text-align: left;
+    align-items: center;
+    word-wrap: break-word;
+}
+
+
+
+
+
+.av-title h4 {
+    padding-top: 0;
+    padding-bottom: 0;
+ /*   padding-left: 16px; */
+    padding-right: 32px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #00C1CF;
+  /*  border-left: 2px solid #00F0FF; */
+
+}
+
+
+.av-paragraph p {
+    padding-top: 0;
+    padding-bottom: 0;
+ /*   padding-left: 16px; */
+    padding-right: 32px;
+    font-size: 1.0rem;
+    font-weight: 350;
+    line-height: 1.6;
+
+}
+
+/* ----------------------------------------- Audio-Visuals -------------------------------------- */
+.audio-visuals-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 400px;
+}
+
+.audio-visuals-container {
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border-left: 1px solid #f3f3f3;
+    border-right: 1px solid #f3f3f3;
+}
+
+.av-systems-wrapper {
+    width: 1080px;
+    display: flex;
+    justify-content: center;
+}
+
+/* --- Left-Side Text Container & Items Styling --- */
+.av-systems-text-container {
+    width: 25%;
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    /* Matching image container height */
+ /*   background-color: #f0f0f0; */
+    /* Example: A light grey background */
+    padding: 5px 0 5px 0;
+    box-sizing: border-box;
+}
+
+.av-systems-left-text {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-100%);
+    /* Start off-screen to the left */
+    opacity: 0;
+    /* Initially hidden */
+    padding-right: 20px;
+    box-sizing: border-box;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Styling for the individual av-text-block divs */
+.av-text-block {
+    width: 100%;
+    margin-bottom: 45px;
+    /* Space between the two text blocks within each slide */
+}
+
+/* Ensure .av-text-block-02 also exists in your HTML if you use it */
+.av-text-block-02 {
+    width: 100%;
+    margin-bottom: 45px;
+}
+
+.av-text-block:last-child {
+    margin-bottom: 0;
+}
+
+/* Adjusting margins and padding for h4 and p within av-text-block */
+.av-text-block h4 {
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    /* Keep this for spacing below h4 if needed */
+    padding-left: 20px;
+    color: #00C1CF;
+    border-left: 2px solid#00C1CF;
+}
+
+.av-text-block-02 h4 {
+    font-size: 1.1em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    color: #00C1CF;
+    border-left: 2px solid #00C1CF;
+}
+
+.av-text-block p {
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 20px;
+}
+
+.av-text-block-02 p {
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 20px;
+}
+
+.explore-btn {
+    display: inline-block;
+    background-color: #00F0FF;
+    color: #000;
+    text-decoration: none;
+    padding: 5px 50px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-left: 20px;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
+
+/* --- Image Container & Image Styling --- */
+.av-images-container {
+    width: 70%;
+    margin: 0 0 0 5%;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 400px;
+    /* Matching left text container height */
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+   
+    /* Background color to prevent white flash */
+}
+
+.av-systems-images {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: no-repeat 50% 50%;
+    background-size: cover;
+    
+}
+
+/* Base styling for the image-text overlay */
+.image-text {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    transform: translateX(-100%);
+    opacity: 0;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding: 10px 15px;
+    
+border-left: 2px solid #00F0FF;
+    white-space: nowrap;
+    transition: none;
+}
+
+/* Explicit Initial State for the First Image (visible from the start) */
+.av-systems-images:nth-child(1) {
+    z-index: 5;
+    opacity: 1;
+    transform: scale(1);
+    animation: animate-1 30s linear infinite;
+    /* CHANGED: 30s duration */
+}
+
+/* For all other images, they should be initially hidden and scaled */
+.av-systems-images:not(:first-child) {
+    opacity: 0;
+    transform: scale(1.2);
+}
+
+.av-systems-images:nth-child(2) {
+    z-index: 4;
+    animation: animate-2 30s linear infinite;
+    /* CHANGED: 30s duration */
+}
+
+.av-systems-images:nth-child(3) {
+    z-index: 3;
+    animation: animate-3 30s linear infinite;
+    /* CHANGED: 30s duration */
+}
+
+.av-systems-images:nth-child(4) {
+    z-index: 2;
+    animation: animate-4 30s linear infinite;
+    /* CHANGED: 30s duration */
+}
+
+.av-systems-images:nth-child(5) {
+    z-index: 1;
+    animation: animate-5 30s linear infinite;
+    /* CHANGED: 30s duration */
+}
+
+/* --- Image Keyframes (adjusted for 30s duration) --- */
+/* Each image is active for ~6 seconds (20% of 30s) */
+
+/* Image 1 */
+@keyframes animate-1 {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+        z-index: 5;
+    }
+
+    19% {
+        opacity: 1;
+        transform: scale(1.05);
+        z-index: 5;
+    }
+
+    /* Stays visible for longer */
+    20% {
+        opacity: 0;
+        transform: scale(1.1);
+        z-index: 5;
+    }
+
+    /* Fades out quickly */
+    99% {
+        opacity: 0;
+        transform: scale(1.2);
+        z-index: 5;
+    }
+
+    /* Stays hidden */
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        z-index: 5;
+    }
+
+    /* Seamless loop back */
+}
+
+/* Image 2 */
+@keyframes animate-2 {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+        z-index: 4;
+    }
+
+    19% {
+        opacity: 0;
+        transform: scale(1.2);
+        z-index: 4;
+    }
+
+    /* Wait for img 1 to fade out */
+    20% {
+        opacity: 1;
+        transform: scale(1);
+        z-index: 4;
+    }
+
+    /* Fades in quickly */
+    39% {
+        opacity: 1;
+        transform: scale(1.05);
+        z-index: 4;
+    }
+
+    40% {
+        opacity: 0;
+        transform: scale(1.1);
+        z-index: 4;
+    }
+
+    /* Fades out quickly */
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
+        z-index: 4;
+    }
+}
+
+/* Image 3 */
+@keyframes animate-3 {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+        z-index: 3;
+    }
+
+    39% {
+        opacity: 0;
+        transform: scale(1.2);
+        z-index: 3;
+    }
+
+    /* Wait for img 2 */
+    40% {
+        opacity: 1;
+        transform: scale(1);
+        z-index: 3;
+    }
+
+    59% {
+        opacity: 1;
+        transform: scale(1.05);
+        z-index: 3;
+    }
+
+    60% {
+        opacity: 0;
+        transform: scale(1.1);
+        z-index: 3;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
+        z-index: 3;
+    }
+}
+
+/* Image 4 */
+@keyframes animate-4 {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+        z-index: 2;
+    }
+
+    59% {
+        opacity: 0;
+        transform: scale(1.2);
+        z-index: 2;
+    }
+
+    /* Wait for img 3 */
+    60% {
+        opacity: 1;
+        transform: scale(1);
+        z-index: 2;
+    }
+
+    79% {
+        opacity: 1;
+        transform: scale(1.05);
+        z-index: 2;
+    }
+
+    80% {
+        opacity: 0;
+        transform: scale(1.1);
+        z-index: 2;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
+        z-index: 2;
+    }
+}
+
+/* Image 5 */
+@keyframes animate-5 {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+        z-index: 1;
+    }
+
+    79% {
+        opacity: 0;
+        transform: scale(1.2);
+        z-index: 1;
+    }
+
+    /* Wait for img 4 */
+    80% {
+        opacity: 1;
+        transform: scale(1);
+        z-index: 1;
+    }
+
+    99% {
+        opacity: 1;
+        transform: scale(1.05);
+        z-index: 1;
+    }
+
+    /* Stays visible until almost end */
+    100% {
+        opacity: 0;
+        transform: scale(1.1);
+        z-index: 1;
+    }
+
+    /* Fades out to allow img 1 to seamlessly appear */
+}
+
+
+/* --- Text Keyframes (adjusted for 30s duration and exact alignment) --- */
+/* Each text block is active for ~6 seconds (20% of 30s) */
+/* Text sweeps in at X.5% and sweeps out at (X+19.5)% */
+
+/* Text for Image 1 */
+.av-systems-images:nth-child(1) .image-text {
+    animation: text-animate-1 30s linear infinite;
+    /* CHANGED: 30s duration */
+}
+
+@keyframes text-animate-1 {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    /* Initially hidden */
+    0.5% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Sweep in with slight delay */
+    19.5% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Stay visible */
+    20% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    /* Sweep out quickly */
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    /* Stay hidden */
+}
+
+/* Text for Image 2 */
+.av-systems-images:nth-child(2) .image-text {
+    animation: text-animate-2 30s linear infinite;
+    /* CHANGED: 30s duration */
+}
+
+@keyframes text-animate-2 {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    20% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    /* Wait for img 1 text to sweep out */
+    20.5% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Sweep in with slight delay */
+    39.5% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    40% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    /* Sweep out quickly */
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+/* Text for Image 3 */
+.av-systems-images:nth-child(3) .image-text {
+    animation: text-animate-3 30s linear infinite;
+    /* CHANGED: 30s duration */
+}
+
+@keyframes text-animate-3 {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    40% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    /* Wait for img 2 text */
+    40.5% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Sweep in with slight delay */
+    59.5% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    60% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+/* Text for Image 4 */
+.av-systems-images:nth-child(4) .image-text {
+    animation: text-animate-4 30s linear infinite;
+    /* CHANGED: 30s duration */
+}
+
+@keyframes text-animate-4 {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    60% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    /* Wait for img 3 text */
+    60.5% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Sweep in with slight delay */
+    79.5% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    80% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+/* Text for Image 5 */
+.av-systems-images:nth-child(5) .image-text {
+    animation: text-animate-5 30s linear infinite;
+    /* CHANGED: 30s duration */
+}
+
+@keyframes text-animate-5 {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    80% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    /* Wait for img 4 text */
+    80.5% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Sweep in with slight delay */
+    99.5% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Stay visible until almost end */
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    /* Sweep out quickly for seamless loop */
+}
+
+/* --- Left-Side Text Keyframes (adjusted for 30s duration and exact alignment) --- */
+/* These keyframes mirror the image-text animations exactly */
+
+/* Text Block for Image 1 */
+.av-systems-left-text:nth-child(1) {
+    animation: left-text-animate-1 30s linear infinite;
+    /* CHANGED: 30s duration */
+}
+
+@keyframes left-text-animate-1 {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%) translateX(-100%);
+    }
+
+    /* Initially hidden */
+    0.5% {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+
+    /* Sweep in with slight delay */
+    19.5% {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+
+    /* Stay visible */
+    20% {
+        opacity: 0;
+        transform: translateY(-50%) translateX(-100%);
+    }
+
+    /* Sweep out quickly */
+    100% {
+        opacity: 0;
+        transform: translateY(-50%) translateX(-100%);
+    }
+
+    /* Stay hidden */
+}
+
+/* Text Block for Image 2 */
+.av-systems-left-text:nth-child(2) {
+    animation: left-text-animate-2 30s linear infinite;
+    /* CHANGED: 30s duration */
+}
+
+@keyframes left-text-animate-2 {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%) translateX(-100%);
+    }
+
+    20% {
+        opacity: 0;
+        transform: translateY(-50%) translateX(-100%);
+    }
+
+    /* Wait for img 1 text to sweep out */
+    20.5% {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+
+    /* Sweep in with slight delay */
+    39.5% {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+
+    40% {
+        opacity: 0;
+        transform: translateY(-50%) translateX(-100%);
+    }
+
+    /* Sweep out quickly */
+    100% {
+        opacity: 0;
+        transform: translateY(-50%) translateX(-100%);
+    }
+}
+
+/* Text Block for Image 3 */
+.av-systems-left-text:nth-child(3) {
+    animation: left-text-animate-3 30s linear infinite;
+    /* CHANGED: 30s duration */
+}
+
+@keyframes left-text-animate-3 {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%) translateX(-100%);
+    }
+
+    40% {
+        opacity: 0;
+        transform: translateY(-50%) translateX(-100%);
+    }
+
+    /* Wait for img 2 text */
+    40.5% {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+
+    /* Sweep in with slight delay */
+    59.5% {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+
+    60% {
+        opacity: 0;
+        transform: translateY(-50%) translateX(-100%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-50%) translateX(-100%);
+    }
+}
+
+/* Text Block for Image 4 */
+.av-systems-left-text:nth-child(4) {
+    animation: left-text-animate-4 30s linear infinite;
+    /* CHANGED: 30s duration */
+}
+
+@keyframes left-text-animate-4 {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%) translateX(-100%);
+    }
+
+    60% {
+        opacity: 0;
+        transform: translateY(-50%) translateX(-100%);
+    }
+
+    /* Wait for img 3 text */
+    60.5% {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+
+    /* Sweep in with slight delay */
+    79.5% {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+
+    80% {
+        opacity: 0;
+        transform: translateY(-50%) translateX(-100%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-50%) translateX(-100%);
+    }
+}
+
+/* Text Block for Image 5 */
+.av-systems-left-text:nth-child(5) {
+    animation: left-text-animate-5 30s linear infinite;
+    /* CHANGED: 30s duration */
+}
+
+@keyframes left-text-animate-5 {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%) translateX(-100%);
+    }
+
+    80% {
+        opacity: 0;
+        transform: translateY(-50%) translateX(-100%);
+    }
+
+    /* Wait for img 4 text */
+    80.5% {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+
+    /* Sweep in with slight delay */
+    99.5% {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+
+    /* Stay visible until almost end */
+    100% {
+        opacity: 0;
+        transform: translateY(-50%) translateX(-100%);
+    }
+
+    /* Sweep out quickly for seamless loop */
+}
+
+/* --------------------------------- Media Queries ------------------------------- */
 @media (min-width: 1600px) {
-
-
     .scroll-container {
         display: flex;
         position: sticky;
         width: 1200px;
-        margin: -20vh auto;
-        /*  min-height: 100vh; 
-        padding: 0, 0, 80px, 0; */
+
+
+
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .sticky-side {
-        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 950px;
+        
     }
 
+
+
     .text-side {
-        padding-top: 0;
-        padding-bottom: 31vh;
+        margin-top: 40px;
+        padding-right: 16px;
         scroll-behavior: smooth;
+        height: 3650px;
+        gap: 300px;
     }
 
     .text-content-block {
-        margin-top: 28vh;
-        margin-bottom: 80px;
-
-
-        height: 20vh;
-
+        margin-top: 210px;
+        margin-bottom: 0;
     }
 
-    .text-spacer {
-        height: 5vh;
+    .solutions-wrapper .solutions-spaces {
+        gap: 60px;
+    }
+
+    .solutions-wrapper .solutions-spaces img {
+        width: 40vw;
+        display: block;
 
     }
 }
@@ -810,8 +2128,6 @@ z-index: 1;
     .text-side {
         width: 100%;
     }
-
-
 
     .text-side {
         align-items: center;
@@ -830,8 +2146,6 @@ z-index: 1;
         text-align: center;
     }
 }
-
-
 
 @media (max-width: 768px) {
     .cta-content {
@@ -855,26 +2169,11 @@ z-index: 1;
         width: 100%;
         max-width: 300px;
     }
-}
 
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
     .cta-wrapper {
         flex-direction: column;
         align-items: center;
         gap: 30px;
-    }
-
-    .cta-column {
-        align-items: center;
-        text-align: center;
-    }
-
-    .email-form {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
     }
 
     .email-form input,
@@ -884,9 +2183,3 @@ z-index: 1;
         max-width: 300px;
     }
 }
-
-/*         
-        html second-section {
-            scroll-snap-type: y mandatory;
-        }
-           */

@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', 'Poppins', sans-serif;
+    
 }
 
 /* Header */
@@ -22,7 +23,7 @@ header {
 }
 
 /* Container Layout */
-.container {
+.header-container {
     max-width: 1200px;
     margin: 0 auto;
 
@@ -179,6 +180,7 @@ header {
 @media (max-width: 950px) {
     .nav-menu {
         display: none;
+       
     }
 
     .hamburger {
@@ -247,6 +249,6 @@ header {
     }
 
     header {
-        padding: 14px 0;
+        padding: 14px 33px;
     }
 }

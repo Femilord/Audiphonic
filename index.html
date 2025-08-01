@@ -8,6 +8,7 @@
     <link rel="icon" type="image/x-icon" href="img/audiphonic-favicon.png" />
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="body.css" />
+    <script src="/main.js"></script>
     <link rel="stylesheet" href="general.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,7 +18,7 @@
 
 <body>
     <header>
-        <div class="container">
+        <div class="header-container">
             <div class="left-group">
                 <div class="audi-logo">
                     <a href="index.html"><img src="img/audiphonic-weblogo.webp" alt="Audiphonic Logo" /></a>
@@ -49,194 +50,501 @@
             <li><a href="/contact.html">Contact Us</a></li>
         </ul>
     </nav>
+    <main>
 
-    <!--   -------------------first section strarts hear-------------   -->
-    <section>
-        <div class="first-section-background" id="parallax-bg">
-            <div class="section-wrapper">
-                <div class="left-section-content">
-                    <div class="object-clause">
-                        <h2>NOISE<br>CONTROL</h2>
-                        <div class="line-divider"></div>
-                        <h2>AUDIO-VISUAL<br>SYSTEMS</h2>
+        <!--   -------------------first section strarts hear-------------   -->
+        <section>
+            <div class="first-section-wrapper">
+                <div class="first-section-background" id="parallax-bg">
+                    <div class="section-wrapper">
+                        <div class="left-section-content">
+                            <div class="object-clause">
+                                <h2>NOISE<br>CONTROL</h2>
+                                <div class="line-divider"></div>
+                                <h2>AUDIO-VISUAL<br>SYSTEMS</h2>
+                            </div>
+                            <div class="tag-line">
+                                <h1>
+                                    Soundproofing | Acoustics | Audio-visuals
+                                </h1>
+                                <p>
+                                    “Our services span soundproofing, acoustics, and audio-visual systems — offering
+                                    end-to-end
+                                    solutions from consultation and design to procurement and implementation.”
+                                </p>
+                            </div>
+                            <div class="learn-more-btn">
+                                <a href="/blog.html" class="learn-more-btn">Learn More</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="tag-line">
-                        <p>
-                            “Our services span soundproofing, acoustics, and audio-visual systems — offering end-to-end
-                            solutions from consultation and design to procurement and implementation.”
+
+
+                    <!-- Right section scroll area -->
+                    <div class="right-section-content">
+                        <div class="scrolling-mask"> <!-- NEW WRAPPER -->
+                            <div class="scrolling-track">
+                                <img src="/img/noisy/new-girl-covers-ears.webp" alt="" />
+                                <img src="/img/noisy/new-noisy-airplane.webp" alt="" />
+                                <img src="/img/noisy/new-noisy-band.webp" alt="" />
+                                <img src="/img/noisy/new-noisy-bus-transportation.webp" alt="" />
+                                <img src="/img/noisy/new-noisy-gen.webp" alt="" />
+                                <img src="/img/noisy/new-noisy-horn.webp" alt="" />
+                                <img src="/img/noisy/new-noisy-loud-music.webp" alt="" />
+                                <img src="/img/noisy/new-noisy-phone-ring.webp" alt="" />
+
+                                <!-- duplicates for seamless loop -->
+                                <img src="/img/noisy/new-girl-covers-ears.webp" alt="" />
+                                <img src="/img/noisy/new-noisy-airplane.webp" alt="" />
+                                <img src="/img/noisy/new-noisy-band.webp" alt="" />
+                                <img src="/img/noisy/new-noisy-bus-transportation.webp" alt="" />
+                                <img src="/img/noisy/new-noisy-gen.webp" alt="" />
+                                <img src="/img/noisy/new-noisy-horn.webp" alt="" />
+                                <img src="/img/noisy/new-noisy-loud-music.webp" alt="" />
+                                <img src="/img/noisy/new-noisy-phone-ring.webp" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="drop-email">
+            <div class="section-lines-wrapper">
+                <div class="drop-email-container">
+                    <div class="drop-email-box">
+                        <div class="cta-column-01">
+                            <p class="cta-title">Let us know how we can help—leave your email and we will respond
+                                promptly
+                            </p>
+
+                        </div>
+
+                        <!-- Right column: Email -->
+                        <div class="cta-column-02">
+                            <!--  <p class="cta-subtext">Or drop us your email and we will get back to you</p> -->
+                            <form class="email-form">
+                                <input type="email" placeholder="Drop your email address" required />
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="services-section">
+            <div class="section-lines-wrapper">
+                <div class="services-box">
+
+                    <div class="services-icon">
+                        <a href="services.html" class="services-link-top"> <img class="services-img"
+                                src="/img/speaker-sound-audio.webp" alt="">
+                            <h3>Soundproofing</h3>
+                            <p class="about">Noice Isolation and/or Insulation of your space. </p>
+                        </a>
+                        <p>Soundproofing is the process of blocking or
+                            minimizing the transmission of sound from one space to another. It involves
+                            using materials or construction techniques to isolate a space from external noise or prevent
+                            internal noise from
+                            escaping. Common methods include insulation, barriers, seals, and specialized structures
+                            like
+                            floating walls or acoustic
+                            doors. </p>
+                        <a href="#" class="see-more-services"> See More</a>
+                    </div>
+
+                    <div class="line-divide"></div>
+
+                    <div class="services-icon">
+                        <a href="services.html" class="services-link-top"> <img class="services-img"
+                                src="/img/eq-acoustics.webp" alt="">
+                            <h3>Acoustics</h3>
+                            <p class="about">Contain sound reflection(echo) within your space.
+                            </p>
+                        </a>
+                        <p>Acoustics refers to the science of sound
+                            behavior within a space—how it travels, reflects, absorbs, and interacts with
+                            surfaces. Acoustic treatment focuses on controlling reverberation, echo, and clarity of
+                            sound to
+                            ensure optimal audio
+                            quality within a room. It’s essential in places like auditoriums, studios, offices, and
+                            homes.
                         </p>
+                        <a href="#" class="see-more-services"> See More</a>
                     </div>
-                    <div class="learn-more-btn">
-                        <a href="/blog.html" class="learn-more-btn">Learn More</a>
+
+                    <div class="line-divide"></div>
+
+                    <div class="services-icon">
+                        <a href="services.html" class="services-link-top"> <img class="services-img"
+                                src="/img/audio-visuals.webp" alt="">
+                            <h3>Audio-visuals</h3>
+                            <p class="about">Seamless Design and Integration of Audio-Visuals for your Space.</p>
+                        </a>
+                        <p>Audio-Visuals (AV) encompass
+                            technologies and systems that integrate sound and visual components for communication or
+                            entertainment. AV solutions are used in conference rooms, classrooms, event venues, cinemas,
+                            and homes
+                            to deliver synchronized
+                            audio and video experiences.</p>
+                        <a href="#" class="see-more-services"> See More</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Right section scroll area -->
-            <div class="right-section-content">
-                <div class="scrolling-mask"> <!-- NEW WRAPPER -->
-                    <div class="scrolling-track">
-                        <img src="/img/noisy/new-girl-covers-ears.webp" alt="" />
-                        <img src="/img/noisy/new-noisy-airplane.webp" alt="" />
-                        <img src="/img/noisy/new-noisy-band.webp" alt="" />
-                        <img src="/img/noisy/new-noisy-bus-transportation.webp" alt="" />
-                        <img src="/img/noisy/new-noisy-gen.webp" alt="" />
-                        <img src="/img/noisy/new-noisy-horn.webp" alt="" />
-                        <img src="/img/noisy/new-noisy-loud-music.webp" alt="" />
-                        <img src="/img/noisy/new-noisy-phone-ring.webp" alt="" />
+        </section>
 
-                        <!-- duplicates for seamless loop -->
-                        <img src="/img/noisy/new-girl-covers-ears.webp" alt="" />
-                        <img src="/img/noisy/new-noisy-airplane.webp" alt="" />
-                        <img src="/img/noisy/new-noisy-band.webp" alt="" />
-                        <img src="/img/noisy/new-noisy-bus-transportation.webp" alt="" />
-                        <img src="/img/noisy/new-noisy-gen.webp" alt="" />
-                        <img src="/img/noisy/new-noisy-horn.webp" alt="" />
-                        <img src="/img/noisy/new-noisy-loud-music.webp" alt="" />
-                        <img src="/img/noisy/new-noisy-phone-ring.webp" alt="" />
+
+        <section class="third-section">
+
+
+
+
+            <div class="sroll-container-wrapper">
+
+
+
+                <div class="scroll-container" id="section2">
+                    <div class="third-section-top-spacer"></div>
+                    <div class="sticky-side">
+                        <div class="panel-content" data-index="0">
+
+                            <img src="/img/soundproofing-acoustics.webp" alt="" />
+
+                        </div>
+                        <div class="panel-content" data-index="1">
+                            <img src="/img/design-implimentation.webp" alt="" />
+
+                        </div>
+                        <div class="panel-content" data-index="2">
+                            <img src="/img/audio-visuals-02.webp" alt="" />
+
+                        </div>
+                        <div class="panel-content" data-index="3">
+                            <img src="/img/procurement-installation-02.webp" alt="" />
+
+                        </div>
+
+                    </div>
+
+                    <div class="text-side">
+
+
+
+                        <!-- <div class="text-spacer"></div> -->
+
+                        <div class="text-content-block" data-index="0">
+
+                            <h3> Noise Control <br> Consultation</h3>
+                            <p>Achieve acoustic harmony and noise control with our integrated soundproofing and
+                                acoustics
+                                consultation services. We
+                                assess your space to identify noise challenges and reverberation issues, then develop
+                                tailored solutions that enhance
+                                sound clarity, eliminate disturbances, and create environments optimized for focus,
+                                comfort,
+                                and performance — whether
+                                for work, leisure, or specialized use.</p>
+
+                            <h4> &#8226; Expert Advice <br> &#8226; Shared Discussion</h4>
+                            <a href="#" class="second-section-learn-more-btn">Learn More</a>
+                        </div>
+
+                        <!--  <div class="text-spacer-01"></div> -->
+                        <div class="text-content-block" data-index="1">
+
+                            <h3>Design and Implementation</h3>
+                            <p>From vision to execution, we offer end-to-end design and implementation services that
+                                turn
+                                your
+                                ideas into fully
+                                realized, functional spaces. Our multidisciplinary team combines creative planning with
+                                technical precision, ensuring
+                                each solution is tailored to your needs — blending form and function with seamless
+                                integration
+                                in mind.</p>
+
+                            <h4> &#8226; Planned Creation <br> &#8226; Purposeful Intent </h4>
+
+
+                            <a href="#" class="second-section-learn-more-btn">Learn More</a>
+                        </div>
+
+                        <!--  <div class="text-spacer-02"></div> -->
+
+                        <div class="text-content-block" data-index="2">
+
+                            <h3>Audio & Visual<br>Requirements</h3>
+                            <p>Bring your space to life with intelligent audio-visual system design and integration.
+                                From
+                                immersive sound to
+                                crystal-clear visuals, we engineer solutions that align with your purpose — be it
+                                corporate
+                                presentations,
+                                entertainment, education, or worship. Our seamless approach covers system design,
+                                equipment
+                                selection, installation, and
+                                fine-tuning to deliver intuitive, high-performance AV experiences.</p>
+                            <h4> &#8226; Crystal Sound <br> &#8226; Creative Illumination <br> &#8226; Sightly Display
+                            </h4>
+                            <a href="#" class="second-section-learn-more-btn">Learn More</a>
+                        </div>
+
+                        <!--    <div class="text-spacer-03"></div> -->
+
+                        <div class="text-content-block" data-index="3">
+
+                            <h3>Procurement<br>and Installation</h3>
+                            <p>Access reliable equipment and expert execution through our procurement and installation
+                                services.
+                                We source premium
+                                sound, acoustic, and AV components aligned with your requirements and budget, then
+                                ensure
+                                they
+                                are installed and
+                                configured professionally — minimizing downtime and maximizing system effectiveness from
+                                day
+                                one.
+                            </p>
+
+                            <h4> &#8226; Sourcing to Obtain<br> &#8226; Acquire to Integrate</h4>
+                            <a href="#" class="second-section-learn-more-btn">Learn More</a>
+                        </div>
+
+                        <div class="text-spacer-04"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="img-carousel-section">
+            <!-- NEW: This will be your centered 1200px container -->
+            <div class="main-content-wrapper">
+                <div class="carousel-title-wrapper">
+                    <!-- This wrapper (1080px wide, centered) is now inside the 1200px container -->
+                    <h2 class="carousel-main-title">Our Service Environments</h2>
+                    <p>We cater to a wide range of service environments — including <span>corporate spaces,
+                            entertainment venues,
+                            meeting rooms,
+                            worship facilities, large-scale auditoriums, professional studios, and flexible outdoor
+                            setups </span>. Each
+                        space is equipped
+                        with tailored solutions for clarity, impact, and seamless performance.</p>
+                </div>
+            </div>
+
+            <div class="gallery-carousel" id="carousel">
+                <div class="gallery-track" id="carouselTrack">
+                    <!-- Duplicate set of images for seamless looping -->
+                    <div class="gallery-slider"><img src="/img/board-room.webp" alt="Board Room" />
+                        <div class="gallery-text">Boardrooms</div>
+                    </div>
+                    <div class="gallery-slider"><img src="/img/movie-theater.webp" alt="Movie Theater" />
+                        <div class="gallery-text">Cinemas</div>
+                    </div>
+                    <div class="gallery-slider"><img src="/img/conference-meeting-space.webp" alt="Conference" />
+                        <div class="gallery-text">Meeting Rooms</div>
+                    </div>
+                    <div class="gallery-slider"><img src="/img/worship-event-auditorium.webp" alt="Auditorium" />
+                        <div class="gallery-text">Auditoriums</div>
+                    </div>
+                    <div class="gallery-slider"><img src="/img/recording-broadcast-studios.webp" alt="Studios" />
+                        <div class="gallery-text">Studios</div>
+                    </div>
+                    <div class="gallery-slider"><img src="/img/marque-soundproofing.webp" alt="Marquee" />
+                        <div class="gallery-text">Marquee Tents</div>
+                    </div>
+
+                    <!-- Duplicates for infinite loop illusion -->
+                    <div class="gallery-slider"><img src="/img/board-room.webp" alt="Board Room" />
+                        <div class="gallery-text">Boardrooms</div>
+                    </div>
+                    <div class="gallery-slider"><img src="/img/movie-theater.webp" alt="Movie Theater" />
+                        <div class="gallery-text">Cinemas</div>
+                    </div>
+                    <div class="gallery-slider"><img src="/img/conference-meeting-space.webp" alt="Conference" />
+                        <div class="gallery-text">Meeting Rooms</div>
+                    </div>
+                    <div class="gallery-slider"><img src="/img/worship-event-auditorium.webp" alt="Auditorium" />
+                        <div class="gallery-text">Auditoriums</div>
+                    </div>
+                    <div class="gallery-slider"><img src="/img/recording-broadcast-studios.webp" alt="Studios" />
+                        <div class="gallery-text">Studios</div>
+                    </div>
+                    <div class="gallery-slider"><img src="/img/marque-soundproofing.webp" alt="Marquee" />
+                        <div class="gallery-text">Marquee Tents</div>
+                    </div>
+
+                </div>
+
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+        </section>
+
+
+        <div class="av-heading-container">
+            <div class="av-heading-main">
+                <div class="av-heading-wrapper">
+                    <div class="av-texts-container">
+                        <div class="av-title">
+                            <h4>Adorn Your Space <br> With High Tech AV-Systems</h4>
+                        </div>
+                        <div class="av-paragraph">
+                            <p>
+                                Partner with us to deliver the ideal tech solutions for your facility - from live event
+                                technology and sound reinforcement to seamless teleconferencing systems. Partner with us
+                                to
+                                deliver the ideal tech solutions for your facility -
+                                from live event technology and sound reinforcement to seamless teleconferencing systems.
+                            </p>
+                        </div>
+
                     </div>
                 </div>
             </div>
 
         </div>
-    </section>
 
 
 
-    <section class="second-section">
 
-        <div class="second-section-top-cta">
-            <div class="cta-wrapper">
-                <!-- Left column: WhatsApp -->
-                <div class="cta-column-01">
-                    <p class="cta-title">Let us know how we can help—leave your email and we will respond promptly</p>
+        <section class="audio-visuals-section">
 
-                </div>
+            <div class="audio-visuals-container">
+                <div class="av-systems-wrapper">
 
-                <!-- Right column: Email -->
-                <div class="cta-column-02">
-                    <!--  <p class="cta-subtext">Or drop us your email and we will get back to you</p> -->
-                    <form class="email-form">
-                        <input type="email" placeholder="Drop your email address" required />
-                        <button type="submit">Submit</button>
-                    </form>
+                    <div class="av-systems-text-container">
+                        <div class="av-systems-left-text">
+                            <div class="av-text-block">
+                                <h4> Pro-Audio</h4>
+                                <p>&#8226; Live-Sound <br>&#8226; Studio-Sound<br>&#8226; Podcasts</p>
+                            </div>
+                            <div class="av-text-block-02">
+                                <h4>Environments</h4>
+                                <p>&#8226; Auditoriums <br>&#8226; Event Centers <br>&#8226; Recording Studios
+                                    <br>&#8226;
+                                    Broadcast studios</p>
+                            </div>
+                            <div class="av-explore">
+                                <a href="#" class="explore-btn">Explore</a>
+                            </div>
+                        </div>
+
+                        <div class="av-systems-left-text">
+                            <div class="av-text-block">
+                                <h4>Pro-Video</h4>
+                                <p>&#8226; Live-Video <br>&#8226; Studio-Video<br>&#8226; Podcasts</p>
+                            </div>
+                            <div class="av-text-block-02">
+                                <h4>Environments</h4>
+                                <p>&#8226; Auditoriums <br>&#8226; Event Centers <br>&#8226; Recording Studios
+                                    <br>&#8226;
+                                    Broadcast studios</p>
+                            </div>
+                            <div class="av-explore">
+                                <a href="#" class="explore-btn">Explore</a>
+                            </div>
+                        </div>
+
+                        <div class="av-systems-left-text">
+                            <div class="av-text-block">
+                                <h4>Corporate Space <br>Audio-Visual Systems</h4>
+                                <p>&#8226; Spacial Audio <br> &#8226; Camera Systems<br>&#8226; Comms</p>
+                            </div>
+                            <div class="av-text-block-02">
+                                <h4>Environments</h4>
+                                <p>&#8226; Open Offices <br> &#8226; Board Rooms <br> &#8226; Meeting Rooms <br>&#8226;
+                                    Circulations Spaces</p>
+                            </div>
+                            <div class="av-explore">
+                                <a href="#" class="explore-btn">Explore</a>
+                            </div>
+                        </div>
+
+                        <div class="av-systems-left-text">
+                            <div class="av-text-block">
+                                <h4> Video-Conferencing <br>Systems</h4>
+                                <p>&#8226; Viewing Systems <br> &#8226; Camera Systems<br> &#8226; Comms</p>
+
+                            </div>
+                            <div class="av-text-block-02">
+                                <h4>Environments</h4>
+                                <p> &#8226; Board Rooms <br> &#8226; Meeting Rooms <br>&#8226; Circulations Spaces <br>
+                                    &#8226; Customer Care Center</p>
+
+                            </div>
+                            <div class="av-explore">
+                                <a href="#" class="explore-btn">Explore</a>
+                            </div>
+
+                        </div>
+
+                        <div class="av-systems-left-text">
+                            <div class="av-text-block">
+                                <h4>Theater Systems</h4>
+                                <p> &#8226; Surround Sound <br> &#8226; Control Deck <br> &#8226; Projector <br> &#8226;
+                                    Screen</p>
+
+                            </div>
+                            <div class="av-text-block-02">
+                                <h4>Environments</h4>
+                                <p> &#8226; Public Cinemas <br> &#8226; Private Cinemas <br>&#8226; Home Theaters
+                                    <br>&#8226; Viewing Centers
+                                </p>
+
+                            </div>
+                            <div class="av-explore">
+                                <a href="#" class="explore-btn">Explore</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="av-images-container">
+
+                        <div class="av-systems-images" style="background-image: url(/img/Pro-audio.webp)">
+                            <div class="image-text">Pro-Audio</div>
+                        </div>
+                        <div class="av-systems-images" style="background-image: url(/img/Pro-video-systems.webp)">
+                            <div class="image-text">Pro-Video</div>
+                        </div>
+                        <div class="av-systems-images" style="background-image: url(/img/Office-audio-systems.webp)">
+                            <div class="image-text">Corporate Space Audio-visuals</div>
+                        </div>
+                        <div class="av-systems-images"
+                            style="background-image: url(/img/Teleconferencing-Systems.webp)">
+                            <div class="image-text">Video-Conferencing Systems</div>
+                        </div>
+                        <div class="av-systems-images" style="background-image: url(/img/pro-projector.webp)">
+                            <div class="image-text">Theater Systems</div>
+                        </div>
+
+
+
+
+
+                    </div>
+
+
                 </div>
             </div>
-        </div>
 
-        <div class="scroll-container" id="section2">
-            <div class="sticky-side">
-                <div class="panel-content" data-index="0">
-                    <img src="/img/soundproofing-acoustic-consultation.webp" alt="" />
-                </div>
-                <div class="panel-content" data-index="1">
-                    <img src="/img/design-implementation.webp" alt="" />
-                </div>
-                <div class="panel-content" data-index="2">
-                    <img src="/img/audio-visual-systems.webp" alt="" />
-                </div>
-                <div class="panel-content" data-index="3">
-                    <img src="/img/procurement-installation.webp" alt="" />
-                </div>
-            </div>
+        </section>
 
-            <div class="text-side">
-                <div class="text-spacer"></div>
-                <div class="text-content-block" data-index="0">
-                    <h3>Soundproofing<br>and Acoustic Consultation</h3>
-                    <p>Achieve acoustic harmony and noise control with our integrated soundproofing and acoustics
-                        consultation services. We
-                        assess your space to identify noise challenges and reverberation issues, then develop
-                        tailored solutions that enhance
-                        sound clarity, eliminate disturbances, and create environments optimized for focus, comfort,
-                        and performance — whether
-                        for work, leisure, or specialized use.</p>
-                    <a href="#" class="second-section-learn-more-btn">Learn More</a>
-                </div>
+    </main>
 
-                <div class="text-content-block" data-index="1">
-                    <h3>Design and Implementation</h3>
-                    <p>From vision to execution, we offer end-to-end design and implementation services that turn your
-                        ideas into fully
-                        realized, functional spaces. Our multidisciplinary team combines creative planning with
-                        technical precision, ensuring
-                        each solution is tailored to your needs — blending form and function with seamless integration
-                        and long-term performance
-                        in mind.</p>
-                    <a href="#" class="second-section-learn-more-btn">Learn More</a>
-                </div>
-
-                <div class="text-content-block" data-index="2">
-                    <h3>Audio-Visual<br>Systems</h3>
-                    <p>Bring your space to life with intelligent audio-visual system design and integration. From
-                        immersive sound to
-                        crystal-clear visuals, we engineer solutions that align with your purpose — be it corporate
-                        presentations,
-                        entertainment, education, or worship. Our seamless approach covers system design, equipment
-                        selection, installation, and
-                        fine-tuning to deliver intuitive, high-performance AV experiences.</p>
-                    <a href="#" class="second-section-learn-more-btn">Learn More</a>
-                </div>
-
-                <div class="text-content-block" data-index="3">
-                    <h3>Procurement<br>and Installation</h3>
-                    <p>Access reliable equipment and expert execution through our procurement and installation services.
-                        We source premium
-                        sound, acoustic, and AV components aligned with your requirements and budget, then ensure they
-                        are installed and
-                        configured professionally — minimizing downtime and maximizing system effectiveness from day
-                        one.
-                    </p>
-                    <a href="#" class="second-section-learn-more-btn">Learn More</a>
-                </div>
-                <div class="text-spacer"></div>
-            </div>
-        </div>
-    </section>
+    <footer>
 
 
+    </footer>
 
-    <!-- -----------   parallax Js script  --------------- -->
-    <script>
-        const bgWrapper = document.getElementById("parallax-bg");
-
-        window.addEventListener("scroll", () => {
-            const scrollY = window.scrollY;
-            const scale = 1.0 - Math.min(scrollY / 1500, 0.09); // Zooms out to 94%
-            bgWrapper.style.transform = `scale(${scale})`;
-        });
-    </script>
-
-
-    <!-- -----------   second-section vertical Scrolling clipart Js script  --------------- -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const textBlocks = document.querySelectorAll(".text-content-block");
-            const panelContents = document.querySelectorAll(".panel-content");
-            const stickyPanel = document.querySelector(".sticky-panel"); // Get the sticky panel container
-
-            const observer = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            const index = Array.from(textBlocks).indexOf(entry.target);
-
-                            // Remove 'active' from all, then apply to the one that matches
-                            panelContents.forEach((panel, i) => {
-                                panel.classList.toggle("active", i === index);
-                            });
-                        }
-                    });
-                },
-                {
-                    root: null,
-                    threshold: 0.5,
-                }
-            );
-
-            textBlocks.forEach((block) => observer.observe(block));
-        });
-    </script>
+    
 
 
 </body>

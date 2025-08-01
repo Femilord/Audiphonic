@@ -8,7 +8,7 @@
 
     <link rel="icon" type="image/x-icon" href="img/audiphonic-favicon.png" />
     <link rel="stylesheet" href="header.css" />
-   <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="about.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -18,7 +18,7 @@
 <body>
     <!-- HEADER -->
     <header>
-        <div class="container">
+        <div class="header-container">
             <div class="left-group">
                 <div class="audi-logo">
                     <a href="index.html"><img src="img/audiphonic-weblogo.webp" alt="Audiphonic Logo" /></a>
@@ -27,7 +27,7 @@
                     <ul class="menu">
                         <li><a href="/index.html">Home</a></li>
                         <li><a href="/services.html">Services</a></li>
-                        <li><a href="/projects.html">Projects</a></li>
+                        <li><a href="/Projects.html">Projects</a></li>
                         <li><a href="/about.html" class="active">About</a></li>
                         <li><a href="/blog.html">Blog</a></li>
                     </ul>
@@ -40,248 +40,16 @@
         </div>
     </header>
 
-    <section class="animation-section soundproofing-section">
-        <h2>Soundproofing Corporate</h2>
-        <div class="soundproofing-animation-container">
-            <svg class="sound-wave-svg" viewBox="0 0 100 100">
-                <circle cx="50" cy="50" r="0" class="wave wave-1"></circle>
-                <circle cx="50" cy="50" r="0" class="wave wave-2"></circle>
-                <circle cx="50" cy="50" r="0" class="wave wave-3"></circle>
-                <rect x="20" y="20" width="60" height="60" class="building-outline office-shape"></rect>
-                <polygon points="50,10 80,40 80,70 20,70 20,40" class="building-outline church-shape"></polygon>
-                <path d="M30 70 L30 50 L40 50 L40 70 M50 70 L50 40 L60 40 L60 70" class="building-outline studio-shape">
-                </path>
-            </svg>
-        </div>
-    </section>
-    
-    <section class="animation-section acoustics-section">
-        <h2>Acoustics</h2>
-        <div class="acoustics-animation-container">
-            <svg class="acoustic-wave-svg" viewBox="0 0 100 100">
-                <path class="raw-wave" d="M10 50 Q 20 30 30 50 T 50 50 T 70 50 T 90 50" fill="none" stroke="#FFD700"
-                    stroke-width="0.5"></path>
-                <path class="refined-wave" d="M10 50 C 30 40 70 60 90 50" fill="none" stroke="#32CD32" stroke-width="0.5"
-                    opacity="0"></path>
-                <rect x="25" y="30" width="10" height="40" class="acoustic-panel panel-1"></rect>
-                <rect x="65" y="30" width="10" height="40" class="acoustic-panel panel-2"></rect>
-            </svg>
-        </div>
-    </section>
-    
-    <section class="animation-section av-section">
-        <h2>Audio-Visuals</h2>
-        <div class="av-animation-container">
-            <div class="stream audio-stream"></div>
-            <div class="stream video-stream"></div>
-            <div class="merged-stream"></div>
-            <div class="projection-area meeting-room-area"></div>
-            <div class="projection-area event-space-area"></div>
-            <div class="projection-area broadcast-area"></div>
-        </div>
-    </section>
-    
-    <section class="animation-section live-sound-section">
-        <h2>Live Sound and Video Services</h2>
-        <div class="installation-container">
-            <div class="blueprint-stage"></div>
-            <div class="equipment speaker-icon"></div>
-            <div class="equipment screen-icon"></div>
-            <div class="equipment cable-line"></div>
-            <div class="burst-effect"></div>
-        </div>
-    </section>
-    
-    <section class="animation-section design-procurement-section">
-        <h2>Design and Procurement</h2>
-        <div class="design-procurement-container">
-            <svg class="design-svg" viewBox="0 0 100 100">
-                <circle cx="20" cy="20" r="5" class="idea-shape idea-1"></circle>
-                <rect x="70" y="10" width="10" height="10" class="idea-shape idea-2"></rect>
-                <polygon points="40,80 50,70 60,80" class="idea-shape idea-3"></polygon>
-                <path class="connection-line conn-1" d="M20 20 L70 10" stroke="#888" stroke-width="0.2"
-                    stroke-dasharray="100" stroke-dashoffset="100"></path>
-                <path class="connection-line conn-2" d="M70 10 L40 80" stroke="#888" stroke-width="0.2"
-                    stroke-dasharray="100" stroke-dashoffset="100"></path>
-                <g class="component-icon speaker-component">
-                    <rect x="5" y="5" width="10" height="15" fill="#f0f0f0"></rect>
-                    <circle cx="10" cy="10" r="3" fill="#333"></circle>
-                </g>
-                <g class="component-icon projector-component">
-                    <rect x="5" y="5" width="15" height="10" fill="#f0f0f0"></rect>
-                    <circle cx="12.5" cy="10" r="2" fill="#333"></circle>
-                    <polygon points="12.5,15 10,20 15,20" fill="#f0f0f0"></polygon>
-                </g>
-            </svg>
-        </div>
-    </section>
-
-
-
-<!-- --------------------Js script ----------------------- -->
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/DrawSVGPlugin.min.js"></script>
-<script>
-    const setupIntersectionObserver = (elementSelector, animationFunction) => {
-        const element = document.querySelector(elementSelector);
-        if (!element) return;
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animationFunction();
-                    observer.unobserve(element);
-                }
-            });
-        }, {
-            threshold: 0.5
-        });
-
-        observer.observe(element);
-    };
-
-    const animateSoundproofing = () => {
-        if (typeof gsap !== 'undefined') {
-            gsap.to(".soundproofing-section .wave", {
-                duration: 3,
-                attr: { r: 80 },
-                opacity: 0,
-                ease: "power1.out",
-                stagger: 0.5,
-                repeat: -1,
-                onStart: () => {
-                    gsap.to(".soundproofing-section .building-outline", { opacity: 0.7, duration: 1, stagger: 0.3 });
-                }
-            });
-        } else {
-            console.warn("GSAP not loaded. Soundproofing animation will be basic CSS or static.");
-            document.querySelectorAll('.soundproofing-section .building-outline').forEach(el => el.style.opacity = '0.7');
-        }
-    };
-    setupIntersectionObserver('.soundproofing-section', animateSoundproofing);
-
-    const animateAcoustics = () => {
-        if (typeof gsap !== 'undefined') {
-            const tl = gsap.timeline({ repeat: -1, yoyo: true, repeatDelay: 1 });
-
-            tl.to(".acoustics-section .raw-wave", {
-                duration: 2,
-                attr: { d: "M10 50 C 30 40 70 60 90 50" },
-                ease: "power2.inOut"
-            })
-                .to(".acoustics-section .raw-wave", { opacity: 0, duration: 0.5 }, "-=0.5")
-                .fromTo(".acoustics-section .refined-wave", { opacity: 0 }, { opacity: 1, duration: 0.5 }, "<");
-
-            tl.to(".acoustics-section .acoustic-panel", {
-                duration: 1,
-                scaleY: 1.1,
-                yoyo: true,
-                repeat: -1,
-                ease: "power1.inOut",
-                stagger: 0.3
-            }, "<");
-        } else {
-            console.warn("GSAP not loaded. Acoustics animation will be basic CSS or static.");
-        }
-    };
-    setupIntersectionObserver('.acoustics-section', animateAcoustics);
-
-    const animateAV = () => {
-        if (typeof gsap !== 'undefined') {
-            const tl = gsap.timeline({ repeat: -1, repeatDelay: 2 });
-
-            tl.fromTo(".av-section .audio-stream", { height: 0, opacity: 1 }, { height: 120, duration: 1.5, ease: "power2.out" })
-                .fromTo(".av-section .video-stream", { height: 0, opacity: 1 }, { height: 120, duration: 1.5, ease: "power2.out" }, "<0.2");
-
-            tl.to(".av-section .merged-stream", {
-                duration: 1.5,
-                width: 300,
-                opacity: 1,
-                ease: "power2.out",
-                onComplete: () => {
-                    gsap.to(".av-section .projection-area", { opacity: 1, duration: 1, stagger: 0.4 });
-                }
-            }, "+=0.5");
-
-            tl.to([".av-section .stream", ".av-section .merged-stream", ".av-section .projection-area"], { opacity: 0, duration: 1 }, "+=2");
-
-        } else {
-            console.warn("GSAP not loaded. Audio-Visuals animation will be basic CSS or static.");
-            document.querySelectorAll('.av-section .stream').forEach(el => el.style.animationPlayState = 'running');
-        }
-    };
-    setupIntersectionObserver('.av-section', animateAV);
-
-    const animateLiveSound = () => {
-        if (typeof gsap !== 'undefined') {
-            const tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
-
-            tl.fromTo(".live-sound-section .equipment", { opacity: 0, y: 50, scale: 0.5 }, {
-                opacity: 1, y: 0, scale: 1,
-                duration: 0.8,
-                ease: "back.out(1.7)",
-                stagger: 0.2
-            });
-
-            tl.to(".live-sound-section .cable-line", { scaleX: 1, duration: 0.8, ease: "power2.out" }, "<0.4");
-
-            tl.to(".live-sound-section .burst-effect", {
-                opacity: 0.5,
-                scale: 1,
-                duration: 1,
-                ease: "circ.out",
-                onComplete: () => {
-                    gsap.to(".live-sound-section .burst-effect", { scale: 2, opacity: 0, duration: 0.5 });
-                }
-            }, "+=0.5");
-
-            tl.to([".live-sound-section .equipment", ".live-sound-section .cable-line"], { opacity: 0, duration: 0.5 }, "+=1");
-
-        } else {
-            console.warn("GSAP not loaded. Live Sound animation will be basic CSS or static.");
-            document.querySelectorAll('.live-sound-section .equipment').forEach(el => {
-                el.style.opacity = '1';
-                el.style.transform = 'translateY(0) scale(1)';
-            });
-            document.querySelector('.live-sound-section .cable-line').style.transform = 'scaleX(1)';
-            document.querySelector('.live-sound-section .burst-effect').style.animationPlayState = 'running';
-        }
-    };
-    setupIntersectionObserver('.live-sound-section', animateLiveSound);
-
-    const animateDesignProcurement = () => {
-        if (typeof gsap !== 'undefined') {
-            const tl = gsap.timeline({ repeat: -1, repeatDelay: 2 });
-
-            tl.fromTo(".design-procurement-section .idea-shape", { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.5, stagger: 0.2 });
-
-            tl.to(".design-procurement-section .connection-line", {
-                duration: 1.5,
-                strokeDashoffset: 0,
-                ease: "none",
-                stagger: 0.5
-            });
-
-            tl.fromTo(".design-procurement-section .component-icon", { opacity: 0, scale: 0 }, {
-                opacity: 1, scale: 1, duration: 1, ease: "back.out(1.7)",
-                stagger: 0.5
-            }, "-=0.5");
-
-            tl.to([".design-procurement-section .idea-shape", ".design-procurement-section .connection-line", ".design-procurement-section .component-icon"], { opacity: 0, duration: 1 }, "+=1");
-
-        } else {
-            console.warn("GSAP not loaded. Design and Procurement animation will be basic CSS or static.");
-            document.querySelectorAll('.design-procurement-section .idea-shape').forEach(el => el.style.opacity = '1');
-            document.querySelectorAll('.design-procurement-section .connection-line').forEach(el => el.style.strokeDashoffset = '0');
-            document.querySelectorAll('.design-procurement-section .component-icon').forEach(el => {
-                el.style.opacity = '1';
-                el.style.transform = 'scale(1)';
-            });
-        }
-    };
-    setupIntersectionObserver('.design-procurement-section', animateDesignProcurement);
-</script>
+    <nav class="mobile-menu" id="mobile-menu">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/Projects.html">Projects</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
 </body>
 
 </html>
