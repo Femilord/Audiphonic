@@ -1,0 +1,15 @@
+let current = 0;
+const images = document.querySelectorAll(".av-systems-content");
+const texts = document.querySelectorAll(".av-text-block");
+
+function showNextSlide() {
+    images[current].classList.remove("active");
+    texts[current].classList.remove("active");
+
+    current = (current + 1) % images.length;
+
+    images[current].classList.add("active");
+    texts[current].classList.add("active");
+}
+
+setInterval(showNextSlide, 4000); 

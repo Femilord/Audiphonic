@@ -1,44 +1,37 @@
-// =========== Parallax Script ==============
-const bgWrapper = document.getElementById("parallax-bg");
-
-window.addEventListener("scroll", () => {
-    const scrollY = window.scrollY;
-    const scale = 1.0 - Math.min(scrollY / 1500, 0.09); // Zooms out to 94%
-    bgWrapper.style.transform = `scale(${scale})`;
-});
+// -------------- Services Section effects --------------------
 
 
 
 // ======= second - section vertical Scrolling clipart Js script ============
 
 document.addEventListener("DOMContentLoaded", () => {
-    const textBlocks = document.querySelectorAll(".text-content-block");
-    const panelContents = document.querySelectorAll(".panel-content");
-    const stickyPanel = document.querySelector(".sticky-panel"); // Get the sticky panel container
+    // Check if the screen is a desktop size
+    if (window.innerWidth > 900) {
+        const textBlocks = document.querySelectorAll(".text-content-block");
+        const panelContents = document.querySelectorAll(".panel-content");
+        const stickyPanel = document.querySelector(".sticky-panel");
 
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    const index = Array.from(textBlocks).indexOf(entry.target);
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const index = Array.from(textBlocks).indexOf(entry.target);
 
-                    // Remove 'active' from all, then apply to the one that matches
-                    panelContents.forEach((panel, i) => {
-                        panel.classList.toggle("active", i === index);
-                    });
-                }
-            });
-        },
-        {
-            root: null,
-            threshold: 0.5,
-        }
-    );
+                        panelContents.forEach((panel, i) => {
+                            panel.classList.toggle("active", i === index);
+                        });
+                    }
+                });
+            },
+            {
+                root: null,
+                threshold: 0.5,
+            }
+        );
 
-    textBlocks.forEach((block) => observer.observe(block));
+        textBlocks.forEach((block) => observer.observe(block));
+    }
 });
-
-
 
 
 // ====================== Carousel Script =================
@@ -58,19 +51,34 @@ carousel.addEventListener('mouseleave', () => {
 
 // ==============================================
 
-let current = 0;
-const images = document.querySelectorAll(".av-systems-content");
-const texts = document.querySelectorAll(".av-text-block");
+document.addEventListener("DOMContentLoaded", function () {
+    let current = 0;
+    const images = document.querySelectorAll(".av-systems-images");
+    const texts = document.querySelectorAll(".av-systems-left-text");
+    const totalItems = images.length;
 
-function showNextSlide() {
-    images[current].classList.remove("active");
-    texts[current].classList.remove("active");
+    // Ensure there are images and text blocks to animate
+    if (totalItems > 0) {
+        // Set the first image and text as active initially
+        images[current].classList.add("active");
+        texts[current].classList.add("active");
 
-    current = (current + 1) % images.length;
+        // Function to switch to the next slide
+        function showNextSlide() {
+            // Remove 'active' class from the current items
+            images[current].classList.remove("active");
+            texts[current].classList.remove("active");
 
-    images[current].classList.add("active");
-    texts[current].classList.add("active");
-}
+            // Move to the next item
+            current = (current + 1) % totalItems;
 
-setInterval(showNextSlide, 4000);
+            // Add 'active' class to the new current items
+            images[current].classList.add("active");
+            texts[current].classList.add("active");
+        }
+
+        // Set the interval to automatically switch every 6 seconds (6000ms)
+        setInterval(showNextSlide, 6000);
+    }
+});
 
