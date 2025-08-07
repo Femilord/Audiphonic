@@ -1,4 +1,12 @@
 /* Base styles (for very large screens or as a default) */
+* {
+    box-sizing: border-box;
+
+}
+
+
+
+html,
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -7,9 +15,7 @@ body {
     overflow-x: hidden;
 }
 
-* {
-    box-sizing: border-box;
-}
+
 
 
 @font-face {
@@ -39,7 +45,7 @@ body {
     padding: 16px;
     position: relative;
     overflow: hidden;
-    
+
 }
 
 
@@ -218,7 +224,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 104, 102, 0.2)); 
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 104, 102, 0.2));
     z-index: 1;
 }
 
@@ -249,7 +255,7 @@ body {
 }
 
 .object-clause h2 {
-    color: white;
+    color: #00F0FF;
     font-size: clamp(2rem, 3vw, 4rem);
     font-weight: bold;
     margin: 0;
@@ -329,11 +335,10 @@ body {
     border-color: white;
     flex-shrink: 0;
     margin-right: 100px;
-   background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
-*/
 
-@keyframes scroll-horizontal {
+*/ @keyframes scroll-horizontal {
     0% {
         transform: translateX(0%);
     }
@@ -416,10 +421,10 @@ body {
         /* Default desktop offset */
         width: 55vw;
         /* Slightly less width for right section perhaps */
-      
+
     }
 
-    
+
 
     .object-clause {
         padding-bottom: 20px;
@@ -949,7 +954,7 @@ body {
     box-sizing: border-box;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);/ display: flex;
     flex-direction: column;
-  /*  background-color: #b5f7fb; */
+    /*  background-color: #b5f7fb; */
     border: 1px solid rgb(238, 238, 238);
 }
 
@@ -970,9 +975,18 @@ body {
     user-select: none;
 }
 
+.services-icon:hover {
+
+
+    background-color: #B5F7FB;
+    background: linear-gradient(130deg, #e8e8e8, #B5F7FB);
+
+}
+
 /* Hover effect for the image */
 .services-icon:hover .services-img {
     transform: scale(1.1);
+
 }
 
 .services-icon h3 {
@@ -986,6 +1000,8 @@ body {
 
 .services-icon p {
     font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
     color: #000000;
     margin-top: 10px;
     text-align: left;
@@ -994,7 +1010,7 @@ body {
 }
 
 .services-icon .about {
-    font-size: 0.9rem;
+    font-size: 1.0rem;
     font-weight: 600;
     color: #000000;
     margin: 6px 0 6px;
@@ -1013,7 +1029,7 @@ body {
 .explore-link {
     text-align: left;
 
-   
+
     color: #00C1CF;
     text-decoration: none;
     font-weight: 500px;
@@ -1021,8 +1037,7 @@ body {
     font-size: 1rem;
     margin-top: 20px;
     /* This is the key property to push it to the bottom */
-    background-color: #b5f7fb
-    transition: background-color 0.3s ease;
+    background-color: #b5f7fb transition: background-color 0.3s ease;
 }
 
 .explore-arrow {
@@ -1097,6 +1112,7 @@ body {
 
 
 
+
 }
 
 
@@ -1161,7 +1177,7 @@ body {
     /*   padding-left: 16px; */
     padding-right: 32px;
     font-size: 1.0rem;
-    font-weight: 350;
+    font-weight: 400;
     line-height: 1.6;
 
 }
@@ -1242,7 +1258,7 @@ body {
 
 /* Adjusting margins and padding for h4 and p within av-text-block */
 .av-text-block h4 {
-    font-size: 1.3em;
+    font-size: 1.1em;
     margin-top: 0;
     margin-bottom: 5px;
     padding-bottom: 10px;
@@ -1263,16 +1279,18 @@ body {
 }
 
 .av-text-block p {
-    font-size: 0.9em;
+    font-size: 0.8em;
     line-height: 1.4;
+    font-weight: 400;
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 20px;
 }
 
 .av-text-block-02 p {
-    font-size: 0.9em;
+    font-size: 0.8rem;
     line-height: 1.4;
+    font-weight: 400;
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 20px;
@@ -1342,6 +1360,12 @@ body {
     border-left: 2px solid #00F0FF;
     white-space: nowrap;
     transition: none;
+}
+
+
+
+.mobile-explore-btn {
+    display: none;
 }
 
 /* Explicit Initial State for the First Image (visible from the start) */
@@ -2028,6 +2052,7 @@ body {
     box-sizing: border-box;
     margin: 0 auto;
     background-color: #f3fcfa;
+
 }
 
 
@@ -2146,6 +2171,7 @@ body {
     max-width: 100%;
     object-fit: contain;
     z-index: 20;
+    filter: drop-shadow(3px 10px 10px rgba(0, 0, 0, 0.4));
 }
 
 .text-side {
@@ -2185,7 +2211,7 @@ body {
 
 .text-content-block p {
     font-size: 1.0rem;
-    font-weight: 350;
+    font-weight: 400;
     line-height: 1.6;
     margin-bottom: 20px;
 
@@ -2193,8 +2219,10 @@ body {
 }
 
 .text-content-block h4 {
-    color: #00a9b5;
+    color: #000000;
     padding-bottom: 30px;
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 .second-section-learn-more-btn {
@@ -2204,7 +2232,7 @@ body {
     text-decoration: none;
     padding: 10px 18px;
     border-radius: 8px;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1rem;
     margin-top: 10px;
     white-space: nowrap;
@@ -2305,7 +2333,7 @@ body {
     /*  padding-left: 16px; */
     padding-right: 32px;
     font-size: 1.0rem;
-    font-weight: 350;
+    font-weight: 400;
     line-height: 1.6;
 }
 
@@ -2597,7 +2625,7 @@ body {
 /* Update the existing media query to be more specific for smaller screens. */
 /* --- New CSS for Mobile/Desktop Switching --- */
 @media (max-width: 900px) {
- /*
+    /*
             .services-section {
                 padding: 10px 0;
                
@@ -2645,8 +2673,14 @@ body {
 
 
     .services-section {
+        overflow-x: hidden;
         padding: 60px 20px;
     }
+
+    .services-lines-wrapper {
+        border: none;
+    }
+
 
     .services-box {
         display: flex;
@@ -2656,27 +2690,32 @@ body {
     }
 
     .services-icon {
-        width: 90%;
-        max-width: 380px;
+        width: 100%;
+        max-width: 450px;
         padding: 30px 20px;
         border: 1px solid rgb(238, 238, 238);
-      /*  background-color: #b5f7fb; */
+        border-radius: 6px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         opacity: 0;
         transform: translateX(0);
         transition: transform 0.7s ease, opacity 0.7s ease;
+
+
+        background-color: #B5F7FB;
+        background: linear-gradient(130deg, #e8e8e8, #B5F7FB);
+
     }
 
     .services-icon.slide-left {
-        transform: translateX(-100px);
+        transform: none;
     }
 
     .services-icon.slide-right {
-        transform: translateX(100px);
+        transform: none;
     }
 
     .services-icon.visible {
-        transform: translateX(0);
+        transform: none;
         opacity: 1;
     }
 
@@ -2685,7 +2724,7 @@ body {
 
     .av-heading-container {
         margin-top: 10px;
-
+        border-top: 1px solid rgb(234, 234, 234);
     }
 
     .av-texts-container {
@@ -2708,15 +2747,18 @@ body {
 
     .audio-visuals-section {
         height: auto;
+        overflow: hidden;
+
 
     }
 
     .audio-visuals-container {
         flex-direction: column;
         align-items: center;
-        padding: 0;
-        width: 100%;
 
+        width: 100vw;
+        padding-top: 0;
+        padding-bottom: 30px;
         border: none;
     }
 
@@ -2724,7 +2766,7 @@ body {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        padding-bottom: 40px;
+        padding-bottom: 10px;
     }
 
     .av-systems-text-container {
@@ -2735,12 +2777,13 @@ body {
         box-sizing: border-box;
         min-height: 380px;
         height: auto;
-        margin-bottom: 30px;
+        margin-bottom: 5px;
+        margin-top: 0;
     }
 
     .av-systems-left-text {
         position: absolute;
-        top: 55%;
+        top: 50%;
         left: 0;
         width: 100%;
         transform: translateY(-50%) translateX(-100%);
@@ -2750,6 +2793,7 @@ body {
         text-align: left;
         z-index: 10;
         font-size: 0.95em;
+        margin-top: 0;
 
     }
 
@@ -2763,12 +2807,9 @@ body {
         gap: 0;
     }
 
-    .av-explore {
-        padding-top: 30px;
-    }
 
     .av-images-container {
-        width: 90%;
+        width: 95%;
         /* gives room for border-radius */
         height: 250px;
         position: relative;
@@ -2778,8 +2819,8 @@ body {
         box-shadow: 0 8px 25px rgba(0, 125, 134, 0.5);
         background: linear-gradient(to top right, #0f0f0f, #1a1a1a);
         /* if you use gradient behind images */
-        margin-bottom: 20px;
-        margin-right: 25px;
+        margin-bottom: 40px;
+        margin-right: 20px;
     }
 
     .av-systems-images {
@@ -2801,7 +2842,7 @@ body {
         transform: translateX(-100%);
         opacity: 0;
         font-size: 1.2em;
-        padding: 8px 12px;
+        padding: 0 12px;
         white-space: wrap;
         z-index: 20;
         color: #fff;
@@ -2809,19 +2850,38 @@ body {
         border-left: 2px solid #00F0FF;
     }
 
-    .explore-btn {
-        margin-top: 10px;
+
+
+    .mobile-explore-btn {
+        display: inline-block;
+        background-color: #00F0FF;
+        color: #000;
+        text-decoration: none;
+        padding: 5px 50px;
+        border-radius: 20px;
+        font-weight: 500;
         font-size: 0.9rem;
-        padding: 6px 30px;
-        margin-left: 0;
+        margin-left: 20px;
+        white-space: nowrap;
+        transition: background-color 0.3s ease;
+
     }
 
+    .mobile-explore-btn:hover {
+        background-color: #000000;
+        color: rgb(255, 255, 255);
+        border: 1px solid white;
+    }
 
+    .explore-btn {
+        display: none;
+    }
 
 
     /* --------------- Third-section ----------------- */
     .mobile-only {
         display: none;
+        overflow: hidden,
     }
 
 
@@ -2834,17 +2894,19 @@ body {
     .mobile-wrapper {
         display: flex;
         flex-direction: column;
-        padding: 0 16px;
+        padding: 0 0;
         box-sizing: border-box;
     }
 
     .mobile-title {
         text-align: left;
-        font-size: 1.8rem;
+        font-size: 1.9rem;
         font-weight: 700;
         margin: 40px 10px 10px;
         padding: 10px;
-        color: #00a9b5;
+        color: #000000;
+        padding: 30px 25px;
+        padding-top: 100px;
     }
 
     .mobile-service-item {
@@ -2855,27 +2917,39 @@ body {
         gap: 30px;
         margin-bottom: 50px;
         padding-bottom: 30px;
-        border-bottom: 1px dashed #ddd;
+        /*    border-bottom: 2px dashed #b0b0b0; */
         box-sizing: border-box;
     }
+
+
 
     .mobile-content-block {
         order: 1;
         box-sizing: border-box;
-        width: 90%;
+        width: 100%;
+        border-top: 1px solid rgb(217, 217, 217);
+        background-color: #B5F7FB;
+        padding: 40px 0;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+
+        background: linear-gradient(130deg, #e8e8e8, #B5F7FB);
+
     }
 
     .mobile-panel-content {
         order: 2;
         width: 90%;
+
         display: flex;
         justify-content: center;
         box-sizing: border-box;
-        border: 1px solid white;
-        background-color: #f3fcfa;
+        /*   border: 1px solid rgb(209, 209, 209); 
+        background-color: #f3fcfa; 
         box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-        border-radius: 16px;
-        margin-top: 0;
+        border-radius: 16px; */
+        margin-top: 35px;
+        /* background: linear-gradient(130deg, #9ff9ff, #ccfafe, #ffffff); */
+
     }
 
     .mobile-panel-content img {
@@ -2887,25 +2961,30 @@ body {
         display: block;
         border-radius: 8px;
         object-fit: cover;
+        filter: drop-shadow(3px 10px 10px rgba(0, 0, 0, 0.4));
     }
 
-    .mobile-service-item h3 {
+    .mobile-content-block h3 {
         font-size: 1.2rem;
         margin-bottom: 10px;
         color: #000;
-
+        padding: 0 38px;
     }
 
-    .mobile-service-item p {
+
+
+    .mobile-content-block p {
         font-size: 1rem;
         line-height: 1.5;
         color: #222;
+        padding: 0 38px;
     }
 
     .mobile-content-block-lower {
         order: 3;
         width: 80%;
         box-sizing: border-box;
+        margin-left: 30px;
 
 
     }
@@ -2934,9 +3013,19 @@ body {
         transition: background-color 0.3s ease;
         display: inline-block;
     }
+
+    /* -----------  service environments ------------- */
+
+    .main-content-wrapper {
+        border: none;
+    }
+
+
+    .carousel-title-wrapper {
+        width: 100%;
+        margin: 5px;
+    }
 }
-
-
 
 
 @media (max-width: 768px) {
@@ -2958,7 +3047,8 @@ body {
     .cta-title {
         width: 300px;
         font-size: 1rem;
-        line-height: 1.5;
+        font-weight: 500;
+        line-height: 1.4;
         color: #222;
         text-align: left;
     }
@@ -2990,6 +3080,10 @@ body {
 
 
 }
+
+
+
+
 
 @media (max-width: 576px) {
     .first-section-background {
@@ -3027,6 +3121,7 @@ body {
 
     .tag-line p {
         font-size: 1.0rem;
+        font-weight: 500;
         line-height: 1.4rem;
     }
 
@@ -3087,13 +3182,14 @@ body {
 
     .mobile-service-item p {
         font-size: 1rem;
+        font-weight: 500;
         line-height: 1.5;
         color: #222;
     }
 
     .mobile-content-block-lower {
         order: 3;
-        width: 80%;
+        width: 100%;
         box-sizing: border-box;
 
 
@@ -3105,6 +3201,11 @@ body {
         font-weight: 500;
         text-align: left;
         margin-bottom: 10px;
+
+    }
+
+    .mobile-content-block-lower {
+        padding-left: 20px;
     }
 
     .second-section-learn-more-btn {
@@ -3112,7 +3213,7 @@ body {
         background-color: #00F0FF;
         color: #000;
         text-decoration: none;
-        padding: 10px 18px;
+        padding-top: 10px 18px;
         border-radius: 8px;
         font-weight: 500;
         font-size: 1rem;

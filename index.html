@@ -22,7 +22,11 @@
         <div class="header-container">
             <div class="left-group">
                 <div class="audi-logo">
-                    <a href="index.html"><img src="img/audiphonic-weblogo.webp" alt="Audiphonic Logo" /></a>
+                    <a href="index.html">
+                        <img src="img/audiphonic-weblogo.webp" alt="Audiphonic Logo" class="logo-desktop" />
+                        <img src="img/white-transparent-logo.webp" alt="Audiphonic Mobile Logo" class="logo-mobile" />
+                    </a>
+
                 </div>
                 <nav class="nav-menu">
                     <ul class="menu">
@@ -41,6 +45,10 @@
         </div>
     </header>
 
+
+
+
+
     <nav class="mobile-menu" id="mobile-menu">
         <ul>
             <li><a href="/">Home</a></li>
@@ -51,9 +59,11 @@
             <li><a href="/contact.html">Contact Us</a></li>
         </ul>
     </nav>
+
+
     <main>
 
-        <!--   -------------------first section strarts hear-------------   --> 
+        <!--   -------------------first section strarts hear-------------   -->
         <section>
             <div class="first-section-wrapper">
                 <div class="first-section-background" id="parallax-bg">
@@ -78,15 +88,15 @@
                                 <a href="/blog.html" class="learn-more-btn">Learn More</a>
                             </div>
 
-                           
+
                         </div>
                     </div>
 
 
-                    
+
                     <div class="right-section-content">
 
-                        <div class="scrolling-mask"> 
+                        <div class="scrolling-mask">
                             <div class="scrolling-track">
                                 <img src="/img/noisy/new-girl-covers-ears.webp" alt="" />
                                 <img src="/img/noisy/new-noisy-airplane.webp" alt="" />
@@ -97,7 +107,7 @@
                                 <img src="/img/noisy/new-noisy-loud-music.webp" alt="" />
                                 <img src="/img/noisy/new-noisy-phone-ring.webp" alt="" />
 
-                                
+
                                 <img src="/img/noisy/new-girl-covers-ears.webp" alt="" />
                                 <img src="/img/noisy/new-noisy-airplane.webp" alt="" />
                                 <img src="/img/noisy/new-noisy-band.webp" alt="" />
@@ -112,7 +122,7 @@
                 </div>
             </div>
         </section>
-<!--
+        <!--
         <section>
             <div class="first-section-wrapper">
                 <div class="first-section-background" id="parallax-bg">
@@ -204,13 +214,13 @@
 
 
         <section class="services-section">
-            
+
             <div class="services-lines-wrapper">
                 <div class="services-box">
 
                     <div class="services-icon">
                         <a href="services.html" class="services-link-top"> <img class="services-img"
-                                src="/img/speaker-sound-audio.webp" alt="">
+                                src="/img/speaker-sound-audio-black.webp" alt="">
                             <h3>Soundproofing</h3>
                             <p class="about">Noice Isolation and/or Insulation of your space. </p>
                         </a>
@@ -235,8 +245,9 @@
                             </p>
                         </a>
                         <p>Acoustics refers to the science of sound
-                            behavior within a space—how it travels, reflects, absorbs, and interacts with
-                            surfaces. Acoustic treatment focuses on controlling reverberation, echo, and clarity of
+                            behavior within a space - how it travels, reflects, absorbs, and interacts with
+                            surfaces. In Acoustic treatment we focuse on controlling reverberation, echo, and
+                            conseqquently - clarity of
                             sound.
                         </p>
                         <div class="explore-box">
@@ -251,7 +262,7 @@
                         <a href="services.html" class="services-link-top"> <img class="services-img"
                                 src="/img/audio-visuals.webp" alt="">
                             <h3>Audio-visuals</h3>
-                            <p class="about">Seamless Design and Integration of Audio-Visuals for your Space.</p>
+                            <p class="about">Design and Integration of Audio-Visuals for your Space.</p>
                         </a>
                         <p>Audio-Visuals (AV) encompass
                             technologies and systems that integrate sound and visual components for communication or
@@ -268,65 +279,71 @@
 
         </section>
 
-<section class="services-section-mobile-only">
-    <div class="services-lines-wrapper">
-        <div class="services-box">
+        <section class="services-section-mobile-only">
+            <div class="services-lines-wrapper">
+                <div class="services-box">
 
-            <!-- Card 1: Slide from left -->
-            <div class="services-icon slide-left">
-                <a href="services.html" class="services-link-top">
-                    <img class="services-img" src="/img/speaker-sound-audio-black.webp" alt="">
-                    <h3>Soundproofing</h3>
-                    <p class="about">Noise Isolation and/or Insulation of your space.</p>
-                </a>
-                <p>Soundproofing is the process of blocking or minimizing the transmission of sound from one space to
-                    another. It involves using materials or construction techniques to isolate a space from external
-                    noise or prevent internal noise from escaping.</p>
-                <div class="explore-box">
-                    <div class="explore-link">Explore</div>
-                    <div class="explore-arrow">&#10141;</div>
+                    <!-- Card 1: Slide from left -->
+                    <div class="services-icon slide-left">
+                        <a href="services.html" class="services-link-top">
+                            <img class="services-img" src="/img/speaker-sound-audio-black.webp" alt="">
+                            <h3>Soundproofing</h3>
+                            <p class="about">Noise Isolation and/or Insulation of your space.</p>
+                        </a>
+                        <p>Soundproofing is the process of blocking or minimizing the transmission of sound from one
+                            space to
+                            another. It involves using materials or construction techniques to isolate a space from
+                            external
+                            noise or prevent internal noise from escaping.</p>
+                        <div class="explore-box">
+                            <div class="explore-link">Explore</div>
+                            <div class="explore-arrow">&#10141;</div>
+                        </div>
+                    </div>
+
+                    <div class="line-divide"></div>
+
+                    <!-- Card 2: Slide from right -->
+                    <div class="services-icon slide-right">
+                        <a href="services.html" class="services-link-top">
+                            <img class="services-img" src="/img/eq-acoustics.webp" alt="">
+                            <h3>Acoustics</h3>
+                            <p class="about">Control Sound reflection (echo) within your space.</p>
+                        </a>
+                        <p>Acoustics refers to the science of sound behavior within a space—how it travels, reflects,
+                            absorbs,
+                            and interacts with surfaces. Acoustic treatment focuses on controlling reverberation, echo,
+                            and
+                            clarity of sound.</p>
+                        <div class="explore-box">
+                            <div class="explore-link">Explore</div>
+                            <div class="explore-arrow">&#10141;</div>
+                        </div>
+                    </div>
+
+                    <div class="line-divide"></div>
+
+                    <!-- Card 3: Slide from left -->
+                    <div class="services-icon slide-left">
+                        <a href="services.html" class="services-link-top">
+                            <img class="services-img" src="/img/audio-visuals.webp" alt="">
+                            <h3>Audio-visuals</h3>
+                            <p class="about">Seamless Design and Integration of Audio-Visuals for your Space.</p>
+                        </a>
+                        <p>Audio-Visuals (AV) encompass technologies and systems that integrate sound and visual
+                            components for
+                            communication or entertainment. AV solutions are used in conference rooms, classrooms, event
+                            venues,
+                            cinemas, and homes.</p>
+                        <div class="explore-box">
+                            <div class="explore-link">Explore</div>
+                            <div class="explore-arrow">&#10141;</div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-
-            <div class="line-divide"></div>
-
-            <!-- Card 2: Slide from right -->
-            <div class="services-icon slide-right">
-                <a href="services.html" class="services-link-top">
-                    <img class="services-img" src="/img/eq-acoustics.webp" alt="">
-                    <h3>Acoustics</h3>
-                    <p class="about">Control Sound reflection (echo) within your space.</p>
-                </a>
-                <p>Acoustics refers to the science of sound behavior within a space—how it travels, reflects, absorbs,
-                    and interacts with surfaces. Acoustic treatment focuses on controlling reverberation, echo, and
-                    clarity of sound.</p>
-                <div class="explore-box">
-                    <div class="explore-link">Explore</div>
-                    <div class="explore-arrow">&#10141;</div>
-                </div>
-            </div>
-
-            <div class="line-divide"></div>
-
-            <!-- Card 3: Slide from left -->
-            <div class="services-icon slide-left">
-                <a href="services.html" class="services-link-top">
-                    <img class="services-img" src="/img/audio-visuals.webp" alt="">
-                    <h3>Audio-visuals</h3>
-                    <p class="about">Seamless Design and Integration of Audio-Visuals for your Space.</p>
-                </a>
-                <p>Audio-Visuals (AV) encompass technologies and systems that integrate sound and visual components for
-                    communication or entertainment. AV solutions are used in conference rooms, classrooms, event venues,
-                    cinemas, and homes.</p>
-                <div class="explore-box">
-                    <div class="explore-link">Explore</div>
-                    <div class="explore-arrow">&#10141;</div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
+        </section>
 
 
         <section>
@@ -473,13 +490,11 @@
                         <div class="av-systems-images" style="background-image: url(/img/pro-projector.webp)">
                             <div class="image-text">Theater Systems</div>
                         </div>
-
-
-
-
-
                     </div>
 
+                    <div class="mobile-av-explore">
+                        <a href="#" class="mobile-explore-btn">Explore</a>
+                    </div>
 
                 </div>
             </div>
@@ -507,9 +522,9 @@
                             <p>Our Service <br>
                                 Delivery Channels
                                 <span class="arrow">&#10141;</span>
-                            <span class="arrow">&#10141;</span>
-                            <span class="arrow">&#10141;</span>
-                            <span class="arrow">&#10141;</span>
+                                <span class="arrow">&#10141;</span>
+                                <span class="arrow">&#10141;</span>
+                                <span class="arrow">&#10141;</span>
                                 <!--<span class="arrow">&#10141;</span> -->
                             </p>
 
@@ -661,10 +676,10 @@
                         </div>
                         <div class="mobile-content-block-lower">
                             <h4> &#8226; Expert Advice <br> &#8226; Shared Discussion</h4>
-                        <a href="#" class="second-section-learn-more-btn">Learn More</a>
+                            <a href="#" class="second-section-learn-more-btn">Learn More</a>
                         </div>
-                        
-                    </div> 
+
+                    </div>
 
                     <div class="mobile-service-item">
 
@@ -691,7 +706,7 @@
                             <a href="#" class="second-section-learn-more-btn">Learn More</a>
                         </div>
 
-                        
+
                     </div>
 
                     <div class="mobile-service-item">
@@ -723,7 +738,7 @@
 
                             <a href="#" class="second-section-learn-more-btn">Learn More</a>
                         </div>
-                       
+
                     </div>
                     <div class="mobile-service-item">
 
@@ -754,7 +769,7 @@
                             <h4> &#8226; Sourcing to Obtain<br> &#8226; Acquire to Integrate</h4>
                             <a href="#" class="second-section-learn-more-btn">Learn More</a>
                         </div>
-                        
+
                     </div>
 
                 </div>
@@ -835,7 +850,6 @@
 
 
 
-
     <footer>
         <div class="main-footer">
 
@@ -890,7 +904,6 @@
                         <li>Projectors</li>
                         <li>Screens</li>
 
-
                     </ul>
                 </div>
 
@@ -913,7 +926,6 @@
                     </div>
                 </div>
 
-
             </div>
 
             <div class="copyrights-legal">
@@ -929,12 +941,11 @@
 
 
 
-
     </footer>
 
     <script>
 
-        
+
         const bgWrapper = document.getElementById("parallax-bg");
 
         window.addEventListener("scroll", () => {
@@ -949,52 +960,88 @@
 
 
 
-<!--  --------------  header ------------------- -->
-<script>
-    let lastScrollTop = 0;
-    const header = document.querySelector("header");
+    <!--  --------------  header ------------------- 
+    <script>
+        let lastScrollTop = 0;
+        const header = document.querySelector("header");
 
-    window.addEventListener("scroll", function () {
-        if (window.innerWidth <= 900) {  // Only apply on mobile
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        window.addEventListener("scroll", function () {
+            if (window.innerWidth <= 900) {  // Only apply on mobile
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-            if (scrollTop > lastScrollTop + 10) {
-                // Scrolling down - hide header
-                header.classList.add("hide-header");
-            } else if (scrollTop < lastScrollTop - 10) {
-                // Scrolling up - show header
-                header.classList.remove("hide-header");
-            }
-
-            lastScrollTop = Math.max(scrollTop, 0);
-        }
-    });
-</script>
-
-
-
-
-<!--  ---------------  Sevices ---------------- -->
-
-    
-
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const cards = document.querySelectorAll('.services-icon');
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+                if (scrollTop > lastScrollTop + 10) {
+                    // Scrolling down - hide header
+                    header.classList.add("hide-header");
+                } else if (scrollTop < lastScrollTop - 10) {
+                    // Scrolling up - show header
+                    header.classList.remove("hide-header");
                 }
-            });
-        }, {
-            threshold: 0.4
-        });
 
-        cards.forEach(card => observer.observe(card));
-    });
-</script>
+                lastScrollTop = Math.max(scrollTop, 0);
+            }
+        });
+    </script> -->
+
+    <!--   ----------- header mobile ------------- -->
+
+    <script>
+        const header = document.querySelector("header");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 10) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+    <!--  ---------------  Sevices ---------------- -->
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const cards = document.querySelectorAll('.services-icon');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.4
+            });
+
+            cards.forEach(card => observer.observe(card));
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.getElementById("menu-toggle");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const header = document.querySelector("header");
+
+            menuToggle.addEventListener("click", function () {
+                const headerHeight = header.offsetHeight + "px";
+                mobileMenu.style.setProperty("--menu-offset", headerHeight);
+
+                mobileMenu.classList.toggle("active");
+                header.classList.toggle("menu-open");
+            });
+
+            const mobileLinks = mobileMenu.querySelectorAll("a");
+            mobileLinks.forEach(link => {
+                link.addEventListener("click", () => {
+                    mobileMenu.classList.remove("active");
+                    header.classList.remove("menu-open");
+                });
+            });
+        });
+    </script>
 
 
 </body>
