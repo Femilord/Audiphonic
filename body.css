@@ -1,18 +1,41 @@
 /* Base styles (for very large screens or as a default) */
 * {
     box-sizing: border-box;
-
+    /* outline: 1px solid red; */
+    /*  ------ debugging only ------ */
 }
 
 
 
-html,
+
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     max-width: 100%;
 
     overflow-x: hidden;
+}
+
+.page-wrapper {
+    overflow-x: clip;
+    /* background-color: #f2f2f2; */
+    /*  ----- Just an idea to fix glare (i may come back to it) -------*/
+}
+
+
+body::-webkit-scrollbar {
+    width: 8px;
+    /* Or any size you prefer */
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Customize thumb */
+    border-radius: 10px;
 }
 
 
@@ -25,7 +48,7 @@ body {
 
 
 .first-section-wrapper {
-    overflow-x: hidden;
+    overflow: hidden;
     position: relative;
     width: 100%;
 }
@@ -183,50 +206,6 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-
-
-
-/*
-.first-section-wrapper {
-    overflow-x: hidden;
-    position: relative;
-    width: 100%;
-}
-
-.first-section-background {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 110vw;
-    min-height: 100vh;
-    left: -5vw;
-    top: -3vh;
-    transition: transform 0.4s ease-out;
-    padding: 16px;
-    position: relative;
-    overflow: hidden;
-}
-
-.background-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 110vw;
-    height: 100vh;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-    z-index: 0;
-    pointer-events: none;
-  /*  opacity: 0.6; */
-}
-
-.video-gradient-overlay {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 104, 102, 0.2));
-    z-index: 1;
-}
 
 .section-wrapper {
     max-width: 1200px;
@@ -538,6 +517,8 @@ body {
 
 /* Medium Devices (e.g., Tablets, 769px to 991px)  */
 @media (min-width: 769px) and (max-width: 993px) {
+
+
     .first-section-background {
         flex-direction: column;
         min-height: 60vh;
@@ -825,16 +806,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
     background-color: #ffffff;
-    overflow: hidden;
     text-align: center;
 }
 
 .section-lines-wrapper {
     width: 100%;
     max-width: 1200px;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -847,12 +825,20 @@ body {
 
 .drop-email-box {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1080px;
+}
+
+/* Desktop layout group */
+.cta-desktop {
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     flex-wrap: wrap;
     gap: 30px;
-    max-width: 1080px;
-    width: 100%;
 }
 
 .cta-column-01,
@@ -907,6 +893,11 @@ body {
 .email-form button:hover {
     background-color: #000;
     color: white;
+}
+
+/* Mobile CTA defaults to hidden */
+.mobile-cta-row {
+    display: none;
 }
 
 /* ------------------------- Services --------------------------*/
@@ -2625,56 +2616,144 @@ body {
 /* Update the existing media query to be more specific for smaller screens. */
 /* --- New CSS for Mobile/Desktop Switching --- */
 @media (max-width: 900px) {
-    /*
-            .services-section {
-                padding: 10px 0;
-               
-                margin-bottom: 0;
-            }
-    
-            .services-box {
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 0;
-                padding-top: 0;
-                
-            }
-    
-            .services-icon {
-                position: relative;
-                transform: translateY(50px);
-                opacity: 0;
-                width: 90%;
-                max-width: 380px;
-                margin-bottom: -80px;
-               
-              
-                z-index: 1;
-                transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-            }
-    
-            .services-icon.show {
-                transform: translateY(0);
-                opacity: 1;
-                z-index: 10;
-                margin-bottom: 40px;
-               
-            }
-    
-            .line-divide {
-                display: none;
-            }
-        
-  
-*/
+   
+/* -------------- call us ------------- */
+
+.section-lines-wrapper {
+        padding: 0;
+        border: none;
+    }
 
 
+
+    .cta-desktop {
+        display: none;
+    }
+
+    .mobile-cta-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 12px;
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .call-now-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 40px;
+        padding: 0 16px;
+        background-color: #000;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 0.85rem;
+        border-radius: 25px;
+        transition: background-color 0.3s ease;
+        white-space: nowrap;
+
+        flex: 0 0 auto;
+        /* ✅ prevent it from stretching */
+    }
+
+    .call-now-btn:hover {
+        background-color: #222;
+    }
+
+    .or-inline {
+        font-size: 0.85rem;
+        color: #666;
+        white-space: nowrap;
+    }
+
+    .email-form-inline {
+        position: relative;
+        flex-grow: 1;
+        /* ✅ grow as much as possible */
+        display: flex;
+        align-items: center;
+        min-width: 0;
+        /* ✅ prevent overflow */
+    }
+
+    .email-form-inline input[type="email"] {
+        width: 100%;
+        height: 40px;
+        padding: 14px 50px 14px 16px;
+        font-size: 0.95rem;
+        border: 1px solid #ccc;
+        border-radius: 999px;
+        outline: none;
+        box-sizing: border-box;
+    }
+
+   .email-form-inline button {
+       position: absolute;
+       top: 50%;
+       right: 5.5px;
+       transform: translateY(-50%);
+       background-color: #00F0FF;
+       color: #000;
+       border: none;
+       height: 30px;
+       width: 70px;
+       /* ✅ Force it wider */
+       border-radius: 999px;
+       cursor: pointer;
+       font-size: .90rem;
+       font-weight: 400;
+       transition: background-color 0.3s ease;
+       white-space: nowrap;
+       text-align: center;
+   }
+
+   .email-form-inline button:hover {
+       background-color: #000;
+       color: #fff;
+   }
+
+
+   .email-form-inline input[type="email"] {
+       padding: 14px 80px 14px 10px;
+       /* right side = room for button */
+   }
+
+
+
+    .mobile-cta-row.sticky-bottom {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 12px 16px;
+        background: #fff;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
+        border-top: 1px solid #eee;
+        z-index: 9999;
+    }
+
+    #mobileCtaWrapper {
+        height: auto;
+    }
+
+    #mobileCtaWrapper.fixed-height {
+        height: 84px;
+        /* same as sticky CTA height: 50px + padding */
+    }
+
+/* ------------ services ------------- */
 
     .services-section {
         overflow-x: hidden;
-        padding: 60px 20px;
+        padding-top: 20px;
+
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 0;
     }
 
     .services-lines-wrapper {
@@ -2685,7 +2764,7 @@ body {
     .services-box {
         display: flex;
         flex-direction: column;
-        gap: 60px;
+        gap: 30px;
         align-items: center;
     }
 
@@ -2723,7 +2802,7 @@ body {
     /* ----------------- av- text -header ----------- */
 
     .av-heading-container {
-        margin-top: 10px;
+        margin-top: 0;
         border-top: 1px solid rgb(234, 234, 234);
     }
 
@@ -2915,7 +2994,7 @@ body {
         justify-content: center;
         align-items: center;
         gap: 30px;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
         padding-bottom: 30px;
         /*    border-bottom: 2px dashed #b0b0b0; */
         box-sizing: border-box;
@@ -2936,8 +3015,20 @@ body {
 
     }
 
+    .mobile-panel-wrapper {
+order: 2;
+width: 90%;
+border: 1.5px solid rgb(255, 255, 255);
+border-radius: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+box-shadow: 0 4px 25px rgba(79, 79, 79, 0.3);
+
+    }
+
     .mobile-panel-content {
-        order: 2;
+       
         width: 90%;
 
         display: flex;
@@ -2947,7 +3038,7 @@ body {
         background-color: #f3fcfa; 
         box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
         border-radius: 16px; */
-        margin-top: 35px;
+        margin-top: 20px;
         /* background: linear-gradient(130deg, #9ff9ff, #ccfafe, #ffffff); */
 
     }
@@ -2962,6 +3053,7 @@ body {
         border-radius: 8px;
         object-fit: cover;
         filter: drop-shadow(3px 10px 10px rgba(0, 0, 0, 0.4));
+        padding-bottom: 20px;
     }
 
     .mobile-content-block h3 {
@@ -3029,60 +3121,140 @@ body {
 
 
 @media (max-width: 768px) {
-    .drop-email {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 0;
+
+    
+
+    /* -------- call us --------- */
+
+    .section-lines-wrapper {
+        padding: 0;
+        border: none;
     }
 
 
-    .cta-column-01 {
+
+    .cta-desktop {
+        display: none;
+    }
+
+    .mobile-cta-row {
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 12px;
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .call-now-btn {
+        display: inline-flex;
         align-items: center;
         justify-content: center;
-        text-align: center;
+
+        height: 40px;
+        padding: 0 16px;
+        background-color: #000;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 0.85rem;
+        border-radius: 25px;
+        transition: background-color 0.3s ease;
+        white-space: nowrap;
+
+        flex: 0 0 auto;
+        /* ✅ prevent it from stretching */
     }
 
-    .cta-title {
-        width: 300px;
-        font-size: 1rem;
-        font-weight: 500;
-        line-height: 1.4;
-        color: #222;
-        text-align: left;
+    .call-now-btn:hover {
+        background-color: #222;
     }
 
-    .email-form {
-        flex-direction: column;
+    .or-inline {
+        font-size: 0.85rem;
+        color: #666;
+        white-space: nowrap;
+    }
+
+    .email-form-inline {
+        position: relative;
+        flex-grow: 1;
+        /* ✅ grow as much as possible */
+        display: flex;
         align-items: center;
+        min-width: 0;
+        /* ✅ prevent overflow */
+    }
+
+    .email-form-inline input[type="email"] {
         width: 100%;
+        height: 40px;
+        padding: 14px 50px 14px 16px;
+        font-size: 0.95rem;
+        border: 1px solid #ccc;
+        border-radius: 999px;
+        outline: none;
+        box-sizing: border-box;
     }
 
-    .email-form input,
-    .email-form button {
-        width: 100%;
-        max-width: 300px;
+   .email-form-inline button {
+       position: absolute;
+       top: 50%;
+       right: 5.5px;
+       transform: translateY(-50%);
+       background-color: #00F0FF;
+       color: #000;
+       border: none;
+       height: 30px;
+       width: 70px;
+       /* ✅ Force it wider */
+       border-radius: 999px;
+       cursor: pointer;
+       font-size: .90rem;
+       font-weight: 400;
+       transition: background-color 0.3s ease;
+       white-space: nowrap;
+       text-align: center;
+   }
+
+   .email-form-inline button:hover {
+       background-color: #000;
+       color: #fff;
+   }
+
+
+   .email-form-inline input[type="email"] {
+       padding: 14px 80px 14px 10px;
+       /* right side = room for button */
+   }
+
+
+
+    .mobile-cta-row.sticky-bottom {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 12px 16px;
+        background: #fff;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
+        border-top: 1px solid #eee;
+        z-index: 9999;
     }
 
-    .cta-wrapper {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
+    #mobileCtaWrapper {
+        height: auto;
     }
 
-    .email-form input,
-    .email-form button,
-    .whatsapp-button {
-        width: 100%;
-        max-width: 300px;
+    #mobileCtaWrapper.fixed-height {
+        height: 84px;
+        /* same as sticky CTA height: 50px + padding */
     }
 
 
+   
 }
-
-
-
 
 
 @media (max-width: 576px) {
@@ -3148,6 +3320,135 @@ body {
         margin-right: 50px;
         /* Even smaller margin */
     }
+
+/* -------------- call us -------------*/
+
+.section-lines-wrapper {
+    padding: 0;
+    border: none;
+}
+
+
+
+.cta-desktop {
+    display: none;
+}
+
+.mobile-cta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 12px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.call-now-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 40px;
+    padding: 0 16px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.85rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+
+    flex: 0 0 auto;
+    /* ✅ prevent it from stretching */
+}
+
+.call-now-btn:hover {
+    background-color: #222;
+}
+
+.or-inline {
+    font-size: 0.85rem;
+    color: #666;
+    white-space: nowrap;
+}
+
+.email-form-inline {
+    position: relative;
+    flex-grow: 1;
+    /* ✅ grow as much as possible */
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    /* ✅ prevent overflow */
+}
+
+.email-form-inline input[type="email"] {
+    width: 100%;
+    height: 40px;
+    padding: 14px 50px 14px 16px;
+    font-size: 0.95rem;
+    border: 1px solid #ccc;
+    border-radius: 999px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.email-form-inline button {
+    position: absolute;
+    top: 50%;
+    right: 5.5px;
+    transform: translateY(-50%);
+    background-color: #00F0FF;
+    color: #000;
+    border: none;
+    height: 30px;
+    width: 70px;
+    /* ✅ Force it wider */
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: .90rem;
+    font-weight: 400;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.email-form-inline button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+
+.email-form-inline input[type="email"] {
+    padding: 14px 80px 14px 10px;
+    /* right side = room for button */
+}
+
+
+
+.mobile-cta-row.sticky-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px 16px;
+    background: #fff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
+    border-top: 1px solid #eee;
+    z-index: 9999;
+}
+
+#mobileCtaWrapper {
+    height: auto;
+}
+
+#mobileCtaWrapper.fixed-height {
+    height: 84px;
+    /* same as sticky CTA height: 50px + padding */
+}
+
 
 
     /* -------- Av-header -------------*/
@@ -3243,3 +3544,21 @@ body {
         padding: 10px 16px;
     }
 }
+
+/*
+@media (max-width: 400px) {
+    .mobile-cta-row {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .or-inline {
+        margin: 6px 0;
+    }
+
+    .call-now-btn {
+        margin-bottom: 6px;
+    }
+}
+    */

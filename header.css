@@ -4,6 +4,8 @@ body {
     overflow-x: hidden;
 }
 
+
+
 * {
     margin: 0;
     padding: 0;
@@ -207,6 +209,10 @@ header {
         box-shadow: none;
         border-bottom: none;
         transition: background-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+        overflow-x: hidden;
+        padding-top: calc(env(safe-area-inset-top, 20px) + 18px);
+            /* 18px is your normal padding */
+            padding-bottom: 18px;
     }
 
     /* When user scrolls */
@@ -216,6 +222,7 @@ header {
         -webkit-backdrop-filter: blur(10px);
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        overflow-x: hidden;
     }
 
     /* When hamburger menu is open */
@@ -225,6 +232,7 @@ header {
         -webkit-backdrop-filter: blur(10px);
         box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        overflow-x: hidden;
     }
 
     /* If both scrolling and menu-open happen, keep menu-open as priority */
@@ -232,6 +240,7 @@ header {
         background-color: rgba(0, 0, 0, 0.85);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
+        overflow-x: hidden;
     }
 
 
@@ -241,6 +250,7 @@ header {
         flex-wrap: nowrap;
         padding-left: 10px;
         padding-right: 10px;
+        overflow-x: hidden;
     }
 
     .nav-menu {
