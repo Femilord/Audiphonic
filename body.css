@@ -61,7 +61,7 @@ body::-webkit-scrollbar-thumb {
 /* Custom Font */
 @font-face {
     font-family: 'blair';
-    src: url(./blairfonts/BlairMdITCTTMedium.ttf);
+    src: url(../blairfonts/BlairMdITCTTMedium.ttf);
 }
 
 /* ========================================
