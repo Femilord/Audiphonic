@@ -61,7 +61,7 @@ body::-webkit-scrollbar-thumb {
 /* Custom Font */
 @font-face {
     font-family: 'blair';
-    src: url(/blairfonts/BlairMdITCTTMedium.ttf);
+    src: url(./blairfonts/BlairMdITCTTMedium.ttf);
 }
 
 /* ========================================
@@ -120,7 +120,7 @@ body::-webkit-scrollbar-thumb {
     font-size: clamp(1.8rem, 3vw, 4rem);
     font-weight: bold;
     margin: 0;
-    font-family: 'blair', 'Montserrat';
+    font-family: 'blair', 'Montserrat', sans-serif;
 }
 
 .tag-line h1 {
