@@ -60,9 +60,13 @@ body::-webkit-scrollbar-thumb {
 
 /* Custom Font */
 @font-face {
-    font-family: 'blair';
-    src: url(blairfonts/BlairMdITCTTMedium.ttf);
-}
+    font-family: "Blair";
+        src: url("./fonts/BlairMdITCTTMedium.woff2") format("woff2"),
+            url("./fonts/BlairMdITCTTMedium.woff") format("woff");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
 
 /* ========================================
    HERO SECTION
