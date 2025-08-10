@@ -447,6 +447,10 @@ body::-webkit-scrollbar-thumb {
     border: 1px solid #afafaf;
 }
 
+.services-section-mobile-only {
+    display: none;
+}
+
 /* ========================================
    AUDIO VISUALS HEADER
    ======================================== */
