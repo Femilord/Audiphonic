@@ -122,16 +122,16 @@ header {
     /* Set to top of viewport */
     left: 0;
     right: 0;
-   /* background-color: #fff; */
+    /* background-color: #fff; */
 
     background-color: rgba(0, 0, 0, 0.20);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     z-index: 9990;
     padding: 100px 20px 20px 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     transform: translateY(var(--menu-offset, 70px));
-     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     /* new: use CSS variable */
 }
 
@@ -149,7 +149,7 @@ header {
     color: aliceblue;
     font-weight: 500;
     padding: 10px;
-    
+
     transition: background-color 250ms ease;
 }
 
@@ -173,7 +173,7 @@ header {
 
 /* ========= RESPONSIVE STYLES (Mobile Only) ========= */
 @media (max-width: 950px) {
-  
+
 
     header {
         background-color: transparent;
@@ -185,9 +185,9 @@ header {
         transition: background-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
         overflow-x: hidden;
         padding-top: calc(env(safe-area-inset-top, 20px) + 18px);
-            /* 18px is your normal padding */
-            padding-bottom: 18px;
-           
+        /* 18px is your normal padding */
+        padding-bottom: 18px;
+
     }
 
     /* When user scrolls */
@@ -198,7 +198,7 @@ header {
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         overflow-x: hidden;
-       
+
     }
 
     /* When hamburger menu is open */
@@ -278,5 +278,5 @@ header {
         padding: 20px 20px 20px 20px;
     }
 
-  
+
 }
