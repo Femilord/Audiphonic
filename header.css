@@ -113,20 +113,7 @@ header {
     color: #000;
 }
 
-/* ========= MOBILE MENU ========= 
-.mobile-menu {
-    display: none;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    border-top: 1px solid #ddd;
-    z-index: 9;
-    padding: 40px 20px 20px 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-*/
+/* ========= MOBILE MENU ========= */
 
 .mobile-menu {
     display: none;
@@ -135,11 +122,16 @@ header {
     /* Set to top of viewport */
     left: 0;
     right: 0;
-    background-color: #fff;
+   /* background-color: #fff; */
+
+    background-color: rgba(0, 0, 0, 0.20);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     z-index: 9990;
-    padding: 40px 20px 20px 20px;
+    padding: 100px 20px 20px 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     transform: translateY(var(--menu-offset, 70px));
+     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     /* new: use CSS variable */
 }
 
@@ -154,10 +146,10 @@ header {
 
 .mobile-menu a {
     text-decoration: none;
-    color: #000;
+    color: aliceblue;
     font-weight: 500;
     padding: 10px;
-    border-radius: 6px;
+    
     transition: background-color 250ms ease;
 }
 
@@ -181,25 +173,7 @@ header {
 
 /* ========= RESPONSIVE STYLES (Mobile Only) ========= */
 @media (max-width: 950px) {
-    /*  header {
-        background-color: transparent;
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-        padding: 18px 16px;
-        box-shadow: none;
-        border-bottom: none;
-        transition: background-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    header.scrolled {
-        background-color: rgba(0, 0, 0, 0.15);
-      
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    } 
-    */
+  
 
     header {
         background-color: transparent;
@@ -213,21 +187,23 @@ header {
         padding-top: calc(env(safe-area-inset-top, 20px) + 18px);
             /* 18px is your normal padding */
             padding-bottom: 18px;
+           
     }
 
     /* When user scrolls */
     header.scrolled {
-        background-color: rgba(0, 0, 0, 0.15);
+        background-color: rgba(0, 0, 0, 0.20);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         overflow-x: hidden;
+       
     }
 
     /* When hamburger menu is open */
     header.menu-open {
-        background-color: rgba(0, 0, 0, 0.85);
+        background-color: rgba(0, 0, 0, 0.15);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
@@ -237,7 +213,7 @@ header {
 
     /* If both scrolling and menu-open happen, keep menu-open as priority */
     header.scrolled.menu-open {
-        background-color: rgba(0, 0, 0, 0.85);
+        background-color: rgba(0, 0, 0, 0.20);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         overflow-x: hidden;
@@ -299,6 +275,8 @@ header {
     }
 
     .mobile-menu {
-        padding: 20px 20px 10px 20px;
+        padding: 20px 20px 20px 20px;
     }
+
+  
 }
