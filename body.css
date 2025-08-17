@@ -1738,7 +1738,6 @@ margin-top: 0;
         margin-right: 100px;
         background-color: rgba(0, 0, 0, 0.5);
     }
-
 }
 
 /* Desktop */
@@ -1787,9 +1786,6 @@ margin-top: 0;
 }
 
 @media (max-width: 1079px) and (min-width: 994px) {
-
-
-
 
     .left-section-content {
 
@@ -1951,7 +1947,6 @@ margin-top: 0;
         gap: 12px;
         width: 100%;
         margin-top: 5px;
-
     }
 
     .call-now-btn {
@@ -2041,7 +2036,6 @@ margin-top: 0;
     #mobileCtaWrapper.fixed-height {
         height: 84px;
     }
-
 
 
     /* --------- Services Section Mobile --------- */
@@ -2474,7 +2468,6 @@ margin-top: 0;
 
     .noise-factors {
         margin-bottom: 20px;
-
         color: aliceblue;
         font-size: 1.1rem;
         font-weight: 500;
@@ -2555,7 +2548,6 @@ margin-top: 0;
         /* Add space after paragraphs */
     }
 
-
     .noise-factors {
         margin-bottom: 20px;
 
@@ -2587,17 +2579,12 @@ margin-top: 0;
         /* More spacing around button */
     }
 
-
-
     .learn-more-btn a {
         padding: 5px 25px;
         /* Keep original padding */
         font-size: inherit;
         /* Keep original font size */
     }
-
-
-
 
 
     /* -------------- Services --------------- */
