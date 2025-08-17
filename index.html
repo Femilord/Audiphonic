@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="footer.css" />
     <link rel="stylesheet" href="general.css" />
     <script src="/main.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet" />
+        rel="stylesheet">
 </head>
 
 <body>
@@ -103,6 +103,11 @@
 
                         <div class="right-section-content">
 
+                            <div class="noise-factors">
+                                <p><span class="static-text">Noise Sources - </span><span class="changing-text"
+                                        id="changingText">Vehicular
+                                        Activities</span></p>
+                            </div>
                             <div class="scrolling-mask">
                                 <div class="scrolling-track">
                                     <img src="img/noisy/new-girl-covers-ears.webp" alt="" />
@@ -172,12 +177,17 @@
             <section class="services-section">
 
                 <div class="services-lines-wrapper">
+                    <div class="our-services">
+                        <h2>Our Services</h2>
+                    </div>
                     <div class="services-box">
 
                         <div class="services-icon">
                             <a href="services.html" class="services-link-top"> <img class="services-img"
                                     src="img/speaker-sound-audio-black.webp" alt="">
-                                <h3>Soundproofing</h3>
+                                <div class="animated-heading">
+                                    <h2>Soundproofing</h2>
+                                </div>
                                 <p class="about">Noice Isolation and/or Insulation of your space. </p>
                             </a>
                             <p>Soundproofing is the process of blocking or
@@ -197,7 +207,9 @@
                         <div class="services-icon">
                             <a href="services.html" class="services-link-top"> <img class="services-img"
                                     src="img/eq-acoustics.webp" alt="">
-                                <h3>Acoustics</h3>
+                                <div class="animated-heading">
+                                    <h2>Acoustics</h2>
+                                </div>
                                 <p class="about">Control Sound reflection(echo) within your space.
                                 </p>
                             </a>
@@ -218,7 +230,9 @@
                         <div class="services-icon">
                             <a href="services.html" class="services-link-top"> <img class="services-img"
                                     src="img/audio-visuals.webp" alt="">
-                                <h3>Audio-visuals</h3>
+                                <div class="animated-heading">
+                                    <h2>Audio-visuals</h2>
+                                </div>
                                 <p class="about">Design and Integration of Audio-Visuals for your Space.</p>
                             </a>
                             <p>Audio-Visuals (AV) encompass
@@ -469,22 +483,12 @@
             </section>
 
 
-
-
-
             <section class="third-section">
-
                 <div class="desktop-only">
-
                     <div class="sroll-container-wrapper">
-
-
-
                         <div class="scroll-container" id="section2">
                             <div class="third-section-top-spacer"></div>
-
                             <div class="sticky-side-wrapper">
-
 
                                 <p>Our Service <br>
                                     Delivery Channels
@@ -494,7 +498,6 @@
                                     <span class="arrow">&#10141;</span>
                                     <!--<span class="arrow">&#10141;</span> -->
                                 </p>
-
 
                                 <div class="sticky-side">
                                     <div class="panel-content" data-index="0">
@@ -518,10 +521,6 @@
                             </div>
 
                             <div class="text-side">
-
-
-
-
 
                                 <div class="text-content-block" data-index="0">
 
@@ -562,11 +561,8 @@
 
                                     <h4> &#8226; Planned Creation <br> &#8226; Purposeful Intent </h4>
 
-
                                     <a href="#" class="second-section-learn-more-btn">Learn More</a>
                                 </div>
-
-
 
                                 <div class="text-content-block" data-index="2">
 
@@ -590,8 +586,6 @@
                                     <a href="#" class="second-section-learn-more-btn">Learn More</a>
                                 </div>
 
-
-
                                 <div class="text-content-block" data-index="3">
 
                                     <h3>Procurement<br>and Installation</h3>
@@ -614,15 +608,11 @@
                                     <h4> &#8226; Sourcing to Obtain<br> &#8226; Acquire to Integrate</h4>
                                     <a href="#" class="second-section-learn-more-btn">Learn More</a>
                                 </div>
-
-
                             </div>
 
                         </div>
                     </div>
                 </div>
-
-
 
 
                 <div class="mobile-only">
@@ -761,8 +751,6 @@
                     </div>
                 </div>
 
-
-
             </section>
 
 
@@ -830,7 +818,6 @@
                     <div class="carousel-dots" id="carouselDots"></div>
                 </div>
             </section>
-
 
         </main>
 
@@ -1142,7 +1129,82 @@
         });
     </script>
 
+    <script>
+        const noiseTexts = [
+            "Vehicular Activities...",
+            "Power Generators...",
+            "Neighbourhood Events...",
+            "Houses of Worship...",
+            "Air-Plane...",
+            "Loud Music...",
+            "Horn-Speakers...",
+            "Phone Calls...",
+            "Conversations...",
+            "Artisans..."
+        ];
 
+        let currentIndex = 0;
+        const textElement = document.getElementById('changingText');
+
+        function changeText() {
+            // Add fade effect
+            textElement.classList.add('fade');
+
+            setTimeout(() => {
+                // Change to next text
+                currentIndex = (currentIndex + 1) % noiseTexts.length;
+                textElement.textContent = noiseTexts[currentIndex];
+
+                // Remove fade effect
+                textElement.classList.remove('fade');
+            }, 250); // Half of the transition duration
+        }
+
+        // Change text every 2 seconds
+        setInterval(changeText, 2000);
+    </script>
+
+
+    <script>
+        const animatedHeadings = document.querySelectorAll('.animated-heading');
+
+        function runFullAnimation() {
+            animatedHeadings.forEach((headingBox) => {
+                const heading = headingBox.querySelector('h2');
+
+                // Reset everything
+                headingBox.classList.remove('border-animate', 'border-reset');
+                heading.style.animation = 'none';
+
+                // Force reflow
+                headingBox.offsetHeight;
+
+                // Start border animation
+                headingBox.classList.add('border-animate');
+
+                // Start text animation
+                heading.style.animation = `
+                        typewriter 1.5s steps(13) 1s forwards,
+                        blink 0.5s step-end infinite,
+                        boldEffect 0.8s ease-in-out 2.8s forwards,
+                        removeCursor 0.1s 2.5s forwards,
+                        reset 0.1s 8.9s forwards
+                    `;
+
+                // Reset border at the end
+                setTimeout(() => {
+                    headingBox.classList.remove('border-animate');
+                    headingBox.classList.add('border-reset');
+                }, 8900);
+            });
+        }
+
+        // Start first animation
+        runFullAnimation();
+
+        // Restart every 9 seconds
+        setInterval(runFullAnimation, 9000);
+    </script>
 </body>
 
 </html>
