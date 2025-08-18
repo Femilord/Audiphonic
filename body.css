@@ -1723,9 +1723,12 @@ body::-webkit-scrollbar-thumb {
     }
 
     .text-side {
-        height: 3885px;
+        height: 3890px;
+        
         gap: 220px;
         padding-top: 85px;
+    line-height: 1.2;
+            box-sizing: border-box;
     }
 
     .text-content-block {
