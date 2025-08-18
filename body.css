@@ -182,13 +182,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 .noise-factors .static-text {
-color: var(--text-light);
+    color: var(--text-light);
 }
 
 .noise-factors {
     margin-bottom: 20px;
 
-   
+
     font-size: 1.3rem;
     font-weight: 500;
 }
@@ -338,9 +338,9 @@ color: var(--text-light);
    ======================================== */
 .services-section {
     display: flex;
-    
+
     justify-content: center;
-   
+
     box-sizing: border-box;
     overflow: hidden;
     margin-top: 50px;
@@ -362,9 +362,9 @@ color: var(--text-light);
 }
 
 .our-services {
-width: 90%;
-margin-bottom: 30px;
-margin-top: 0;
+    width: 90%;
+    margin-bottom: 30px;
+    margin-top: 0;
 
 }
 
@@ -428,7 +428,7 @@ margin-top: 0;
 .animated-heading.heading-border-hide::before {
     animation: borderReset 0.1s forwards;
 }
-        
+
 
 /* Border animation */
 @keyframes borderAppear {
@@ -693,13 +693,16 @@ margin-top: 0;
     width: var(--content-max);
     display: flex;
     justify-content: center;
+   
+    
 }
 
 .av-systems-text-container {
     width: 25%;
     position: relative;
     overflow: hidden;
-    height: 430px;
+    top: -10%;
+    
     padding: 0 0 5px 0;
     box-sizing: border-box;
 }
@@ -838,7 +841,7 @@ margin-top: 0;
 }
 
 /* ========================================
-   SCROLLING SECTION
+   THIRD/SCROLLING SECTION
    ======================================== */
 .third-section {
     box-sizing: border-box;
@@ -965,11 +968,11 @@ margin-top: 0;
 
 .text-side {
     width: 540px;
-    height: 3750px;
+    height: 3780px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    padding: 20px 40px 0 0;
+    padding: 30px 40px 0 0;
     gap: 40px;
     border-left: 1px dashed var(--border-gray);
     border-right: 1px dashed var(--border-gray);
@@ -1720,9 +1723,9 @@ margin-top: 0;
     }
 
     .text-side {
-        height: 3920px;
-        gap: 250px;
-        padding-top: 58px;
+        height: 3885px;
+        gap: 220px;
+        padding-top: 85px;
     }
 
     .text-content-block {
@@ -2560,7 +2563,7 @@ margin-top: 0;
         width: 100%;
         height: 100%;
         overflow: hidden;
-         border-left: none; 
+        border-left: none;
     }
 
     .scrolling-track img {
