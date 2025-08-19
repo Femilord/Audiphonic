@@ -693,8 +693,8 @@ body::-webkit-scrollbar-thumb {
     width: var(--content-max);
     display: flex;
     justify-content: center;
-   
-    
+
+
 }
 
 .av-systems-text-container {
@@ -702,7 +702,7 @@ body::-webkit-scrollbar-thumb {
     position: relative;
     overflow: hidden;
     top: -10%;
-    
+
     padding: 0 0 5px 0;
     box-sizing: border-box;
 }
@@ -1724,11 +1724,11 @@ body::-webkit-scrollbar-thumb {
 
     .text-side {
         height: 3890px;
-        
+
         gap: 220px;
         padding-top: 85px;
-    line-height: 1.2;
-            box-sizing: border-box;
+        line-height: 1.2;
+        box-sizing: border-box;
     }
 
     .text-content-block {
@@ -1788,6 +1788,87 @@ body::-webkit-scrollbar-thumb {
 
     .tag-line p {
         font-size: clamp(1.0rem, 1vw, 1.2rem);
+    }
+
+    .sticky-side-wrapper {
+        width: 540px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        height: 600px;
+        margin-bottom: var(--section-padding);
+    }
+
+    .sticky-side-wrapper p {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin: 110px 0 100px;
+        padding-left: 40px;
+    }
+
+    .arrow {
+        display: inline-block;
+        opacity: 0.2;
+        animation: arrowFlow 1.2s infinite;
+        margin-left: 5px;
+        margin-bottom: 30px;
+    }
+
+    .arrow:nth-child(2) {
+        animation-delay: 0s;
+    }
+
+    .arrow:nth-child(3) {
+        animation-delay: 0.3s;
+    }
+
+    .arrow:nth-child(4) {
+        animation-delay: 0.6s;
+    }
+
+    .arrow:nth-child(5) {
+        animation-delay: 0.9s;
+    }
+
+    @keyframes arrowFlow {
+        0% {
+            opacity: 0.15;
+            transform: scale(1);
+        }
+
+        50% {
+            opacity: 0.8;
+            transform: scale(1.3);
+        }
+
+        100% {
+            opacity: 0.2;
+            transform: scale(1);
+        }
+    }
+
+    .sticky-side {
+        width: 500px;
+        position: sticky;
+        top: 0;
+        height: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 16px;
+        overflow: visible;
+    }
+
+    .text-side {
+        height: 3290px;
+
+    }
+
+    .text-content-block {
+        margin-top: 180px;
+
     }
 }
 
@@ -2077,7 +2158,7 @@ body::-webkit-scrollbar-thumb {
         opacity: 1;
     }
 
-    /* AV Header Mobile */
+    /* ---------------- AV Header Mobile ------------------- */
     .av-heading-container {
         margin-top: 0;
         border-top: 1px solid rgb(234, 234, 234);
@@ -2088,7 +2169,8 @@ body::-webkit-scrollbar-thumb {
         padding-left: 40px;
     }
 
-    /* AV Section Mobile */
+    /* ---------------- AV Section Mobile -------------- */
+
     .audio-visuals-section {
         height: auto;
         overflow: hidden;
@@ -2109,32 +2191,52 @@ body::-webkit-scrollbar-thumb {
         padding-bottom: 10px;
     }
 
+    
     .av-systems-text-container {
+        
         width: 100%;
-        padding: 0 15px;
-        min-height: 380px;
+
+        min-height: 300px;
         height: auto;
         margin: 0 0 5px;
+
     }
 
     .av-systems-left-text {
-        top: 50%;
-        left: 0;
+
         width: 100%;
-        transform: translateY(-50%) translateX(-100%);
+
         opacity: 0;
-        padding: 5px 30px;
+      padding: 0 0 0 18px;
         text-align: left;
         z-index: 10;
-        font-size: 0.95em;
+       
+
     }
+
+  
+
+
+    .av-text-block {
+        margin-bottom: 30px;
+
+    }
+
+    .av-text-block-02 {
+        margin-bottom: 0;
+
+    }
+
 
     .av-images-container {
         width: 95%;
         height: 250px;
-        margin: 0 20px 40px 0;
+        margin: 0 0 40px 0;
         background: linear-gradient(to top right, #0f0f0f, #1a1a1a);
     }
+
+
+
 
     .image-text {
         bottom: 10%;
@@ -2434,6 +2536,11 @@ body::-webkit-scrollbar-thumb {
         color: var(--text-light);
         outline: none;
     }
+
+    /* --------------- AV Section ---------------- */
+
+
+
 }
 
 /* Fine-tuning for very small screens (320px-400px) - Keep original tighter spacing */
