@@ -1984,7 +1984,7 @@ body::-webkit-scrollbar-thumb {
 
     .noise-factors {
         margin-bottom: 20px;
-
+        margin-left: 55px;
         color: aliceblue;
         font-size: 1.3rem;
         font-weight: 500;
@@ -2191,9 +2191,9 @@ body::-webkit-scrollbar-thumb {
         padding-bottom: 10px;
     }
 
-    
+
     .av-systems-text-container {
-        
+
         width: 100%;
 
         min-height: 300px;
@@ -2207,14 +2207,14 @@ body::-webkit-scrollbar-thumb {
         width: 100%;
 
         opacity: 0;
-      padding: 0 0 0 18px;
+        padding: 0 0 0 18px;
         text-align: left;
         z-index: 10;
-       
+
 
     }
 
-  
+
 
 
     .av-text-block {
@@ -2454,7 +2454,7 @@ body::-webkit-scrollbar-thumb {
         top: auto;
         transform: none;
         left: auto;
-        width: 100%;
+        width: 110%;
         margin: clamp(8px, 2vw, 10px) 0 clamp(15px, 4vw, 20px);
         border-left: none;
     }
@@ -2479,13 +2479,7 @@ body::-webkit-scrollbar-thumb {
         /* Responsive line height */
     }
 
-    .noise-factors {
-        margin-bottom: 20px;
 
-        color: aliceblue;
-        font-size: 1.3rem;
-        font-weight: 500;
-    }
 
     .scrolling-mask {
         width: 100%;
@@ -2581,8 +2575,9 @@ body::-webkit-scrollbar-thumb {
 
     .noise-factors {
         margin-bottom: 20px;
+        margin-left: 50px;
         color: aliceblue;
-        font-size: 1.1rem;
+        font-size: 1rem;
         font-weight: 500;
     }
 
@@ -2663,7 +2658,7 @@ body::-webkit-scrollbar-thumb {
 
     .noise-factors {
         margin-bottom: 20px;
-
+        margin-left: 58px;
         color: aliceblue;
         font-size: 1rem;
         font-weight: 500;
