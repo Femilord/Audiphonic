@@ -388,6 +388,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: column;
     transition: var(--transition-fast);
+    flex-wrap: wrap;
 }
 
 .animated-heading h2 {
@@ -752,7 +753,7 @@ body::-webkit-scrollbar-thumb {
     background-color: var(--primary-cyan);
     color: var(--text-dark);
     text-decoration: none;
-    padding: 5px 50px;
+    padding: 5px 40px;
     border-radius: 20px;
     font-weight: 500;
     font-size: 0.9rem;
@@ -1790,6 +1791,22 @@ body::-webkit-scrollbar-thumb {
         font-size: clamp(1.0rem, 1vw, 1.2rem);
     }
 
+
+    /* ------------ Services ------------ */
+    .services-box {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* --------------- AV Systems --------------- */
+
+    .audio-visuals-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* -------------- Third Section -------------- */
+
     .sticky-side-wrapper {
         width: 540px;
         display: flex;
@@ -1882,6 +1899,123 @@ body::-webkit-scrollbar-thumb {
     .section-wrapper {
         padding: 0 1rem;
     }
+
+    /* ------------- Services -------------- */
+
+    .services-box {
+        max-width: var(--content-max);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        box-sizing: border-box;
+
+
+        padding-left: 10px;
+        padding-right: 10px;
+
+    }
+
+    .services-icon {
+        width: 320px;
+        text-align: center;
+        padding: 30px 20px;
+        box-sizing: border-box;
+        box-shadow: var(--shadow-heavy2);
+        border: 1px solid rgb(228, 227, 227);
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        transition: var(--transition-fast);
+        flex-wrap: wrap;
+    }
+
+    .audio-visuals-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    /* --------------- Third Section --------------- */
+    .sticky-side {
+        width: 500px;
+        position: sticky;
+        top: 0;
+        height: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 16px;
+        overflow: visible;
+    }
+
+    .text-side {
+        height: 3790px;
+
+
+
+    }
+
+    .text-content-block {
+        margin-top: 180px;
+        padding-top: 100px;
+
+
+
+    }
+
+
+}
+
+
+
+@media (max-width: 1079px) and (min-width: 901px) {
+    .scroll-container-wrapper {
+        transform-origin: center;
+        transform: scale(calc(0.7 + (100vw - 901px) * 0.3 / 178px));
+        /* This creates a smooth scale from 0.7 at 901px to 1.0 at 1079px */
+    }
+
+    .scroll-container {
+        /* Ensure the container maintains its layout */
+        position: relative;
+        overflow: visible;
+    }
+
+    .sticky-side-wrapper {
+        /* Scale widths proportionally */
+        width: clamp(378px, calc(540px * (0.7 + (100vw - 901px) * 0.3 / 178px)), 540px);
+    }
+
+    .sticky-side {
+        /* Scale widths proportionally */
+        width: clamp(350px, calc(500px * (0.7 + (100vw - 901px) * 0.3 / 178px)), 500px);
+    }
+
+    .text-side {
+        /* Scale widths proportionally */
+        width: clamp(378px, calc(540px * (0.7 + (100vw - 901px) * 0.3 / 178px)), 540px);
+        /* Height scales automatically with transform */
+    }
+
+    .text-content-block {
+        /* Adjust padding proportionally */
+        padding-left: clamp(3.5rem, calc(5rem * (0.7 + (100vw - 901px) * 0.3 / 178px)), 5rem);
+    }
+
+    /* Optional: Adjust font sizes proportionally if needed */
+    .sticky-side-wrapper p {
+        font-size: clamp(1.26rem, calc(1.8rem * (0.7 + (100vw - 901px) * 0.3 / 178px)), 1.8rem);
+        padding-left: clamp(28px, calc(40px * (0.7 + (100vw - 901px) * 0.3 / 178px)), 40px);
+    }
+
+    .text-content-block h3 {
+        font-size: clamp(1.26rem, calc(1.8rem * (0.7 + (100vw - 901px) * 0.3 / 178px)), 1.8rem);
+    }
+
+    .text-content-block p {
+        font-size: clamp(0.7rem, calc(1.0rem * (0.7 + (100vw - 901px) * 0.3 / 178px)), 1.0rem);
+    }
 }
 
 /* Tablet */
@@ -1943,7 +2077,48 @@ body::-webkit-scrollbar-thumb {
             transform: translateX(calc(-8 * 240px - 7 * 60px));
         }
     }
+
+
+    /* ------------- Services -------------- */
+
+    .services-box {
+        max-width: var(--content-max);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-left: 7px;
+        padding-right: 7px;
+        gap: 5px;
+        box-sizing: border-box;
+    }
+
+    .services-icon {
+        width: 290px;
+        text-align: center;
+        padding: 30px 20px;
+        box-sizing: border-box;
+        box-shadow: var(--shadow-heavy2);
+        border: 1px solid rgb(228, 227, 227);
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        transition: var(--transition-fast);
+        flex-wrap: wrap;
+    }
+
+    /* ------------ AV Systems ------------- */
+
+    .audio-visuals-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
 }
+
+
+
+
 
 /* Large Mobile */
 @media (min-width: 577px) and (max-width: 768px) {
@@ -2006,9 +2181,11 @@ body::-webkit-scrollbar-thumb {
 
     .services-box {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         gap: 5px;
     }
+
+
 
 
 }
@@ -2246,6 +2423,8 @@ body::-webkit-scrollbar-thumb {
         white-space: wrap;
         z-index: 20;
     }
+
+
 
     .mobile-explore-btn {
         display: inline-block;
