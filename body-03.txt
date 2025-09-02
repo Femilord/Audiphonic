@@ -2039,8 +2039,6 @@ body::-webkit-scrollbar-thumb {
         height: auto;
         position: sticky;
         top: 80px;
-        margin-top: 140px;
-        margin-bottom: 200px;
         /* sticky still works with header offset */
     }
 
@@ -2054,10 +2052,7 @@ body::-webkit-scrollbar-thumb {
     }
 
     .text-content-block {
-        margin-top: 285px;
-        margin-bottom: 100px;
-        margin-left: 0;
-        margin-right: 0;
+        margin: 120px 0;
         padding-left: 2rem;
     }
 
@@ -2068,13 +2063,6 @@ body::-webkit-scrollbar-thumb {
     .text-content-block p {
         font-size: 0.9rem;
     }
-
-
-
-   /* .img-carousel-section {
-        margin-top: 200px;
-    } */
-
 }
 
 /* Tablet */

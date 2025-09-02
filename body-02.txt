@@ -1910,10 +1910,10 @@ body::-webkit-scrollbar-thumb {
         gap: 20px;
         box-sizing: border-box;
 
-      
-                padding-left: 10px;
-                padding-right: 10px;
-        
+
+        padding-left: 10px;
+        padding-right: 10px;
+
     }
 
     .services-icon {
@@ -1936,35 +1936,86 @@ body::-webkit-scrollbar-thumb {
     }
 
 
-/* --------------- Third Section --------------- */
-  .sticky-side {
-      width: 500px;
-      position: sticky;
-      top: 0;
-      height: 800px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-right: 16px;
-      overflow: visible;
-  }
+    /* --------------- Third Section --------------- */
+    .sticky-side {
+        width: 500px;
+        position: sticky;
+        top: 0;
+        height: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 16px;
+        overflow: visible;
+    }
 
-  .text-side {
-      height: 3790px;
-
- 
-
-  }
-
-  .text-content-block {
-      margin-top: 180px;
-      padding-top: 100px;
-    
-       
-
-  }
+    .text-side {
+        height: 3790px;
 
 
+
+    }
+
+    .text-content-block {
+        margin-top: 180px;
+        padding-top: 100px;
+
+
+
+    }
+
+
+}
+
+
+
+@media (max-width: 1079px) and (min-width: 901px) {
+    .scroll-container-wrapper {
+        transform-origin: center;
+        transform: scale(calc(0.7 + (100vw - 901px) * 0.3 / 178px));
+        /* This creates a smooth scale from 0.7 at 901px to 1.0 at 1079px */
+    }
+
+    .scroll-container {
+        /* Ensure the container maintains its layout */
+        position: relative;
+        overflow: visible;
+    }
+
+    .sticky-side-wrapper {
+        /* Scale widths proportionally */
+        width: clamp(378px, calc(540px * (0.7 + (100vw - 901px) * 0.3 / 178px)), 540px);
+    }
+
+    .sticky-side {
+        /* Scale widths proportionally */
+        width: clamp(350px, calc(500px * (0.7 + (100vw - 901px) * 0.3 / 178px)), 500px);
+    }
+
+    .text-side {
+        /* Scale widths proportionally */
+        width: clamp(378px, calc(540px * (0.7 + (100vw - 901px) * 0.3 / 178px)), 540px); 
+        /* Height scales automatically with transform */
+    }
+
+    .text-content-block {
+        /* Adjust padding proportionally */
+        padding-left: clamp(3.5rem, calc(5rem * (0.7 + (100vw - 901px) * 0.3 / 178px)), 5rem);
+    }
+
+    /* Optional: Adjust font sizes proportionally if needed */
+    .sticky-side-wrapper p {
+        font-size: clamp(1.26rem, calc(1.8rem * (0.7 + (100vw - 901px) * 0.3 / 178px)), 1.8rem);
+        padding-left: clamp(28px, calc(40px * (0.7 + (100vw - 901px) * 0.3 / 178px)), 40px);
+    }
+
+    .text-content-block h3 {
+        font-size: clamp(1.26rem, calc(1.8rem * (0.7 + (100vw - 901px) * 0.3 / 178px)), 1.8rem);
+    }
+
+    .text-content-block p {
+        font-size: clamp(0.7rem, calc(1.0rem * (0.7 + (100vw - 901px) * 0.3 / 178px)), 1.0rem);
+    }
 }
 
 /* Tablet */
@@ -2035,9 +2086,9 @@ body::-webkit-scrollbar-thumb {
         width: 100%;
         display: flex;
         justify-content: center;
-       padding-left: 7px;
-       padding-right: 7px;
-        gap: 5px; 
+        padding-left: 7px;
+        padding-right: 7px;
+        gap: 5px;
         box-sizing: border-box;
     }
 
@@ -2135,7 +2186,7 @@ body::-webkit-scrollbar-thumb {
     }
 
 
-   
+
 
 }
 
@@ -2373,7 +2424,7 @@ body::-webkit-scrollbar-thumb {
         z-index: 20;
     }
 
-   
+
 
     .mobile-explore-btn {
         display: inline-block;
