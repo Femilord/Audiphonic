@@ -2071,7 +2071,7 @@ body::-webkit-scrollbar-thumb {
 
 
 
-   /* .img-carousel-section {
+    /* .img-carousel-section {
         margin-top: 200px;
     } */
 
@@ -2116,10 +2116,18 @@ body::-webkit-scrollbar-thumb {
         top: auto;
         transform: none;
         left: auto;
-        width: 95vw;
+        width: 110vw;
         margin: 25px 0 60px;
         border-left: none;
         pointer-events: auto;
+    }
+
+    .noise-factors {
+        margin-left: 90px;
+    }
+
+    .scrolling-mask {
+        border-left: none;
     }
 
     .scrolling-track img {
@@ -2177,10 +2185,8 @@ body::-webkit-scrollbar-thumb {
 
 
 
-
-
 /* Large Mobile */
-@media (min-width: 577px) and (max-width: 768px) {
+@media (min-width: 579px) and (max-width: 768px) {
     .first-section-background {
         flex-direction: column;
         min-height: 80vh;
@@ -2210,7 +2216,7 @@ body::-webkit-scrollbar-thumb {
         top: auto;
         transform: none;
         left: auto;
-        width: 95vw;
+        width: 110vw;
         margin: 25px 0 60px;
         border-left: none;
         pointer-events: auto;
@@ -2218,7 +2224,7 @@ body::-webkit-scrollbar-thumb {
 
     .noise-factors {
         margin-bottom: 20px;
-        margin-left: 55px;
+        margin-left: 85px;
         color: aliceblue;
         font-size: 1.3rem;
         font-weight: 500;
@@ -2228,12 +2234,16 @@ body::-webkit-scrollbar-thumb {
         width: 100%;
         height: 100%;
         overflow: hidden;
-        /* border-left: 3px solid var(--text-light); */
+        border-left: none;
     }
 
     .scrolling-track img {
-        width: 240px;
+        width: clamp(150px, 25vw, 200px);
+        /* Responsive image width */
+        height: auto;
         margin-right: 60px;
+        /* Maintain aspect ratio */
+
     }
 
     /* -------- Services Section --------- */
@@ -2245,6 +2255,139 @@ body::-webkit-scrollbar-thumb {
     }
 
 
+
+    /* ------------------- Third Section -------------------- */
+
+   .mobile-only {
+       display: block;
+       background-color: var(--background-light);
+   }
+
+   .mobile-wrapper {
+       display: flex;
+       flex-direction: column;
+       padding: 0;
+   }
+
+   .mobile-title {
+       text-align: left;
+       font-size: 1.9rem;
+       font-weight: 700;
+       margin: 10px 10px 10px;
+       padding: 30px 25px;
+       padding-top: var(--section-padding);
+       color: var(--text-dark);
+   }
+
+   .mobile-service-item {
+    width: 100%;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       gap: 30px;
+       margin-bottom: 20px;
+       padding-bottom: 30px;
+       
+   }
+
+  .mobile-service-channels {
+    
+      display: flex;
+      flex-direction: row;
+     
+     
+  }
+
+  .mobile-service-channels .mobile-content-block {
+      order: 2;
+      /* push it after the panel wrapper */
+  }
+
+  .mobile-service-channels .mobile-panel-wrapper {
+      order: 1;
+      /* ensure this one comes first */
+  }
+
+   .mobile-content-block {
+       order: 1;
+       width: 100%;
+       border-top: 1px solid rgb(217, 217, 217);
+      /* background: linear-gradient(130deg, #e8e8e8, var(--secondary-cyan)); */
+      background-color: var(--secondary-cyan);
+       padding: 40px 0;
+       box-shadow: var(--shadow-light);
+   }
+
+   .mobile-panel-wrapper {
+       order: 2;
+       width: 90%;
+       border: 1px solid var(--text-light);
+     /*  border-radius: 10px; */
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       box-shadow: 0 4px 25px rgba(79, 79, 79, 0.3);
+   }
+
+
+
+
+   .mobile-panel-content {
+       width: 90%;
+       display: flex;
+       justify-content: center;
+       margin-top: 20px;
+   }
+
+   .mobile-panel-content img {
+       width: 100%;
+       max-width: 350px;
+       height: auto;
+      
+       object-fit: cover;
+       filter: drop-shadow(3px 10px 10px rgba(0, 0, 0, 0.4));
+       padding-bottom: 20px;
+   }
+
+   .mobile-content-block h3 {
+       font-size: 1.2rem;
+       margin-bottom: 10px;
+       color: var(--text-dark);
+       padding: 0 38px;
+   }
+
+   .mobile-content-block p {
+       font-size: 1rem;
+       line-height: 1.5;
+       color: #222;
+       padding: 0 38px;
+   }
+
+   .mobile-content-block-lower {
+       order: 3;
+       width: 80%;
+       padding-left: 0;
+       margin-left: 0;
+   }
+
+   .mobile-content-block-lower h4 {
+       color: #00a9b5;
+       font-size: 0.95rem;
+       font-weight: 500;
+       text-align: left;
+       margin-bottom: 10px;
+   }
+
+   .second-section-learn-more-btn {
+       order: 4;
+       max-width: fit-content;
+       align-self: flex-start;
+   }
+
+   .desktop-only {
+       display: none;
+   }
 
 
 }
@@ -2394,16 +2537,166 @@ body::-webkit-scrollbar-thumb {
         opacity: 1;
     }
 
+
+    /* Carousel Mobile */
+    .main-content-wrapper {
+        border: none;
+    }
+
+    .carousel-title-wrapper {
+        width: 100%;
+        margin: 5px;
+    }
+
+    .gallery-track {
+        width: 200%;
+    }
+
+    .gallery-slider {
+        min-width: 80vw;
+        margin: 0 4vw;
+    }
+
+    .carousel-main-title {
+        font-size: 1.8em;
+    }
+
+    .gallery-text {
+        font-size: 1em;
+        bottom: 10px;
+        left: 10px;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .av-texts-container {
+        max-width: 100%;
+        padding-left: 20px;
+    }
+
+    .mobile-content-block-lower {
+        width: 100%;
+        padding-left: 20px;
+    }
+}
+
+/* --------------------- Small Screens ------------------------- */
+
+@media screen and (min-width: 320px) and (max-width: 578px) {
+    .first-section-background {
+        flex-direction: column;
+        min-height: 50vh;
+    }
+
+    .section-wrapper {
+        flex-direction: column;
+        text-align: left;
+        align-items: center;
+        padding-left: clamp(0.75rem, 3vw, 1.25rem);
+        /* Responsive left padding */
+        padding-right: clamp(0.75rem, 3vw, 1rem);
+        /* Add right padding too */
+    }
+
+    .left-section-content {
+        max-width: 100%;
+        padding: clamp(30px, 8vw, 45px) clamp(20px, 10vw, 60px) clamp(40px, 8vw, 50px) clamp(15px, 4vw, 20px);
+        margin-top: 0;
+    }
+
+    .right-section-content {
+        position: relative;
+        top: auto;
+        transform: none;
+        left: auto;
+        width: 110%;
+        margin: clamp(8px, 2vw, 10px) 0 clamp(15px, 4vw, 20px);
+        border-left: none;
+    }
+
+    .object-clause h2 {
+        font-size: clamp(1.2rem, 4vw, 1.6rem);
+        /* Responsive heading size */
+        line-height: 1.2;
+    }
+
+    .tag-line {
+        width: clamp(85%, 5vw + 85%, 95%);
+        /* Responsive width */
+        margin: clamp(0.6rem, 2vw, 1rem) 0;
+    }
+
+    .tag-line p {
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
+        /* Responsive text size */
+        font-weight: 500;
+        line-height: clamp(1.3rem, 1vw + 1.2rem, 1.5rem);
+        /* Responsive line height */
+    }
+
+
+
+    .scrolling-mask {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        /*  border-left: 3px solid var(--text-light); */
+    }
+
+    .scrolling-track img {
+        width: clamp(120px, 25vw, 180px);
+        /* Responsive image width */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+
+    .line-divider {
+        width: clamp(120px, 30vw, 180px);
+        /* Responsive divider width */
+        height: 2px;
+        background-color: var(--text-light);
+        margin: clamp(15px, 4vw, 25px) 0;
+    }
+
+    .learn-more-btn {
+        margin: clamp(0.75rem, 3vw, 1.25rem) 0;
+    }
+
+    .learn-more-btn a {
+        display: inline-block;
+        padding: clamp(6px, 1.5vw, 8px) clamp(20px, 5vw, 30px);
+        /* Responsive button padding */
+        background-color: var(--primary-cyan);
+        color: var(--text-dark);
+        text-decoration: none;
+        border-radius: 50px;
+        transition: var(--transition-fast);
+        font-size: clamp(0.85rem, 2.5vw, 1rem);
+        /* Responsive button text */
+        min-width: 100px;
+        /* Ensure button isn't too small */
+    }
+
+    /* Hover states remain the same */
+    .learn-more-btn a:hover,
+    .learn-more-btn a:focus {
+        background-color: rgba(0, 0, 0, 0.4);
+        border: 1px solid var(--text-light);
+        color: var(--text-light);
+        outline: none;
+    }
+
+  
+
     /* ---------------- AV Header Mobile ------------------- */
     .av-heading-container {
         margin-top: 0;
-        border-top: 1px solid rgb(234, 234, 234);
+        border-top: 1px solid rgb(221, 221, 221);
+        
     }
 
-    .av-texts-container {
-        max-width: 80%;
-        padding-left: 40px;
-    }
+   
 
     /* ---------------- AV Section Mobile -------------- */
 
@@ -2509,7 +2802,7 @@ body::-webkit-scrollbar-thumb {
         display: none;
     }
 
-    /* Third Section Mobile */
+    /* --------------- Third Section Mobile ------------------ */
     .mobile-only {
         display: block;
         background-color: var(--background-light);
@@ -2525,7 +2818,7 @@ body::-webkit-scrollbar-thumb {
         text-align: left;
         font-size: 1.9rem;
         font-weight: 700;
-        margin: 40px 10px 10px;
+        margin: 10px 10px 10px;
         padding: 30px 25px;
         padding-top: var(--section-padding);
         color: var(--text-dark);
@@ -2539,6 +2832,13 @@ body::-webkit-scrollbar-thumb {
         gap: 30px;
         margin-bottom: 20px;
         padding-bottom: 30px;
+    }
+
+    .mobile-service-channels {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
     }
 
     .mobile-content-block {
@@ -2559,6 +2859,7 @@ body::-webkit-scrollbar-thumb {
         justify-content: center;
         align-items: center;
         box-shadow: 0 4px 25px rgba(79, 79, 79, 0.3);
+        margin-top: 30px;
     }
 
 
@@ -2579,6 +2880,7 @@ body::-webkit-scrollbar-thumb {
         object-fit: cover;
         filter: drop-shadow(3px 10px 10px rgba(0, 0, 0, 0.4));
         padding-bottom: 20px;
+       
     }
 
     .mobile-content-block h3 {
@@ -2598,7 +2900,8 @@ body::-webkit-scrollbar-thumb {
     .mobile-content-block-lower {
         order: 3;
         width: 80%;
-        margin-left: 30px;
+        padding-left: 0;
+        margin-left: 0;
     }
 
     .mobile-content-block-lower h4 {
@@ -2618,159 +2921,6 @@ body::-webkit-scrollbar-thumb {
     .desktop-only {
         display: none;
     }
-
-    /* Carousel Mobile */
-    .main-content-wrapper {
-        border: none;
-    }
-
-    .carousel-title-wrapper {
-        width: 100%;
-        margin: 5px;
-    }
-
-    .gallery-track {
-        width: 200%;
-    }
-
-    .gallery-slider {
-        min-width: 80vw;
-        margin: 0 4vw;
-    }
-
-    .carousel-main-title {
-        font-size: 1.8em;
-    }
-
-    .gallery-text {
-        font-size: 1em;
-        bottom: 10px;
-        left: 10px;
-        padding: 6px 10px;
-    }
-}
-
-@media (max-width: 768px) {
-    .av-texts-container {
-        max-width: 100%;
-        padding-left: 20px;
-    }
-
-    .mobile-content-block-lower {
-        width: 100%;
-        padding-left: 20px;
-    }
-}
-
-/* ---------- Small Screens -----------*/
-
-/* Responsive styles for screens 320px to 578px */
-@media screen and (min-width: 320px) and (max-width: 578px) {
-    .first-section-background {
-        flex-direction: column;
-        min-height: 50vh;
-    }
-
-    .section-wrapper {
-        flex-direction: column;
-        text-align: left;
-        align-items: center;
-        padding-left: clamp(0.75rem, 3vw, 1.25rem);
-        /* Responsive left padding */
-        padding-right: clamp(0.75rem, 3vw, 1rem);
-        /* Add right padding too */
-    }
-
-    .left-section-content {
-        max-width: 100%;
-        padding: clamp(30px, 8vw, 45px) clamp(20px, 10vw, 60px) clamp(40px, 8vw, 50px) clamp(15px, 4vw, 20px);
-        margin-top: 0;
-    }
-
-    .right-section-content {
-        position: relative;
-        top: auto;
-        transform: none;
-        left: auto;
-        width: 110%;
-        margin: clamp(8px, 2vw, 10px) 0 clamp(15px, 4vw, 20px);
-        border-left: none;
-    }
-
-    .object-clause h2 {
-        font-size: clamp(1.2rem, 4vw, 1.6rem);
-        /* Responsive heading size */
-        line-height: 1.2;
-    }
-
-    .tag-line {
-        width: clamp(85%, 5vw + 85%, 95%);
-        /* Responsive width */
-        margin: clamp(0.6rem, 2vw, 1rem) 0;
-    }
-
-    .tag-line p {
-        font-size: clamp(0.9rem, 3vw, 1.1rem);
-        /* Responsive text size */
-        font-weight: 500;
-        line-height: clamp(1.3rem, 1vw + 1.2rem, 1.5rem);
-        /* Responsive line height */
-    }
-
-
-
-    .scrolling-mask {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        /*  border-left: 3px solid var(--text-light); */
-    }
-
-    .scrolling-track img {
-        width: clamp(120px, 25vw, 180px);
-        /* Responsive image width */
-        height: auto;
-        /* Maintain aspect ratio */
-    }
-
-    .line-divider {
-        width: clamp(120px, 30vw, 180px);
-        /* Responsive divider width */
-        height: 2px;
-        background-color: var(--text-light);
-        margin: clamp(15px, 4vw, 25px) 0;
-    }
-
-    .learn-more-btn {
-        margin: clamp(0.75rem, 3vw, 1.25rem) 0;
-    }
-
-    .learn-more-btn a {
-        display: inline-block;
-        padding: clamp(6px, 1.5vw, 8px) clamp(20px, 5vw, 30px);
-        /* Responsive button padding */
-        background-color: var(--primary-cyan);
-        color: var(--text-dark);
-        text-decoration: none;
-        border-radius: 50px;
-        transition: var(--transition-fast);
-        font-size: clamp(0.85rem, 2.5vw, 1rem);
-        /* Responsive button text */
-        min-width: 100px;
-        /* Ensure button isn't too small */
-    }
-
-    /* Hover states remain the same */
-    .learn-more-btn a:hover,
-    .learn-more-btn a:focus {
-        background-color: rgba(0, 0, 0, 0.4);
-        border: 1px solid var(--text-light);
-        color: var(--text-light);
-        outline: none;
-    }
-
-    /* --------------- AV Section ---------------- */
-
 
 
 }
