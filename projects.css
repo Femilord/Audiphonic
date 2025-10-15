@@ -1,0 +1,419 @@
+/* ========================================
+   CSS VARIABLES & RESET
+   ======================================== */
+
+:root {
+
+    /* Header */
+    --header-height: 87px;
+
+    /* Colors */
+    --primary-cyan: #00F0FF;
+    --secondary-cyan: #B5F7FB;
+    --accent-teal: #00C1CF;
+    --text-dark: #000000;
+    --text-light: #ffffff;
+    --text-muted: #666666;
+    --background-dark: #00848e;
+    --background-darker: #000000;
+    --background-light: #f3fcfa;
+
+    --border-light: #f3f3f3;
+    --border-gray: #dddddd;
+
+    /* Spacing */
+    --container-max: 1200px;
+    --content-max: 1080px;
+    --section-padding: 100px;
+    --mobile-padding: 20px;
+
+    /* Transitions */
+    --transition-fast: 0.3s ease;
+    --transition-slow: 0.6s ease;
+
+    /* Shadows */
+    --shadow-light: 0 4px 14px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 8px 25px rgba(0, 125, 134, 0.5);
+    --shadow-heavy: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --shadow-heavy2: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+body {
+
+    font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+.services-banner {
+    width: 100%;
+    height: 600px;
+    /* Fixed height instead of 80vh */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--header-height);
+    background-color: var(--background-darker);
+}
+
+.hero-banner {
+    width: 100%;
+    max-width: 1200px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Fixed height instead of 60vh */
+    /* background-color: #2c3e50; */
+
+}
+
+.hero-content-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: slideshow 15s infinite;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Stagger the animations for each slide */
+.slide-1 {
+    animation-delay: 0s;
+}
+
+.slide-2 {
+    animation-delay: 5s;
+}
+
+.slide-3 {
+    animation-delay: 10s;
+}
+
+@keyframes slideshow {
+    0% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    6.67% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    33.33% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    40% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+}
+
+.services-two {
+    width: 100%;
+   
+   min-height: 100vh;
+    background-color: var(--background-light);
+}
+
+
+.services-section {
+    display: flex;
+
+    justify-content: center;
+
+    box-sizing: border-box;
+    overflow: hidden;
+
+
+}
+
+.services-lines-wrapper {
+    max-width: var(--container-max);
+    width: 100%;
+    margin: 50px auto;
+    border-left: 1px solid var(--border-light);
+    border-right: 1px solid var(--border-light);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin-top: 10px
+}
+
+.our-services {
+    width: 90%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+
+}
+
+.services-box {
+    max-width: var(--content-max);
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 40px;
+    box-sizing: border-box;
+
+}
+
+.services-icon {
+    width: 350px;
+    text-align: center;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    box-shadow: var(--shadow-heavy2);
+    border: 1px solid rgb(228, 227, 227);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition-fast);
+    flex-wrap: wrap;
+}
+
+.animated-heading h2 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+    color: #2c3e50;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    border-right: 1.5px solid #e74c3c;
+    animation:
+        typewriter 1.5s steps(13) 1s forwards,
+        blink 0.5s step-end infinite,
+        boldEffect 0.8s ease-in-out 2.8s forwards,
+        removeCursor 0.1s 2.5s forwards,
+        reset 0.1s 8.9s forwards;
+}
+
+.animated-heading::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid #3498db;
+    border-radius: 8px;
+    transform: scale(0);
+    opacity: 0;
+}
+
+/* Border animation classes - more specific */
+.animated-heading.heading-border-show::before {
+    animation: borderAppear 0.8s ease-out 0s forwards;
+}
+
+.animated-heading.heading-border-hide::before {
+    animation: borderReset 0.1s forwards;
+}
+
+
+/* Border animation */
+@keyframes borderAppear {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes borderReset {
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+/* Typewriter effect */
+@keyframes typewriter {
+    to {
+        width: 100%;
+    }
+}
+
+/* Cursor blink */
+@keyframes blink {
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+
+/* Remove cursor */
+@keyframes removeCursor {
+    to {
+        border-right-color: transparent;
+    }
+}
+
+
+/* Bold effect */
+@keyframes boldEffect {
+    0% {
+        font-weight: normal;
+        transform: scale(1);
+    }
+
+    50% {
+        font-weight: 600;
+        color: #00F0FF;
+        transform: scale(1.1);
+    }
+
+    100% {
+        font-weight: 600;
+        transform: scale(1);
+    }
+}
+
+/* Reset animation */
+@keyframes reset {
+    to {
+        width: 0;
+        border-right-color: #e74c3c;
+    }
+}
+
+/* Container animation - repeats every 9 seconds */
+.animated-heading {
+    animation: containerReset 9s infinite;
+}
+
+@keyframes containerReset {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+}
+
+.services-icon:hover {
+    background: linear-gradient(130deg, #e8e8e8, var(--secondary-cyan));
+    transform: translateY(-2px);
+}
+
+.services-icon:hover .services-img {
+    transform: scale(1.1);
+}
+
+.services-icon .services-link-top {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    text-align: left;
+    align-items: flex-start;
+}
+
+.services-icon img {
+    width: 40%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    pointer-events: none;
+    user-select: none;
+}
+
+.services-icon h2 {
+    color: var(--text-dark);
+    margin: 24px 0 6px;
+    padding: 2px 0 0 12px;
+    border-left: 2px solid var(--accent-teal);
+}
+
+.services-icon p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--text-dark);
+    margin-top: 10px;
+    text-align: left;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.services-icon .about {
+    font-size: 1.0rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 6px 0;
+    padding-top: 10px;
+}
+
+.explore-box {
+    display: flex;
+    width: 250px;
+    height: 50px;
+    border-top: 1px solid #656565;
+}
+
+.explore-link {
+    text-align: left;
+    color: var(--accent-teal);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: var(--transition-fast);
+}
+
+.explore-arrow {
+    height: 31px;
+    border: 1px solid var(--accent-teal);
+    padding: 5px 7.3px;
+    border-radius: 50%;
+    margin-top: 15px;
+    color: var(--accent-teal);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-left: 10px;
+    transition: var(--transition-fast);
+    cursor: pointer;
+}
+
+.explore-arrow:hover {
+    background-color: #afafaf;
+    color: var(--text-light);
+    border: 1px solid #afafaf;
+}
+
+.services-section-mobile-only {
+    display: none;
+}

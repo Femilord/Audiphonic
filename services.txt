@@ -142,7 +142,7 @@ width: 1200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 850px;
+    max-width: 650px;
     width: 100%;
     color: var(--text-light);
 }
@@ -154,7 +154,7 @@ width: 1200px;
 .services-object-clause h1 {
 
     color: var(--text-light);
-    font-size: clamp(3.0rem, 2.5vw, 3.1rem);
+    font-size: clamp(1.8rem, 3vw, 4rem);
     line-height: 1.3;
     font-weight: bold;
 
@@ -244,7 +244,7 @@ width: 1200px;
 .services-right-section-content {
     position: absolute;
     top: 55%;
-    left: 58%;
+    left: 48%;
     transform: translateY(-50%);
     width: 50vw;
     z-index: 1;
@@ -252,17 +252,16 @@ width: 1200px;
     background-color: transparent;
 }
 
-/* Cards Box - 3D Carousel Style */
+/* Cards Box - Updated for Stacking */
 .services-cards-box {
     position: relative;
     width: 350px;
     height: 450px;
     margin: 0 auto;
-    perspective: 1200px;
-    transform-style: preserve-3d;
+    perspective: 1000px;
 }
 
-/* Cards - Stripe-style 3D Rotation */
+/* Cards - Updated for Stacking and Animation */
 .services-cards {
     position: absolute;
     width: 100%;
@@ -272,11 +271,9 @@ width: 1200px;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    transition: all 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     pointer-events: auto;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
 }
 
 .services-cards img {
@@ -289,81 +286,162 @@ width: 1200px;
 /* Individual Card Styling with Your Color Scheme */
 .services-cards-one {
     background: linear-gradient(135deg, var(--accent-teal) 0%, var(--primary-cyan) 100%);
+    z-index: 3;
+    transform: translateY(0) rotate(0deg);
 }
 
 .services-cards-two {
     background: linear-gradient(135deg, #7a9c02 0%, #9bc100 100%);
+    z-index: 2;
+    transform: translateY(20px) rotate(-3deg);
 }
 
 .services-cards-three {
     background: linear-gradient(135deg, #003d41 0%, #00848e 100%);
+    z-index: 1;
+    transform: translateY(40px) rotate(3deg);
 }
 
-/* Stripe-style 3D Carousel Animation */
-@keyframes stripeCarousel {
+/* Shuffle Animation Keyframes */
+@keyframes shuffleTop {
     0% {
-        transform: translateX(0) translateZ(0) rotateY(0deg);
-        opacity: 1;
+        transform: translateY(0) rotate(0deg);
         z-index: 3;
     }
 
     25% {
-        transform: translateX(50px) translateZ(-200px) rotateY(15deg);
-        opacity: 0.7;
+        transform: translateY(-120px) translateX(60px) rotate(15deg);
+        z-index: 5;
+    }
+
+    33% {
+        transform: translateY(20px) rotate(-3deg);
         z-index: 2;
     }
 
-    33.33% {
-        transform: translateX(80px) translateZ(-400px) rotateY(20deg);
-        opacity: 0.4;
+    58% {
+        transform: translateY(20px) rotate(-3deg);
+        z-index: 2;
+    }
+
+    66% {
+        transform: translateY(40px) rotate(3deg);
         z-index: 1;
     }
 
-    50% {
-        transform: translateX(-80px) translateZ(-400px) rotateY(-20deg);
-        opacity: 0.4;
+    91% {
+        transform: translateY(40px) rotate(3deg);
         z-index: 1;
-    }
-
-    66.66% {
-        transform: translateX(-50px) translateZ(-200px) rotateY(-15deg);
-        opacity: 0.7;
-        z-index: 2;
-    }
-
-    75% {
-        transform: translateX(-20px) translateZ(-100px) rotateY(-8deg);
-        opacity: 0.85;
-        z-index: 2;
     }
 
     100% {
-        transform: translateX(0) translateZ(0) rotateY(0deg);
-        opacity: 1;
+        transform: translateY(0) rotate(0deg);
         z-index: 3;
     }
 }
 
-/* Apply Animation with Delays for Carousel Effect */
+@keyframes shuffleMiddle {
+    0% {
+        transform: translateY(20px) rotate(-3deg);
+        z-index: 2;
+    }
+
+    25% {
+        transform: translateY(20px) rotate(-3deg);
+        z-index: 2;
+    }
+
+    33% {
+        transform: translateY(40px) rotate(3deg);
+        z-index: 1;
+    }
+
+    58% {
+        transform: translateY(40px) rotate(3deg);
+        z-index: 1;
+    }
+
+    66% {
+        transform: translateY(0) rotate(0deg);
+        z-index: 3;
+    }
+
+    75% {
+        transform: translateY(-120px) translateX(-60px) rotate(-15deg);
+        z-index: 5;
+    }
+
+    91% {
+        transform: translateY(20px) rotate(-3deg);
+        z-index: 2;
+    }
+
+    100% {
+        transform: translateY(20px) rotate(-3deg);
+        z-index: 2;
+    }
+}
+
+@keyframes shuffleBottom {
+    0% {
+        transform: translateY(40px) rotate(3deg);
+        z-index: 1;
+    }
+
+    25% {
+        transform: translateY(40px) rotate(3deg);
+        z-index: 1;
+    }
+
+    33% {
+        transform: translateY(0) rotate(0deg);
+        z-index: 3;
+    }
+
+    41% {
+        transform: translateY(-120px) translateX(60px) rotate(15deg);
+        z-index: 5;
+    }
+
+    58% {
+        transform: translateY(20px) rotate(-3deg);
+        z-index: 2;
+    }
+
+    66% {
+        transform: translateY(20px) rotate(-3deg);
+        z-index: 2;
+    }
+
+    91% {
+        transform: translateY(40px) rotate(3deg);
+        z-index: 1;
+    }
+
+    100% {
+        transform: translateY(40px) rotate(3deg);
+        z-index: 1;
+    }
+}
+
+/* Apply Animations - Add 'shuffling' class to services-cards-box */
 .services-cards-box.shuffling .services-cards-one {
-    animation: stripeCarousel 9s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+    animation: shuffleTop 3s ease-in-out infinite;
 }
 
 .services-cards-box.shuffling .services-cards-two {
-    animation: stripeCarousel 9s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
-    animation-delay: -3s;
+    animation: shuffleMiddle 3s ease-in-out infinite;
 }
 
 .services-cards-box.shuffling .services-cards-three {
-    animation: stripeCarousel 9s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
-    animation-delay: -6s;
+    animation: shuffleBottom 3s ease-in-out infinite;
 }
 
-/* Hover Effect */
+/* Hover Effect on Individual Cards */
 .services-cards:hover {
-    box-shadow: 0 25px 80px rgba(0, 240, 255, 0.4);
+    transform: translateY(-30px) scale(1.08) !important;
+    box-shadow: 0 25px 70px rgba(0, 240, 255, 0.3);
     cursor: pointer;
-    transform: scale(1.05) !important;
 }
 
 /* Responsive Adjustments */
@@ -376,51 +454,6 @@ width: 1200px;
     .services-cards-box {
         width: 300px;
         height: 400px;
-        perspective: 1000px;
-    }
-
-    @keyframes stripeCarousel {
-        0% {
-            transform: translateX(0) translateZ(0) rotateY(0deg);
-            opacity: 1;
-            z-index: 3;
-        }
-
-        25% {
-            transform: translateX(40px) translateZ(-150px) rotateY(12deg);
-            opacity: 0.7;
-            z-index: 2;
-        }
-
-        33.33% {
-            transform: translateX(60px) translateZ(-300px) rotateY(15deg);
-            opacity: 0.4;
-            z-index: 1;
-        }
-
-        50% {
-            transform: translateX(-60px) translateZ(-300px) rotateY(-15deg);
-            opacity: 0.4;
-            z-index: 1;
-        }
-
-        66.66% {
-            transform: translateX(-40px) translateZ(-150px) rotateY(-12deg);
-            opacity: 0.7;
-            z-index: 2;
-        }
-
-        75% {
-            transform: translateX(-15px) translateZ(-80px) rotateY(-6deg);
-            opacity: 0.85;
-            z-index: 2;
-        }
-
-        100% {
-            transform: translateX(0) translateZ(0) rotateY(0deg);
-            opacity: 1;
-            z-index: 3;
-        }
     }
 }
 
@@ -437,70 +470,62 @@ width: 1200px;
     .services-cards-box {
         width: 280px;
         height: 380px;
-        perspective: 800px;
     }
 
-    @keyframes stripeCarousel {
-        0% {
-            transform: translateX(0) translateZ(0) rotateY(0deg);
-            opacity: 1;
+    @keyframes shuffleTop {
+
+        0%,
+        100% {
+            transform: translateY(0) rotate(0deg);
             z-index: 3;
         }
 
-        25% {
-            transform: translateX(30px) translateZ(-100px) rotateY(10deg);
-            opacity: 0.7;
-            z-index: 2;
+        33% {
+            transform: translateY(-80px) translateX(40px) rotate(10deg);
+            z-index: 4;
         }
 
-        33.33% {
-            transform: translateX(40px) translateZ(-200px) rotateY(12deg);
-            opacity: 0.4;
+        66% {
+            transform: translateY(30px) rotate(2deg);
             z-index: 1;
         }
+    }
 
-        50% {
-            transform: translateX(-40px) translateZ(-200px) rotateY(-12deg);
-            opacity: 0.4;
-            z-index: 1;
-        }
+    @keyframes shuffleMiddle {
 
-        66.66% {
-            transform: translateX(-30px) translateZ(-100px) rotateY(-10deg);
-            opacity: 0.7;
-            z-index: 2;
-        }
-
-        75% {
-            transform: translateX(-10px) translateZ(-50px) rotateY(-5deg);
-            opacity: 0.85;
-            z-index: 2;
-        }
-
+        0%,
         100% {
-            transform: translateX(0) translateZ(0) rotateY(0deg);
-            opacity: 1;
+            transform: translateY(15px) rotate(-2deg);
+            z-index: 2;
+        }
+
+        33% {
+            transform: translateY(0) rotate(0deg);
+            z-index: 3;
+        }
+
+        66% {
+            transform: translateY(-80px) translateX(-40px) rotate(-10deg);
+            z-index: 4;
+        }
+    }
+
+    @keyframes shuffleBottom {
+
+        0%,
+        100% {
+            transform: translateY(30px) rotate(2deg);
+            z-index: 1;
+        }
+
+        33% {
+            transform: translateY(15px) rotate(-2deg);
+            z-index: 2;
+        }
+
+        66% {
+            transform: translateY(0) rotate(0deg);
             z-index: 3;
         }
     }
 }
-
-
-
-
-/* ============== Media ================ */
-
-@media (min-width: 1600px) {
-
- .services-right-section-content {
-            position: absolute;
-            top: 55%;
-            left: 45%;
-            transform: translateY(-50%);
-            width: 50vw;
-            z-index: 1;
-            pointer-events: none;
-            background-color: transparent;
-        }
-
- 
