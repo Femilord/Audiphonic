@@ -54,53 +54,94 @@
 
 
     <section>
-        <div class="first-section-wrapper">
-            <div class="hero-banner-box" id="parallax-bg">
-                <div class="services-section-wrapper">
-                    <div class="services-left-section-content">
-                        <div class="services-object-clause">
-                            <h1><span>  Custom Solutions </span> <br> <span>  Design to Specifications</span> <br> <span
-                                    class="text-deco">  Delivered with Precision
-                                </span>
-                            </h1>
-                        </div>
-                        <div class="tag-line">
 
-                            <p>
-                                Solutions tailored to your specifications <br>through consultation and design to
-                                procurement <br>and
-                                implementation.
-
-                            </p>
-                        </div>
-                        <div class="learn-more-btn">
-                            <a href="blog.html" class="learn-more-btn">Learn More</a>
-                        </div>
-
-
+        <div class="hero-banner-box">
+            <div class="services-section-wrapper">
+                <div class="services-left-section-content">
+                    <div class="services-object-clause">
+                        <h2><span> Custom Solutions </span> <br> <span> Design to Specifications</span> <br> <span
+                                class="text-deco"> Delivered with Precision
+                            </span>
+                        </h2>
                     </div>
-                </div>
+                    <div class="tag-line">
 
+                        <p>
+                            Solutions tailored to your specifications <br>through consultation and design to
+                            procurement <br>and
+                            implementation.
 
-
-                <div class="services-right-section-content">
-
-                  
-                    <div class="services-cards-box">
-                        <div class="services-cards services-cards-one">
-                            <img src="img/speaker-sound-audio-white.webp" alt="" />
-                        </div>
-                        <div class="services-cards services-cards-two"> <img src="img/eq-acoustics-white.webp" alt="" />
-                        </div>
-                        <div class="services-cards services-cards-three"> <img src="img/audio-visuals-white.webp" alt="" />
-                        </div>
-
-
-
+                        </p>
                     </div>
+                    <div class="learn-more-btn">
+                        <a href="blog.html" class="learn-more-btn">Learn More</a>
+                    </div>
+
+
                 </div>
             </div>
+
+
+
+            <div class="services-right-section-content">
+
+                <div class="carousel-container">
+                  <!--  <button class="carousel-nav prev" onclick="prevSlide()">‹</button>
+                    <button class="carousel-nav next" onclick="nextSlide()">›</button> -->
+
+                    <div class="services-cards-slider">
+                        <div class="services-cards services-cards-one" data-index="0">
+                            <div class="inner-card-top">
+                                <p>Noise Isolation and/or Insulation of your space.</p>
+                            </div>
+                            <div class="inner-card-bottom">
+                                <img src="img/speaker-sound-audio-black.webp" alt="" />
+                                <h1>Soundproofing</h1>
+                                <div class="explore-btn">
+                                    <a href="blog.html" class="learn-more-btn">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="services-cards services-cards-two" data-index="1">
+                            <div class="inner-card-top">
+                                <p>Control Sound reflection (echo) within your space.</p>
+                            </div>
+                            <div class="inner-card-bottom">
+                                <img src="img/eq-acoustics.webp" alt="" />
+                                <h1>Acoustics</h1>
+                                <div class="explore-btn">
+                                    <a href="blog.html" class="learn-more-btn">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="services-cards services-cards-three" data-index="2">
+                            <div class="inner-card-top">
+                                <p>Design and Integration of Audio-Visuals for your Space.</p>
+                            </div>
+                            <div class="inner-card-bottom">
+                                <img src="img/audio-visuals.webp" alt="" />
+                                <h1>Audio-Visuals</h1>
+                                <div class="explore-btn">
+                                    <a href="blog.html" class="learn-more-btn">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="goToSlide(0)"></span>
+                    <span class="dot" onclick="goToSlide(1)"></span>
+                    <span class="dot" onclick="goToSlide(2)"></span>
+                </div>
+
+            </div>
+
         </div>
+
+
     </section>
 
 
@@ -209,14 +250,112 @@
     </footer>
 
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const cardBox = document.querySelector('.services-cards-box');
-        if (cardBox) {
-            cardBox.classList.add('shuffling');
+
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 3;
+        let autoplayInterval;
+        const cards = document.querySelectorAll('.services-cards');
+
+        function updateCarousel() {
+            cards.forEach((card, index) => {
+                // Remove all position classes
+                card.classList.remove('center', 'left', 'right', 'hidden-left', 'hidden-right');
+
+                // Calculate relative position
+                let position = index - currentSlide;
+
+                // Normalize position to be within range
+                if (position < -1) position += totalSlides;
+                if (position > 1) position -= totalSlides;
+
+                // Apply appropriate class
+                if (position === 0) {
+                    card.classList.add('center');
+                } else if (position === -1) {
+                    card.classList.add('left');
+                } else if (position === 1) {
+                    card.classList.add('right');
+                } else if (position < -1) {
+                    card.classList.add('hidden-left');
+                } else {
+                    card.classList.add('hidden-right');
+                }
+            });
+
+            // Update dots
+            document.querySelectorAll('.dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
         }
-    });
-</script>
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+            resetAutoplay();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+            resetAutoplay();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarousel();
+            resetAutoplay();
+        }
+
+        function startAutoplay() {
+            autoplayInterval = setInterval(nextSlide, 3500);
+        }
+
+        function resetAutoplay() {
+            clearInterval(autoplayInterval);
+            startAutoplay();
+        }
+
+        // Pause on hover/touch
+        const slider = document.querySelector('.services-cards-slider');
+        const container = document.querySelector('.services-right-section-content');
+
+        // Mouse events
+        container.addEventListener('mouseenter', () => {
+            clearInterval(autoplayInterval);
+        });
+
+        container.addEventListener('mouseleave', () => {
+            startAutoplay();
+        });
+
+        // Touch events for mobile
+        container.addEventListener('touchstart', () => {
+            clearInterval(autoplayInterval);
+        });
+
+        container.addEventListener('touchend', () => {
+            // Resume after 2 seconds of no touch
+            setTimeout(() => {
+                startAutoplay();
+            }, 2000);
+        });
+
+        // Click side cards to navigate
+        cards.forEach((card, index) => {
+            card.addEventListener('click', () => {
+                if (index !== currentSlide) {
+                    goToSlide(index);
+                }
+            });
+        });
+
+        // Initialize carousel
+        updateCarousel();
+        startAutoplay();
+    </script>
+
 
 </body>
 
