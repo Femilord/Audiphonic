@@ -126,6 +126,8 @@ body::-webkit-scrollbar-thumb {
     font-family: 'blair', 'Montserrat', 'Poppins', sans-serif;
 }
 
+
+
 .tag-line h1 {
     padding-bottom: 20px;
     color: var(--text-light);
