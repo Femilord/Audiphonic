@@ -84,6 +84,19 @@ body {
     font-display: swap;
 }
 
+
+
+/* ================= Start ================= */
+
+.hero-box {
+    position: relative;
+    min-height: 90vh;
+   
+    z-index: 1;
+    overflow: hidden;
+}
+
+
 .first-section-wrapper {
     overflow: hidden;
     position: relative;
@@ -99,6 +112,7 @@ body {
     background-size: cover;
     width: 110vw;
     min-height: 80vh;
+    /* Changed from height to min-height */
     left: -5vw;
     top: -3vh;
     position: relative;
@@ -118,7 +132,8 @@ body {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    z-index: -40;
+    z-index: 1;
+    /* FIXED: Changed from -40 to 1 */
 }
 
 .services-left-section-content {
@@ -415,16 +430,38 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 80px 20px;
+    padding: 0px 20px 80px 20px; /* Added top padding */
     box-sizing: border-box;
     overflow: hidden;
     background-color: white;
+    position: relative; /* Added */
+    z-index: 2; /* Added to ensure it's above hero */
 }
 
 .services-section {
     max-width: var(--container-max);
     width: 100%;
+    max-width: 1200px;
+    border-left: 1px solid var(--border-light);
+        border-right: 1px solid var(--border-light);
 }
+
+
+.main-title {
+align-self: flex-start;
+
+}
+
+
+
+.main-title h2 {
+   
+  
+    font-size: clamp(2rem, 3vw, 2.6rem);
+    margin-bottom: 20px;
+}
+
+
 
 .services-wrapper {
     width: 100%;
@@ -441,9 +478,10 @@ body {
 .services-content {
     width: 100%;
     max-width: 1080px;
-    padding: 40px;
+    padding: 30px;
     background-color: #ffffff;
-    border-radius: 20px;
+  /*  border-radius: 20px; */
+   
     box-shadow: var(--shadow-light);
     box-sizing: border-box;
     transition: var(--transition-fast);
@@ -469,7 +507,8 @@ body {
 }
 
 .image-title img {
-    width: 80px;
+    width: 60px;
+   
     height: auto;
     object-fit: contain;
 }
@@ -477,7 +516,7 @@ body {
 .services-content h1 {
     font-size: clamp(2rem, 3vw, 2.5rem);
     color: var(--text-dark);
-    font-weight: 700;
+    font-weight: 500;
     margin: 0;
     line-height: 1.2;
 }
