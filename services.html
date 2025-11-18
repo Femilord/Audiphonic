@@ -1,15 +1,15 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Audiphonic | Soundproofing, Acoustics, Audio, Visuals, Sound Reinforcement</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Audiphonic | Services - Soundproofing, Acoustics, Audio, Visuals</title>
     <link rel="icon" type="image/x-icon" href="img/audiphonic-favicon.png" />
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="services.css" />
     <link rel="stylesheet" href="footer.css">
+    <script src="/main.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -17,12 +17,15 @@
 </head>
 
 <body>
-    <!-- HEADER -->
+    <!-- HEADER - FIXED VERSION -->
     <header>
         <div class="header-container">
             <div class="left-group">
                 <div class="audi-logo">
-                    <a href="index.html"><img src="img/audiphonic-weblogo.webp" alt="Audiphonic Logo" /></a>
+                    <a href="index.html">
+                        <img src="img/audiphonic-weblogo.webp" alt="Audiphonic Logo" class="logo-desktop" />
+                        <img src="img/white-transparent-logo.webp" alt="Audiphonic Mobile Logo" class="logo-mobile" />
+                    </a>
                 </div>
                 <nav class="nav-menu">
                     <ul class="menu">
@@ -43,15 +46,14 @@
 
     <nav class="mobile-menu" id="mobile-menu">
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/services.html">Services</a></li>
-            <li><a href="/Projects.html">Projects</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/blog.html">Blog</a></li>
-            <li><a href="/contact.html">Contact Us</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
-
 
     <section class="hero-box">
         <div class="first-section-wrapper">
@@ -589,6 +591,47 @@
 
 
     </footer>
+
+
+
+
+<!-- ==================header mobile 02 ================== -->
+
+
+<script>
+    // Mobile menu toggle
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const header = document.querySelector("header");
+
+        menuToggle.addEventListener("click", function () {
+            const headerHeight = header.offsetHeight + "px";
+            mobileMenu.style.setProperty("--menu-offset", headerHeight);
+
+            mobileMenu.classList.toggle("active");
+            header.classList.toggle("menu-open");
+        });
+
+        const mobileLinks = mobileMenu.querySelectorAll("a");
+        mobileLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.remove("active");
+                header.classList.remove("menu-open");
+            });
+        });
+    });
+
+    // Header scroll effect
+    const header = document.querySelector("header");
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 10) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    });
+</script>
 
 
     <!-- ============= First Section Parallax =============== -->
