@@ -1508,8 +1508,8 @@ body::-webkit-scrollbar-thumb {
 
     .services-left-section-content {
         max-width: 100%;
-        text-align: left;
-        align-items: left;
+        text-align: center;
+        align-items: center;
 
     }
 
@@ -1816,6 +1816,7 @@ body::-webkit-scrollbar-thumb {
     .services-object-clause h2 {
         font-size: 2rem;
         line-height: 1.3;
+
     }
 
     .tag-line p {
