@@ -41,6 +41,7 @@
     /* Outline */
     --border-mild: solid .5px rgb(230, 229, 229);
     --border-mild2: solid .5px rgb(188, 188, 188);
+    --border-mild3: solid .5px rgb(222, 222, 222);
     --line-only: solid .5px rgb(188, 188, 188);
 
 
@@ -1750,6 +1751,8 @@ body::-webkit-scrollbar-thumb {
         height: auto;
         /* Remove fixed height */
         padding: 20px;
+        
+        
     }
 
     .services-content-wrapper {
@@ -1780,7 +1783,7 @@ body::-webkit-scrollbar-thumb {
         height: 300px;
         /* Adjust height for mobile */
         border-left: none;
-        border-top: 1px solid var(--border-light);
+       
         margin-top: 20px;
     }
 
@@ -1846,6 +1849,7 @@ body::-webkit-scrollbar-thumb {
         width: 100vw;
         padding: 40px 20px 40px 20px;
         background-color: #f8f9fa;
+       
 
     }
 
@@ -1855,7 +1859,7 @@ body::-webkit-scrollbar-thumb {
         display: flex;
         flex-direction: column;
         gap: 30px;
-    }
+       
 
     /* Individual Service Card */
     .services-content-mobile {
@@ -1864,6 +1868,9 @@ body::-webkit-scrollbar-thumb {
         overflow: hidden;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: var(--border-mild3);
+        border-bottom: solid 10px #00F0FF;
+        }
     }
 
     .services-content-mobile:hover {
