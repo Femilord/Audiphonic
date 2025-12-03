@@ -79,6 +79,18 @@ body::-webkit-scrollbar-thumb {
 /* ========================================
    HERO SECTION
    ======================================== */
+
+.top-cover-box {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 23px 20px;
+
+
+    width: 100%;
+    height: 86px;
+    z-index: 8;
+
+}
+
 .first-section-wrapper {
     overflow: hidden;
     position: relative;
@@ -96,7 +108,11 @@ body::-webkit-scrollbar-thumb {
     width: 110vw;
     min-height: 100vh;
     left: -5vw;
-    top: -3vh;
+    top: -14vh;
+    /* The white top-cover-box is behind 
+        the header for removing the blur before scroll. 
+        I dragged the hero banner box up from 
+        top: -3vh to -14vh to compensate for the drop */
     position: relative;
     padding: 16px;
     transition: transform 0.4s ease-out;
@@ -1903,6 +1919,9 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 1079px) and (min-width: 994px) {
 
+
+
+
     .left-section-content {
 
         padding-left: 40px;
@@ -1982,6 +2001,15 @@ body::-webkit-scrollbar-thumb {
 
 
 @media (max-width: 1079px) and (min-width: 901px) {
+
+
+
+    .top-cover-box {
+        display: none !important;
+
+    }
+
+
     .scroll-container-wrapper {
         transform-origin: center;
         transform: scale(calc(0.7 + (100vw - 901px) * 0.3 / 178px));
@@ -2031,6 +2059,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (min-width: 768px) and (max-width: 1079px) {
+
+    .top-cover-box {
+        display: none !important;
+
+    }
 
     .scroll-container {
         flex-direction: row;
@@ -2092,10 +2125,16 @@ body::-webkit-scrollbar-thumb {
 /* Tablet */
 @media (min-width: 769px) and (max-width: 993px) {
 
+    .top-cover-box {
+        display: none !important;
+
+    }
+
     .first-section-background {
         flex-direction: column;
         min-height: 60vh;
         padding: 100px 8px 10px;
+        top: -3vh;
     }
 
     .left-section-content {
@@ -2199,10 +2238,22 @@ body::-webkit-scrollbar-thumb {
 
 /* Large Mobile */
 @media (min-width: 579px) and (max-width: 768px) {
+
+
+    .top-cover-box {
+        display: none !important;
+
+    }
+
     .first-section-background {
         flex-direction: column;
         min-height: 80vh;
         padding: 8px;
+    }
+
+
+    .first-section-background {
+        top: -3vh;
     }
 
     .left-section-content {
@@ -2607,8 +2658,9 @@ body::-webkit-scrollbar-thumb {
     }
 
     .services-icon {
+
         width: 100%;
-        max-width: 450px;
+
         padding: 30px 20px;
         border-radius: 6px;
         opacity: 0;
@@ -2616,6 +2668,17 @@ body::-webkit-scrollbar-thumb {
         transition: transform 0.7s ease, opacity 0.7s ease;
         background: linear-gradient(130deg, #e8e8e8, var(--secondary-cyan));
     }
+
+    .services-link-below {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .services-icon img {
+        width: 80px;
+    }
+
+
 
     .services-icon.visible {
         transform: none;
@@ -2656,8 +2719,14 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 768px) {
 
+    .first-section-background {
+        top: -3vh;
+    }
 
+    .top-cover-box {
+        display: none !important;
 
+    }
 
 
     .av-texts-container {
@@ -2674,6 +2743,15 @@ body::-webkit-scrollbar-thumb {
 /* --------------------- Small Screens ------------------------- */
 
 @media screen and (min-width: 481px) and (max-width: 578px) {
+    .first-section-background {
+        top: -3vh;
+    }
+
+    .top-cover-box {
+        display: none !important;
+
+    }
+
     .first-section-background {
         flex-direction: column;
         min-height: 50vh;
@@ -3095,6 +3173,11 @@ body::-webkit-scrollbar-thumb {
     .first-section-background {
         flex-direction: column;
         min-height: 50vh;
+
+    }
+
+    .first-section-background {
+        top: -3vh;
     }
 
     .section-wrapper {
@@ -3111,6 +3194,7 @@ body::-webkit-scrollbar-thumb {
         max-width: 100%;
         padding: clamp(30px, 8vw, 45px) clamp(20px, 10vw, 60px) clamp(40px, 8vw, 50px) clamp(15px, 4vw, 20px);
         margin-top: 0;
+
     }
 
 
@@ -3123,6 +3207,7 @@ body::-webkit-scrollbar-thumb {
         width: 110%;
         margin: clamp(8px, 2vw, 10px) 0 clamp(15px, 4vw, 20px);
         border-left: none;
+
     }
 
     .object-clause h2 {

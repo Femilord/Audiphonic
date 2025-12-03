@@ -102,10 +102,22 @@ body::-webkit-scrollbar-thumb {
     overflow: hidden;
 }
 
+.top-cover-box {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 23px 20px;
+
+
+    width: 100%;
+    height: 86px;
+    z-index: 8;
+
+}
+
 
 .first-section-wrapper {
     overflow: hidden;
     position: relative;
+
     width: 100%;
 }
 
@@ -120,7 +132,11 @@ body::-webkit-scrollbar-thumb {
     min-height: 100vh;
 
     left: -5vw;
-    top: -3vh;
+    top: -14vh;
+    /* The white top-cover-box is behind 
+    the header for removing the blur before scroll. 
+    I dragged the hero banner box up from 
+    top: -3vh to -14vh to compensate for the drop */
     position: relative;
     padding: 16px;
     transition: transform 0.4s ease-out;
@@ -1085,6 +1101,8 @@ body::-webkit-scrollbar-thumb {
 
 
 @media (min-width: 1600px) {
+
+
     .services-right-section-content {
         position: absolute;
         top: 55%;
@@ -1426,7 +1444,8 @@ body::-webkit-scrollbar-thumb {
         text-align: center;
         margin-top: 100px;
         margin-left: 0;
-        padding-left: 0;
+        padding: 100px 0 50px 0;
+      
 
 
     }
@@ -1496,6 +1515,11 @@ body::-webkit-scrollbar-thumb {
 /* =========================================================== */
 @media (max-width: 950px) {
 
+    .top-cover-box {
+        display: none !important;
+
+    }
+
     .hero-banner-box {
         flex-direction: column;
 
@@ -1519,6 +1543,7 @@ body::-webkit-scrollbar-thumb {
         max-width: 100%;
         text-align: center;
         align-items: center;
+       
 
     }
 
@@ -1611,6 +1636,10 @@ body::-webkit-scrollbar-thumb {
     }
 
 
+
+.services-left-section-content {
+    padding: 0;
+}
 
     .services-object-clause h2 {
 
@@ -1751,8 +1780,8 @@ body::-webkit-scrollbar-thumb {
         height: auto;
         /* Remove fixed height */
         padding: 20px;
-        
-        
+
+
     }
 
     .services-content-wrapper {
@@ -1783,7 +1812,7 @@ body::-webkit-scrollbar-thumb {
         height: 300px;
         /* Adjust height for mobile */
         border-left: none;
-       
+
         margin-top: 20px;
     }
 
@@ -1849,7 +1878,7 @@ body::-webkit-scrollbar-thumb {
         width: 100vw;
         padding: 40px 20px 40px 20px;
         background-color: #f8f9fa;
-       
+
 
     }
 
@@ -1859,17 +1888,17 @@ body::-webkit-scrollbar-thumb {
         display: flex;
         flex-direction: column;
         gap: 30px;
-       
 
-    /* Individual Service Card */
-    .services-content-mobile {
-        background: #ffffff;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border: var(--border-mild3);
-        border-bottom: solid 10px #00F0FF;
+
+        /* Individual Service Card */
+        .services-content-mobile {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: var(--border-mild3);
+            border-bottom: solid 10px #00F0FF;
         }
     }
 
