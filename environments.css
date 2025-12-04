@@ -257,7 +257,7 @@ body::-webkit-scrollbar-thumb {
     border-left: 1px solid var(--border-light);
     border-right: 1px solid var(--border-light);
     padding: 80px 0;
-    background-color: var(--background-lighter);
+    /*  background-color: var(--background-lighter); */
 }
 
 .main-container-wrapper {
@@ -402,6 +402,119 @@ body::-webkit-scrollbar-thumb {
 }
 
 
+/* =============== mid Section ================= */
+.mid-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-light);
+}
+
+.mid-section-body-one {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-left: 1px solid var(--border-light);
+    border-right: 1px solid var(--border-light);
+    padding: 50px 0;
+}
+
+.mid-section-box-one {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* ============ TITLES & TEXT ============ */
+.mid-section-box-one-title {
+    margin-left: 60px;
+}
+
+.mid-section-box-one-title h3 {
+    margin-bottom: 40px;
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
+    font-weight: 600;
+    color: var(--accent-teal);
+}
+
+/* TEXT TWO COLUMNS */
+.mid-section-box-one-text {
+    display: flex;
+    margin-left: 60px;
+    flex-wrap: wrap;
+    /*  gap: 30px; */
+}
+
+.mid-section-box-one-text h3,
+.mid-section-box-one-text p {
+    flex: 1 1 350px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.mid-section-box-one-text h3 {
+    font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+    font-weight: 600;
+    padding-right: 60px;
+
+}
+
+
+.mid-section-box-one-text p {
+    line-height: 1.5;
+    padding-left: 20px;
+    padding-right: 60px;
+    color: var(--text-muted);
+}
+
+/* ============ AV SECTIONS ============ */
+.av-box {
+    display: flex;
+    flex-wrap: wrap;
+    /*   gap: 40px; */
+    margin-left: 60px;
+}
+
+.av-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 450px;
+    gap: 50px;
+    padding-right: 120px;
+}
+
+.av-body-gen p {
+    margin-top: 15px;
+    line-height: 1.4;
+    font-size: 15px;
+    padding-right: 20px;
+    color: var(--text-muted);
+}
+
+/* IMAGE SIDE */
+.mid-section-box-one-acoustic {
+    flex: 1 1 450px;
+    display: flex;
+    overflow: hidden;
+}
+
+.mid-section-box-one-acoustic img {
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.35s ease;
+    border: var(--border-mild3);
+}
+
+.av-body-three h4 {
+    color: var(--accent-teal);
+}
+
 /* =============== Mid Section one ================ */
 
 .mid-section-one {
@@ -431,13 +544,14 @@ body::-webkit-scrollbar-thumb {
     max-width: 1080px;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10px;
 }
 
 .mid-section-box-text {
-    width: 30%;
+    width: 100%;
 
     background-color: #B5F7FB;
 }
@@ -448,7 +562,7 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     align-items: center;
 
-    overflow: hidden;
+   
     gap: 10px;
 }
 
@@ -485,6 +599,24 @@ body::-webkit-scrollbar-thumb {
     .environs-box-text {
         padding: 20px;
     }
+
+    /* -------------- Mid Section one ------------------ */
+
+    .mid-section-box-one-title,
+    .mid-section-box-one-text,
+    .av-box {
+        margin-left: 30px;
+    }
+
+    .av-body {
+        padding-right: 0;
+    }
+
+    .mid-section-box-one-acoustic img {
+        max-height: 40vh;
+    }
+
+
 }
 
 /* Smaller tablets & large phones */
@@ -523,6 +655,37 @@ body::-webkit-scrollbar-thumb {
     .environs-image {
         height: 190px;
     }
+
+    /* ------------------ Mid Section One ----------------- */
+
+    .mid-section-box-one-title,
+    .mid-section-box-one-text,
+    .av-box {
+        margin-left: 0;
+    }
+
+    .mid-section-box-one-text {
+        gap: 20px;
+    }
+
+    .mid-section-box-one-text h3 {
+        padding-right: 0;
+    }
+
+    .mid-section-box-one-text p {
+        padding-left: 0;
+    }
+
+    .av-box {
+        gap: 30px;
+    }
+
+    .mid-section-box-one-acoustic img {
+        max-height: 35vh;
+    }
+
+
+
 }
 
 /* Mobile phones */
@@ -555,6 +718,30 @@ body::-webkit-scrollbar-thumb {
         padding: 18px;
     }
 }
+
+
+@media (max-width: 480px) {
+
+    /* ------------------ Mid Section One ----------------- */
+    .mid-section-body-one {
+        padding: 30px 15px;
+    }
+
+    .mid-section-box-one {
+        gap: 30px;
+    }
+
+    .av-body-gen p {
+        padding-right: 0;
+    }
+
+    .mid-section-box-one-acoustic img {
+        max-height: 30vh;
+    }
+
+}
+
+
 
 /* Very small screens */
 @media (max-width: 400px) {
