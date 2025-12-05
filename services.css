@@ -91,7 +91,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-
 /* ================= Start-Hero-Section ================= */
 
 .hero-box {
@@ -176,7 +175,7 @@ body::-webkit-scrollbar-thumb {
     font-size: clamp(2.5rem, 2.25vw, 2.8rem);
     line-height: 1.3;
     font-weight: bold;
-    font-family: 'blair', Poppins, sans-serif !important;
+    font-family: 'blair', 'Montserrat', 'Poppins', sans-serif !important;
     margin: 0;
 }
 
@@ -1445,7 +1444,7 @@ body::-webkit-scrollbar-thumb {
         margin-top: 100px;
         margin-left: 0;
         padding: 100px 0 50px 0;
-      
+
 
 
     }
@@ -1543,7 +1542,7 @@ body::-webkit-scrollbar-thumb {
         max-width: 100%;
         text-align: center;
         align-items: center;
-       
+
 
     }
 
@@ -1637,9 +1636,9 @@ body::-webkit-scrollbar-thumb {
 
 
 
-.services-left-section-content {
-    padding: 0;
-}
+    .services-left-section-content {
+        padding: 0;
+    }
 
     .services-object-clause h2 {
 
@@ -2178,6 +2177,13 @@ body::-webkit-scrollbar-thumb {
     }
 
 
+    .services-section-wrapper {
+        margin-top: 80px;
+
+
+    }
+
+
     .services-content {
         padding: 25px 15px;
     }
@@ -2191,11 +2197,13 @@ body::-webkit-scrollbar-thumb {
     .services-section-wrapper {
         width: 100%;
         padding: 0 10px;
+
     }
 
     .services-object-clause h2 {
         font-size: 2rem;
         line-height: 1.3;
+        padding-bottom: 30px;
 
     }
 
@@ -2204,13 +2212,17 @@ body::-webkit-scrollbar-thumb {
     }
 
     .learn-more-btn {
-        margin-top: 1rem;
+        margin-top: 2rem;
         margin-bottom: 20px;
     }
 
     .learn-more-btn a {
         padding: 8px 18px;
         font-size: 0.85rem;
+    }
+
+    .services-right-section-content {
+        margin-top: 100px;
     }
 
     .services-cards-slider {

@@ -97,8 +97,6 @@ body::-webkit-scrollbar-thumb {
 
 .hero-box-environs {
     position: relative;
-
-
     z-index: 1;
     overflow: hidden;
 }
@@ -106,14 +104,11 @@ body::-webkit-scrollbar-thumb {
 .top-cover-box {
     background-color: rgba(255, 255, 255, 0.85);
     padding: 23px 20px;
-
     top: 0;
     width: 100%;
     height: 86px;
     z-index: 8;
-
 }
-
 
 .first-section-wrapper-environs {
     overflow: hidden;
@@ -130,21 +125,14 @@ body::-webkit-scrollbar-thumb {
     background-size: cover;
     width: 110vw;
     min-height: 100vh;
-
     left: -5vw;
     top: -14vh;
-    /* The white top-cover-box is behind 
-        the header for removing the blur before scroll. 
-        I dragged the hero banner box up from 
-        top: -3vh to -14vh to compensate for the drop */
     position: relative;
     padding: 16px;
     transition: transform 0.4s ease-out;
     overflow: hidden;
     z-index: 0;
 }
-
-
 
 .services-section-wrapper-environs {
     max-width: var(--container-max);
@@ -155,7 +143,7 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
     position: relative;
     z-index: 1;
-    /* FIXED: Changed from -40 to 1 */
+    padding: 0 20px;
 }
 
 .services-left-section-content-environs {
@@ -167,18 +155,20 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     color: var(--text-light);
     padding-top: 120px;
+    text-align: center;
 }
 
-.object-clause {
+.services-object-clause {
     padding-bottom: 20px;
+    max-width: 90%;
 }
 
 .services-object-clause h1 {
     color: var(--text-light);
-    font-size: clamp(2.8rem, 2.5vw, 3rem);
-    line-height: 1.3;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.2;
     font-weight: bold;
-    font-family: Poppins !important;
+    font-family: 'blair', 'Montserrat', 'Poppins', sans-serif !important;
     margin: 0;
 }
 
@@ -189,13 +179,17 @@ body::-webkit-scrollbar-thumb {
     color: transparent;
 }
 
-.tag-line p {
-    color: var(--text-light);
-    font-size: clamp(1.0rem, 1.4vw, 1.2rem);
-    line-height: 1.8;
+.tag-line {
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-
+.tag-line p {
+    color: var(--text-light);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.6;
+    margin: 0;
+}
 
 .learn-more-btn {
     margin: 2rem 0;
@@ -203,16 +197,15 @@ body::-webkit-scrollbar-thumb {
 
 .learn-more-btn a {
     display: inline-block;
-    padding: 10px 25px;
+    padding: 12px 30px;
     background-color: var(--background-light);
     color: var(--text-dark);
     text-decoration: none;
     border-radius: 10px;
+    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+    font-weight: 500;
     transition: var(--transition-fast);
 }
-
-
-
 
 .learn-more-btn a:hover,
 .learn-more-btn a:focus {
@@ -220,6 +213,32 @@ body::-webkit-scrollbar-thumb {
     border: 1px solid var(--text-light);
     color: var(--text-light);
     outline: none;
+}
+
+
+
+/
+/* Small mobile styles */
+@media (max-width: 480px) {
+    .hero-banner-box-environs {
+        top: -8vh;
+    }
+
+    .services-left-section-content-environs {
+        padding-top: 60px;
+    }
+
+    .services-object-clause h1 {
+        font-size: clamp(1.5rem, 7vw, 2rem);
+    }
+
+    .tag-line p {
+        font-size: clamp(0.9rem, 3.5vw, 1rem);
+    }
+
+    .learn-more-btn a {
+        padding: 10px 20px;
+    }
 }
 
 
@@ -419,6 +438,7 @@ body::-webkit-scrollbar-thumb {
     border-left: 1px solid var(--border-light);
     border-right: 1px solid var(--border-light);
     padding: 50px 0;
+
 }
 
 .mid-section-box-one {
@@ -515,67 +535,199 @@ body::-webkit-scrollbar-thumb {
     color: var(--accent-teal);
 }
 
-/* =============== Mid Section one ================ */
+/* =============== Mid Section two ================ */
 
-.mid-section-one {
+
+.mid-section-two {
+    position: relative;
     width: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--background-darker);
-
+    overflow: hidden;
+    background-color: var(--background-light);
 }
 
-.mid-section-body {
-    max-width: 1200px;
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-left: 1px solid var(--border-light);
-    border-right: 1px solid var(--border-light);
-    padding: 50px 0;
-
-}
-
-.mid-section-box {
+.mid-section-body-two {
+    position: relative;
+    padding: 60px 0;
     max-width: 1080px;
-    width: 100%;
+    margin: 0 auto;
+}
+
+.mid-section-box-two {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    gap: 40px;
 }
 
-.mid-section-box-text {
-    width: 100%;
-
-    background-color: #B5F7FB;
+.carousel-container-two {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
 }
 
-.mid-section-box-acoustic {
-    width: 700px;
+.mid-section-box-acoustic-two {
     display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-    gap: 10px;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 20px 0;
+    padding-left: calc(50vw - 540px);
+    padding-right: calc(50vw - 540px);
 }
 
-.mid-section-box-acoustic img {
-    width: 300px;
+.mid-section-box-acoustic-two::-webkit-scrollbar {
+    display: none;
+}
 
+.mid-section-box-acoustic-two img {
+    min-width: 280px;
+    max-width: 280px;
+    height: 350px;
     object-fit: cover;
-    display: block;
-    transition: transform 0.35s ease;
-    border: var(--border-mild3);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
 }
+
+.mid-section-box-acoustic-two img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Scroll Arrows */
+.carousel-arrow-two {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-arrow-two:hover {
+    background: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-arrow-two.left-two {
+    left: calc(50vw - 540px + 10px);
+}
+
+.carousel-arrow-two.right-two {
+    right: calc(50vw - 540px + 10px);
+}
+
+.carousel-arrow-two svg {
+    width: 20px;
+    height: 20px;
+    stroke: #333;
+    stroke-width: 2;
+    fill: none;
+}
+
+.carousel-arrow-two:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.carousel-arrow-two:disabled:hover {
+    transform: translateY(-50%) scale(1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mid-section-box-text-two {
+    text-align: left;
+
+
+}
+
+
+.mid-section-box-text-two h5 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1a1a1a;
+    /* margin-bottom: 5px; */
+}
+
+.mid-section-box-text-two p {
+    max-width: 700px;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-top: 15px;
+
+}
+
+
+
 
 /* ---------- Responsive improvements ---------- */
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+    .services-left-section-content-environs {
+        padding-top: 100px;
+    }
+
+    .services-object-clause h1 {
+        font-size: clamp(1.8rem, 4.5vw, 3rem);
+    }
+
+    .tag-line {
+        max-width: 600px;
+    }
+}
+
+
+@media (max-width: 1080px) {
+
+    .mid-section-body-one {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+
+
+
+    .carousel-container-two {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .mid-section-box-text-two {
+        text-align: left;
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+
+    .mid-section-box-acoustic-two {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+
+
+    .carousel-arrow-two.left-two {
+        left: 10px;
+    }
+
+    .carousel-arrow-two.right-two {
+        right: 10px;
+    }
+}
+
 
 /* Tablet */
 @media (max-width: 992px) {
@@ -632,11 +784,54 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 768px) {
 
-    .top-cover-box {
-        display: none !important;
+    /* ---------- hero-section ------------- */
 
+
+    .hero-banner-box-environs {
+        min-height: 100vh;
+        padding: 16px 70px;
+        top: -10vh;
     }
 
+    .services-section-wrapper-environs {
+        padding: 0 15px;
+        margin-top: 0;
+    }
+
+    .services-left-section-content-environs {
+        padding-top: 80px;
+    }
+
+    .services-object-clause {
+        padding-bottom: 15px;
+        max-width: 95%;
+    }
+
+    .services-object-clause h1 {
+        font-size: clamp(1.75rem, 6vw, 2.5rem);
+        line-height: 1.3;
+    }
+
+    .tag-line {
+        max-width: 100%;
+    }
+
+    .tag-line p {
+        font-size: clamp(0.95rem, 3vw, 1.1rem);
+        line-height: 1.5;
+    }
+
+    .learn-more-btn {
+        margin: 1.5rem 0;
+    }
+
+    .learn-more-btn a {
+        padding: 10px 25px;
+        font-size: clamp(0.9rem, 2.5vw, 1rem);
+    }
+
+
+    /* --------------- Corporate Section -------------- */
 
     .main-container-wrapper {
         width: 100%;
@@ -657,6 +852,12 @@ body::-webkit-scrollbar-thumb {
     }
 
     /* ------------------ Mid Section One ----------------- */
+
+    .mid-section-body-one {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
 
     .mid-section-box-one-title,
     .mid-section-box-one-text,
@@ -685,16 +886,39 @@ body::-webkit-scrollbar-thumb {
     }
 
 
+    /* ---------------- Mid Section Two ---------------- */
+
+    .mid-section-box-text-two {
+        text-align: left;
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+
+
+    .mid-section-box-acoustic-two img {
+        min-width: 240px;
+        max-width: 240px;
+        height: 300px;
+    }
+
+    .carousel-arrow-two {
+        width: 35px;
+        height: 35px;
+    }
+
 
 }
 
 /* Mobile phones */
 @media (max-width: 600px) {
 
-    .top-cover-box {
-        display: none !important;
-
+    .hero-banner-box-environs {
+        padding-left: 30px;
+        padding-right: 30px;
     }
+
+
 
     .layer {
         grid-template-columns: 1fr;
@@ -722,6 +946,32 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 480px) {
 
+    /* ---------------- Hero - Banner ------------ */
+
+    .hero-banner-box-environs {
+        top: -8vh;
+    }
+
+    .services-left-section-content-environs {
+        padding-top: 60px;
+    }
+
+    .services-object-clause h1 {
+        font-size: clamp(1.5rem, 7vw, 2rem);
+    }
+
+    .tag-line p {
+        font-size: clamp(0.9rem, 3.5vw, 1rem);
+    }
+
+    .learn-more-btn a {
+        padding: 10px 20px;
+    }
+
+
+
+
+
     /* ------------------ Mid Section One ----------------- */
     .mid-section-body-one {
         padding: 30px 15px;
@@ -746,10 +996,7 @@ body::-webkit-scrollbar-thumb {
 /* Very small screens */
 @media (max-width: 400px) {
 
-    .top-cover-box {
-        display: none !important;
 
-    }
 
     .feature-space {
         flex: 0 0 92%;
