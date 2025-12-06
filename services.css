@@ -768,7 +768,7 @@ body::-webkit-scrollbar-thumb {
 
     position: sticky;
     top: 80px;
-    /* Increased from 20px - adjust based on your header height */
+
     align-self: flex-start;
     height: fit-content;
     /*   max-height: calc(100vh - 100px); */
@@ -854,7 +854,7 @@ body::-webkit-scrollbar-thumb {
 
 .text-content {
     width: 100%;
-    min-height: 150px;
+    min-height: 100px;
 
     padding-top: 10px;
     box-sizing: border-box;
@@ -1630,10 +1630,17 @@ body::-webkit-scrollbar-thumb {
 
     .services-section-wrapper {
 
-        width: 70%;
+        width: 80%;
 
     }
 
+    .services-section-wrapper {
+
+        padding: 0 25px 0 15px;
+        margin-top: 80px;
+
+
+    }
 
 
     .services-left-section-content {
@@ -1888,18 +1895,19 @@ body::-webkit-scrollbar-thumb {
         flex-direction: column;
         gap: 30px;
 
-
-        /* Individual Service Card */
-        .services-content-mobile {
-            background: #ffffff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: var(--border-mild3);
-            border-bottom: solid 10px #00F0FF;
-        }
     }
+
+    /* Individual Service Card */
+    .services-content-mobile {
+        background: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: var(--border-mild3);
+        border-bottom: solid 10px #00F0FF;
+    }
+
 
     .services-content-mobile:hover {
         transform: translateY(-4px);
@@ -2112,10 +2120,19 @@ body::-webkit-scrollbar-thumb {
 
         width: 110vw;
 
-        left: -29;
+        left: -33;
         padding: 20px 20px 10px;
 
     }
+
+    .services-section-wrapper {
+        width: 100%;
+        padding: 0 22px 0 22px;
+        margin-top: 80px;
+
+
+    }
+
 
     .services-object-clause h2 {
         font-size: 2.2rem;
@@ -2178,6 +2195,8 @@ body::-webkit-scrollbar-thumb {
 
 
     .services-section-wrapper {
+        width: 100%;
+        padding: 0 15px;
         margin-top: 80px;
 
 
@@ -2194,11 +2213,7 @@ body::-webkit-scrollbar-thumb {
     }
 
 
-    .services-section-wrapper {
-        width: 100%;
-        padding: 0 10px;
-
-    }
+    .services-section-wrapper {}
 
     .services-object-clause h2 {
         font-size: 2rem;
