@@ -98,11 +98,14 @@ header {
     transition: background-color 300ms ease, box-shadow 300ms ease;
 }
 
-.btn:hover {
+.btn:hover,
+.btn.active {
     background-color: #00F0FF;
     color: black;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+
 
 .hamburger {
     display: none;

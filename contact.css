@@ -1,0 +1,322 @@
+/* ========================================
+   CSS VARIABLES & RESET
+   ======================================== */
+
+:root {
+
+    /* Header */
+    --header-height: 87px;
+
+    /* Colors */
+    --primary-cyan: #00F0FF;
+    --secondary-cyan: #B5F7FB;
+    --accent-teal: #00C1CF;
+    --text-dark: #000000;
+    --text-light: #ffffff;
+    --text-muted: #666666;
+    --background-dark: #00848e;
+    --background-darker: #000000;
+    --background-light: #f3fcfa;
+    --background-lighter: #fcfefe;
+    --border-light: #f3f3f3;
+    --border-gray: #dddddd;
+
+    /* Spacing */
+    --container-max: 1200px;
+    --content-max: 1080px;
+    --section-padding: 100px;
+    --mobile-padding: 20px;
+
+    /* Transitions */
+    --transition-fast: 0.3s ease;
+    --transition-slow: 0.6s ease;
+
+    /* Shadows */
+    --shadow-light: 0 4px 14px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 8px 25px rgba(0, 125, 134, 0.5);
+    --shadow-heavy: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --shadow-heavy2: 0 10px 30px rgba(0, 0, 0, 0.2);
+    --shadow-heavy3: 0 10px 30px rgba(0, 0, 0, 0.32);
+
+    /* Outline */
+    --border-mild: solid .5px rgb(230, 229, 229);
+    --border-mild2: solid .5px rgb(188, 188, 188);
+    --border-mild3: solid .5px rgb(222, 222, 222);
+    --line-only: solid .5px rgb(188, 188, 188);
+    --line-only2: solid 2px rgb(0, 255, 251);
+
+
+
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    font-family: "Montserrat", "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+.page-wrapper {
+    overflow-x: clip;
+}
+
+
+/* Custom Font */
+@font-face {
+    font-family: 'blair';
+    src: url('./blairfonts/BlairMdITCTTMedium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+/* ================= Start-Hero-Section ================= */
+.contact-hero {
+    width: 110vw;
+    min-height: 100vh;
+    left: -5vw;
+    top: -14vh;
+    position: relative;
+    padding: 16px;
+    transition: transform 0.4s ease-out;
+    overflow: hidden;
+    z-index: 0;
+    /* adjust to your taste (50–70vh works well) */
+    background-image: url('img/contact-us.jpg');
+    /* replace with your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-cover-box {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 23px 20px;
+    top: 0;
+    width: 100%;
+    height: 86px;
+    z-index: 8;
+}
+
+/* Dark translucent overlay block */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    /* subtle dark tint */
+    backdrop-filter: blur(1px);
+}
+
+/* Centered Title */
+.contact-hero h1 {
+    position: relative;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    z-index: 2;
+}
+
+
+
+
+
+
+/* ================= Contact Us Form ================ */
+.contact-section {
+    padding: 0 20px 90px 20px;
+    background: var(--light);
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+/* ---- LEFT SIDE ---- */
+.contact-text h2 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    color: var(--dark);
+}
+
+.contact-text p {
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.contact-info strong {
+    color: var(--accent-teal);
+}
+
+.contact-info a {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* ---- FORM ---- */
+.contact-form {
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    border-left: 6px solid var(--green);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.contact-form .input-group {
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--dark);
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: 0.25s ease;
+    background: #fafafa;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(31, 79, 69, 0.25);
+    outline: none;
+    background: #fff;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* ---- BUTTON ---- */
+.contact-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--background-darker);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+    letter-spacing: 0.4px;
+}
+
+.contact-btn:hover {
+    background: var(--primary-cyan);
+    color: #000000;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 900px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* -------- Error return --------- */
+
+.form-message {
+    margin-top: 20px;
+    padding: 16px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    animation: slideIn 0.3s ease;
+}
+
+.form-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Responsive scaling */
+@media (max-width: 900px) {
+    .contact-hero {
+        height: 40vh;
+    }
+
+    .contact-hero h1 {
+        font-size: 2.3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-hero {
+        height: 35vh;
+    }
+
+    .contact-hero h1 {
+        font-size: 1.9rem;
+    }
+}

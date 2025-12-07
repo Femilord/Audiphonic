@@ -1,19 +1,141 @@
+/* ========================================
+   CSS VARIABLES & RESET
+   ======================================== */
+
+:root {
+
+    /* Header */
+    --header-height: 87px;
+
+    /* Colors */
+    --primary-cyan: #00F0FF;
+    --secondary-cyan: #B5F7FB;
+    --accent-teal: #00C1CF;
+    --text-dark: #000000;
+    --text-light: #ffffff;
+    --text-muted: #666666;
+    --background-dark: #00848e;
+    --background-darker: #000000;
+    --background-light: #f3fcfa;
+    --background-lighter: #fcfefe;
+    --border-light: #f3f3f3;
+    --border-gray: #dddddd;
+
+    /* Spacing */
+    --container-max: 1200px;
+    --content-max: 1080px;
+    --section-padding: 100px;
+    --mobile-padding: 20px;
+
+    /* Transitions */
+    --transition-fast: 0.3s ease;
+    --transition-slow: 0.6s ease;
+
+    /* Shadows */
+    --shadow-light: 0 4px 14px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 8px 25px rgba(0, 125, 134, 0.5);
+    --shadow-heavy: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --shadow-heavy2: 0 10px 30px rgba(0, 0, 0, 0.2);
+    --shadow-heavy3: 0 10px 30px rgba(0, 0, 0, 0.32);
+
+    /* Outline */
+    --border-mild: solid .5px rgb(230, 229, 229);
+    --border-mild2: solid .5px rgb(188, 188, 188);
+    --border-mild3: solid .5px rgb(222, 222, 222);
+    --line-only: solid .5px rgb(188, 188, 188);
+    --line-only2: solid 2px rgb(0, 255, 251);
 
 
-.top-box {
-    width: 100vw;
+
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    font-family: "Montserrat", "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+.page-wrapper {
+    overflow-x: clip;
+}
+
+
+/* Custom Font */
+@font-face {
+    font-family: 'blair';
+    src: url('./blairfonts/BlairMdITCTTMedium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+/* ================= Start-Hero-Section ================= */
+
+.coming-soon-wrapper {
     height: 100vh;
+    width: 100%;
+    background: #000;
+    /* change to your preferred background */
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(0, 34, 23);
+    flex-direction: column;
 }
 
-.inner-box {
-    width: 500px;
-    height: 500px;
-    background-color: aqua;
-    border-top-left-radius: 300px;
-    border-bottom-right-radius: 300px;
-    transform: rotate(45deg);
+.coming-soon {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #fff;
+    animation: fadeIn 2s ease forwards;
+}
+
+.dot {
+    display: inline-block;
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes blink {
+    from {
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

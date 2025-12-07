@@ -812,6 +812,33 @@ body::-webkit-scrollbar-thumb {
 
 /* Smaller tablets & large phones */
 
+@media (max-width: 969px) {
+    .av-box {
+        margin-left: 0;
+    }
+
+
+    .mid-section-box-one-acoustic img {
+        max-height: 60vh;
+    }
+
+    .av-body {
+        margin-bottom: 50px;
+
+    }
+
+
+
+    /* ---------------- Corporate ----------------- */
+
+    .main-container {
+        border: none;
+    }
+
+
+
+}
+
 @media (max-width: 950px) {
     .top-cover-box {
         display: none !important;
@@ -922,7 +949,7 @@ body::-webkit-scrollbar-thumb {
     }
 
     .mid-section-box-one-acoustic img {
-        max-height: 35vh;
+        max-height: 60vh;
     }
 
 
@@ -1014,6 +1041,10 @@ body::-webkit-scrollbar-thumb {
 
     }
 
+    .av-body {
+        padding-bottom: 0;
+        margin-bottom: 10px;
+    }
 
 }
 

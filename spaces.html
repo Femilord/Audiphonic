@@ -32,7 +32,7 @@
                     <ul class="menu">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Services</a></li>
-                        <li><a href="spacess.html" class="active">Spaces</a></li>
+                        <li><a href="spaces.html" class="active">Spaces</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="blog.html">Blog</a></li>
                     </ul>
@@ -736,7 +736,7 @@
                     <div class="forth-Column-02">
                         <h2><a href="#" target="_blank" rel="noopener noreferrer">Contact Us</a></h2>
                         <ul>
-                            <li><a href="tel:+2348066667177">Call Us: +234(0)80-66-66-71-77</a></li>
+                            <li><a href="tel:+2348066667177">Call Us: +234 (0) 701 001 9643</a></li>
                             <li><a href="mailto:info@audiphonic.com" class="website-link">Email Us:
                                     info@audiphonic.com</a></li>
                         </ul>
@@ -807,6 +807,27 @@
             }
         });
     </script>
+
+
+
+    <!-- ------------- Hero Section zoom out scroll effect ------------- -->
+    <script>
+
+
+        const bgWrapper = document.getElementById("hero-banner-box");
+
+        window.addEventListener("scroll", () => {
+            const scrollY = window.scrollY;
+            const scale = 1.0 - Math.min(scrollY / 1500, 0.09); // Zooms out to 94%
+            bgWrapper.style.transform = `scale(${scale})`;
+        });
+
+
+
+    </script>
+
+
+
 
 
     <script>
