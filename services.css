@@ -118,6 +118,95 @@ body::-webkit-scrollbar-thumb {
     position: relative;
 
     width: 100%;
+    margin-bottom: 50px;
+}
+
+.who-info {
+    max-width: var(--container-max);
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -200px;
+    padding: 0 20px;
+
+    border-left: 1px solid var(--border-light);
+    border-right: 1px solid var(--border-light);
+    color: var(--text-muted);
+}
+
+.side-line {
+    max-width: var(--content-max);
+    width: 100%;
+    min-height: 163px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+    gap: 40px;
+}
+
+.who-info-text {
+    max-width: 600px;
+    width: 100%;
+    flex: 1;
+    margin-top: -180px;
+}
+
+.who-info-text h3 {
+    width: 100%;
+    padding-left: 20px;
+    color: var(--text-dark);
+    margin: 0;
+    border-left: 2px solid #00F0FF;
+}
+
+.who-info-text span {
+
+    color: var(--text-muted);
+
+
+}
+
+.who-info-text h4 {
+    width: 100%;
+
+    padding-top: 40px;
+    color: var(--text-dark);
+    margin: 0;
+
+}
+
+
+
+.who-info-text ul {
+    padding-top: 20px;
+}
+
+.who-info-text li {
+    padding-bottom: 10px;
+}
+
+.who-info-text p {
+    width: 100%;
+    padding-top: 20px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.who-info-video {
+    flex-shrink: 0;
+    max-width: 320px;
+}
+
+.who-info-video video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 .hero-banner-box {
@@ -150,8 +239,8 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     margin: var(--section-padding) auto 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+
     position: relative;
     z-index: 1;
     /* FIXED: Changed from -40 to 1 */
@@ -164,6 +253,7 @@ body::-webkit-scrollbar-thumb {
     max-width: 500px;
     width: 100%;
     color: var(--text-light);
+    margin-top: 20px;
 }
 
 .object-clause {
@@ -220,6 +310,52 @@ body::-webkit-scrollbar-thumb {
 }
 
 
+/* --------------- Quick-Data ---------------- */
+.quick-data {
+    max-width: 800px;
+    margin-top: 80px;
+}
+
+.quick-data-wrpper {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.vertical-line-divider {
+    width: 1px;
+    background-color: #ddd;
+    min-height: 80px;
+}
+
+.studio-data,
+.corporate-data,
+.auditorium-data {
+    flex: 1;
+    text-align: center;
+}
+
+.studio-data h3,
+.corporate-data h3,
+.auditorium-data h3 {
+    margin: 0 0 10px 0;
+    font-size: 2em;
+    color: var(--text-light);
+}
+
+.studio-data p,
+.corporate-data p,
+.auditorium-data p {
+    margin: 0;
+    font-size: 0.9em;
+    color: var(--text-light);
+}
+
+.word-bold {
+    color: rgb(0, 255, 242);
+}
+
 
 /* -------------- Services-right-section-content ---------------- */
 
@@ -275,6 +411,7 @@ body::-webkit-scrollbar-thumb {
     transform-style: preserve-3d;
     cursor: pointer;
     pointer-events: none;
+
 }
 
 /* Positioning states */
@@ -470,14 +607,21 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-
 .main-title {
-    width: var(--container-max);
+
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 16px 10px 16px;
 
+    width: 100%;
+    height: 200px;
+    padding: 20px 0 20px 20px;
+    background-color: var(--background-lighter);
+    /* box-shadow: var(--shadow-light); */
+    border: var(--border-mild2);
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: var(--transition-fast);
 
     /* border-left: 1px solid var(--border-light);
     border-right: 1px solid var(--border-light);
@@ -485,6 +629,9 @@ body::-webkit-scrollbar-thumb {
     box-shadow: var(--shadow-heavy); */
 
 }
+
+
+
 
 .main-title-wrapper {
 
@@ -1101,10 +1248,26 @@ body::-webkit-scrollbar-thumb {
 
 @media (min-width: 1600px) {
 
+    .hero-banner-box {
+        min-height: 70vh;
+        margin-top: 80px;
+
+    }
+
+
+    /* --------------- Quick-Data ---------------- */
+
+
+
+
+    .quick-data {
+        max-width: 700px;
+        margin-top: 0;
+    }
 
     .services-right-section-content {
         position: absolute;
-        top: 55%;
+        top: 50%;
         left: 45%;
         transform: translateY(-50%);
         width: 50vw;
@@ -1141,7 +1304,7 @@ body::-webkit-scrollbar-thumb {
         line-height: 1.3;
         font-weight: bold;
         font-family: 'blair', 'Montserrat', 'Poppins', sans-serif !important;
-        margin: 0;
+        margin-bottom: 20px;
     }
 
 
@@ -1155,21 +1318,89 @@ body::-webkit-scrollbar-thumb {
 
         width: 110vw;
         min-height: 100vh;
-        padding-top: 80px;
+        padding-top: 20px;
 
     }
 
-
+    .first-section-wrapper {
+        margin-top: 0;
+    }
 
     .services-object-clause h2 {
         color: var(--text-light);
-        font-size: clamp(3.0rem, 2.5vw, 3.0rem);
+        font-size: clamp(2.5rem, 2vw, 3.0rem);
         line-height: 1.3;
         font-weight: bold;
         font-family: 'blair', Poppins, sans-serif !important;
         margin: 0;
     }
 
+    .tag-line {
+        margin-top: 20px;
+    }
+
+    .tag-line p {
+
+        font-size: clamp(1.0rem, 1.4vw, 1rem);
+    }
+
+
+    .learn-more-btn {
+        margin-top: 20px;
+    }
+
+
+    .who-info {
+
+        margin-top: -150px;
+    }
+
+
+    /* --------------- Quick-Data ---------------- */
+    .quick-data {
+        max-width: 600px;
+        margin-top: 0;
+    }
+
+    .quick-data-wrpper {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .vertical-line-divider {
+        width: 1px;
+        background-color: #ddd;
+        min-height: 80px;
+    }
+
+    .studio-data,
+    .corporate-data,
+    .auditorium-data {
+        flex: 1;
+        text-align: center;
+    }
+
+    .studio-data h3,
+    .corporate-data h3,
+    .auditorium-data h3 {
+        margin: 0 0 10px 0;
+        font-size: 1.8em;
+        color: var(--text-light);
+    }
+
+    .studio-data p,
+    .corporate-data p,
+    .auditorium-data p {
+        margin: 0;
+        font-size: 0.8em;
+        color: var(--text-light);
+    }
+
+
+
+    /* ------- ---------------------- */
 
     .services-cards {
         position: absolute;
@@ -1183,7 +1414,10 @@ body::-webkit-scrollbar-thumb {
 
 
 
-    /* ------- */
+
+
+
+
 
     .services-cards img {
         position: relative;
@@ -1242,14 +1476,11 @@ body::-webkit-scrollbar-thumb {
         left: -60;
         padding-top: 80px;
         padding-bottom: 30px;
-        padding-left: 20px;
+        padding-left: 0;
+
         padding-right: 20px;
     }
 
-    .services-section-wrapper {
-        width: 92%;
-        margin: 20px auto 0;
-    }
 
 
 
@@ -1259,10 +1490,12 @@ body::-webkit-scrollbar-thumb {
         margin: var(--section-padding) auto 0;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         position: relative;
         z-index: 1;
         /* FIXED: Changed from -40 to 1 */
+        margin-left: 80px;
+
     }
 
     .services-left-section-content {
@@ -1273,19 +1506,77 @@ body::-webkit-scrollbar-thumb {
         width: 100%;
         color: var(--text-light);
 
-        margin-left: 60px;
+
+
+
     }
 
 
     .services-object-clause h2 {
-        font-size: clamp(2.8rem, 3.5vw, 2.5rem);
-        line-height: 1.2;
+        color: var(--text-light);
+        font-size: clamp(2.5rem, 2vw, 3.0rem);
+        line-height: 1.3;
+        font-weight: bold;
+        font-family: 'blair', Poppins, sans-serif !important;
+        margin: 0;
+    }
+
+    .tag-line {
+        margin-top: 20px;
     }
 
     .tag-line p {
 
-        font-size: clamp(1.0rem, 1.4vw, 1.2rem);
+        font-size: clamp(1.0rem, 1.4vw, 1rem);
     }
+
+
+
+
+
+    /* --------------- Quick-Data ---------------- */
+    .quick-data {
+        max-width: 600px;
+
+        margin-top: 0;
+    }
+
+    .quick-data-wrpper {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .vertical-line-divider {
+        width: 1px;
+        background-color: #ddd;
+        min-height: 80px;
+    }
+
+    .studio-data,
+    .corporate-data,
+    .auditorium-data {
+        flex: 1;
+        text-align: center;
+    }
+
+    .studio-data h3,
+    .corporate-data h3,
+    .auditorium-data h3 {
+        margin: 0 0 10px 0;
+        font-size: 1.8em;
+        color: var(--text-light);
+    }
+
+    .studio-data p,
+    .corporate-data p,
+    .auditorium-data p {
+        margin: 0;
+        font-size: 0.8em;
+        color: var(--text-light);
+    }
+
 
     /* Keep right section on the right but adjust size */
 
@@ -1377,17 +1668,20 @@ body::-webkit-scrollbar-thumb {
     }
 
 
-
+    .services-section-wrapper {
+        margin-left: 10px;
+    }
 
     .services-left-section-content {
 
         max-width: 450px;
+        padding-left: 50px;
     }
 
 
 
     .services-object-clause h2 {
-        font-size: clamp(2.8rem, 3.5vw, 2.5rem);
+        font-size: clamp(2.1rem, 3.5vw, 2.5rem);
         line-height: 1.2;
     }
 
@@ -1399,6 +1693,31 @@ body::-webkit-scrollbar-thumb {
     .learn-more-btn {
         margin: 1.5rem 0;
     }
+
+    /* --------- who info ----------- */
+    .who-info {
+        margin-top: -200px;
+    }
+
+    .side-line {
+        gap: 30px;
+    }
+
+    .who-info-text {
+        margin-top: -120px;
+    }
+
+    .who-info-text h3 {
+        padding-left: 30px;
+    }
+
+    .who-info-video {
+        max-width: 280px;
+    }
+
+
+    /* ------------- Right Section Content ----------- */
+
 
     .services-right-section-content {
         width: 42vw;
@@ -1664,6 +1983,46 @@ body::-webkit-scrollbar-thumb {
         font-size: 0.9rem;
     }
 
+    /* ------------ Who ----------- */
+
+    .who-info {
+        height: auto;
+        margin-top: 120px;
+        padding: 0 15px;
+    }
+
+    .side-line {
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 40px;
+        padding: 20px 0;
+    }
+
+    .who-info-text {
+        max-width: 90%;
+
+    }
+
+    .who-info-text h3 {
+        padding-left: 20px;
+        font-size: 1.5rem;
+    }
+
+    .who-info-text p {
+        padding-top: 15px;
+        font-size: 0.95rem;
+    }
+
+    .who-info-video {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+
+
+
+    /* ---------- Right Section ---------------*/
 
     .services-right-section-content {
         margin-bottom: 50px;
@@ -2134,6 +2493,7 @@ body::-webkit-scrollbar-thumb {
     }
 
 
+
     .services-object-clause h2 {
         font-size: 2.2rem;
     }
@@ -2182,6 +2542,7 @@ body::-webkit-scrollbar-thumb {
     }
 
 
+
 }
 
 /* Small mobile (480px and below) */
@@ -2213,7 +2574,7 @@ body::-webkit-scrollbar-thumb {
     }
 
 
-    .services-section-wrapper {}
+
 
     .services-object-clause h2 {
         font-size: 2rem;
@@ -2236,6 +2597,23 @@ body::-webkit-scrollbar-thumb {
         font-size: 0.85rem;
     }
 
+    /* --------- Who ------------ */
+
+    .who-info {
+        margin-top: -50px;
+    }
+
+    .who-info-text h3 {
+        padding-left: 15px;
+        font-size: 1.25rem;
+    }
+
+    .who-info-text p {
+        font-size: 0.9rem;
+    }
+
+
+    /* -------------- Right Section ------------ */
     .services-right-section-content {
         margin-top: 100px;
     }

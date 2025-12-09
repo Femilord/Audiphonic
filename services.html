@@ -89,6 +89,35 @@
 
 
                         </div>
+
+
+
+                        <div class="quick-data">
+                            <div class="quick-data-wrpper">
+                                <div class="vertical-line-divider"> </div>
+                                <div class="studio-data">
+                                    <h3> &#62; </h3>
+                                    <p><span class="word-bold">Studios</span> built from ground up inlcuding
+                                        installations</p>
+                                </div>
+                                <div class="vertical-line-divider"> </div>
+                                <div class="corporate-data">
+                                    <h3>&#62; </h3>
+                                    <p><span class="word-bold">Corporate Spaces </span>- from call centers to work
+                                        spaces and fit-outs</p>
+                                </div>
+                                <div class="vertical-line-divider"> </div>
+                                <div class="auditorium-data">
+                                    <h3>&#62; </h3>
+                                    <p><span class="word-bold">Auditoriums </span> - from marque sundproofing to
+                                        auditorium acoustics</p>
+                                </div>
+                                <div class="vertical-line-divider"> </div>
+                            </div>
+                        </div>
+
+
+
                     </div>
 
 
@@ -151,27 +180,44 @@
 
                 </div>
 
+                <div class="who-info">
+                    <div class="side-line">
+                        <div class="who-info-text">
+
+                            <h3>New Project Alert - <span>Home Cinema Ogudu, Lagos</span></h3>
+                            <p>Home cinemas bring the full cinematic experience into your living space with immersive
+                                audio, crisp visuals, and
+                                intentional room design. They combine acoustics, lighting control, seating layout, and
+                                smart automation to deliver true
+                                theater-quality performance. With the right setup, every movie night becomes richer,
+                                more engaging, and tailored to your
+                                personal entertainment style. <span>Here we designed, built and equiped a begitting
+                                    family cinema space in Ogudu, Lagos. </span>
+                            </p>
+                            <h4>Installed</h4>
+
+                            <ul>
+                                <li>Epson 4k Home Cinema Projector </li>
+                                <li>Onkyo Control Deck</li>
+                                <li>Klipcsh Cinema Speakers</li>
+
+                            </ul>
+                        </div>
+                        <div class="who-info-video">
+                            <video controls>
+                                <source src="video/1740681236110143 (1).mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
 
         <section class="services-intro">
-            <div class="main-title">
-                <div class="main-title-wrapper">
-                    <div class="main-title-container">
-                        <div class="intro-content-heading">
 
-                            <h2>Our Services</h2>
-                        </div>
-                        <div class="intro-content-body">
-                            <p>We provide expert Noise Control and AV system integration to create
-                                spaces that sound exceptional
-                                and perform with purpose.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </section>
 
@@ -181,6 +227,22 @@
 
                     <div class="services-wrapper">
 
+                        <div class="main-title">
+                            <div class="main-title-wrapper">
+                                <div class="main-title-container">
+                                    <div class="intro-content-heading">
+
+                                        <h2>Our Services</h2>
+                                    </div>
+                                    <div class="intro-content-body">
+                                        <p>We provide expert Noise Control and AV system integration to create
+                                            spaces that sound exceptional
+                                            and perform with purpose.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="services-content soundproofing">
                             <div class="services-content-wrapper">
@@ -972,6 +1034,35 @@
             // Change slide every 4 seconds
             setInterval(showNextSlide, 4000);
         })();
+    </script>
+
+    <script>
+        // Animated counter function
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16); // 60fps
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = `> ${target}`;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = `> ${Math.floor(start)}`;
+                }
+            }, 16);
+        }
+
+        // Run when page loads
+        window.addEventListener('DOMContentLoaded', () => {
+            // Get all h3 elements and animate them
+            const studioH3 = document.querySelector('.studio-data h3');
+            const corporateH3 = document.querySelector('.corporate-data h3');
+            const auditoriumH3 = document.querySelector('.auditorium-data h3');
+
+            if (studioH3) animateCounter(studioH3, 50, 2000);
+            if (corporateH3) animateCounter(corporateH3, 15, 2000);
+            if (auditoriumH3) animateCounter(auditoriumH3, 10, 2000);
+        });
     </script>
 
 

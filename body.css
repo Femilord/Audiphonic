@@ -104,13 +104,20 @@ body::-webkit-scrollbar-thumb {
     height: 86px;
     z-index: 8;
 
+    display: flex;
+    flex-direction: column;
+
 }
 
 .first-section-wrapper {
     overflow: hidden;
     position: relative;
     width: 100%;
+
+
 }
+
+
 
 .first-section-background {
     display: flex;
@@ -139,11 +146,58 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     margin: var(--section-padding) auto 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     position: relative;
     z-index: 2;
 }
+
+.who-info {
+    max-width: var(--container-max);
+    width: 100%;
+    margin: 0 auto;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -250px;
+
+    border-left: 1px solid var(--border-light);
+    border-right: 1px solid var(--border-light);
+    color: var(--text-muted);
+}
+
+.side-line {
+    max-width: var(--container-max);
+    width: 100%;
+    height: 163px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.who-info-text {
+    max-width: var(--content-max);
+    width: 100%;
+}
+
+.who-info-text h3 {
+    width: 800px;
+    padding-left: 40px;
+    color: var(--text-dark);
+    margin: 0;
+    border-left: 2px solid #00F0FF;
+}
+
+.who-info-text P {
+    width: 800px;
+    padding-top: 20px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
 
 .left-section-content {
     display: flex;
@@ -152,6 +206,7 @@ body::-webkit-scrollbar-thumb {
     max-width: 600px;
     width: 100%;
     color: var(--text-light);
+    margin-top: 100px;
 }
 
 .object-clause {
@@ -176,11 +231,14 @@ body::-webkit-scrollbar-thumb {
     font-weight: 600;
 }
 
+
+
 .tag-line p {
     color: var(--text-light);
-    font-size: clamp(1.0rem, 1.4vw, 1.5rem);
+    font-size: clamp(1.0rem, 1.4vw, 1.2rem);
     line-height: 1.8;
 }
+
 
 .line-divider {
     width: 200px;
@@ -273,6 +331,51 @@ body::-webkit-scrollbar-thumb {
         transform: translateX(calc(-8 * 300px - 7 * 100px));
     }
 }
+
+
+/* --------------- Quick-Data ---------------- */
+.quick-data {
+    max-width: 800px;
+    margin-top: 80px;
+}
+
+.quick-data-wrpper {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.vertical-line-divider {
+    width: 1px;
+    background-color: #ddd;
+    min-height: 80px;
+}
+
+.studio-data,
+.corporate-data,
+.auditorium-data {
+    flex: 1;
+    text-align: center;
+}
+
+.studio-data h3,
+.corporate-data h3,
+.auditorium-data h3 {
+    margin: 0 0 10px 0;
+    font-size: 2em;
+    color: var(--text-light);
+}
+
+.studio-data p,
+.corporate-data p,
+.auditorium-data p {
+    margin: 0;
+    font-size: 0.9em;
+    color: var(--text-light);
+}
+
+
 
 /* ========================================
    CTA SECTION (Email/Call)
@@ -595,7 +698,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.4;
-    color: var(--text-dark);
+    color: var(--text-muted);
     margin-top: 10px;
     text-align: left;
     flex-grow: 1;
@@ -605,7 +708,7 @@ body::-webkit-scrollbar-thumb {
 .services-icon .about {
     font-size: 1.0rem;
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--text-muted);
     margin: 6px 0;
     padding-top: 10px;
 }
@@ -909,7 +1012,7 @@ body::-webkit-scrollbar-thumb {
     border-right: 1px solid var(--border-light);
     box-sizing: border-box;
     margin: 0 auto;
-    background-color: var(--background-light);
+    /*  background-color: var(--background-light); */
 }
 
 .sticky-side-wrapper {
@@ -1021,7 +1124,7 @@ body::-webkit-scrollbar-thumb {
     gap: 40px;
     border-left: 1px dashed var(--border-gray);
     border-right: 1px dashed var(--border-gray);
-    background-color: var(--secondary-cyan);
+    /*   background-color: var(--secondary-cyan); */
 }
 
 .text-content-block {
@@ -1036,6 +1139,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 15px;
+    color: var(--text-dark);
 }
 
 .text-content-block p {
@@ -1043,6 +1147,7 @@ body::-webkit-scrollbar-thumb {
     font-weight: 400;
     line-height: 1.6;
     margin-bottom: 20px;
+    color: var(--text-muted);
 }
 
 .text-content-block h4 {
@@ -1737,9 +1842,40 @@ body::-webkit-scrollbar-thumb {
 /* Large Desktop */
 @media (min-width: 1600px) {
 
+    .first-section-background {
+        min-height: 70vh;
+        margin-top: 80px;
+
+    }
+
+    /* --------------- Quick-Data ---------------- */
+
+    .quick-data {
+        max-width: 700px;
+        margin-top: 0;
+    }
+
+
+    /* --------------- Right Section ---------------- */
     .right-section-content {
         left: 55%;
         width: 50vw;
+    }
+
+
+    .scrolling-track img {
+        width: 320px;
+        height: auto;
+        border-radius: 12px;
+        border: 2px solid var(--text-light);
+        flex-shrink: 0;
+        margin-right: 100px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    /* --------------- Left Section ---------------- */
+    .section-wrapper {
+        margin-top: 80px;
     }
 
     .object-clause h2 {
@@ -1747,8 +1883,13 @@ body::-webkit-scrollbar-thumb {
     }
 
     .tag-line p {
-        font-size: clamp(1.0rem, 1.2vw, 1.4rem);
+        color: var(--text-light);
+        font-size: clamp(1.0rem, 1.4vw, 1.2rem);
+        line-height: 1.8;
     }
+
+
+    /* ------------------------------ */
 
     .scroll-container {
         width: var(--container-max);
@@ -1780,15 +1921,6 @@ body::-webkit-scrollbar-thumb {
         margin: 300px 0 0;
     }
 
-    .scrolling-track img {
-        width: 320px;
-        height: auto;
-        border-radius: 12px;
-        border: 2px solid var(--text-light);
-        flex-shrink: 0;
-        margin-right: 100px;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
 }
 
 /* Desktop */

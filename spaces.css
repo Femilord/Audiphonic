@@ -710,522 +710,428 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-
-/* ---------- Responsive improvements ---------- */
-
-/* Tablet styles */
-@media (max-width: 1024px) {
-    .services-left-section-content-environs {
-        padding-top: 100px;
-    }
-
-    .services-object-clause h1 {
-        font-size: clamp(1.8rem, 4.5vw, 3rem);
-    }
-
-    .tag-line {
-        max-width: 600px;
-    }
-}
-
-
-@media (max-width: 1080px) {
-
-    .mid-section-body-one {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-
-
-
-    .carousel-container-two {
-        margin-left: 0;
-        width: 100%;
-    }
-
-    .mid-section-box-text-two {
-        text-align: left;
-        padding-left: 15px;
-        padding-right: 15px;
-
-    }
-
-    .mid-section-box-acoustic-two {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-
-
-    .carousel-arrow-two.left-two {
-        left: 10px;
-    }
-
-    .carousel-arrow-two.right-two {
-        right: 10px;
-    }
-}
-
-
-/* Tablet */
-@media (max-width: 992px) {
-
-
-
-    .layer {
-        gap: 24px;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    }
-
-    .feature-space {
-        flex: 0 0 calc(50% - 20px);
-        /* show 2 cards */
-    }
-
-    .environs-image {
-        height: 200px;
-    }
-
-    .environs-box-text {
-        padding: 20px;
-    }
-
-    /* -------------- Mid Section one ------------------ */
-
-    .mid-section-box-one-title,
-    .mid-section-box-one-text,
-    .av-box {
-        margin-left: 30px;
-    }
-
-    .av-body {
-        padding-right: 0;
-    }
-
-    .mid-section-box-one-acoustic img {
-        max-height: 40vh;
-    }
-
-
-}
-
-/* Smaller tablets & large phones */
-
-@media (max-width: 969px) {
-    .av-box {
-        margin-left: 0;
-    }
-
-
-    .mid-section-box-one-acoustic img {
-        max-height: 60vh;
-    }
-
-    .av-body {
-        margin-bottom: 50px;
-
-    }
-
-
-
-    /* ---------------- Corporate ----------------- */
-
-    .main-container {
-        border: none;
-    }
-
-
-
-}
-
-@media (max-width: 950px) {
-    .top-cover-box {
-        display: none !important;
-
-    }
-
-
-}
-
-@media (max-width: 768px) {
-
-    /* ---------- hero-section ------------- */
-
+@media (min-width: 1600px) {
 
     .hero-banner-box-environs {
-        min-height: 100vh;
-        padding: 16px 70px;
-        top: -10vh;
-    }
-
-    .services-section-wrapper-environs {
-        padding: 0 15px;
-        margin-top: 0;
-    }
-
-    .services-left-section-content-environs {
-        padding-top: 80px;
-    }
-
-    .services-object-clause {
-        padding-bottom: 15px;
-        max-width: 95%;
-    }
-
-    .services-object-clause h1 {
-        font-size: clamp(1.75rem, 6vw, 2.5rem);
-        line-height: 1.3;
-    }
-
-    .tag-line {
-        max-width: 100%;
-    }
-
-    .tag-line p {
-        font-size: clamp(0.95rem, 3vw, 1.1rem);
-        line-height: 1.5;
-    }
-
-    .learn-more-btn {
-        margin: 1.5rem 0;
-    }
-
-    .learn-more-btn a {
-        padding: 10px 25px;
-        font-size: clamp(0.9rem, 2.5vw, 1rem);
-    }
-
-
-    /* --------------- Corporate Section -------------- */
-
-    .main-container-wrapper {
-        width: 100%;
-    }
-
-    .layer {
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 22px;
-    }
-
-    .feature-space {
-        flex: 0 0 calc(70%);
-        /* show 1.3 cards */
-        border-bottom: solid 10px #00F0FF;
-    }
-
-    .environs-image {
-        height: 190px;
-    }
-
-    /* ------------------ Mid Section One ----------------- */
-
-    .mid-section-body-one {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-
-    .mid-section-box-one-title,
-    .mid-section-box-one-text,
-    .av-box {
-        margin-left: 0;
-    }
-
-    .mid-section-box-one-text {
-        gap: 20px;
-    }
-
-    .mid-section-box-one-text h3 {
-        padding-right: 0;
-    }
-
-    .mid-section-box-one-text p {
-        padding-left: 0;
-    }
-
-    .av-box {
-        gap: 30px;
-    }
-
-    .mid-section-box-one-acoustic img {
-        max-height: 60vh;
-    }
-
-
-    /* ---------------- Mid Section Two ---------------- */
-
-    .mid-section-box-text-two {
-        text-align: left;
-        padding-left: 15px;
-        padding-right: 15px;
-
-    }
-
-
-    .mid-section-box-acoustic-two img {
-        min-width: 240px;
-        max-width: 240px;
-        height: 300px;
-    }
-
-    .carousel-arrow-two {
-        width: 35px;
-        height: 35px;
-    }
-
-
-}
-
-
-@media (max-width: 759px) {
-
-    .mid-section-box-one-text h3 {
-        font-size: clamp(1.2rem, 2.2vw, 1.5rem);
-        font-weight: 500;
-        padding-right: 150px;
-        line-height: 1.5;
-
-    }
-
-
-}
-
-
-
-/* Mobile phones */
-@media (max-width: 600px) {
-
-    .hero-banner-box-environs {
-        padding-left: 30px;
-        padding-right: 30px;
+        min-height: 70vh;
+        margin-top: 80px;
 
     }
 
 
 
-    .main-container {
-        border: none;
-    }
 
-    .layer {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
+    /* ---------- Responsive improvements ---------- */
 
-    .feature-space {
-        flex: 0 0 85%;
-        /* show 1 card almost full width */
-    }
+    /* Tablet styles */
+    @media (max-width: 1024px) {
+        .services-left-section-content-environs {
+            padding-top: 100px;
+        }
 
-    .environs-image {
-        height: 180px;
-    }
+        .services-object-clause h1 {
+            font-size: clamp(1.8rem, 4.5vw, 3rem);
+        }
 
-    .feature-space {
-        border-radius: 12px;
-    }
-
-    .environs-box-text {
-        padding: 18px;
+        .tag-line {
+            max-width: 600px;
+        }
     }
 
 
+    @media (max-width: 1080px) {
+
+        .mid-section-body-one {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
 
 
-    .mid-section-box-one-text h3 {
-        font-size: clamp(1.2rem, 2.2vw, 1.5rem);
-        font-weight: 500;
-        padding-right: 60px;
-        line-height: 1.5;
-
-    }
-
-    .av-body {
-        padding-bottom: 0;
-        margin-bottom: 10px;
-    }
-
-}
 
 
-@media (max-width: 480px) {
+        .carousel-container-two {
+            margin-left: 0;
+            width: 100%;
+        }
 
-    /* ---------------- Hero - Banner ------------ */
+        .mid-section-box-text-two {
+            text-align: left;
+            padding-left: 15px;
+            padding-right: 15px;
 
-    .hero-banner-box-environs {
-        top: -8vh;
-    }
+        }
 
-    .services-left-section-content-environs {
-        padding-top: 60px;
-    }
+        .mid-section-box-acoustic-two {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
 
-    .services-object-clause h1 {
-        font-size: clamp(1.5rem, 7vw, 2rem);
-    }
 
-    .tag-line p {
-        font-size: clamp(0.9rem, 3.5vw, 1rem);
-    }
 
-    .learn-more-btn a {
-        padding: 10px 20px;
+        .carousel-arrow-two.left-two {
+            left: 10px;
+        }
+
+        .carousel-arrow-two.right-two {
+            right: 10px;
+        }
     }
 
 
-    /* --------------- Corporate ----------------- */
+    /* Tablet */
+    @media (max-width: 992px) {
 
-    .main-container-title-main {
-        padding-right: 40px;
+
+
+        .layer {
+            gap: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
+
+        .feature-space {
+            flex: 0 0 calc(50% - 20px);
+            /* show 2 cards */
+        }
+
+        .environs-image {
+            height: 200px;
+        }
+
+        .environs-box-text {
+            padding: 20px;
+        }
+
+        /* -------------- Mid Section one ------------------ */
+
+        .mid-section-box-one-title,
+        .mid-section-box-one-text,
+        .av-box {
+            margin-left: 30px;
+        }
+
+        .av-body {
+            padding-right: 0;
+        }
+
+        .mid-section-box-one-acoustic img {
+            max-height: 40vh;
+        }
+
+
     }
 
-    .main-container-title-para {
-        padding-right: 40px;
+    /* Smaller tablets & large phones */
+
+    @media (max-width: 969px) {
+        .av-box {
+            margin-left: 0;
+        }
+
+
+        .mid-section-box-one-acoustic img {
+            max-height: 60vh;
+        }
+
+        .av-body {
+            margin-bottom: 50px;
+
+        }
+
+
+
+        /* ---------------- Corporate ----------------- */
+
+        .main-container {
+            border: none;
+        }
+
+
+
+    }
+
+    @media (max-width: 950px) {
+        .top-cover-box {
+            display: none !important;
+
+        }
+
+
+    }
+
+    @media (max-width: 768px) {
+
+        /* ---------- hero-section ------------- */
+
+
+        .hero-banner-box-environs {
+            min-height: 100vh;
+            padding: 16px 70px;
+            top: -10vh;
+        }
+
+        .services-section-wrapper-environs {
+            padding: 0 15px;
+            margin-top: 0;
+        }
+
+        .services-left-section-content-environs {
+            padding-top: 80px;
+        }
+
+        .services-object-clause {
+            padding-bottom: 15px;
+            max-width: 95%;
+        }
+
+        .services-object-clause h1 {
+            font-size: clamp(1.75rem, 6vw, 2.5rem);
+            line-height: 1.3;
+        }
+
+        .tag-line {
+            max-width: 100%;
+        }
+
+        .tag-line p {
+            font-size: clamp(0.95rem, 3vw, 1.1rem);
+            line-height: 1.5;
+        }
+
+        .learn-more-btn {
+            margin: 1.5rem 0;
+        }
+
+        .learn-more-btn a {
+            padding: 10px 25px;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
+        }
+
+
+        /* --------------- Corporate Section -------------- */
+
+        .main-container-wrapper {
+            width: 100%;
+        }
+
+        .layer {
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 22px;
+        }
+
+        .feature-space {
+            flex: 0 0 calc(70%);
+            /* show 1.3 cards */
+            border-bottom: solid 10px #00F0FF;
+        }
+
+        .environs-image {
+            height: 190px;
+        }
+
+        /* ------------------ Mid Section One ----------------- */
+
+        .mid-section-body-one {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+
+        .mid-section-box-one-title,
+        .mid-section-box-one-text,
+        .av-box {
+            margin-left: 0;
+        }
+
+        .mid-section-box-one-text {
+            gap: 20px;
+        }
+
+        .mid-section-box-one-text h3 {
+            padding-right: 0;
+        }
+
+        .mid-section-box-one-text p {
+            padding-left: 0;
+        }
+
+        .av-box {
+            gap: 30px;
+        }
+
+        .mid-section-box-one-acoustic img {
+            max-height: 60vh;
+        }
+
+
+        /* ---------------- Mid Section Two ---------------- */
+
+        .mid-section-box-text-two {
+            text-align: left;
+            padding-left: 15px;
+            padding-right: 15px;
+
+        }
+
+
+        .mid-section-box-acoustic-two img {
+            min-width: 240px;
+            max-width: 240px;
+            height: 300px;
+        }
+
+        .carousel-arrow-two {
+            width: 35px;
+            height: 35px;
+        }
+
+
+    }
+
+
+    @media (max-width: 759px) {
+
+        .mid-section-box-one-text h3 {
+            font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+            font-weight: 500;
+            padding-right: 150px;
+            line-height: 1.5;
+
+        }
+
+
     }
 
 
 
-    /* ------------------ Mid Section One ----------------- */
-    .mid-section-body-one {
-        padding: 30px 15px;
+    /* Mobile phones */
+    @media (max-width: 600px) {
+
+        .hero-banner-box-environs {
+            padding-left: 30px;
+            padding-right: 30px;
+
+        }
+
+
+
+        .main-container {
+            border: none;
+        }
+
+        .layer {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .feature-space {
+            flex: 0 0 85%;
+            /* show 1 card almost full width */
+        }
+
+        .environs-image {
+            height: 180px;
+        }
+
+        .feature-space {
+            border-radius: 12px;
+        }
+
+        .environs-box-text {
+            padding: 18px;
+        }
+
+
+
+
+        .mid-section-box-one-text h3 {
+            font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+            font-weight: 500;
+            padding-right: 60px;
+            line-height: 1.5;
+
+        }
+
+        .av-body {
+            padding-bottom: 0;
+            margin-bottom: 10px;
+        }
+
     }
 
-    .mid-section-box-one {
-        gap: 30px;
+
+    @media (max-width: 480px) {
+
+        /* ---------------- Hero - Banner ------------ */
+
+        .hero-banner-box-environs {
+            top: -8vh;
+        }
+
+        .services-left-section-content-environs {
+            padding-top: 60px;
+        }
+
+        .services-object-clause h1 {
+            font-size: clamp(1.5rem, 7vw, 2rem);
+        }
+
+        .tag-line p {
+            font-size: clamp(0.9rem, 3.5vw, 1rem);
+        }
+
+        .learn-more-btn a {
+            padding: 10px 20px;
+        }
+
+
+        /* --------------- Corporate ----------------- */
+
+        .main-container-title-main {
+            padding-right: 40px;
+        }
+
+        .main-container-title-para {
+            padding-right: 40px;
+        }
+
+
+
+        /* ------------------ Mid Section One ----------------- */
+        .mid-section-body-one {
+            padding: 30px 15px;
+        }
+
+        .mid-section-box-one {
+            gap: 30px;
+        }
+
+
+        .av-body-gen p {
+            padding-right: 0;
+        }
+
+        .mid-section-box-one-acoustic img {
+            max-height: 30vh;
+        }
+
     }
 
 
-    .av-body-gen p {
-        padding-right: 0;
+
+    /* Very small screens */
+    @media (max-width: 400px) {
+
+
+
+        .feature-space {
+            flex: 0 0 92%;
+        }
+
+        .environs-image {
+            height: 160px;
+        }
+
+        .environs-paragraph p {
+            font-size: 0.9rem;
+        }
     }
-
-    .mid-section-box-one-acoustic img {
-        max-height: 30vh;
-    }
-
-}
-
-
-
-/* Very small screens */
-@media (max-width: 400px) {
-
-
-
-    .feature-space {
-        flex: 0 0 92%;
-    }
-
-    .environs-image {
-        height: 160px;
-    }
-
-    .environs-paragraph p {
-        font-size: 0.9rem;
-    }
-}
-
-
-/*
-
-.corporate,
-.auditoriums,
-.studios {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-
-.main-container {
-    max-width: var(--container-max);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: Center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    box-sizing: border-box;
-}
-
-
-.main-container-wrapper {
-    max-width: var(--content-max);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-}
-
-.environs-box {
-    max-width: var(--content-max);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    box-sizing: border-box;
-}
-
-.layer-one,
-.layer-two {
-    width: 100%;
-    height: 453px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-
-
-}
-
-.feature-space {
-    width: 30%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-
-    box-sizing: border-box;
-    gap: 20px;
-}
-
-
-.environs-image {
-
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: var(--border-mild);
-    border-radius: 10px;
-
-}
-
-.environs-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
-
-.environs-box-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    gap: 20px;
-
-} */
