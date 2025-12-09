@@ -159,7 +159,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -250px;
+    padding: 0 20px;
 
     border-left: 1px solid var(--border-light);
     border-right: 1px solid var(--border-light);
@@ -169,12 +169,12 @@ body::-webkit-scrollbar-thumb {
 .side-line {
     max-width: var(--container-max);
     width: 100%;
-    height: 163px;
+
 
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
+
 }
 
 .who-info-text {
@@ -1863,6 +1863,13 @@ body::-webkit-scrollbar-thumb {
     }
 
 
+    .who-info {
+        margin-top: -200px;
+    }
+
+
+
+    /* -------------- Sticky scrolly ---------*/
     .scrolling-track img {
         width: 320px;
         height: auto;
@@ -1926,9 +1933,17 @@ body::-webkit-scrollbar-thumb {
 /* Desktop */
 @media (min-width: 1250px) and (max-width: 1599px) {
 
-    .left-section-content {
-        padding-top: 80px;
+    .first-section-background {
+        width: 110vw;
+        min-height: 100vh;
+
     }
+
+    .first-section-wrapper {
+        margin-top: 0;
+    }
+
+    .left-section-content {}
 
     .right-section-content {
         left: 55%;
@@ -1941,11 +1956,68 @@ body::-webkit-scrollbar-thumb {
 
     .tag-line p {
         font-size: clamp(1.0rem, 1vw, 1.2rem);
+
     }
+
+
+
+    /* --------------- Quick-Data ---------------- */
+    .quick-data {
+        max-width: 600px;
+        margin-top: 0;
+    }
+
+    .quick-data-wrpper {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .vertical-line-divider {
+        width: 1px;
+        background-color: #ddd;
+        min-height: 80px;
+    }
+
+    .studio-data,
+    .corporate-data,
+    .auditorium-data {
+        flex: 1;
+        text-align: center;
+    }
+
+    .studio-data h3,
+    .corporate-data h3,
+    .auditorium-data h3 {
+        margin: 0 0 10px 0;
+        font-size: 1.8em;
+        color: var(--text-light);
+    }
+
+    .studio-data p,
+    .corporate-data p,
+    .auditorium-data p {
+        margin: 0;
+        font-size: 0.8em;
+        color: var(--text-light);
+    }
+
+
+
+
+    .who-info {
+
+        margin-top: -120px;
+    }
+
 }
 
 /* Medium Desktop */
-@media (max-width: 1254px) and (min-width: 1080px) {
+@media (max-width: 1249px) and (min-width: 1080px) {
+
+
+
 
     .section-wrapper {
         margin-left: 40px;
@@ -1966,6 +2038,50 @@ body::-webkit-scrollbar-thumb {
     .tag-line p {
         font-size: clamp(1.0rem, 1vw, 1.2rem);
     }
+
+
+    /* --------------- Quick-Data ---------------- */
+    .quick-data {
+        max-width: 600px;
+        margin-top: 0;
+    }
+
+    .quick-data-wrpper {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .vertical-line-divider {
+        width: 1px;
+        background-color: #ddd;
+        min-height: 80px;
+    }
+
+    .studio-data,
+    .corporate-data,
+    .auditorium-data {
+        flex: 1;
+        text-align: center;
+    }
+
+    .studio-data h3,
+    .corporate-data h3,
+    .auditorium-data h3 {
+        margin: 0 0 10px 0;
+        font-size: 1.8em;
+        color: var(--text-light);
+    }
+
+    .studio-data p,
+    .corporate-data p,
+    .auditorium-data p {
+        margin: 0;
+        font-size: 0.8em;
+        color: var(--text-light);
+    }
+
 
 
     /* ------------ Services ------------ */
@@ -2071,13 +2187,57 @@ body::-webkit-scrollbar-thumb {
 
 
     .left-section-content {
-
+        margin-top: 200px;
         padding-left: 40px;
     }
 
     .section-wrapper {
         padding: 0 1rem;
     }
+
+    /* --------------- Quick-Data ---------------- */
+    .quick-data {
+        max-width: 600px;
+        margin-top: 0;
+    }
+
+    .quick-data-wrpper {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .vertical-line-divider {
+        width: 1px;
+        background-color: #ddd;
+        min-height: 80px;
+    }
+
+    .studio-data,
+    .corporate-data,
+    .auditorium-data {
+        flex: 1;
+        text-align: center;
+    }
+
+    .studio-data h3,
+    .corporate-data h3,
+    .auditorium-data h3 {
+        margin: 0 0 10px 0;
+        font-size: 1.8em;
+        color: var(--text-light);
+    }
+
+    .studio-data p,
+    .corporate-data p,
+    .auditorium-data p {
+        margin: 0;
+        font-size: 0.8em;
+        color: var(--text-light);
+    }
+
+
 
     /* ------------- Services -------------- */
 
