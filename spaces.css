@@ -1005,6 +1005,11 @@ body::-webkit-scrollbar-thumb {
 
     /* Mobile phones */
     @media (max-width: 600px) {
+        .top-cover-box {
+            display: none !important;
+        }
+
+
 
         .hero-banner-box-environs {
             padding-left: 30px;
@@ -1060,6 +1065,10 @@ body::-webkit-scrollbar-thumb {
 
 
     @media (max-width: 480px) {
+
+        .top-cover-box {
+            display: none !important;
+        }
 
         /* ---------------- Hero - Banner ------------ */
 
@@ -1120,7 +1129,9 @@ body::-webkit-scrollbar-thumb {
 
     /* Very small screens */
     @media (max-width: 400px) {
-
+        .top-cover-box {
+            display: none !important;
+        }
 
 
         .feature-space {
