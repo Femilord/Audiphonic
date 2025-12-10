@@ -1948,7 +1948,7 @@ body::-webkit-scrollbar-thumb {
     /* ----------------- Hero - Section ---------------- */
 
     .hero-banner-box {
-        padding: 50px 25px 15px;
+        padding: 50px 25px 15px 25px;
         top: 0;
     }
 
@@ -1961,7 +1961,7 @@ body::-webkit-scrollbar-thumb {
     .services-section-wrapper {
 
         padding: 0 25px 0 15px;
-        margin-top: 80px;
+        margin-top: 30px;
 
 
     }
@@ -1988,7 +1988,12 @@ body::-webkit-scrollbar-thumb {
         font-size: 0.9rem;
     }
 
-    /* ------------ Who ----------- */
+
+    .quick-data-wrpper {
+        margin-bottom: 50px;
+    }
+
+    /* ------------ Who ----------- 
 
     .who-info {
         height: auto;
@@ -2022,7 +2027,7 @@ body::-webkit-scrollbar-thumb {
         width: 100%;
         max-width: 100%;
     }
-
+*/
 
 
 
@@ -2602,7 +2607,7 @@ body::-webkit-scrollbar-thumb {
         font-size: 0.85rem;
     }
 
-    /* --------- Who ------------ */
+    /* --------- Who ------------ 
 
     .who-info {
         margin-top: 50px;
@@ -2616,7 +2621,7 @@ body::-webkit-scrollbar-thumb {
     .who-info-text p {
         font-size: 0.9rem;
     }
-
+*/
 
     /* -------------- Right Section ------------ */
     .services-right-section-content {
