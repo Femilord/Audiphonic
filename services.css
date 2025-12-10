@@ -2605,7 +2605,7 @@ body::-webkit-scrollbar-thumb {
     /* --------- Who ------------ */
 
     .who-info {
-        margin-top: -50px;
+        margin-top: 50px;
     }
 
     .who-info-text h3 {
