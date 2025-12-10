@@ -122,7 +122,7 @@
 
                             <div class="quick-data-mobile">
                                 <div class="quick-data-wrapper-mobile">
-                                <div class="vertical-line-divider-mobile"> </div>
+                                    <div class="vertical-line-divider-mobile"> </div>
                                     <div class="studio-data-mobile">
                                         <h3> &#62; </h3>
                                         <p>Studios built from ground up inlcuding installations</p>
@@ -137,7 +137,7 @@
                                         <h3>&#62; </h3>
                                         <p>Auditoriums - from marque sundproofing to auditorium acoustics</p>
                                     </div>
-                                <div class="vertical-line-divider-mobile"> </div>
+                                    <div class="vertical-line-divider-mobile"> </div>
                                 </div>
                             </div>
 
@@ -1281,6 +1281,8 @@
         setInterval(runFullAnimation, 9000);
     </script>
 
+
+    <!-- ------------------- Quick Data Main --------------------- -->
     <script>
         // Animated counter function
         function animateCounter(element, target, duration = 2000) {
@@ -1300,15 +1302,46 @@
         // Run when page loads
         window.addEventListener('DOMContentLoaded', () => {
             // Get all h3 elements and animate them
-            const studioH3 = document.querySelector('.studio-data h3');
-            const corporateH3 = document.querySelector('.corporate-data h3');
-            const auditoriumH3 = document.querySelector('.auditorium-data h3');
+            const studioH3 = document.querySelector('.studio-data h3', '.studio-data-mobile h3');
+            const corporateH3 = document.querySelector('.corporate-data h3', '.corporate-data-mobile h3');
+            const auditoriumH3 = document.querySelector('.auditorium-data h3', '.auditorium-data-mobile');
 
             if (studioH3) animateCounter(studioH3, 50, 2000);
             if (corporateH3) animateCounter(corporateH3, 15, 2000);
             if (auditoriumH3) animateCounter(auditoriumH3, 10, 2000);
         });
     </script>
+
+    <!-- ------------------- Quick Data Mobile--------------------- -->
+    <script>
+        // Animated counter function
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16); // 60fps
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = `> ${target}`;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = `> ${Math.floor(start)}`;
+                }
+            }, 16);
+        }
+
+        // Run when page loads
+        window.addEventListener('DOMContentLoaded', () => {
+            // Get all h3 elements and animate them
+            const studioH3 = document.querySelector('.studio-data-mobile h3');
+            const corporateH3 = document.querySelector('.corporate-data-mobile h3');
+            const auditoriumH3 = document.querySelector('.auditorium-data-mobile h3');
+
+            if (studioH3) animateCounter(studioH3, 50, 2000);
+            if (corporateH3) animateCounter(corporateH3, 15, 2000);
+            if (auditoriumH3) animateCounter(auditoriumH3, 10, 2000);
+        });
+    </script>
+
 </body>
 
 </html>
