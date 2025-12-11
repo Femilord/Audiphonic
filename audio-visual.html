@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="google-site-verification" content="zp_TMWGfQneCG971aKKIDmWK6Pw2gUUPW9nY9-94S5M" />
-    <title>Audiphonic | Spaces - Soundproofing, Acoustics, Audio, Visuals</title>
+    <title>Audiphonic | Audio, Visuals, Soundproofing, Acoustics, Sound Reinforcement</title>
+
     <link rel="icon" type="image/x-icon" href="img/audiphonic-favicon.png" />
     <link rel="stylesheet" href="header.css" />
-    <link rel="stylesheet" href="about.css" />
     <link rel="stylesheet" href="footer.css">
-    <script src="/main.js"></script>
+    <link rel="stylesheet" href="blog.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -24,23 +23,20 @@
         <div class="header-container">
             <div class="left-group">
                 <div class="audi-logo">
-                    <a href="index.html">
-                        <img src="img/audiphonic-weblogo.webp" alt="Audiphonic Logo" class="logo-desktop" />
-                        <img src="img/white-transparent-logo.webp" alt="Audiphonic Mobile Logo" class="logo-mobile" />
-                    </a>
+                    <a href="index.html"><img src="img/audiphonic-weblogo.webp" alt="Audiphonic Logo" /></a>
                 </div>
                 <nav class="nav-menu">
                     <ul class="menu">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="spaces.html">Spaces</a></li>
-                        <li><a href="about.html" class="active">About</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/services.html">Services</a></li>
+                        <li><a href="/spaces.html">Spaces</a></li>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/blog.html" class="active">Blog</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="right-group">
-                <a href="contact.html" class="btn">Contact Us</a>
+                <a href="/contact.html" class="btn">Contact Us</a>
                 <button class="hamburger" id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
             </div>
         </div>
@@ -49,72 +45,76 @@
     <nav class="mobile-menu" id="mobile-menu">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="spaces.html">Spaces</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/spaces.html">Spaces</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/contact.html">Contact Us</a></li>
         </ul>
     </nav>
+
 
     <main>
 
 
-        <section class="about-hero-box">
+        <section class="blog-one">
             <div class="top-cover-box"></div>
-            <div class="about-hero-wrapper">
-                <div class="about-hero" id="hero-banner-box">
-                    <div class="hero-overlay"></div>
-                    <h1>About Us</h1>
+            <div class="submenu-bar">
+                <div class="submenu-container">
+                    <div class="submenu-content">
+                        <a href="#blog" class="blog-link">Blog</a>
+
+                        <button class="mobile-toggle" id="mobileToggle">Menu ☰</button>
+
+                        <div class="menu-wrapper" id="menuWrapper">
+                            <div class="menu-item">
+                                <button class="menu-button" data-index="0">
+                                    <span>Corporate</span>
+                                    <span class="chevron"></span>
+                                </button>
+                                <div class="dropdown">
+                                    <a href="#offices">Offices</a>
+                                    <a href="#boardrooms">Boardrooms</a>
+                                    <a href="#meeting-rooms">Meeting Rooms</a>
+                                    <a href="#call-centers">Call Centers</a>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <button class="menu-button" data-index="1">
+                                    <span>Auditoriums</span>
+                                    <span class="chevron"></span>
+                                </button>
+                                <div class="dropdown">
+                                    <a href="#worship">Worship Auditoriums</a>
+                                    <a href="#event-centers">Event Centers</a>
+                                    <a href="#marque-tents">Marque Tents</a>
+                                    <a href="#cinemas">Cinemas</a>
+                                    <a href="#clubs">Clubs</a>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <button class="menu-button" data-index="2">
+                                    <span>Studios</span>
+                                    <span class="chevron"></span>
+                                </button>
+                                <div class="dropdown">
+                                    <a href="#music-studios">Music Studios</a>
+                                    <a href="#radio-studios">Radio Studios</a>
+                                    <a href="#tv-studios">TV Studios</a>
+                                    <a href="#broadcast-studios">Broadcast Studios</a>
+                                    <a href="#home-cinemas">Home Cinemas</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </section>
 
 
-
-        <section class="about-section">
-
-            <div class="about-container">
-                <div class="about-content">
-                    <p>
-                        Audiphonic is an integrated Noise Control and AV Systems solutions company.
-                        We provide premium Soundproofing, Acoustics, and Audio-Visual services to a wide
-                        range of clients - from corporate organizations to non-formal environments.
-                    </p>
-
-                    <p>
-                        With over a decade of experience serving clients who require noise reduction
-                        or audio-visual systems, our work is defined by fitness for purpose, excellence,
-                        and finesse.
-                    </p>
-
-                    <p>
-                        Our team comprises skilled professionals across every stage of our projects.
-                        From administration to technical operations, every member is dedicated to delivering
-                        the best client experience.
-                    </p>
-
-                    <p>
-                        Our solutions cover all types of environments—from boardrooms and worship auditoriums
-                        to recording and broadcast studios. Whatever your space requires, we have the experience
-                        and technical depth to provide the best solutions possible.
-                    </p>
-
-                    <p>
-                        Driven by a passion for technology, creativity, and design, we deliver exceptional
-                        noise-control solutions and integrate high-performance audio-visual systems for flawless
-                        experiences in auditoriums, event venues, and workspaces.
-                    </p>
-                </div>
-            </div>
-
-            <div class="appreciation-last">
-                <h3>Thank You!</h3>
-            </div>
-        </section>
     </main>
-
 
     <footer>
         <div class="main-footer">
@@ -263,122 +263,6 @@
             }
         });
     </script>
-
-
-
-    <!-- ------------- Hero Section zoom out scroll effect ------------- -->
-    <script>
-
-
-        const bgWrapper = document.getElementById("hero-banner-box");
-
-        window.addEventListener("scroll", () => {
-            const scrollY = window.scrollY;
-            const scale = 1.0 - Math.min(scrollY / 1500, 0.09); // Zooms out to 94%
-            bgWrapper.style.transform = `scale(${scale})`;
-        });
-
-
-
-    </script>
-
-
-
-
-
-    <script>
-        document.querySelectorAll('.carousel-wrapper').forEach((wrapper, index) => {
-            const layer = wrapper.querySelector('.layer');
-            const cards = layer.querySelectorAll('.feature-space');
-            const dotsContainer = wrapper.parentElement.querySelector('.carousel-dots');
-
-            // create dots
-            cards.forEach((_, i) => {
-                let dot = document.createElement('div');
-                dotsContainer.appendChild(dot);
-            });
-
-            const dots = dotsContainer.querySelectorAll('div');
-
-            // update active dot on scroll
-            wrapper.addEventListener('scroll', () => {
-                let cardWidth = cards[0].offsetWidth + 28; // card width + gap
-                let index = Math.round(wrapper.scrollLeft / cardWidth);
-
-                dots.forEach(d => d.classList.remove('active'));
-                if (dots[index]) dots[index].classList.add('active');
-            });
-
-            // initialize
-            dots[0].classList.add('active');
-        });
-    </script>
-
-    <script>
-        const carousel01 = document.getElementById('carousel01');
-        const scrollLeftBtn = document.getElementById('scrollLeft');
-        const scrollRightBtn = document.getElementById('scrollRight');
-
-        // Scroll amount (one image width + gap)
-        const scrollAmount = 300;
-
-        // Scroll right
-        scrollRightBtn.addEventListener('click', () => {
-            carousel01.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
-        });
-
-        // Scroll left
-        scrollLeftBtn.addEventListener('click', () => {
-            carousel01.scrollBy({
-                left: -scrollAmount,
-                behavior: 'smooth'
-            });
-        });
-
-        // Update arrow states based on scroll position
-        function updateArrowStates() {
-            const maxScroll = carousel01.scrollWidth - carousel01.clientWidth;
-
-            // Disable left arrow at the start
-            if (carousel01.scrollLeft <= 0) {
-                scrollLeftBtn.disabled = true;
-            } else {
-                scrollLeftBtn.disabled = false;
-            }
-
-            // Disable right arrow at the end
-            if (carousel01.scrollLeft >= maxScroll - 1) {
-                scrollRightBtn.disabled = true;
-            } else {
-                scrollRightBtn.disabled = false;
-            }
-        }
-
-        // Listen for scroll events
-        carousel01.addEventListener('scroll', updateArrowStates);
-
-        // Initialize arrow states on load
-        updateArrowStates();
-
-        // Optional: Update on touch/swipe for mobile
-        let touchStartX = 0;
-        carousel01.addEventListener('touchstart', (e) => {
-            touchStartX = e.touches[0].clientX;
-        });
-
-        carousel01.addEventListener('touchend', () => {
-            updateArrowStates();
-        });
-
-    </script>
-
-
 </body>
-
-
-
 
 </html>

@@ -718,7 +718,7 @@ body::-webkit-scrollbar-thumb {
 
     }
 
-
+}
 
 
     /* ---------- Responsive improvements ---------- */
@@ -778,11 +778,8 @@ body::-webkit-scrollbar-thumb {
     }
 
 
-    /* Tablet */
-    @media (max-width: 992px) {
 
-
-
+.top-cover-box {
         .layer {
             gap: 24px;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -823,6 +820,10 @@ body::-webkit-scrollbar-thumb {
     /* Smaller tablets & large phones */
 
     @media (max-width: 969px) {
+        .top-cover-box {
+                display: none !important;
+            }
+
         .av-box {
             margin-left: 0;
         }
@@ -851,15 +852,17 @@ body::-webkit-scrollbar-thumb {
 
     @media (max-width: 950px) {
         .top-cover-box {
-            display: none !important;
-
-        }
+                display: none !important;
+            }
 
 
     }
 
     @media (max-width: 768px) {
 
+        .top-cover-box {
+                display: none !important;
+            }
         /* ---------- hero-section ------------- */
 
 
@@ -989,6 +992,8 @@ body::-webkit-scrollbar-thumb {
 
 
     @media (max-width: 759px) {
+
+        
 
         .mid-section-box-one-text h3 {
             font-size: clamp(1.2rem, 2.2vw, 1.5rem);

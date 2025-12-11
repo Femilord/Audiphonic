@@ -1,0 +1,246 @@
+/* ========================================
+   CSS VARIABLES & RESET
+   ======================================== */
+
+:root {
+
+    /* Header */
+    --header-height: 87px;
+
+    /* Colors */
+    --primary-cyan: #00F0FF;
+    --secondary-cyan: #B5F7FB;
+    --accent-teal: #00C1CF;
+    --text-dark: #000000;
+    --text-light: #ffffff;
+    --text-muted: #666666;
+    --background-dark: #00848e;
+    --background-darker: #000000;
+    --background-light: #f3fcfa;
+    --background-lighter: #fcfefe;
+    --border-light: #f3f3f3;
+    --border-gray: #dddddd;
+
+    /* Spacing */
+    --container-max: 1200px;
+    --content-max: 1080px;
+    --section-padding: 100px;
+    --mobile-padding: 20px;
+
+    /* Transitions */
+    --transition-fast: 0.3s ease;
+    --transition-slow: 0.6s ease;
+
+    /* Shadows */
+    --shadow-light: 0 4px 14px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 8px 25px rgba(0, 125, 134, 0.5);
+    --shadow-heavy: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --shadow-heavy2: 0 10px 30px rgba(0, 0, 0, 0.2);
+    --shadow-heavy3: 0 10px 30px rgba(0, 0, 0, 0.32);
+
+    /* Outline */
+    --border-mild: solid .5px rgb(230, 229, 229);
+    --border-mild2: solid .5px rgb(188, 188, 188);
+    --border-mild3: solid .5px rgb(222, 222, 222);
+    --line-only: solid .5px rgb(188, 188, 188);
+    --line-only2: solid 2px rgb(0, 255, 251);
+
+
+
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    font-family: "Montserrat", "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+.page-wrapper {
+    overflow-x: clip;
+}
+
+
+/* Custom Font */
+@font-face {
+    font-family: 'blair';
+    src: url('./blairfonts/BlairMdITCTTMedium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+
+.top-cover-box {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 23px 20px;
+
+
+    width: 100%;
+    height: 86px;
+    z-index: 8;
+
+}
+
+
+/* --- Base Reset and Readability --- */
+
+
+.policy-section {
+    max-width: 900px;
+    /* Optimal width for reading */
+    margin: 40px auto;
+    /* Center the content */
+    background: var(--background-lighter);
+    /* Use your light background */
+    padding: 50px 40px;
+    border-radius: 8px;
+    /* Soft corners */
+    box-shadow: var(--shadow-heavy);
+    /* Use your shadow variable */
+}
+
+/* --- Headings --- */
+.policy-section h1 {
+    font-size: 2.5em;
+    color: var(--accent-teal);
+    /* Use your accent color for primary focus */
+    border-bottom: 3px solid var(--primary-cyan);
+    /* Use your bright cyan */
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.policy-section h2 {
+    font-size: 1.6em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+    /* Dark text for section titles */
+}
+
+.policy-section h3 {
+    font-size: 1.2em;
+    margin-top: 15px;
+    color: var(--text-muted);
+    /* Muted text for sub-headings */
+}
+
+.effective-date {
+    font-style: italic;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+/* --- Lists and Paragraphs --- */
+.policy-section p,
+.policy-section ul {
+    margin-bottom: 20px;
+    font-size: 1.05em;
+    color: var(--text-dark);
+    /* Ensure main text is dark */
+}
+
+.policy-section ul {
+    padding-left: 25px;
+}
+
+.policy-section li {
+    margin-bottom: 8px;
+}
+
+/* --- Table of Contents (for Privacy Policy) --- */
+.policy-toc {
+    /* Use a light secondary cyan/teal color */
+    background: var(--secondary-cyan);
+    border-left: 5px solid var(--accent-teal);
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 4px;
+}
+
+.policy-toc h2 {
+    font-size: 1.3em;
+    margin-top: 0;
+    color: var(--background-dark);
+    /* Dark teal for ToC title */
+}
+
+.policy-toc ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.policy-toc li {
+    margin: 10px 0;
+}
+
+.policy-toc a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.policy-toc a:hover {
+    color: var(--accent-teal);
+    /* Hover effect using the accent color */
+    text-decoration: underline;
+}
+
+/* --- Important Disclaimer Box (for Terms of Use) --- */
+.disclaimer-box {
+    /* Since you don't have a specific red/warning color, we'll use a strong border 
+       and a neutral light background for contrast. */
+    border: 2px solid var(--background-dark);
+    /* Use dark teal/cyan as the alert color */
+    background: var(--background-light);
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 6px;
+}
+
+.disclaimer-box strong {
+    color: var(--background-dark);
+    /* Dark teal for emphasis */
+    font-size: 1.1em;
+}
+
+/* --- Media Query for Smaller Screens --- */
+@media (max-width: 768px) {
+    .policy-section {
+        padding: 30px 20px;
+        margin: 20px auto;
+    }
+
+    .policy-section h1 {
+        font-size: 2em;
+    }
+
+    .policy-section h2 {
+        font-size: 1.4em;
+    }
+}
