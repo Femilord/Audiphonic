@@ -116,6 +116,15 @@ header {
     color: #000;
 }
 
+.hamburger-02 {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000;
+}
+
 /* ========= MOBILE MENU ========= */
 
 .mobile-menu {
@@ -181,9 +190,15 @@ header {
     display: none;
 }
 
+.logo-mobile-02 {
+    display: none;
+}
+
+
 /* ========= RESPONSIVE STYLES (Mobile Only) ========= */
 @media (max-width: 950px) {
 
+   
 
     header {
         background-color: transparent;
@@ -236,6 +251,7 @@ header {
         flex-wrap: nowrap;
         padding-left: 10px;
         padding-right: 10px;
+        
         overflow-x: hidden;
     }
 
@@ -247,6 +263,12 @@ header {
         display: inline-block;
         color: #fff;
     }
+
+    .hamburger-02 {
+        display: inline-block;
+        color: #ffffff;
+    }
+
 
     .btn {
         display: none;
@@ -268,6 +290,12 @@ header {
         display: block;
         height: 32px;
     }
+
+    .logo-mobile-02 {
+        display: block;
+        height: 32px;
+    }
+
 }
 
 /* Fine-tuned extra small */
@@ -277,6 +305,10 @@ header {
     }
 
     .hamburger {
+        font-size: 30px;
+    }
+
+    .hamburger-02 {
         font-size: 30px;
     }
 

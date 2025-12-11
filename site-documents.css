@@ -231,6 +231,10 @@ body::-webkit-scrollbar-thumb {
 
 /* --- Media Query for Smaller Screens --- */
 @media (max-width: 768px) {
+.top-cover-box {
+    display: none;
+}
+
     .policy-section {
         padding: 30px 20px;
         margin: 20px auto;
