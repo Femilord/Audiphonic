@@ -25,23 +25,24 @@
                 <div class="audi-logo">
                     <a href="index.html">
                         <img src="img/audiphonic-weblogo.webp" alt="Audiphonic Logo" class="logo-desktop" />
-                        <img src="img/white-transparent-logo.webp" alt="Audiphonic Mobile Logo" class="logo-mobile-02" />
-                    
-                    
+                        <img src="img/white-transparent-logo.webp" alt="Audiphonic Mobile Logo"
+                            class="logo-mobile-02" />
+
+
                     </a>
                 </div>
                 <nav class="nav-menu">
                     <ul class="menu">
-                        <li><a href="/index.html">Home</a></li>
-                        <li><a href="/services.html">Services</a></li>
-                        <li><a href="/spaces.html">Spaces</a></li>
-                        <li><a href="/about.html">About</a></li>
-                        <li><a href="/blog.html" class="active">Blog</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="spaces.html">Spaces</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html" class="active">Blog</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="right-group">
-                <a href="/contact.html" class="btn">Contact Us</a>
+                <a href="contact.html" class="btn">Contact Us</a>
                 <button class="hamburger" id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
             </div>
         </div>
@@ -50,11 +51,11 @@
     <nav class="mobile-menu" id="mobile-menu">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="/services.html">Services</a></li>
-            <li><a href="/spaces.html">Spaces</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/blog.html">Blog</a></li>
-            <li><a href="/contact.html">Contact Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="spaces.html">Spaces</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
 
@@ -716,43 +717,43 @@
     </footer>
 
 
-<!-- ==================header mobile 02 ================== -->
+    <!-- ==================header mobile 02 ================== -->
 
 
-<script>
-    // Mobile menu toggle
-    document.addEventListener("DOMContentLoaded", function () {
-        const menuToggle = document.getElementById("menu-toggle");
-        const mobileMenu = document.getElementById("mobile-menu");
-        const header = document.querySelector("header");
+    <script>
+        // Mobile menu toggle
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.getElementById("menu-toggle");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const header = document.querySelector("header");
 
-        menuToggle.addEventListener("click", function () {
-            const headerHeight = header.offsetHeight + "px";
-            mobileMenu.style.setProperty("--menu-offset", headerHeight);
+            menuToggle.addEventListener("click", function () {
+                const headerHeight = header.offsetHeight + "px";
+                mobileMenu.style.setProperty("--menu-offset", headerHeight);
 
-            mobileMenu.classList.toggle("active");
-            header.classList.toggle("menu-open");
-        });
+                mobileMenu.classList.toggle("active");
+                header.classList.toggle("menu-open");
+            });
 
-        const mobileLinks = mobileMenu.querySelectorAll("a");
-        mobileLinks.forEach(link => {
-            link.addEventListener("click", () => {
-                mobileMenu.classList.remove("active");
-                header.classList.remove("menu-open");
+            const mobileLinks = mobileMenu.querySelectorAll("a");
+            mobileLinks.forEach(link => {
+                link.addEventListener("click", () => {
+                    mobileMenu.classList.remove("active");
+                    header.classList.remove("menu-open");
+                });
             });
         });
-    });
 
-    // Header scroll effect
-    const header = document.querySelector("header");
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 10) {
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
-        }
-    });
-</script>
+        // Header scroll effect
+        const header = document.querySelector("header");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 10) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        });
+    </script>
 
 </body>
 
