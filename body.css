@@ -217,6 +217,7 @@ body::-webkit-scrollbar-thumb {
 
 
 .object-clause h2 {
+   
     color: var(--primary-cyan);
     font-size: clamp(1.8rem, 3vw, 4rem);
     font-weight: bold;
@@ -227,12 +228,17 @@ body::-webkit-scrollbar-thumb {
 
 
 .tag-line h1 {
+    
     padding-bottom: 20px;
     color: var(--text-light);
     font-size: clamp(1.0rem, 1.2vw, 1.3rem);
     font-weight: 600;
 }
 
+.tag-line h1 a {
+    text-decoration: none;
+    color: var(--text-light);
+}
 
 
 .tag-line p {
@@ -240,6 +246,8 @@ body::-webkit-scrollbar-thumb {
     font-size: clamp(1.0rem, 1.4vw, 1.2rem);
     line-height: 1.8;
 }
+
+
 
 
 .line-divider {

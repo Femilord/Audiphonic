@@ -1,72 +1,79 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://www.audiphonic.com/</loc>
-  <lastmod>2025-12-11T23:53:08+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://www.audiphonic.com/index.html</loc>
-  <lastmod>2025-12-11T23:53:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.audiphonic.com/services.html</loc>
-  <lastmod>2025-12-11T23:53:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.audiphonic.com/spaces.html</loc>
-  <lastmod>2025-12-11T23:53:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.audiphonic.com/about.html</loc>
-  <lastmod>2025-12-11T23:53:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.audiphonic.com/blog.html</loc>
-  <lastmod>2025-12-11T23:53:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.audiphonic.com/contact.html</loc>
-  <lastmod>2025-12-11T23:53:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.audiphonic.com/audio-visual.html</loc>
-  <lastmod>2025-12-11T23:53:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.audiphonic.com/projects.html</loc>
-  <lastmod>2025-12-11T23:53:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.audiphonic.com/site-documents.html</loc>
-  <lastmod>2025-12-11T23:53:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.audiphonic.com/soundproofing-explained.html</loc>
-  <lastmod>2025-12-11T23:53:08+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.audiphonic.com/acoustic-control.html</loc>
-  <lastmod>2025-12-11T23:53:08+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.audiphonic.com/</loc>
+    <lastmod>2025-12-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.audiphonic.com/index.html</loc>
+    <lastmod>2025-12-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.audiphonic.com/services/</loc>
+    <lastmod>2025-12-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.audiphonic.com/spaces/</loc>
+    <lastmod>2025-12-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.audiphonic.com/about/</loc>
+    <lastmod>2025-12-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.audiphonic.com/blog/</loc>
+    <lastmod>2025-12-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.audiphonic.com/services/index.html</loc>
+    <lastmod>2025-12-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.audiphonic.com/contact/</loc>
+    <lastmod>2025-12-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.audiphonic.com/audio-visual/</loc>
+    <lastmod>2025-12-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.audiphonic.com/site-documents/</loc>
+    <lastmod>2025-12-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.audiphonic.com/spaces/index.html</loc>
+    <lastmod>2025-12-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.audiphonic.com/about/index.html</loc>
+    <lastmod>2025-12-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.audiphonic.com/blog/index.html</loc>
+    <lastmod>2025-12-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.audiphonic.com/soundproofing-explained/</loc>
+    <lastmod>2025-12-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.audiphonic.com/acoustic-control/</loc>
+    <lastmod>2025-12-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.audiphonic.com/contact/index.html</loc>
+    <lastmod>2025-12-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.audiphonic.com/audio-visual/index.html</loc>
+    <lastmod>2025-12-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.audiphonic.com/site-documents/index.html</loc>
+    <lastmod>2025-12-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.audiphonic.com/soundproofing-explained/index.html</loc>
+    <lastmod>2025-12-13</lastmod>
+  </url>
 </urlset>
