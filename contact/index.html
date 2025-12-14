@@ -297,100 +297,6 @@
 
 
 
-
-
-    <script>
-        document.querySelectorAll('.carousel-wrapper').forEach((wrapper, index) => {
-            const layer = wrapper.querySelector('.layer');
-            const cards = layer.querySelectorAll('.feature-space');
-            const dotsContainer = wrapper.parentElement.querySelector('.carousel-dots');
-
-            // create dots
-            cards.forEach((_, i) => {
-                let dot = document.createElement('div');
-                dotsContainer.appendChild(dot);
-            });
-
-            const dots = dotsContainer.querySelectorAll('div');
-
-            // update active dot on scroll
-            wrapper.addEventListener('scroll', () => {
-                let cardWidth = cards[0].offsetWidth + 28; // card width + gap
-                let index = Math.round(wrapper.scrollLeft / cardWidth);
-
-                dots.forEach(d => d.classList.remove('active'));
-                if (dots[index]) dots[index].classList.add('active');
-            });
-
-            // initialize
-            dots[0].classList.add('active');
-        });
-    </script>
-
-    <script>
-        const carousel01 = document.getElementById('carousel01');
-        const scrollLeftBtn = document.getElementById('scrollLeft');
-        const scrollRightBtn = document.getElementById('scrollRight');
-
-        // Scroll amount (one image width + gap)
-        const scrollAmount = 300;
-
-        // Scroll right
-        scrollRightBtn.addEventListener('click', () => {
-            carousel01.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
-        });
-
-        // Scroll left
-        scrollLeftBtn.addEventListener('click', () => {
-            carousel01.scrollBy({
-                left: -scrollAmount,
-                behavior: 'smooth'
-            });
-        });
-
-        // Update arrow states based on scroll position
-        function updateArrowStates() {
-            const maxScroll = carousel01.scrollWidth - carousel01.clientWidth;
-
-            // Disable left arrow at the start
-            if (carousel01.scrollLeft <= 0) {
-                scrollLeftBtn.disabled = true;
-            } else {
-                scrollLeftBtn.disabled = false;
-            }
-
-            // Disable right arrow at the end
-            if (carousel01.scrollLeft >= maxScroll - 1) {
-                scrollRightBtn.disabled = true;
-            } else {
-                scrollRightBtn.disabled = false;
-            }
-        }
-
-        // Listen for scroll events
-        carousel01.addEventListener('scroll', updateArrowStates);
-
-        // Initialize arrow states on load
-        updateArrowStates();
-
-        // Optional: Update on touch/swipe for mobile
-        let touchStartX = 0;
-        carousel01.addEventListener('touchstart', (e) => {
-            touchStartX = e.touches[0].clientX;
-        });
-
-        carousel01.addEventListener('touchend', () => {
-            updateArrowStates();
-        });
-
-    </script>
-
-
-    <!-- ----- Audiphonic Contact Form API with Google Sheets ------ -->
-
     <script>
         // Replace with your actual Google Apps Script Web App URL
         const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby8-ACm5c37hVZW2Ifhp8i2ueJJBVMmXDMPjaSa9RORkuI9M_JlpmX7OWYbUjq3bfGBFw/exec';
@@ -415,7 +321,6 @@
                 // Disable button and show loading state
                 submitBtn.disabled = true;
                 submitBtn.textContent = 'Sending...';
-                submitBtn.style.opacity = '0.7';
 
                 try {
                     const response = await fetch(SCRIPT_URL, {
@@ -427,44 +332,36 @@
                         body: JSON.stringify(formData)
                     });
 
-                    // Show success message
-                    showMessage('Thank you! Your message has been sent successfully.', 'success');
+                    // Show success on button
+                    submitBtn.classList.add('btn-success');
+                    submitBtn.textContent = '✓ Message Sent Successfully!';
 
                     // Reset form
                     contactForm.reset();
 
+                    // Reset button after 3 seconds
+                    setTimeout(() => {
+                        submitBtn.classList.remove('btn-success');
+                        submitBtn.textContent = originalBtnText;
+                        submitBtn.disabled = false;
+                    }, 3000);
+
                 } catch (error) {
                     console.error('Error:', error);
-                    showMessage('Oops! Something went wrong. Please try again or contact us directly.', 'error');
-                } finally {
-                    // Re-enable button
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = originalBtnText;
-                    submitBtn.style.opacity = '1';
+
+                    // Show error on button
+                    submitBtn.classList.add('btn-error');
+                    submitBtn.textContent = '✗ Failed. Try Again';
+
+                    // Reset button after 3 seconds
+                    setTimeout(() => {
+                        submitBtn.classList.remove('btn-error');
+                        submitBtn.textContent = originalBtnText;
+                        submitBtn.disabled = false;
+                    }, 3000);
                 }
             });
         });
-
-        function showMessage(message, type) {
-            // Remove existing messages
-            const existingMsg = document.querySelector('.form-message');
-            if (existingMsg) existingMsg.remove();
-
-            // Create message element
-            const msgDiv = document.createElement('div');
-            msgDiv.className = `form-message ${type}`;
-            msgDiv.textContent = message;
-
-            // Insert after form
-            const form = document.querySelector('.contact-form');
-            form.parentNode.insertBefore(msgDiv, form.nextSibling);
-
-            // Auto-remove after 5 seconds
-            setTimeout(() => {
-                msgDiv.style.opacity = '0';
-                setTimeout(() => msgDiv.remove(), 300);
-            }, 5000);
-        }
     </script>
 
 
