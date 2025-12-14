@@ -15,7 +15,7 @@ footer {
     display: flex;
     justify-content: center;
     overflow: hidden;
-  
+
 }
 
 .main-footer {
@@ -87,14 +87,14 @@ footer {
     margin-bottom: 0;
     padding-left: 20px;
     list-style-type: none;
-   
+
 }
 
-.main-footer-wrapper a{
+.main-footer-wrapper a {
     text-decoration: none;
-        /* removes underline */
-        color: inherit;
-        /* makes link use parent text color */
+    /* removes underline */
+    color: inherit;
+    /* makes link use parent text color */
 }
 
 .main-footer-wrapper a:hover {
@@ -126,6 +126,53 @@ footer {
     /* optional: change color on hover */
 }
 
+
+@media (max-width: 1080px) {
+    footer {
+        height: auto;
+        min-height: 700px;
+        padding: 40px 20px;
+    }
+
+    .main-footer {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .main-footer-wrapper {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 30px 40px;
+    }
+
+    .footer-logo {
+        width: 140px;
+        flex-shrink: 0;
+    }
+
+    .first-column,
+    .second-column,
+    .third-column,
+    .forth-column {
+        flex: 0 0 auto;
+        width: 180px;
+    }
+
+    .main-footer h2 {
+        font-size: 0.75em;
+        padding-left: 0;
+    }
+
+    .main-footer ul {
+        font-size: 0.75em;
+        padding-left: 0;
+    }
+
+    .footer-logo p {
+        font-size: 0.75em;
+    }
+}
 
 
 @media (max-width: 768px) {
@@ -204,41 +251,41 @@ footer {
         margin-bottom: 8px;
     }
 
-.main-footer-wrapper a {
-    text-decoration: none;
-    /* removes underline */
-    color: inherit;
-    /* makes link use parent text color */
-}
+    .main-footer-wrapper a {
+        text-decoration: none;
+        /* removes underline */
+        color: inherit;
+        /* makes link use parent text color */
+    }
 
-.main-footer-wrapper a:hover {
-    color: rgb(0, 193, 207);
-}
+    .main-footer-wrapper a:hover {
+        color: rgb(0, 193, 207);
+    }
 
-.main-footer li {
-    margin-bottom: 10px;
-}
+    .main-footer li {
+        margin-bottom: 10px;
+    }
 
-.copyrights-legal {
-    font-size: 0.8em;
-    color: rgb(0, 0, 0);
-}
+    .copyrights-legal {
+        font-size: 0.8em;
+        color: rgb(0, 0, 0);
+    }
 
-.copyrights-legal a {
+    .copyrights-legal a {
 
-    text-decoration: none;
-    /* removes underline */
-    color: inherit;
-    /* makes link use parent text color */
-}
+        text-decoration: none;
+        /* removes underline */
+        color: inherit;
+        /* makes link use parent text color */
+    }
 
-.copyrights-legal a:hover {
-    text-decoration: underline;
-    font-weight: bold;
-    /* optional: underline only on hover */
-    color: #000000;
-    /* optional: change color on hover */
-}
+    .copyrights-legal a:hover {
+        text-decoration: underline;
+        font-weight: bold;
+        /* optional: underline only on hover */
+        color: #000000;
+        /* optional: change color on hover */
+    }
 
     .copyrights-legal {
         margin-top: 40px;
@@ -266,39 +313,39 @@ footer {
         font-size: 0.85em;
     }
 
-        .main-footer-wrapper a {
-            text-decoration: none;
-            /* removes underline */
-            color: inherit;
-            /* makes link use parent text color */
-        }
-    
-        .main-footer-wrapper a:hover {
-            color: rgb(0, 193, 207);
-        }
-    
-        .main-footer li {
-            margin-bottom: 10px;
-        }
-    
-        .copyrights-legal {
-            font-size: 0.8em;
-            color: rgb(0, 0, 0);
-        }
-    
-        .copyrights-legal a {
-    
-            text-decoration: none;
-            /* removes underline */
-            color: inherit;
-            /* makes link use parent text color */
-        }
-    
-        .copyrights-legal a:hover {
-            text-decoration: underline;
-            font-weight: bold;
-            /* optional: underline only on hover */
-            color: #000000;
-            /* optional: change color on hover */
-        }
+    .main-footer-wrapper a {
+        text-decoration: none;
+        /* removes underline */
+        color: inherit;
+        /* makes link use parent text color */
+    }
+
+    .main-footer-wrapper a:hover {
+        color: rgb(0, 193, 207);
+    }
+
+    .main-footer li {
+        margin-bottom: 10px;
+    }
+
+    .copyrights-legal {
+        font-size: 0.8em;
+        color: rgb(0, 0, 0);
+    }
+
+    .copyrights-legal a {
+
+        text-decoration: none;
+        /* removes underline */
+        color: inherit;
+        /* makes link use parent text color */
+    }
+
+    .copyrights-legal a:hover {
+        text-decoration: underline;
+        font-weight: bold;
+        /* optional: underline only on hover */
+        color: #000000;
+        /* optional: change color on hover */
+    }
 }
