@@ -136,7 +136,7 @@ body::-webkit-scrollbar-thumb {
 .submenu-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 0.4rem 1rem 0.4rem 1rem;
 
 }
 
@@ -1008,10 +1008,10 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-/* ------------------------------------------------------- 
+/* ---------------- Corporate ----------------- */
 
 .coming-soon {
-    min-height: 100vh;
+    min-height: 78vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1110,5 +1110,3 @@ body::-webkit-scrollbar-thumb {
         transform: translateY(-20px);
     }
 }
-
-*/

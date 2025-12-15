@@ -94,10 +94,10 @@
                                     <span class="chevron"></span>
                                 </button>
                                 <div class="dropdown">
-                                    <a href="#offices">Offices</a>
-                                    <a href="#boardrooms">Boardrooms</a>
-                                    <a href="#meeting-rooms">Meeting Rooms</a>
-                                    <a href="#call-centers">Call Centers</a>
+                                    <a href="/corporate-info/#offices">Offices</a>
+                                    <a href="/corporate-info/#boardrooms">Boardrooms</a>
+                                    <a href="/corporate-info/#meeting-rooms">Meeting Rooms</a>
+                                    <a href="/corporate-info/#call-centers">Call Centers</a>
                                 </div>
                             </div>
 
@@ -107,11 +107,11 @@
                                     <span class="chevron"></span>
                                 </button>
                                 <div class="dropdown">
-                                    <a href="#worship">Worship Auditoriums</a>
-                                    <a href="#event-centers">Event Centers</a>
-                                    <a href="#marque-tents">Marque Tents</a>
-                                    <a href="#cinemas">Cinemas</a>
-                                    <a href="#clubs">Clubs</a>
+                                    <a href="/auditoriums-info/#worship">Worship Auditoriums</a>
+                                    <a href="/auditoriums-info/#event-centers">Event Centers</a>
+                                    <a href="/auditoriums-info/#marque-tents">Marque Tents</a>
+                                    <a href="/auditoriums-info/#cinemas">Cinemas</a>
+                                    <a href="/auditoriums-info/#clubs">Clubs</a>
                                 </div>
                             </div>
 
@@ -121,13 +121,27 @@
                                     <span class="chevron"></span>
                                 </button>
                                 <div class="dropdown">
-                                    <a href="#music-studios">Music Studios</a>
-                                    <a href="#radio-studios">Radio Studios</a>
-                                    <a href="#tv-studios">TV Studios</a>
-                                    <a href="#broadcast-studios">Broadcast Studios</a>
-                                    <a href="#home-cinemas">Home Cinemas</a>
+                                    <a href="/studios-info/#music-studios">Music Studios</a>
+                                    <a href="/studios-info/#radio-studios">Radio Studios</a>
+                                    <a href="/studios-info/#tv-studios">TV Studios</a>
+                                    <a href="/studios-info/#broadcast-studios">Broadcast Studios</a>
+                                    <a href="/studios-info/#home-cinemas">Home Cinemas</a>
                                 </div>
                             </div>
+
+                            <div class="menu-item">
+                                <button class="menu-button" data-index="3">
+                                    <span>Consultation</span>
+                                    <span class="chevron"></span>
+                                </button>
+                                <div class="dropdown">
+                                    <a href="/consulting-info/#consultation">Consultation</a>
+                                    <a href="/consulting-info/#design">Design</a>
+                                    <a href="/consulting-info/#procurements">Procurement</a>
+                                    <a href="/consulting-info/#installations">Installations</a>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -765,6 +779,183 @@
                 header.classList.remove("scrolled");
             }
         });
+    </script>
+
+
+    <!-- ------------- Blog Nav ------------- -->
+
+    <script>
+        var activeDropdown = null;
+
+        function toggleDropdown(index) {
+            var buttons = document.querySelectorAll('.menu-button');
+            var dropdowns = document.querySelectorAll('.dropdown');
+
+            if (activeDropdown === index) {
+                buttons[index].classList.remove('active');
+                dropdowns[index].classList.remove('active');
+                activeDropdown = null;
+            } else {
+                for (var i = 0; i < buttons.length; i++) {
+                    buttons[i].classList.remove('active');
+                    dropdowns[i].classList.remove('active');
+                }
+                buttons[index].classList.add('active');
+                dropdowns[index].classList.add('active');
+                activeDropdown = index;
+            }
+        }
+
+        function toggleMobileMenu() {
+            var menuWrapper = document.getElementById('menuWrapper');
+            menuWrapper.classList.toggle('mobile-active');
+        }
+
+        // Mobile toggle
+        document.getElementById('mobileToggle').addEventListener('click', toggleMobileMenu);
+
+        // Click handlers for buttons
+        var menuButtons = document.querySelectorAll('.menu-button');
+        for (var i = 0; i < menuButtons.length; i++) {
+            menuButtons[i].addEventListener('click', function () {
+                var index = parseInt(this.getAttribute('data-index'));
+                toggleDropdown(index);
+            });
+        }
+
+        // Close on outside click
+        document.addEventListener('click', function (event) {
+            var isClickInside = event.target.closest('.menu-item') || event.target.closest('.mobile-toggle');
+            if (!isClickInside && activeDropdown !== null) {
+                var buttons = document.querySelectorAll('.menu-button');
+                var dropdowns = document.querySelectorAll('.dropdown');
+                for (var i = 0; i < buttons.length; i++) {
+                    buttons[i].classList.remove('active');
+                    dropdowns[i].classList.remove('active');
+                }
+                activeDropdown = null;
+            }
+        });
+
+        // Desktop hover (only on larger screens)
+        if (window.innerWidth > 768) {
+            var menuItems = document.querySelectorAll('.menu-item');
+            for (var i = 0; i < menuItems.length; i++) {
+                (function (index) {
+                    menuItems[index].addEventListener('mouseenter', function () {
+                        var buttons = document.querySelectorAll('.menu-button');
+                        var dropdowns = document.querySelectorAll('.dropdown');
+                        for (var j = 0; j < buttons.length; j++) {
+                            buttons[j].classList.remove('active');
+                            dropdowns[j].classList.remove('active');
+                        }
+                        buttons[index].classList.add('active');
+                        dropdowns[index].classList.add('active');
+                        activeDropdown = index;
+                    });
+
+                    // FIXED: Use captured 'index' parameter, not outer scope
+                    menuItems[index].addEventListener('mouseleave', function () {
+                        var buttons = document.querySelectorAll('.menu-button');
+                        var dropdowns = document.querySelectorAll('.dropdown');
+                        buttons[index].classList.remove('active');  // Now uses correct index
+                        dropdowns[index].classList.remove('active'); // Now uses correct index
+                        activeDropdown = null;
+                    });
+                })(i);
+            }
+        }
+    </script>
+
+
+    <!-- --------------------                ------------------ -->
+    <script>
+        document.querySelectorAll('.carousel-wrapper').forEach((wrapper, index) => {
+            const layer = wrapper.querySelector('.layer');
+            const cards = layer.querySelectorAll('.feature-space');
+            const dotsContainer = wrapper.parentElement.querySelector('.carousel-dots');
+
+            // create dots
+            cards.forEach((_, i) => {
+                let dot = document.createElement('div');
+                dotsContainer.appendChild(dot);
+            });
+
+            const dots = dotsContainer.querySelectorAll('div');
+
+            // update active dot on scroll
+            wrapper.addEventListener('scroll', () => {
+                let cardWidth = cards[0].offsetWidth + 28; // card width + gap
+                let index = Math.round(wrapper.scrollLeft / cardWidth);
+
+                dots.forEach(d => d.classList.remove('active'));
+                if (dots[index]) dots[index].classList.add('active');
+            });
+
+            // initialize
+            dots[0].classList.add('active');
+        });
+    </script>
+
+    <script>
+        const carousel01 = document.getElementById('carousel01');
+        const scrollLeftBtn = document.getElementById('scrollLeft');
+        const scrollRightBtn = document.getElementById('scrollRight');
+
+        // Scroll amount (one image width + gap)
+        const scrollAmount = 300;
+
+        // Scroll right
+        scrollRightBtn.addEventListener('click', () => {
+            carousel01.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+
+        // Scroll left
+        scrollLeftBtn.addEventListener('click', () => {
+            carousel01.scrollBy({
+                left: -scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+
+        // Update arrow states based on scroll position
+        function updateArrowStates() {
+            const maxScroll = carousel01.scrollWidth - carousel01.clientWidth;
+
+            // Disable left arrow at the start
+            if (carousel01.scrollLeft <= 0) {
+                scrollLeftBtn.disabled = true;
+            } else {
+                scrollLeftBtn.disabled = false;
+            }
+
+            // Disable right arrow at the end
+            if (carousel01.scrollLeft >= maxScroll - 1) {
+                scrollRightBtn.disabled = true;
+            } else {
+                scrollRightBtn.disabled = false;
+            }
+        }
+
+        // Listen for scroll events
+        carousel01.addEventListener('scroll', updateArrowStates);
+
+        // Initialize arrow states on load
+        updateArrowStates();
+
+        // Optional: Update on touch/swipe for mobile
+        let touchStartX = 0;
+        carousel01.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+        });
+
+        carousel01.addEventListener('touchend', () => {
+            updateArrowStates();
+        });
+
     </script>
 
 </body>
