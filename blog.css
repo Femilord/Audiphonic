@@ -1,7 +1,6 @@
 /* ========================================
    CSS VARIABLES & RESET
    ======================================== */
-
 :root {
 
     /* Header */
@@ -13,7 +12,7 @@
     --accent-teal: #00C1CF;
     --text-dark: #000000;
     --text-light: #ffffff;
-    --text-muted: #666666;
+    --text-muted: #374436;
     --background-dark: #00848e;
     --background-darker: #000000;
     --background-light: #f3fcfa;
@@ -25,6 +24,7 @@
     --container-max: 1200px;
     --content-max: 1080px;
     --section-padding: 100px;
+    --section-padding2: 50px;
     --mobile-padding: 20px;
 
     /* Transitions */
@@ -43,7 +43,6 @@
     --border-mild2: solid .5px rgb(188, 188, 188);
     --border-mild3: solid .5px rgb(222, 222, 222);
     --line-only: solid .5px rgb(188, 188, 188);
-    --line-only2: solid 2px rgb(0, 255, 251);
 
 
 
@@ -59,7 +58,7 @@
 
 
 body {
-    font-family: "Montserrat", "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     overflow-x: hidden;
     max-width: 100%;
 }
@@ -83,15 +82,32 @@ body::-webkit-scrollbar-thumb {
 
 
 /* Custom Font */
+/* Montserrat Regular (400) - for body text */
 @font-face {
-    font-family: 'blair';
-    src: url('./blairfonts/BlairMdITCTTMedium.ttf') format('truetype');
-    font-weight: normal;
+    font-family: 'Montserrat';
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
+    src: url('../fonts/Montserrat-Regular.woff2') format('woff2');
 }
 
+/* Montserrat SemiBold (600) - for subheadings */
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2');
+}
 
+/* Montserrat Bold (700) - for headings */
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/Montserrat-Bold.woff2') format('woff2');
+}
 
 
 

@@ -1,7 +1,6 @@
 /* ========================================
    CSS VARIABLES & RESET
    ======================================== */
-
 :root {
 
     /* Header */
@@ -13,7 +12,7 @@
     --accent-teal: #00C1CF;
     --text-dark: #000000;
     --text-light: #ffffff;
-    --text-muted: #666666;
+    --text-muted: #374436;
     --background-dark: #00848e;
     --background-darker: #000000;
     --background-light: #f3fcfa;
@@ -25,6 +24,7 @@
     --container-max: 1200px;
     --content-max: 1080px;
     --section-padding: 100px;
+    --section-padding2: 50px;
     --mobile-padding: 20px;
 
     /* Transitions */
@@ -43,7 +43,6 @@
     --border-mild2: solid .5px rgb(188, 188, 188);
     --border-mild3: solid .5px rgb(222, 222, 222);
     --line-only: solid .5px rgb(188, 188, 188);
-    --line-only2: solid 2px rgb(0, 255, 251);
 
 
 
@@ -59,7 +58,7 @@
 
 
 body {
-    font-family: "Montserrat", "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     overflow-x: hidden;
     max-width: 100%;
 }
@@ -83,14 +82,32 @@ body::-webkit-scrollbar-thumb {
 
 
 /* Custom Font */
+/* Montserrat Regular (400) - for body text */
 @font-face {
-    font-family: 'blair';
-    src: url('./blairfonts/BlairMdITCTTMedium.ttf') format('truetype');
-    font-weight: normal;
+    font-family: 'Montserrat';
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
+    src: url('../fonts/Montserrat-Regular.woff2') format('woff2');
 }
 
+/* Montserrat SemiBold (600) - for subheadings */
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2');
+}
+
+/* Montserrat Bold (700) - for headings */
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/Montserrat-Bold.woff2') format('woff2');
+}
 
 
 /* ================= Start-Hero-Section ================= */
@@ -721,433 +738,434 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-    /* ---------- Responsive improvements ---------- */
+/* ---------- Responsive improvements ---------- */
 
-    /* Tablet styles */
-    @media (max-width: 1024px) {
-        .services-left-section-content-environs {
-            padding-top: 100px;
-        }
+/* Tablet styles */
+@media (max-width: 1024px) {
+    .services-left-section-content-environs {
+        padding-top: 100px;
+    }
 
-        .services-object-clause h1 {
-            font-size: clamp(1.8rem, 4.5vw, 3rem);
-        }
+    .services-object-clause h1 {
+        font-size: clamp(1.8rem, 4.5vw, 3rem);
+    }
 
-        .tag-line {
-            max-width: 600px;
-        }
+    .tag-line {
+        max-width: 600px;
+    }
+}
+
+
+@media (max-width: 1080px) {
+
+    .mid-section-body-one {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
 
-    @media (max-width: 1080px) {
-
-        .mid-section-body-one {
-            padding-left: 15px;
-            padding-right: 15px;
-        }
 
 
-
-
-        .carousel-container-two {
-            margin-left: 0;
-            width: 100%;
-        }
-
-        .mid-section-box-text-two {
-            text-align: left;
-            padding-left: 15px;
-            padding-right: 15px;
-
-        }
-
-        .mid-section-box-acoustic-two {
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-
-
-
-        .carousel-arrow-two.left-two {
-            left: 10px;
-        }
-
-        .carousel-arrow-two.right-two {
-            right: 10px;
-        }
+    .carousel-container-two {
+        margin-left: 0;
+        width: 100%;
     }
+
+    .mid-section-box-text-two {
+        text-align: left;
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+
+    .mid-section-box-acoustic-two {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+
+
+    .carousel-arrow-two.left-two {
+        left: 10px;
+    }
+
+    .carousel-arrow-two.right-two {
+        right: 10px;
+    }
+}
 
 
 
 .top-cover-box {
-        .layer {
-            gap: 24px;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        }
-
-        .feature-space {
-            flex: 0 0 calc(50% - 20px);
-            /* show 2 cards */
-        }
-
-        .environs-image {
-            height: 200px;
-        }
-
-        .environs-box-text {
-            padding: 20px;
-        }
-
-        /* -------------- Mid Section one ------------------ */
-
-        .mid-section-box-one-title,
-        .mid-section-box-one-text,
-        .av-box {
-            margin-left: 30px;
-        }
-
-        .av-body {
-            padding-right: 0;
-        }
-
-        .mid-section-box-one-acoustic img {
-            max-height: 40vh;
-        }
-
-
+    .layer {
+        gap: 24px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
 
-    /* Smaller tablets & large phones */
-
-    @media (max-width: 969px) {
-        .top-cover-box {
-                display: none !important;
-            }
-
-        .av-box {
-            margin-left: 0;
-        }
-
-
-        .mid-section-box-one-acoustic img {
-            max-height: 60vh;
-        }
-
-        .av-body {
-            margin-bottom: 50px;
-
-        }
-
-
-
-        /* ---------------- Corporate ----------------- */
-
-        .main-container {
-            border: none;
-        }
-
-
-
+    .feature-space {
+        flex: 0 0 calc(50% - 20px);
+        /* show 2 cards */
     }
 
-    @media (max-width: 950px) {
-        .top-cover-box {
-                display: none !important;
-            }
-
-
+    .environs-image {
+        height: 200px;
     }
 
-    @media (max-width: 768px) {
+    .environs-box-text {
+        padding: 20px;
+    }
 
-        .top-cover-box {
-                display: none !important;
-            }
-        /* ---------- hero-section ------------- */
+    /* -------------- Mid Section one ------------------ */
 
+    .mid-section-box-one-title,
+    .mid-section-box-one-text,
+    .av-box {
+        margin-left: 30px;
+    }
 
-        .hero-banner-box-environs {
-            min-height: 100vh;
-            padding: 16px 70px;
-            top: -10vh;
-        }
+    .av-body {
+        padding-right: 0;
+    }
 
-        .services-section-wrapper-environs {
-            padding: 0 15px;
-            margin-top: 0;
-        }
-
-        .services-left-section-content-environs {
-            padding-top: 80px;
-        }
-
-        .services-object-clause {
-            padding-bottom: 15px;
-            max-width: 95%;
-        }
-
-        .services-object-clause h1 {
-            font-size: clamp(1.75rem, 6vw, 2.5rem);
-            line-height: 1.3;
-        }
-
-        .tag-line {
-            max-width: 100%;
-        }
-
-        .tag-line p {
-            font-size: clamp(0.95rem, 3vw, 1.1rem);
-            line-height: 1.5;
-        }
-
-        .learn-more-btn {
-            margin: 1.5rem 0;
-        }
-
-        .learn-more-btn a {
-            padding: 10px 25px;
-            font-size: clamp(0.9rem, 2.5vw, 1rem);
-        }
-
-
-        /* --------------- Corporate Section -------------- */
-
-        .main-container-wrapper {
-            width: 100%;
-        }
-
-        .layer {
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 22px;
-        }
-
-        .feature-space {
-            flex: 0 0 calc(70%);
-            /* show 1.3 cards */
-            border-bottom: solid 10px #00F0FF;
-        }
-
-        .environs-image {
-            height: 190px;
-        }
-
-        /* ------------------ Mid Section One ----------------- */
-
-        .mid-section-body-one {
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-
-
-        .mid-section-box-one-title,
-        .mid-section-box-one-text,
-        .av-box {
-            margin-left: 0;
-        }
-
-        .mid-section-box-one-text {
-            gap: 20px;
-        }
-
-        .mid-section-box-one-text h3 {
-            padding-right: 0;
-        }
-
-        .mid-section-box-one-text p {
-            padding-left: 0;
-        }
-
-        .av-box {
-            gap: 30px;
-        }
-
-        .mid-section-box-one-acoustic img {
-            max-height: 60vh;
-        }
-
-
-        /* ---------------- Mid Section Two ---------------- */
-
-        .mid-section-box-text-two {
-            text-align: left;
-            padding-left: 15px;
-            padding-right: 15px;
-
-        }
-
-
-        .mid-section-box-acoustic-two img {
-            min-width: 240px;
-            max-width: 240px;
-            height: 300px;
-        }
-
-        .carousel-arrow-two {
-            width: 35px;
-            height: 35px;
-        }
-
-
+    .mid-section-box-one-acoustic img {
+        max-height: 40vh;
     }
 
 
-    @media (max-width: 759px) {
+}
 
-        
+/* Smaller tablets & large phones */
 
-        .mid-section-box-one-text h3 {
-            font-size: clamp(1.2rem, 2.2vw, 1.5rem);
-            font-weight: 500;
-            padding-right: 150px;
-            line-height: 1.5;
+@media (max-width: 969px) {
+    .top-cover-box {
+        display: none !important;
+    }
 
-        }
+    .av-box {
+        margin-left: 0;
+    }
 
+
+    .mid-section-box-one-acoustic img {
+        max-height: 60vh;
+    }
+
+    .av-body {
+        margin-bottom: 50px;
 
     }
 
 
 
-    /* Mobile phones */
-    @media (max-width: 600px) {
-        .top-cover-box {
-            display: none !important;
-        }
+    /* ---------------- Corporate ----------------- */
 
-
-
-        .hero-banner-box-environs {
-            padding-left: 30px;
-            padding-right: 30px;
-
-        }
-
-
-
-        .main-container {
-            border: none;
-        }
-
-        .layer {
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
-
-        .feature-space {
-            flex: 0 0 85%;
-            /* show 1 card almost full width */
-        }
-
-        .environs-image {
-            height: 180px;
-        }
-
-        .feature-space {
-            border-radius: 12px;
-        }
-
-        .environs-box-text {
-            padding: 18px;
-        }
-
-
-
-
-        .mid-section-box-one-text h3 {
-            font-size: clamp(1.2rem, 2.2vw, 1.5rem);
-            font-weight: 500;
-            padding-right: 60px;
-            line-height: 1.5;
-
-        }
-
-        .av-body {
-            padding-bottom: 0;
-            margin-bottom: 10px;
-        }
-
-    }
-
-
-    @media (max-width: 480px) {
-
-        .top-cover-box {
-            display: none !important;
-        }
-
-        /* ---------------- Hero - Banner ------------ */
-
-        .hero-banner-box-environs {
-            top: -8vh;
-        }
-
-        .services-left-section-content-environs {
-            padding-top: 60px;
-        }
-
-        .services-object-clause h1 {
-            font-size: clamp(1.5rem, 7vw, 2rem);
-        }
-
-        .tag-line p {
-            font-size: clamp(0.9rem, 3.5vw, 1rem);
-        }
-
-        .learn-more-btn a {
-            padding: 10px 20px;
-        }
-
-
-        /* --------------- Corporate ----------------- */
-
-        .main-container-title-main {
-            padding-right: 40px;
-        }
-
-        .main-container-title-para {
-            padding-right: 40px;
-        }
-
-
-
-        /* ------------------ Mid Section One ----------------- */
-        .mid-section-body-one {
-            padding: 30px 15px;
-        }
-
-        .mid-section-box-one {
-            gap: 30px;
-        }
-
-
-        .av-body-gen p {
-            padding-right: 0;
-        }
-
-        .mid-section-box-one-acoustic img {
-            max-height: 30vh;
-        }
-
+    .main-container {
+        border: none;
     }
 
 
 
-    /* Very small screens */
-    @media (max-width: 400px) {
-        .top-cover-box {
-            display: none !important;
-        }
+}
 
-
-        .feature-space {
-            flex: 0 0 92%;
-        }
-
-        .environs-image {
-            height: 160px;
-        }
-
-        .environs-paragraph p {
-            font-size: 0.9rem;
-        }
+@media (max-width: 950px) {
+    .top-cover-box {
+        display: none !important;
     }
+
+
+}
+
+@media (max-width: 768px) {
+
+    .top-cover-box {
+        display: none !important;
+    }
+
+    /* ---------- hero-section ------------- */
+
+
+    .hero-banner-box-environs {
+        min-height: 100vh;
+        padding: 16px 70px;
+        top: -10vh;
+    }
+
+    .services-section-wrapper-environs {
+        padding: 0 15px;
+        margin-top: 0;
+    }
+
+    .services-left-section-content-environs {
+        padding-top: 80px;
+    }
+
+    .services-object-clause {
+        padding-bottom: 15px;
+        max-width: 95%;
+    }
+
+    .services-object-clause h1 {
+        font-size: clamp(1.75rem, 6vw, 2.5rem);
+        line-height: 1.3;
+    }
+
+    .tag-line {
+        max-width: 100%;
+    }
+
+    .tag-line p {
+        font-size: clamp(0.95rem, 3vw, 1.1rem);
+        line-height: 1.5;
+    }
+
+    .learn-more-btn {
+        margin: 1.5rem 0;
+    }
+
+    .learn-more-btn a {
+        padding: 10px 25px;
+        font-size: clamp(0.9rem, 2.5vw, 1rem);
+    }
+
+
+    /* --------------- Corporate Section -------------- */
+
+    .main-container-wrapper {
+        width: 100%;
+    }
+
+    .layer {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 22px;
+    }
+
+    .feature-space {
+        flex: 0 0 calc(70%);
+        /* show 1.3 cards */
+        border-bottom: solid 10px #00F0FF;
+    }
+
+    .environs-image {
+        height: 190px;
+    }
+
+    /* ------------------ Mid Section One ----------------- */
+
+    .mid-section-body-one {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+
+    .mid-section-box-one-title,
+    .mid-section-box-one-text,
+    .av-box {
+        margin-left: 0;
+    }
+
+    .mid-section-box-one-text {
+        gap: 20px;
+    }
+
+    .mid-section-box-one-text h3 {
+        padding-right: 0;
+    }
+
+    .mid-section-box-one-text p {
+        padding-left: 0;
+    }
+
+    .av-box {
+        gap: 30px;
+    }
+
+    .mid-section-box-one-acoustic img {
+        max-height: 60vh;
+    }
+
+
+    /* ---------------- Mid Section Two ---------------- */
+
+    .mid-section-box-text-two {
+        text-align: left;
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+
+
+    .mid-section-box-acoustic-two img {
+        min-width: 240px;
+        max-width: 240px;
+        height: 300px;
+    }
+
+    .carousel-arrow-two {
+        width: 35px;
+        height: 35px;
+    }
+
+
+}
+
+
+@media (max-width: 759px) {
+
+
+
+    .mid-section-box-one-text h3 {
+        font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+        font-weight: 500;
+        padding-right: 150px;
+        line-height: 1.5;
+
+    }
+
+
+}
+
+
+
+/* Mobile phones */
+@media (max-width: 600px) {
+    .top-cover-box {
+        display: none !important;
+    }
+
+
+
+    .hero-banner-box-environs {
+        padding-left: 30px;
+        padding-right: 30px;
+
+    }
+
+
+
+    .main-container {
+        border: none;
+    }
+
+    .layer {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .feature-space {
+        flex: 0 0 85%;
+        /* show 1 card almost full width */
+    }
+
+    .environs-image {
+        height: 180px;
+    }
+
+    .feature-space {
+        border-radius: 12px;
+    }
+
+    .environs-box-text {
+        padding: 18px;
+    }
+
+
+
+
+    .mid-section-box-one-text h3 {
+        font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+        font-weight: 500;
+        padding-right: 60px;
+        line-height: 1.5;
+
+    }
+
+    .av-body {
+        padding-bottom: 0;
+        margin-bottom: 10px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .top-cover-box {
+        display: none !important;
+    }
+
+    /* ---------------- Hero - Banner ------------ */
+
+    .hero-banner-box-environs {
+        top: -8vh;
+    }
+
+    .services-left-section-content-environs {
+        padding-top: 60px;
+    }
+
+    .services-object-clause h1 {
+        font-size: clamp(1.5rem, 7vw, 2rem);
+    }
+
+    .tag-line p {
+        font-size: clamp(0.9rem, 3.5vw, 1rem);
+    }
+
+    .learn-more-btn a {
+        padding: 10px 20px;
+    }
+
+
+    /* --------------- Corporate ----------------- */
+
+    .main-container-title-main {
+        padding-right: 40px;
+    }
+
+    .main-container-title-para {
+        padding-right: 40px;
+    }
+
+
+
+    /* ------------------ Mid Section One ----------------- */
+    .mid-section-body-one {
+        padding: 30px 15px;
+    }
+
+    .mid-section-box-one {
+        gap: 30px;
+    }
+
+
+    .av-body-gen p {
+        padding-right: 0;
+    }
+
+    .mid-section-box-one-acoustic img {
+        max-height: 30vh;
+    }
+
+}
+
+
+
+/* Very small screens */
+@media (max-width: 400px) {
+    .top-cover-box {
+        display: none !important;
+    }
+
+
+    .feature-space {
+        flex: 0 0 92%;
+    }
+
+    .environs-image {
+        height: 160px;
+    }
+
+    .environs-paragraph p {
+        font-size: 0.9rem;
+    }
+}
