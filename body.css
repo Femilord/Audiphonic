@@ -84,8 +84,7 @@ body::-webkit-scrollbar-thumb {
 /* Custom Font */
 /* Montserrat Regular (400) - for body text */
 @font-face {
-    font-family: 'Montserrat';
-    font-weight: 400;
+    font-family: 'Montser', sans-serifeight: 400;
     font-style: normal;
     font-display: swap;
     src: url('../fonts/Montserrat-Regular.woff2') format('woff2');
@@ -93,8 +92,7 @@ body::-webkit-scrollbar-thumb {
 
 /* Montserrat SemiBold (600) - for subheadings */
 @font-face {
-    font-family: 'Montserrat';
-    font-weight: 600;
+    font-family: 'Montser', sans-serifeight: 600;
     font-style: normal;
     font-display: swap;
     src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2');
@@ -102,8 +100,7 @@ body::-webkit-scrollbar-thumb {
 
 /* Montserrat Bold (700) - for headings */
 @font-face {
-    font-family: 'Montserrat';
-    font-weight: 700;
+    font-family: 'Montser', sans-serifeight: 700;
     font-style: normal;
     font-display: swap;
     src: url('../fonts/Montserrat-Bold.woff2') format('woff2');
@@ -171,54 +168,6 @@ body::-webkit-scrollbar-thumb {
     z-index: 2;
 }
 
-/*
-.who-info {
-    max-width: var(--container-max);
-    width: 100%;
-    margin: 0 auto;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-
-    border-left: 1px solid var(--border-light);
-    border-right: 1px solid var(--border-light);
-    color: var(--text-muted);
-}
-
-.side-line {
-    max-width: var(--container-max);
-    width: 100%;
-
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.who-info-text {
-    max-width: var(--content-max);
-    width: 100%;
-}
-
-.who-info-text h3 {
-    width: 800px;
-    padding-left: 40px;
-    color: var(--text-dark);
-    margin: 0;
-    border-left: 2px solid #00F0FF;
-}
-
-.who-info-text P {
-    width: 800px;
-    padding-top: 20px;
-    line-height: 1.5;
-    margin: 0;
-}
-
-*/
 
 .left-section-content {
     display: flex;
@@ -241,7 +190,7 @@ body::-webkit-scrollbar-thumb {
     font-size: clamp(2.5rem, 2.25vw, 2.8rem);
     line-height: 1.3;
     font-weight: bold;
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .text-deco {
