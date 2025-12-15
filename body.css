@@ -84,7 +84,8 @@ body::-webkit-scrollbar-thumb {
 /* Custom Font */
 /* Montserrat Regular (400) - for body text */
 @font-face {
-    font-family: 'Montser', sans-serifeight: 400;
+    font-family: 'Montserrat';
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
     src: url('../fonts/Montserrat-Regular.woff2') format('woff2');
@@ -92,7 +93,8 @@ body::-webkit-scrollbar-thumb {
 
 /* Montserrat SemiBold (600) - for subheadings */
 @font-face {
-    font-family: 'Montser', sans-serifeight: 600;
+    font-family: 'Montserrat';
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
     src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2');
@@ -100,12 +102,12 @@ body::-webkit-scrollbar-thumb {
 
 /* Montserrat Bold (700) - for headings */
 @font-face {
-    font-family: 'Montser', sans-serifeight: 700;
+    font-family: 'Montserrat';
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
     src: url('../fonts/Montserrat-Bold.woff2') format('woff2');
 }
-
 
 
 /* ========================================

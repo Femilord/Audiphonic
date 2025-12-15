@@ -1021,95 +1021,11 @@
 
     </div>
 
-    <!-- ------------- Hero Section zoom out scroll effect ------------- -->
-    <script>
 
 
-        const bgWrapper = document.getElementById("parallax-bg");
+    <!-- ========================== Scripts ===================================== -->
 
-        window.addEventListener("scroll", () => {
-            const scrollY = window.scrollY;
-            const scale = 1.0 - Math.min(scrollY / 1500, 0.09); // Zooms out to 94%
-            bgWrapper.style.transform = `scale(${scale})`;
-        });
-
-
-
-    </script>
-
-
-    <!-- ------------ hero section scrolling images --------------- -->
-
-
-    <script>
-        const track = document.getElementById('scrollTrack');
-        track.addEventListener('animationend', () => {
-            track.style.animation = 'none';
-            setTimeout(() => {
-                track.style.animation = 'scroll-horizontal 80s linear infinite';
-            }, 10);
-        });
-    </script>
-
-    <!--  --------------  header ------------------- 
-    <script>
-        let lastScrollTop = 0;
-        const header = document.querySelector("header");
-
-        window.addEventListener("scroll", function () {
-            if (window.innerWidth <= 900) {  // Only apply on mobile
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-                if (scrollTop > lastScrollTop + 10) {
-                    // Scrolling down - hide header
-                    header.classList.add("hide-header");
-                } else if (scrollTop < lastScrollTop - 10) {
-                    // Scrolling up - show header
-                    header.classList.remove("hide-header");
-                }
-
-                lastScrollTop = Math.max(scrollTop, 0);
-            }
-        });
-    </script> -->
-
-    <!--   ----------- header mobile ------------- -->
-
-    <script>
-        const header = document.querySelector("header");
-
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 10) {
-                header.classList.add("scrolled");
-            } else {
-                header.classList.remove("scrolled");
-            }
-        });
-    </script>
-
-    <!--  ---------------  Sevices ---------------- -->
-
-
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const cards = document.querySelectorAll('.services-icon');
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, {
-                threshold: 0.4
-            });
-
-            cards.forEach(card => observer.observe(card));
-        });
-    </script>
-
-    <!-- ---------------------- menu --------------------- -->
+    <!-- ---------------------- Mobile menu script --------------------- -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const menuToggle = document.getElementById("menu-toggle");
@@ -1135,115 +1051,83 @@
     </script>
 
 
-    <!--   -------------email mobile ------------- -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const cta = document.getElementById("mobileCta");
-            const wrapper = document.getElementById("mobileCtaWrapper");
-
-            function handleScroll() {
-                const rect = wrapper.getBoundingClientRect();
-                const isOutOfView = rect.top < 0;
-
-                if (isOutOfView) {
-                    cta.classList.add("sticky-bottom");
-                    wrapper.classList.add("fixed-height");
-                } else {
-                    cta.classList.remove("sticky-bottom");
-                    wrapper.classList.remove("fixed-height");
-                }
-            }
-
-            window.addEventListener("scroll", handleScroll);
-            handleScroll();
-        });
-    </script>
-
-
-
-    <!-- ---------------------- Third Section Sticky scrolly ---------------------- -->
+    <!--  ---------------  mobile header scroll ---------------- -->
 
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            // Check if the screen is a desktop size
-            if (window.innerWidth > 900) {
-                const textBlocks = document.querySelectorAll(".text-content-block");
-                const panelContents = document.querySelectorAll(".panel-content");
-                const stickyPanel = document.querySelector(".sticky-panel");
+        const header = document.querySelector("header");
 
-                const observer = new IntersectionObserver(
-                    (entries) => {
-                        entries.forEach((entry) => {
-                            if (entry.isIntersecting) {
-                                const index = Array.from(textBlocks).indexOf(entry.target);
-
-                                panelContents.forEach((panel, i) => {
-                                    panel.classList.toggle("active", i === index);
-                                });
-                            }
-                        });
-                    },
-                    {
-                        root: null,
-                        threshold: 0.5,
-                    }
-                );
-
-                textBlocks.forEach((block) => observer.observe(block));
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 10) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
             }
         });
     </script>
 
-    <!-- ------------- AV Carousel ---------------- -->
 
+
+    <!-- ------------- Hero Section zoom out scroll effect ------------- -->
     <script>
 
-        const track = document.getElementById('carouselTrack');
-        const carousel = document.getElementById('carousel');
 
-        // Pause animation on hover
-        carousel.addEventListener('mouseenter', () => {
-            track.style.animationPlayState = 'paused';
+        const bgWrapper = document.getElementById("parallax-bg");
+
+        window.addEventListener("scroll", () => {
+            const scrollY = window.scrollY;
+            const scale = 1.0 - Math.min(scrollY / 1500, 0.09); // Zooms out to 94%
+            bgWrapper.style.transform = `scale(${scale})`;
         });
-        carousel.addEventListener('mouseleave', () => {
-            track.style.animationPlayState = 'running';
-        });
+
+
 
     </script>
 
 
+    <!-- ------------ hero section scrolling images combined with --------------- -->
+
+
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            let current = 0;
-            const images = document.querySelectorAll(".av-systems-images");
-            const texts = document.querySelectorAll(".av-systems-left-text");
-            const totalItems = images.length;
+        // --- Define the two re-usable functions (bricks) ---
 
-            // Ensure there are images and text blocks to animate
-            if (totalItems > 0) {
-                // Set the first image and text as active initially
-                images[current].classList.add("active");
-                texts[current].classList.add("active");
+        function setupAnimationReset(trackId, animationDuration) {
+            const track = document.getElementById(trackId);
+            if (!track) return;
 
-                // Function to switch to the next slide
-                function showNextSlide() {
-                    // Remove 'active' class from the current items
-                    images[current].classList.remove("active");
-                    texts[current].classList.remove("active");
+            track.addEventListener('animationend', () => {
+                track.style.animation = 'none';
+                setTimeout(() => {
+                    track.style.animation = animationDuration;
+                }, 10);
+            });
+            track.style.animation = animationDuration;
+        }
 
-                    // Move to the next item
-                    current = (current + 1) % totalItems;
+        function setupHoverPause(containerId, trackId) {
+            const container = document.getElementById(containerId);
+            const track = document.getElementById(trackId);
+            if (!container || !track) return;
 
-                    // Add 'active' class to the new current items
-                    images[current].classList.add("active");
-                    texts[current].classList.add("active");
-                }
+            container.addEventListener('mouseenter', () => {
+                track.style.animationPlayState = 'paused';
+            });
+            container.addEventListener('mouseleave', () => {
+                track.style.animationPlayState = 'running';
+            });
+        }
 
-                // Set the interval to automatically switch every 6 seconds (6000ms)
-                setInterval(showNextSlide, 6000);
-            }
-        });
+        // --- Execute the functions for your specific sections ---
+
+        // 1. Hero Section Setup
+        setupAnimationReset(
+            'scrollTrack',
+            'scroll-horizontal 80s linear infinite'
+        );
+
+        // 2. AV Carousel Setup
+        setupHoverPause('carousel', 'carouselTrack');
     </script>
+
 
     <!-- ------------------------- Noise Source -------------------- -->
     <script>
@@ -1281,7 +1165,53 @@
         setInterval(changeText, 2000);
     </script>
 
+    <!-- ---------------- services animation mobile --------------------- -->
 
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const cards = document.querySelectorAll('.services-icon');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.4
+            });
+
+            cards.forEach(card => observer.observe(card));
+        });
+    </script>
+
+
+
+
+    <!--   -------------email mobile ------------- -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cta = document.getElementById("mobileCta");
+            const wrapper = document.getElementById("mobileCtaWrapper");
+
+            function handleScroll() {
+                const rect = wrapper.getBoundingClientRect();
+                const isOutOfView = rect.top < 0;
+
+                if (isOutOfView) {
+                    cta.classList.add("sticky-bottom");
+                    wrapper.classList.add("fixed-height");
+                } else {
+                    cta.classList.remove("sticky-bottom");
+                    wrapper.classList.remove("fixed-height");
+                }
+            }
+
+            window.addEventListener("scroll", handleScroll);
+            handleScroll();
+        });
+    </script>
 
     <!--  -------------------  Services - Animation Js  ---------------------  -->
 
@@ -1304,12 +1234,12 @@
 
                 // Start text animation
                 heading.style.animation = `
-                        typewriter 1.5s steps(13) 1s forwards,
-                        blink 0.5s step-end infinite,
-                        boldEffect 0.8s ease-in-out 2.8s forwards,
-                        removeCursor 0.1s 2.5s forwards,
-                        reset 0.1s 8.9s forwards
-                    `;
+                            typewriter 1.5s steps(13) 1s forwards,
+                            blink 0.5s step-end infinite,
+                            boldEffect 0.8s ease-in-out 2.8s forwards,
+                            removeCursor 0.1s 2.5s forwards,
+                            reset 0.1s 8.9s forwards
+                        `;
 
                 // Reset border at the end
                 setTimeout(() => {
@@ -1327,65 +1257,75 @@
     </script>
 
 
-    <!-- ------------------- Quick Data Main --------------------- -->
+    <!-- ------------- AV Systems images ---------------- -->
     <script>
-        // Animated counter function
-        function animateCounter(element, target, duration = 2000) {
-            let start = 0;
-            const increment = target / (duration / 16); // 60fps
-            const timer = setInterval(() => {
-                start += increment;
-                if (start >= target) {
-                    element.textContent = `> ${target}`;
-                    clearInterval(timer);
-                } else {
-                    element.textContent = `> ${Math.floor(start)}`;
+        document.addEventListener("DOMContentLoaded", function () {
+            let current = 0;
+            const images = document.querySelectorAll(".av-systems-images");
+            const texts = document.querySelectorAll(".av-systems-left-text");
+            const totalItems = images.length;
+
+            // Ensure there are images and text blocks to animate
+            if (totalItems > 0) {
+                // Set the first image and text as active initially
+                images[current].classList.add("active");
+                texts[current].classList.add("active");
+
+                // Function to switch to the next slide
+                function showNextSlide() {
+                    // Remove 'active' class from the current items
+                    images[current].classList.remove("active");
+                    texts[current].classList.remove("active");
+
+                    // Move to the next item
+                    current = (current + 1) % totalItems;
+
+                    // Add 'active' class to the new current items
+                    images[current].classList.add("active");
+                    texts[current].classList.add("active");
                 }
-            }, 16);
-        }
 
-        // Run when page loads
-        window.addEventListener('DOMContentLoaded', () => {
-            // Get all h3 elements and animate them
-            const studioH3 = document.querySelector('.studio-data h3', '.studio-data-mobile h3');
-            const corporateH3 = document.querySelector('.corporate-data h3', '.corporate-data-mobile h3');
-            const auditoriumH3 = document.querySelector('.auditorium-data h3', '.auditorium-data-mobile');
-
-            if (studioH3) animateCounter(studioH3, 50, 2000);
-            if (corporateH3) animateCounter(corporateH3, 15, 2000);
-            if (auditoriumH3) animateCounter(auditoriumH3, 10, 2000);
+                // Set the interval to automatically switch every 6 seconds (6000ms)
+                setInterval(showNextSlide, 6000);
+            }
         });
     </script>
 
-    <!-- ------------------- Quick Data Mobile--------------------- -->
+
+    <!-- ---------------------- Third Section Sticky scrolly ---------------------- -->
+
     <script>
-        // Animated counter function
-        function animateCounter(element, target, duration = 2000) {
-            let start = 0;
-            const increment = target / (duration / 16); // 60fps
-            const timer = setInterval(() => {
-                start += increment;
-                if (start >= target) {
-                    element.textContent = `> ${target}`;
-                    clearInterval(timer);
-                } else {
-                    element.textContent = `> ${Math.floor(start)}`;
-                }
-            }, 16);
-        }
+        document.addEventListener("DOMContentLoaded", () => {
+            // Check if the screen is a desktop size
+            if (window.innerWidth > 900) {
+                const textBlocks = document.querySelectorAll(".text-content-block");
+                const panelContents = document.querySelectorAll(".panel-content");
+                const stickyPanel = document.querySelector(".sticky-panel");
 
-        // Run when page loads
-        window.addEventListener('DOMContentLoaded', () => {
-            // Get all h3 elements and animate them
-            const studioH3 = document.querySelector('.studio-data-mobile h3');
-            const corporateH3 = document.querySelector('.corporate-data-mobile h3');
-            const auditoriumH3 = document.querySelector('.auditorium-data-mobile h3');
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                const index = Array.from(textBlocks).indexOf(entry.target);
 
-            if (studioH3) animateCounter(studioH3, 50, 2000);
-            if (corporateH3) animateCounter(corporateH3, 15, 2000);
-            if (auditoriumH3) animateCounter(auditoriumH3, 10, 2000);
+                                panelContents.forEach((panel, i) => {
+                                    panel.classList.toggle("active", i === index);
+                                });
+                            }
+                        });
+                    },
+                    {
+                        root: null,
+                        threshold: 0.5,
+                    }
+                );
+
+                textBlocks.forEach((block) => observer.observe(block));
+            }
         });
     </script>
+
+
 
 </body>
 
