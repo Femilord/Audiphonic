@@ -356,6 +356,10 @@ body::-webkit-scrollbar-thumb {
         height: 100vh;
     } */
 
+    .top-cover-box {
+        display: none;
+    }
+
     .contact-hero h1 {
         font-size: 1.9rem;
     }
