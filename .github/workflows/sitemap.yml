@@ -1,0 +1,25 @@
+name: Generate sitemap
+
+on:
+  push:
+    branches: [ main ]  # If your main branch is called 'master', change this to master
+
+jobs:
+  sitemap_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v3
+
+      - name: Generate Sitemap
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url-path: https://audiphonic.com/ # <--- CHANGE THIS to your GoDaddy domain
+
+      - name: Commit and push the sitemap
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add sitemap.xml
+          git commit -m "Automated sitemap update" || exit 0
+          git push
