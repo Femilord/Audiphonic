@@ -401,95 +401,9 @@
     </script>
 
 
-    <!-- --------------------                ------------------ -->
-    <script>
-        document.querySelectorAll('.carousel-wrapper').forEach((wrapper, index) => {
-            const layer = wrapper.querySelector('.layer');
-            const cards = layer.querySelectorAll('.feature-space');
-            const dotsContainer = wrapper.parentElement.querySelector('.carousel-dots');
 
-            // create dots
-            cards.forEach((_, i) => {
-                let dot = document.createElement('div');
-                dotsContainer.appendChild(dot);
-            });
 
-            const dots = dotsContainer.querySelectorAll('div');
 
-            // update active dot on scroll
-            wrapper.addEventListener('scroll', () => {
-                let cardWidth = cards[0].offsetWidth + 28; // card width + gap
-                let index = Math.round(wrapper.scrollLeft / cardWidth);
-
-                dots.forEach(d => d.classList.remove('active'));
-                if (dots[index]) dots[index].classList.add('active');
-            });
-
-            // initialize
-            dots[0].classList.add('active');
-        });
-    </script>
-
-    <script>
-        const carousel01 = document.getElementById('carousel01');
-        const scrollLeftBtn = document.getElementById('scrollLeft');
-        const scrollRightBtn = document.getElementById('scrollRight');
-
-        // Scroll amount (one image width + gap)
-        const scrollAmount = 300;
-
-        // Scroll right
-        scrollRightBtn.addEventListener('click', () => {
-            carousel01.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
-        });
-
-        // Scroll left
-        scrollLeftBtn.addEventListener('click', () => {
-            carousel01.scrollBy({
-                left: -scrollAmount,
-                behavior: 'smooth'
-            });
-        });
-
-        // Update arrow states based on scroll position
-        function updateArrowStates() {
-            const maxScroll = carousel01.scrollWidth - carousel01.clientWidth;
-
-            // Disable left arrow at the start
-            if (carousel01.scrollLeft <= 0) {
-                scrollLeftBtn.disabled = true;
-            } else {
-                scrollLeftBtn.disabled = false;
-            }
-
-            // Disable right arrow at the end
-            if (carousel01.scrollLeft >= maxScroll - 1) {
-                scrollRightBtn.disabled = true;
-            } else {
-                scrollRightBtn.disabled = false;
-            }
-        }
-
-        // Listen for scroll events
-        carousel01.addEventListener('scroll', updateArrowStates);
-
-        // Initialize arrow states on load
-        updateArrowStates();
-
-        // Optional: Update on touch/swipe for mobile
-        let touchStartX = 0;
-        carousel01.addEventListener('touchstart', (e) => {
-            touchStartX = e.touches[0].clientX;
-        });
-
-        carousel01.addEventListener('touchend', () => {
-            updateArrowStates();
-        });
-
-    </script>
 
 
 </body>

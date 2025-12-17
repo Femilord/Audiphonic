@@ -971,41 +971,7 @@
     </script>
 
 
-
-
-
-
-    <Script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const serviceContents = document.querySelectorAll('.services-content');
-            const serviceChannels = document.querySelectorAll('.service-channel');
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        // Get the index of the visible service
-                        const index = Array.from(serviceContents).indexOf(entry.target);
-
-                        // Remove active class from all channels
-                        serviceChannels.forEach(channel => channel.classList.remove('active'));
-
-                        // Add active class to corresponding channel
-                        if (serviceChannels[index]) {
-                            serviceChannels[index].classList.add('active');
-                        }
-                    }
-                });
-            }, {
-                threshold: 0.5,
-                rootMargin: '-20% 0px -20% 0px'
-            });
-
-            serviceContents.forEach(content => observer.observe(content));
-        });
-    </Script>
-
-
-
+    <!-- -------------------- quick data on hero -------------- -->
     <script>
         (function () {
             const slides = document.querySelectorAll('.channels-images');
@@ -1050,6 +1016,40 @@
             if (auditoriumH3) animateCounter(auditoriumH3, 10, 2000);
         });
     </script>
+
+
+
+    <Script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const serviceContents = document.querySelectorAll('.services-content');
+            const serviceChannels = document.querySelectorAll('.service-channel');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Get the index of the visible service
+                        const index = Array.from(serviceContents).indexOf(entry.target);
+
+                        // Remove active class from all channels
+                        serviceChannels.forEach(channel => channel.classList.remove('active'));
+
+                        // Add active class to corresponding channel
+                        if (serviceChannels[index]) {
+                            serviceChannels[index].classList.add('active');
+                        }
+                    }
+                });
+            }, {
+                threshold: 0.5,
+                rootMargin: '-20% 0px -20% 0px'
+            });
+
+            serviceContents.forEach(content => observer.observe(content));
+        });
+    </Script>
+
+
+
 
 
 </body>
