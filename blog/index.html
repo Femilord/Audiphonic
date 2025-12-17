@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="/header.css" />
     <link rel="stylesheet" href="/footer.css">
     <link rel="stylesheet" href="/blog.css">
-    <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 
@@ -500,60 +500,52 @@
         const scrollLeftBtn = document.getElementById('scrollLeft');
         const scrollRightBtn = document.getElementById('scrollRight');
 
-        // Scroll amount (one image width + gap)
-        const scrollAmount = 300;
+        // Only run if carousel exists on this page
+        if (carousel01 && scrollLeftBtn && scrollRightBtn) {
+            const scrollAmount = 300;
 
-        // Scroll right
-        scrollRightBtn.addEventListener('click', () => {
-            carousel01.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
+            scrollRightBtn.addEventListener('click', () => {
+                carousel01.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
             });
-        });
 
-        // Scroll left
-        scrollLeftBtn.addEventListener('click', () => {
-            carousel01.scrollBy({
-                left: -scrollAmount,
-                behavior: 'smooth'
+            scrollLeftBtn.addEventListener('click', () => {
+                carousel01.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
             });
-        });
 
-        // Update arrow states based on scroll position
-        function updateArrowStates() {
-            const maxScroll = carousel01.scrollWidth - carousel01.clientWidth;
+            function updateArrowStates() {
+                const maxScroll = carousel01.scrollWidth - carousel01.clientWidth;
 
-            // Disable left arrow at the start
-            if (carousel01.scrollLeft <= 0) {
-                scrollLeftBtn.disabled = true;
-            } else {
-                scrollLeftBtn.disabled = false;
+                if (carousel01.scrollLeft <= 0) {
+                    scrollLeftBtn.disabled = true;
+                } else {
+                    scrollLeftBtn.disabled = false;
+                }
+
+                if (carousel01.scrollLeft >= maxScroll - 1) {
+                    scrollRightBtn.disabled = true;
+                } else {
+                    scrollRightBtn.disabled = false;
+                }
             }
 
-            // Disable right arrow at the end
-            if (carousel01.scrollLeft >= maxScroll - 1) {
-                scrollRightBtn.disabled = true;
-            } else {
-                scrollRightBtn.disabled = false;
-            }
-        }
-
-        // Listen for scroll events
-        carousel01.addEventListener('scroll', updateArrowStates);
-
-        // Initialize arrow states on load
-        updateArrowStates();
-
-        // Optional: Update on touch/swipe for mobile
-        let touchStartX = 0;
-        carousel01.addEventListener('touchstart', (e) => {
-            touchStartX = e.touches[0].clientX;
-        });
-
-        carousel01.addEventListener('touchend', () => {
+            carousel01.addEventListener('scroll', updateArrowStates);
             updateArrowStates();
-        });
 
+            let touchStartX = 0;
+            carousel01.addEventListener('touchstart', (e) => {
+                touchStartX = e.touches[0].clientX;
+            });
+
+            carousel01.addEventListener('touchend', () => {
+                updateArrowStates();
+            });
+        }
     </script>
 
 
