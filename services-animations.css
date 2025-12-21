@@ -1,0 +1,96 @@
+/* ========================================
+   MINIMAL SCROLL ANIMATIONS
+   Simple fade-in effects only - no structural changes
+   Add this to your existing services.css
+   ======================================== */
+
+/* Simple fade-in animation */
+@keyframes simpleFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ========================================
+   SERVICES CONTENT - MINIMAL FADE IN
+   ======================================== */
+
+/* Initial hidden state */
+.services-content {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+/* When visible */
+.services-content.visible {
+    opacity: 1;
+}
+
+/* ========================================
+   SUBTLE HOVER EFFECTS
+   ======================================== */
+
+/* Very subtle lift on hover - only 3px */
+.services-content:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Smooth transition */
+.services-content {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease;
+}
+
+/* Image slight zoom on hover */
+.soundproofing-services-image img,
+.soundproofing-services-image-01 img,
+.soundproofing-services-image-02 img {
+    transition: transform 0.3s ease;
+}
+
+.services-content:hover .soundproofing-services-image img,
+.services-content:hover .soundproofing-services-image-01 img,
+.services-content:hover .soundproofing-services-image-02 img {
+    transform: scale(1.03);
+}
+
+/* ========================================
+   MOBILE - MINIMAL EFFECTS
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* Even more subtle on mobile */
+    .services-content:hover {
+        transform: translateY(-2px);
+    }
+
+    .services-content-mobile {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    .services-content-mobile.visible {
+        opacity: 1;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+
+    .services-content,
+    .services-content-mobile {
+        opacity: 1;
+    }
+}
