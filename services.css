@@ -218,25 +218,35 @@ body::-webkit-scrollbar-thumb {
     margin-top: 20px;
 }
 
-.object-clause {
-    padding-bottom: 20px;
-}
-
-.services-object-clause h2 {
+.services-object-clause h1 {
     color: var(--text-light);
     font-size: clamp(2.5rem, 2.25vw, 2.8rem);
     line-height: 1.3;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif !important;
     margin: 0;
+
+
 }
 
-.text-deco {
+
+.page-main-title {
     background-image: linear-gradient(120deg, #7a9c02 0%, #00F0FF 100%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+
 }
+
+.object-clause {
+    padding-bottom: 20px;
+}
+
+
+
+h2 {}
+
+.text-deco {}
 
 .tag-line p {
     color: var(--text-light);
@@ -452,7 +462,7 @@ body::-webkit-scrollbar-thumb {
     padding-bottom: 30px;
 }
 
-.services-cards h1 {
+.services-cards h2 {
     font-size: 1.7rem;
     padding-left: 35px;
 }
@@ -556,6 +566,117 @@ body::-webkit-scrollbar-thumb {
     right: -60px;
 }
 
+
+
+/* ================ Services Overview Section ================ */
+
+.services-overview {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px 100px 20px;
+    margin-top: -100px;
+    position: relative;
+    z-index: 2;
+}
+
+.services-overview-container {
+    max-width: var(--container-max);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-left: 1px solid var(--border-light);
+    border-right: 1px solid var(--border-light);
+}
+
+.services-overview-wrapper {
+    max-width: var(--content-max);
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.overview-content {
+    max-width: 900px;
+    width: 100%;
+    text-align: left;
+}
+
+.overview-content h2 {
+    font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+    font-weight: 700;
+    color: var(--accent-teal);
+    margin-bottom: 30px;
+    line-height: 1.3;
+
+}
+
+.overview-content p {
+    font-size: clamp(1rem, 1.2vw, 1.1rem);
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.overview-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+    .services-overview {
+        padding: 60px 20px;
+    }
+
+    .overview-content h2 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+
+    .overview-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .services-overview {
+        padding: 50px 20px;
+    }
+
+    .services-overview-container {
+        border-left: none;
+        border-right: none;
+    }
+
+    .overview-content h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .overview-content p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-overview {
+        padding: 40px 15px;
+    }
+
+    .overview-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .overview-content p {
+        font-size: 0.9rem;
+    }
+}
 
 /* ================Services Title =================*/
 
@@ -754,7 +875,7 @@ body::-webkit-scrollbar-thumb {
     object-fit: contain;
 }
 
-.services-content h1 {
+.services-content h2 {
 
     font-size: clamp(1.1rem, 1.5vw, 1.3rem);
     color: var(--text-muted);
@@ -763,7 +884,7 @@ body::-webkit-scrollbar-thumb {
     line-height: 1.2;
 }
 
-.services-content h2 {
+.services-content h3 {
     width: 60%;
     font-size: clamp(1.4rem, 2vw, 1.7rem);
     color: var(--text-dark);
@@ -876,7 +997,7 @@ body::-webkit-scrollbar-thumb {
 
 
 
-/* Fixed Side Styling */
+/* ----------------------- Fixed Side Styling --------------------- */
 .fixed-side {
     width: 20%;
 
@@ -1265,7 +1386,7 @@ body::-webkit-scrollbar-thumb {
 
 
 
-    .services-object-clause h2 {
+    .services-object-clause h1 {
         color: var(--text-light);
         font-size: clamp(3rem, 2.5vw, 3.1rem);
         line-height: 1.3;
@@ -1274,10 +1395,7 @@ body::-webkit-scrollbar-thumb {
         margin-bottom: 20px;
     }
 
-    .who-info {
 
-        margin-top: -180px;
-    }
 
 }
 
@@ -1297,7 +1415,7 @@ body::-webkit-scrollbar-thumb {
         margin-top: 0;
     }
 
-    .services-object-clause h2 {
+    .services-object-clause h1 {
         color: var(--text-light);
         font-size: clamp(2.5rem, 2vw, 3.0rem);
         line-height: 1.3;
@@ -1321,10 +1439,7 @@ body::-webkit-scrollbar-thumb {
     }
 
 
-    .who-info {
 
-        margin-top: -120px;
-    }
 
 
     /* --------------- Quick-Data ---------------- */
@@ -1401,7 +1516,7 @@ body::-webkit-scrollbar-thumb {
         padding-bottom: 30px;
     }
 
-    .services-cards h1 {
+    .services-cards h2 {
         font-size: 1.3rem;
         padding-left: 35px;
     }
@@ -1435,9 +1550,9 @@ body::-webkit-scrollbar-thumb {
     }
 
 
-.services-section-cover {
-    margin-top: -100px;
-}
+    .services-section-cover {
+        margin-top: -100px;
+    }
 
 
 
@@ -1485,7 +1600,7 @@ body::-webkit-scrollbar-thumb {
     }
 
 
-    .services-object-clause h2 {
+    .services-object-clause h1 {
         color: var(--text-light);
         font-size: clamp(2.5rem, 2vw, 3.0rem);
         line-height: 1.3;
@@ -1588,7 +1703,7 @@ body::-webkit-scrollbar-thumb {
         padding-bottom: 30px;
     }
 
-    .services-cards h1 {
+    .services-cards h2 {
         font-size: 1.3rem;
         padding-left: 35px;
     }
@@ -1653,7 +1768,7 @@ body::-webkit-scrollbar-thumb {
 
 
 
-    .services-object-clause h2 {
+    .services-object-clause h1 {
         font-size: clamp(2.1rem, 3.5vw, 2.5rem);
         line-height: 1.2;
     }
@@ -1665,27 +1780,6 @@ body::-webkit-scrollbar-thumb {
 
     .learn-more-btn {
         margin: 1.5rem 0;
-    }
-
-    /* --------- who info ----------- */
-    .who-info {
-        margin-top: -200px;
-    }
-
-    .side-line {
-        gap: 30px;
-    }
-
-    .who-info-text {
-        margin-top: -120px;
-    }
-
-    .who-info-text h3 {
-        padding-left: 30px;
-    }
-
-    .who-info-video {
-        max-width: 280px;
     }
 
 
@@ -1745,7 +1839,7 @@ body::-webkit-scrollbar-thumb {
         display: none;
     } */
 
-    .services-object-clause h2 {
+    .services-object-clause h1 {
         font-size: clamp(2.8rem, 3.5vw, 2.5rem);
         line-height: 1.2;
         margin-bottom: 10px;
@@ -1937,7 +2031,7 @@ body::-webkit-scrollbar-thumb {
         padding: 0;
     }
 
-    .services-object-clause h2 {
+    .services-object-clause h1 {
 
         font-size: clamp(2.3rem, 5vw, 2.5rem);
     }
@@ -1959,43 +2053,6 @@ body::-webkit-scrollbar-thumb {
         margin-bottom: 50px;
     }
 
-    /* ------------ Who ----------- 
-
-    .who-info {
-        height: auto;
-        margin-top: 120px;
-        padding: 0 15px;
-    }
-
-    .side-line {
-        flex-direction: column;
-        gap: 30px;
-        margin-top: 40px;
-        padding: 20px 0;
-    }
-
-    .who-info-text {
-        max-width: 90%;
-
-    }
-
-    .who-info-text h3 {
-        padding-left: 20px;
-        font-size: 1.5rem;
-    }
-
-    .who-info-text p {
-        padding-top: 15px;
-        font-size: 0.95rem;
-    }
-
-    .who-info-video {
-        width: 100%;
-        max-width: 100%;
-    }
-*/
-
-
 
 
     /* ---------- Right Section ---------------*/
@@ -2010,11 +2067,6 @@ body::-webkit-scrollbar-thumb {
         perspective: 800px;
 
     }
-
-
-
-
-
 
 
     .services-cards {
@@ -2042,7 +2094,7 @@ body::-webkit-scrollbar-thumb {
         padding-bottom: 20px;
     }
 
-    .services-cards h1 {
+    .services-cards h2 {
         font-size: 1.5rem;
         padding-left: 25px;
     }
@@ -2131,7 +2183,7 @@ body::-webkit-scrollbar-thumb {
         padding-left: 0;
     }
 
-    .services-content h2 {
+    .services-content h3 {
         width: 100%;
         /* Full width for heading */
     }
@@ -2304,7 +2356,7 @@ body::-webkit-scrollbar-thumb {
 
 
 
-    .image-title-mobile h1 {
+    .image-title-mobile h2 {
         font-size: clamp(1.3rem, 1.5vw, 1.6rem);
         color: var(--text-muted);
         font-weight: 400;
@@ -2312,7 +2364,7 @@ body::-webkit-scrollbar-thumb {
         line-height: 1.2;
     }
 
-    .services-title-mobile h2 {
+    .services-title-mobile h3 {
         width: 60%;
         font-size: clamp(1.4rem, 2vw, 1.7rem);
         color: var(--text-dark);
@@ -2321,70 +2373,6 @@ body::-webkit-scrollbar-thumb {
         line-height: 1.3;
         /* Align with h1 after icon */
     }
-
-    /*
-
-.services-title {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-    margin-bottom: 15px;
-}
-
-.image-title {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.image-title img {
-    width: 50px;
-    height: auto;
-    object-fit: contain;
-}
-
-.services-content h1 {
-
-    font-size: clamp(1.1rem, 1.5vw, 1.3rem);
-    color: var(--text-muted);
-    font-weight: 400;
-    margin: 0;
-    line-height: 1.2;
-}
-
-.services-content h2 {
-    width: 60%;
-    font-size: clamp(1.4rem, 2vw, 1.7rem);
-    color: var(--text-dark);
-    font-weight: 500;
-    margin: 0;
-    line-height: 1.3;
-}
-
-
-
-.services-paragra {
-    margin-bottom: 10px;
-}
-
-.services-paragra p {
-    width: 80%;
-    font-size: 1.05rem;
-    line-height: 1.6;
-    color: var(--text-muted);
-    text-align: left;
-    margin: 0;
-}
-
-
-
-
-*/
-
-
-
-
 
 
     /* Line Divider */
@@ -2470,7 +2458,7 @@ body::-webkit-scrollbar-thumb {
 
 
 
-    .services-object-clause h2 {
+    .services-object-clause h1 {
         font-size: 2.2rem;
     }
 
@@ -2501,7 +2489,7 @@ body::-webkit-scrollbar-thumb {
         left: 8%;
     }
 
-    .services-cards h1 {
+    .services-cards h2 {
         font-size: 1.3rem;
         padding-left: 20px;
     }
@@ -2552,7 +2540,7 @@ body::-webkit-scrollbar-thumb {
 
 
 
-    .services-object-clause h2 {
+    .services-object-clause h1 {
         font-size: 2rem;
         line-height: 1.3;
         padding-bottom: 30px;
@@ -2573,21 +2561,7 @@ body::-webkit-scrollbar-thumb {
         font-size: 0.85rem;
     }
 
-    /* --------- Who ------------ 
 
-    .who-info {
-        margin-top: 50px;
-    }
-
-    .who-info-text h3 {
-        padding-left: 15px;
-        font-size: 1.25rem;
-    }
-
-    .who-info-text p {
-        font-size: 0.9rem;
-    }
-*/
 
     /* -------------- Right Section ------------ */
     .services-right-section-content {
@@ -2618,7 +2592,7 @@ body::-webkit-scrollbar-thumb {
         padding-bottom: 15px;
     }
 
-    .services-cards h1 {
+    .services-cards h2 {
         font-size: 1.2rem;
         padding-left: 18px;
     }
@@ -2671,11 +2645,11 @@ body::-webkit-scrollbar-thumb {
     }
 
 
-    .image-title-mobile h1 {
+    .image-title-mobile h2 {
         font-size: 20px;
     }
 
-    .services-title-mobile h2 {
+    .services-title-mobile h3 {
         font-size: 20px;
         padding-left: 0;
         margin-top: 8px;
@@ -2697,7 +2671,7 @@ body::-webkit-scrollbar-thumb {
 
 /* Extra small devices (360px and below) */
 @media (max-width: 360px) {
-    .services-object-clause h2 {
+    .services-object-clause h1 {
         font-size: 1.4rem;
     }
 
