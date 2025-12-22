@@ -53,40 +53,101 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" sizes="48x48" href="/audiphonic-favicon.ico?v=2" />
     <!-- Schema.org Structured Data -->
+    <!-- Organization Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
+      "@type": "Organization",
       "name": "Audiphonic",
       "url": "https://www.audiphonic.com",
-      "logo": "https://www.audiphonic.com/audiphonic-favicon.ico",
-      "description": "Professional soundproofing, acoustics, and AV systems services for studios, offices, and auditoriums.",
-      "areaServed": {
-        "@type": "Country",
-        "name": "Nigeria"
-      },
-      "serviceType": ["Soundproofing", "Acoustics", "Audio-Visual Systems"],
+      "logo": "https://www.audiphonic.com/img/audiphonic-weblogo.webp",
+      "image": "https://www.audiphonic.com/img/audiphonic-banner.webp",
+      "description": "Professional soundproofing, acoustics, and audio-visual systems services for studios, offices, auditoriums, and commercial spaces across Nigeria.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "44 Oluwadare Street",
         "addressLocality": "Shomolu",
-        "postalCode": "100231",
         "addressRegion": "Lagos",
+        "postalCode": "100231",
         "addressCountry": "NG"
       },
-      "telephone": "+234-701-001-9643",
-      "email": "info@audiphonic.com",
-      "image": "https://www.audiphonic.com/img/audiphonic-banner.webp",
-      "priceRange": "$$",
       "geo": {
         "@type": "GeoCoordinates",
         "latitude": "6.5392",
         "longitude": "3.3823"
       },
-      "openingHours": "Mo-Fr 08:00-17:00",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+234-701-001-9643",
+        "contactType": "customer service",
+        "email": "info@audiphonic.com",
+        "areaServed": "NG",
+        "availableLanguage": ["English"]
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Nigeria"
+      },
+      "foundingDate": "YYYY",
       "sameAs": [
-        "https://www.audiphonic.com"
+        "https://www.linkedin.com/company/audiphonic"
       ]
+    }
+    </script>
+
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Audiphonic",
+      "image": "https://www.audiphonic.com/img/audiphonic-banner.webp",
+      "url": "https://www.audiphonic.com",
+      "telephone": "+234-701-001-9643",
+      "email": "info@audiphonic.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "44 Oluwadare Street",
+        "addressLocality": "Shomolu",
+        "addressRegion": "Lagos",
+        "postalCode": "100231",
+        "addressCountry": "NG"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "6.5392",
+        "longitude": "3.3823"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "17:00"
+        }
+      ],
+      "priceRange": "$$"
+    }
+    </script>
+
+    <!-- Website Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Audiphonic",
+      "url": "https://www.audiphonic.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.audiphonic.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     }
     </script>
 
