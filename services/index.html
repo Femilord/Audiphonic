@@ -51,95 +51,14 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" sizes="48x48" href="/audiphonic-favicon.ico?v=2">
+
     <!-- Schema.org Service Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Audiphonic",
-      "url": "https://www.audiphonic.com/services/",
-      "logo": "https://www.audiphonic.com/audiphonic-favicon.ico",
-      "description": "Professional soundproofing, acoustics, and audio-visual services including consultation, design, procurement, and installation.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "44 Oluwadare Street",
-        "addressLocality": "Shomolu",
-        "addressRegion": "Lagos",
-        "postalCode": "100231",
-        "addressCountry": "NG"
-      },
-      "telephone": "+234-701-001-9643",
-      "email": "info@audiphonic.com",
-      "areaServed": {
-        "@type": "Country",
-        "name": "Nigeria"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Audiphonic Services",
-        "itemListElement": [
-          {
-            "@type": "OfferCatalog",
-            "name": "Soundproofing",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Soundproofing Consultation"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Soundproofing Installation"
-                }
-              }
-            ]
-          },
-          {
-            "@type": "OfferCatalog",
-            "name": "Acoustics",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Acoustic Treatment"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Acoustic Design"
-                }
-              }
-            ]
-          },
-          {
-            "@type": "OfferCatalog",
-            "name": "Audio-Visual Systems",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "AV System Design"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "AV Installation"
-                }
-              }
-            ]
-          }
-        ]
-      }
+      // ... your existing service schema
     }
     </script>
 
@@ -148,20 +67,79 @@
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
+      // ... your existing breadcrumb
+    }
+    </script>
+
+    <!-- Spaces We Serve Schema - ADD THIS NEW ONE -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Spaces We Serve",
+      "description": "Environments and facilities served by Audiphonic for soundproofing, acoustics, and audio-visual solutions",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Home",
-          "item": "https://www.audiphonic.com/"
+          "item": {
+            "@type": "Place",
+            "name": "Auditoriums",
+            "description": "Professional soundproofing, acoustics, and AV systems for auditoriums and worship halls"
+          }
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Services",
-          "item": "https://www.audiphonic.com/services/"
+          "item": {
+            "@type": "Place",
+            "name": "Studios",
+            "description": "Recording studios, broadcast studios, and production facilities"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Place",
+            "name": "Corporate Spaces",
+            "description": "Offices, boardrooms, meeting rooms, and conference facilities"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Place",
+            "name": "Entertainment Venues",
+            "description": "Cinemas, event centers, and performance spaces"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Place",
+            "name": "Commercial Facilities",
+            "description": "Hotels, schools, healthcare facilities, and other commercial spaces"
+          }
         }
-      ]
+      ],
+      "provider": {
+        "@type": "ProfessionalService",
+        "name": "Audiphonic",
+        "url": "https://www.audiphonic.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "44 Oluwadare Street",
+          "addressLocality": "Shomolu",
+          "addressRegion": "Lagos",
+          "postalCode": "100231",
+          "addressCountry": "NG"
+        },
+        "telephone": "+234-701-001-9643",
+        "email": "info@audiphonic.com"
+      }
     }
     </script>
 
