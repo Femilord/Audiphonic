@@ -187,7 +187,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-.object-clause h2 {
+.object-clause h1 {
 
     color: var(--primary-cyan);
     font-size: clamp(2.5rem, 2.25vw, 2.8rem);
@@ -203,7 +203,7 @@ body::-webkit-scrollbar-thumb {
 
 
 
-.tag-line h1 {
+.tag-line h2 {
 
     padding-bottom: 20px;
     color: var(--text-light);
@@ -211,7 +211,7 @@ body::-webkit-scrollbar-thumb {
     font-weight: 600;
 }
 
-.tag-line h1 a {
+.tag-line h2 a {
     text-decoration: none;
     color: var(--text-light);
 }
@@ -484,6 +484,8 @@ body::-webkit-scrollbar-thumb {
     margin-top: 50px;
 }
 
+
+
 .services-lines-wrapper {
     max-width: var(--container-max);
     width: 100%;
@@ -499,10 +501,27 @@ body::-webkit-scrollbar-thumb {
     margin-top: 10px
 }
 
+
+
 .our-services {
-    width: 90%;
+    max-width: var(--content-max);
+    width: 100%;
     margin-bottom: 30px;
     margin-top: 0;
+
+}
+
+.services-head {
+    width: 80%;
+}
+
+.our-services h2 {
+    margin-bottom: 20px;
+    color: var(--accent-teal);
+}
+
+.our-services h3 {
+    padding-bottom: 10px;
 
 }
 
@@ -1876,7 +1895,7 @@ body::-webkit-scrollbar-thumb {
         margin-top: 80px;
     }
 
-    .object-clause h2 {
+    .object-clause h1 {
         font-size: clamp(2.5rem, 2.8vw, 3.2rem);
     }
 
@@ -1940,7 +1959,7 @@ body::-webkit-scrollbar-thumb {
         width: 55vw;
     }
 
-    .object-clause h2 {
+    .object-clause h1 {
         font-size: clamp(2.5rem, 2.25vw, 2.8rem);
     }
 
@@ -1996,11 +2015,6 @@ body::-webkit-scrollbar-thumb {
 
 
 
-    .who-info {
-
-        margin-top: -120px;
-    }
-
 }
 
 /* Medium Desktop */
@@ -2026,13 +2040,13 @@ body::-webkit-scrollbar-thumb {
 
 
     .object-clause,
-    .tag-line h1,
+    .tag-line h2,
     .tag-line p,
     .learn-more-btn {
         padding-left: 10px;
     }
 
-    .object-clause h2 {
+    .object-clause h1 {
         font-size: clamp(2rem, 2.3vw, 2.8rem);
     }
 
@@ -2222,7 +2236,7 @@ body::-webkit-scrollbar-thumb {
 
 
 
-    .object-clause h2 {
+    .object-clause h1 {
         font-size: clamp(2rem, 2.3vw, 2.8rem);
     }
 
@@ -2384,7 +2398,7 @@ body::-webkit-scrollbar-thumb {
         /* padding-left: 20px; */
     }
 
-    .object-clause h2 {
+    .object-clause h1 {
         font-size: 2.0rem;
     }
 
@@ -2544,7 +2558,7 @@ body::-webkit-scrollbar-thumb {
         padding-left: 20px; 
     } */
 
-    .object-clause h2 {
+    .object-clause h1 {
         font-size: 2.0rem;
     }
 
@@ -2694,7 +2708,7 @@ body::-webkit-scrollbar-thumb {
         padding-left: 20px;
     } */
 
-    .object-clause h2 {
+    .object-clause h1 {
         font-size: 2.0rem;
     }
 
@@ -2870,7 +2884,7 @@ body::-webkit-scrollbar-thumb {
 
     }
 
-    .object-clause h2 {
+    .object-clause h1 {
         font-size: 2.0rem;
     }
 
@@ -3434,8 +3448,8 @@ body::-webkit-scrollbar-thumb {
         border-left: none;
     }
 
-    .object-clause h2 {
-        font-size: clamp(1.2rem, 4vw, 1.6rem);
+    .object-clause h1 {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
         /* Responsive heading size */
         line-height: 1.2;
     }
@@ -3868,8 +3882,8 @@ body::-webkit-scrollbar-thumb {
 
     }
 
-    .object-clause h2 {
-        font-size: clamp(1.2rem, 4vw, 1.6rem);
+    .object-clause h1 {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
         /* Responsive heading size */
         line-height: 1.2;
     }
