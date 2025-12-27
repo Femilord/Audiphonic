@@ -244,9 +244,12 @@ body::-webkit-scrollbar-thumb {
 
 
 
-h2 {}
+.services-object-clause h1 {
+    font-family: 'Montserrat', sans-serif;
+}
 
-.text-deco {}
+
+
 
 .tag-line p {
     color: var(--text-light);
@@ -1417,10 +1420,10 @@ h2 {}
 
     .services-object-clause h1 {
         color: var(--text-light);
-        font-size: clamp(2.5rem, 2vw, 3.0rem);
+        font-size: clamp(2.5rem, 2.25vw, 3.0rem);
         line-height: 1.3;
         font-weight: bold;
-        font-family: 'blair', Poppins, sans-serif !important;
+        font-family: 'Montserrat', sans-serif !important;
         margin: 0;
     }
 
@@ -1605,7 +1608,7 @@ h2 {}
         font-size: clamp(2.5rem, 2vw, 3.0rem);
         line-height: 1.3;
         font-weight: bold;
-        font-family: 'blair', Poppins, sans-serif !important;
+        font-family: 'Montserrat', sans-serif !important;
         margin: 0;
     }
 
@@ -2451,7 +2454,7 @@ h2 {}
     .services-section-wrapper {
         width: 100%;
         padding: 0 22px 0 22px;
-        margin-top: 80px;
+        margin-top: 50px;
 
 
     }
@@ -2460,6 +2463,7 @@ h2 {}
 
     .services-object-clause h1 {
         font-size: 2.2rem;
+        font-family: 'Montserrat', sans-serif;
     }
 
     .tag-line p {
@@ -2525,6 +2529,10 @@ h2 {}
         margin-top: 80px;
 
 
+    }
+
+    .services-left-section-content {
+        margin-top: 50px;
     }
 
 
