@@ -141,22 +141,6 @@ body::-webkit-scrollbar-thumb {
 
 }
 
-.who-info {
-    max-width: var(--container-max);
-    width: 100%;
-    margin: 0 auto;
-    height: auto;
-    min-height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 0 20px;
-
-    border-left: 1px solid var(--border-light);
-    border-right: 1px solid var(--border-light);
-    color: var(--text-muted);
-}
 
 .side-line {
     max-width: var(--content-max);
