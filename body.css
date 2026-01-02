@@ -1887,12 +1887,6 @@ body::-webkit-scrollbar-thumb {
     }
 
 
-    .who-info {
-        margin-top: -200px;
-    }
-
-
-
     /* -------------- Sticky scrolly ---------*/
     .scrolling-track img {
         width: 320px;
