@@ -471,6 +471,17 @@ body::-webkit-scrollbar-thumb {
     display: none;
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
 /* ========================================
    SERVICES SECTION
    ======================================== */
@@ -512,7 +523,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .services-head {
-    width: 80%;
+    max-width: 800px;
+}
+
+.invincible {
+    color: white;
 }
 
 .our-services h2 {
@@ -1887,7 +1902,7 @@ body::-webkit-scrollbar-thumb {
     }
 
 
-    
+
 
 
 
@@ -2119,6 +2134,10 @@ body::-webkit-scrollbar-thumb {
         padding-right: 10px;
     }
 
+    .services-head {
+        padding: 0 20px;
+    }
+
     /* --------------- AV Systems --------------- */
 
     .audio-visuals-container {
@@ -2342,6 +2361,9 @@ body::-webkit-scrollbar-thumb {
         padding-right: 20px;
     }
 
+    .services-head {
+        padding: 0 20px;
+    }
 
     /* --------------- Third Section --------------- */
     .sticky-side {
@@ -2487,6 +2509,9 @@ body::-webkit-scrollbar-thumb {
 
     }
 
+    .services-head {
+        padding: 0 20px;
+    }
 
     .scroll-container-wrapper {
         transform-origin: center;

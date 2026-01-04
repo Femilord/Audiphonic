@@ -90,7 +90,7 @@
         "@type": "Country",
         "name": "Nigeria"
       },
-      "foundingDate": "YYYY",
+      "foundingDate": "2021",
       "sameAs": [
         "https://www.linkedin.com/company/audiphonic"
       ]
@@ -181,9 +181,9 @@
                         </a>
 
                     </div>
-                    <nav class="nav-menu">
+                    <nav class="nav-menu" aria-label="Main navigation">
                         <ul class="menu">
-                            <li><a href="/" class="active">Home</a></li>
+                            <li><a href="/" class="active" aria-current="page">Home</a></li>
                             <li><a href="/services/">Services</a></li>
                             <li><a href="/spaces/">Spaces</a></li>
                             <li><a href="/about/">About</a></li>
@@ -200,11 +200,9 @@
 
 
 
-
-
-        <nav class="mobile-menu" id="mobile-menu">
+        <nav class="mobile-menu" aria-label="Mobile navigation" id="mobile-menu">
             <ul>
-                <li><a href="/">Home</a></li>
+                <li><a href="/" aria-current="page">Home</a></li>
                 <li><a href="/services/">Services</a></li>
                 <li><a href="/spaces/">Spaces</a></li>
                 <li><a href="/about/">About</a></li>
@@ -217,7 +215,7 @@
         <main>
 
             <!--   -------------------first section strarts hear-------------   -->
-            <section class="hero-section">
+            <section class="hero-section" aria-label="Hero introduction">
                 <div class="top-cover-box"></div>
                 <div class="first-section-wrapper">
                     <div class="first-section-background" id="parallax-bg">
@@ -261,24 +259,28 @@
                             <div class="scrolling-mask">
                                 <div class="scrolling-track" id="scrollTrack"
                                     style="animation: 80s linear 0s infinite normal none running scroll-horizontal;">
-                                    <img src="/img/noisy/new-girl-covers-ears.webp" alt="" />
-                                    <img src="/img/noisy/new-noisy-airplane.webp" alt="" />
-                                    <img src="/img/noisy/new-noisy-band.webp" alt="" />
-                                    <img src="/img/noisy/new-noisy-bus-transportation.webp" alt="" />
-                                    <img src="/img/noisy/new-noisy-gen.webp" alt="" />
-                                    <img src="/img/noisy/new-noisy-horn.webp" alt="" />
-                                    <img src="/img/noisy/new-noisy-loud-music.webp" alt="" />
-                                    <img src="/img/noisy/new-noisy-phone-ring.webp" alt="" />
+                                    <img src="/img/noisy/new-girl-covers-ears.webp" alt="Girl covers ears from noise" />
+                                    <img src="/img/noisy/new-noisy-airplane.webp" alt="Noisy airplane flying" />
+                                    <img src="/img/noisy/new-noisy-band.webp" alt="Noisy band playing" />
+                                    <img src="/img/noisy/new-noisy-bus-transportation.webp"
+                                        alt="Noisy bus transportation" />
+                                    <img src="/img/noisy/new-noisy-gen.webp" alt="Noisy generator" />
+                                    <img src="/img/noisy/new-noisy-horn.webp" alt="Noisy vehicle hunking" />
+                                    <img src="/img/noisy/new-noisy-loud-music.webp"
+                                        alt="Noisy loud music playing from a deck" />
+                                    <img src="/img/noisy/new-noisy-phone-ring.webp" alt="Noisy phone ring" />
 
 
-                                    <img src="/img/noisy/new-girl-covers-ears.webp" alt="" />
-                                    <img src="/img/noisy/new-noisy-airplane.webp" alt="" />
-                                    <img src="/img/noisy/new-noisy-band.webp" alt="" />
-                                    <img src="/img/noisy/new-noisy-bus-transportation.webp" alt="" />
-                                    <img src="/img/noisy/new-noisy-gen.webp" alt="" />
-                                    <img src="/img/noisy/new-noisy-horn.webp" alt="" />
-                                    <img src="/img/noisy/new-noisy-loud-music.webp" alt="" />
-                                    <img src="/img/noisy/new-noisy-phone-ring.webp" alt="" />
+                                    <img src="/img/noisy/new-girl-covers-ears.webp" alt="Girl covers ears from noise" />
+                                    <img src="/img/noisy/new-noisy-airplane.webp" alt="Noisy airplane flying" />
+                                    <img src="/img/noisy/new-noisy-band.webp" alt="Noisy band playing" />
+                                    <img src="/img/noisy/new-noisy-bus-transportation.webp"
+                                        alt="Noisy bus transportation" />
+                                    <img src="/img/noisy/new-noisy-gen.webp" alt="Noisy generator" />
+                                    <img src="/img/noisy/new-noisy-horn.webp" alt="Noisy vehicle hunking" />
+                                    <img src="/img/noisy/new-noisy-loud-music.webp"
+                                        alt="Noisy loud music playing from a deck" />
+                                    <img src="/img/noisy/new-noisy-phone-ring.webp" alt="Noisy phone ring" />
                                 </div>
                             </div>
                         </div>
@@ -306,7 +308,7 @@
             </section>
 
 
-            <section class="drop-email">
+            <section class="drop-email" aria-label="Drop email">
                 <div class="section-lines-wrapper">
 
                     <div class="drop-email-box">
@@ -318,9 +320,10 @@
                                     promptly</p>
                             </div>
                             <div class="cta-column-02">
-                                <form class="email-form">
-                                    <input type="email" placeholder="Drop your email address" required="" />
-                                    <button type="submit">Submit</button>
+                                <form class="email-form-inline">
+                                    <label for="email-mobile" class="sr-only">Email address</label>
+                                    <input id="email-mobile" type="email" placeholder="email address" required />
+                                    <button type="submit">Send →</button>
                                 </form>
                             </div>
                         </div>
@@ -344,7 +347,7 @@
             </section>
 
 
-            <section class="services-section">
+            <section class="services-section" aria-label="Our services">
 
                 <div class="services-lines-wrapper">
                     <div class="our-services">
@@ -352,13 +355,21 @@
                             <h2>Our Services</h2>
                             <h3>Best Soundproofing and Acoustic Solutions in Lagos, Nigeria</h3>
                             <p>We design and deliver soundproofing, acoustic, and audio-visual solutions that bring
-                                clarity,
-                                comfort, and control to
-                                your space.
-                                Every solution is thoughtfully engineered to reduce noise, enhance performance, and
-                                create
-                                environments that truly work
-                                for you.
+                                clarity, comfort, and control to
+                                your space. Every solution is thoughtfully engineered to reduce noise, improve sound
+                                quality, and enhance performance,
+                                creating environments that truly work for you.
+
+                                From acoustic treatment and noise control to audio-visual system design and integration,
+                                we combine technical expertise
+                                with practical insight to ensure optimal results. Whether for homes, offices, studios,
+                                worship spaces, educational
+                                facilities, or commercial environments, our solutions are tailored to your
+                                needs-balancing functionality, aesthetics,
+                                and long-term reliability. The result is a space that sounds right, functions
+                                efficiently, and supports the purpose it
+                                was designed for.
+                                <!-- <Span class="invincible">Soundproofing store near you. Acoustic store near you.</Span> -->
                             </p>
                         </div>
                     </div>
@@ -393,7 +404,7 @@
 
                         <div class="services-icon visible">
                             <a href="/services/#acoustics-01" class="services-link-top"> <img class="services-img"
-                                    src="/img/eq-acoustics.webp" alt="Acoustic Icon" />
+                                    src="/img/eq-acoustics.webp" alt="Acoustics Icon" />
                                 <div class="animated-heading border-animate">
                                     <h2
                                         style="animation: 1.5s steps(13) 1s 1 normal forwards running typewriter, 0.5s step-end 0s infinite normal none running blink, 0.8s ease-in-out 2.8s 1 normal forwards running boldEffect, 0.1s ease 2.5s 1 normal forwards running removeCursor, 0.1s ease 8.9s 1 normal forwards running reset;">
@@ -421,7 +432,7 @@
 
                         <div class="services-icon visible">
                             <a href="/services/#audio-visuals-01" class="services-link-top"> <img class="services-img"
-                                    src="/img/audio-visuals.webp" alt="" />
+                                    src="/img/audio-visuals.webp" alt="Audio-visual systems icon" />
                                 <div class="animated-heading border-animate">
                                     <h2
                                         style="animation: 1.5s steps(13) 1s 1 normal forwards running typewriter, 0.5s step-end 0s infinite normal none running blink, 0.8s ease-in-out 2.8s 1 normal forwards running boldEffect, 0.1s ease 2.5s 1 normal forwards running removeCursor, 0.1s ease 8.9s 1 normal forwards running reset;">
@@ -446,7 +457,7 @@
 
 
 
-            <section>
+            <section aria-label="Audio visual systems overview">
                 <div class="av-heading-container">
                     <div class="av-heading-main">
                         <div class="av-heading-wrapper">
@@ -479,7 +490,7 @@
             </section>
 
 
-            <section class="audio-visuals-section">
+            <section class="audio-visuals-section" aria-label="Audio visuals introduction">
 
                 <div class="audio-visuals-container">
                     <div class="av-systems-wrapper">
@@ -624,7 +635,7 @@
             </section>
 
 
-            <section class="third-section">
+            <section class="third-section" aria-label="Service delivery channels">
                 <div class="desktop-only">
                     <div class="sroll-container-wrapper">
                         <div class="scroll-container" id="section2">
@@ -727,7 +738,7 @@
                                     <h4> • Crystal Sound <br /> • Creative Illumination <br /> • Sightly
                                         Display
                                     </h4>
-                                    <a href="#" class="second-section-learn-more-btn">Learn More</a>
+                                    <a href="/services/" class="second-section-learn-more-btn">Learn More</a>
                                 </div>
 
                                 <div class="text-content-block" data-index="3">
@@ -775,7 +786,8 @@
 
                                     </div>
                                     <div class="mobile-panel-content" data-index="1">
-                                        <img src="/img/soundproofing-acoustics.webp" alt="" />
+                                        <img src="/img/soundproofing-acoustics.webp"
+                                            alt="Soundproofing and acoustics clipart" />
                                     </div>
 
                                 </div>
@@ -816,7 +828,8 @@
                                     </div>
 
                                     <div class="mobile-panel-content" data-index="1">
-                                        <img src="/img/design-implimentation.webp" alt="" />
+                                        <img src="/img/design-implimentation.webp"
+                                            alt="Design and implementation clipart " />
                                     </div>
 
                                 </div>
@@ -861,7 +874,7 @@
 
                                     </div>
                                     <div class="mobile-panel-content" data-index="2">
-                                        <img src="/img/audio-visuals-02.webp" alt="" />
+                                        <img src="/img/audio-visuals-02.webp" alt="Audio-visuals clipart" />
                                     </div>
                                 </div>
 
@@ -901,7 +914,8 @@
 
                                     </div>
                                     <div class="mobile-panel-content" data-index="3">
-                                        <img src="/img/procurement-installation-02.webp" alt="" />
+                                        <img src="/img/procurement-installation-02.webp"
+                                            alt="Procurement and installation clipart" />
                                     </div>
                                 </div>
 
@@ -940,7 +954,7 @@
 
 
 
-            <section class="img-carousel-section">
+            <section class="img-carousel-section" aria-label="Carousel section">
                 <!-- NEW: This will be your centered 1200px container -->
                 <div class="main-content-wrapper">
                     <div class="carousel-title-wrapper">
@@ -1013,26 +1027,27 @@
 
                 <div class="main-footer-wrapper">
                     <div class="footer-logo">
-                        <div class="logo-logo"> <a href="/"><img src="/img/audiphonic-weblogo.webp" alt="" /></a>
+                        <div class="logo-logo"> <a href="/"><img src="/img/audiphonic-weblogo.webp"
+                                    alt="Audiphonic logo"></a>
                         </div>
-                        <p>44 Oluwadare Street<br /> Shomolu <br /> Lagos <br /> Nigeria <br /> <a
+                        <p>44 Oluwadare Street<br> Shomolu <br> Lagos <br> Nigeria <br> <a
                                 href="/">www.audiphonic.com</a></p>
                     </div>
                     <div class="first-column">
                         <h2>Services</h2>
                         <ul>
-                            <li><a href="/services/#soundproofing-02" rel="noopener noreferrer">Soundproofing</a></li>
-                            <li><a href="/services/#acoustic-02" rel="noopener noreferrer">Acoustics</a></li>
-                            <li><a href="/services/#audio-visuals-02" rel="noopener noreferrer">Audio-Visuals</a></li>
-                            <li><a href="/blog/" rel="noopener noreferrer">Technical Assessment</a>
+                            <li><a href="/services/#soundproofing-02">Soundproofing</a></li>
+                            <li><a href="/services/#acoustic-02">Acoustics</a></li>
+                            <li><a href="/services/#audio-visuals-02">Audio-Visuals</a></li>
+                            <li><a href="/blog/">Technical Assessment</a>
                             </li>
-                            <li><a href="/soundproofing-explained/" rel="noopener noreferrer">Noise Measurements</a>
+                            <li><a href="/soundproofing-explained/">Noise Measurements</a>
                             </li>
-                            <li><a href="/acoustic-control/" rel="noopener noreferrer">Acoustic Simulations</a>
+                            <li><a href="/acoustic-control/">Acoustic Simulations</a>
                             </li>
-                            <li><a href="/blog/" rel="noopener noreferrer">Design</a></li>
-                            <li><a href="/blog/" rel="noopener noreferrer">Procurements</a></li>
-                            <li><a href="/blog/" rel="noopener noreferrer">Installations</a></li>
+                            <li><a href="/blog/">Design</a></li>
+                            <li><a href="/blog/">Procurements</a></li>
+                            <li><a href="/blog/">Installations</a></li>
 
                         </ul>
 
@@ -1041,15 +1056,15 @@
                     <div class="second-column">
                         <h2>Environments</h2>
                         <ul>
-                            <li><a href="/spaces/#auditorium-link" rel="noopener noreferrer">Auditoriums</a></li>
-                            <li><a href="/spaces/#corporate-link" rel="noopener noreferrer">Offices</a></li>
-                            <li><a href="/spaces/#corporate-link" rel="noopener noreferrer">Boardrooms</a></li>
-                            <li><a href="/spaces/#corporate-link" rel="noopener noreferrer">Meeting Rooms</a></li>
-                            <li><a href="/spaces/#corporate-link" rel="noopener noreferrer">Call Centers</a></li>
-                            <li><a href="/spaces/#studios-link" rel="noopener noreferrer">Home Theaters</a></li>
-                            <li><a href="/spaces/#auditoriums-link" rel="noopener noreferrer">Movie Cinemas</a></li>
-                            <li><a href="/spaces/#auditoriums-link" rel="noopener noreferrer">Event Centers</a></li>
-                            <li><a href="/spaces/#studios-link" rel="noopener noreferrer">Studios</a></li>
+                            <li><a href="/spaces/#auditorium-link">Auditoriums</a></li>
+                            <li><a href="/spaces/#corporate-link">Offices</a></li>
+                            <li><a href="/spaces/#corporate-link">Boardrooms</a></li>
+                            <li><a href="/spaces/#corporate-link">Meeting Rooms</a></li>
+                            <li><a href="/spaces/#corporate-link">Call Centers</a></li>
+                            <li><a href="/spaces/#studios-link">Home Theaters</a></li>
+                            <li><a href="/spaces/#auditoriums-link">Movie Cinemas</a></li>
+                            <li><a href="/spaces/#auditoriums-link">Event Centers</a></li>
+                            <li><a href="/spaces/#studios-link">Studios</a></li>
 
                         </ul>
 
@@ -1058,19 +1073,19 @@
                     <div class="third-column">
                         <h2>Equipments</h2>
                         <ul>
-                            <li><a href="/services/#audio-visulas-02" rel="noopener noreferrer">Pro-Audio</a></li>
-                            <li><a href="/services/#audio-visulas-02" rel="noopener noreferrer">Pro-Video</a></li>
-                            <li><a href="/services/#audio-visulas-02" rel="noopener noreferrer">Video-Conferencing</a>
+                            <li><a href="/services/#audio-visulas-02">Pro-Audio</a></li>
+                            <li><a href="/services/#audio-visulas-02">Pro-Video</a></li>
+                            <li><a href="/services/#audio-visulas-02">Video-Conferencing</a>
                             </li>
-                            <li><a href="/services/#audio-visulas-02" rel="noopener noreferrer">Communication
+                            <li><a href="/services/#audio-visulas-02">Communication
                                     Systems</a></li>
-                            <li><a href="/services/#audio-visulas-02" rel="noopener noreferrer">Interactive
+                            <li><a href="/services/#audio-visulas-02">Interactive
                                     Display</a></li>
-                            <li><a href="/services/#audio-visulas-02" rel="noopener noreferrer">Control
+                            <li><a href="/services/#audio-visulas-02">Control
                                     Systems</a></li>
-                            <li><a href="/services/#audio-visulas-02" rel="noopener noreferrer">Projectors</a>
+                            <li><a href="/services/#audio-visulas-02">Projectors</a>
                             </li>
-                            <li><a href="/services/#audio-visulas-02" rel="noopener noreferrer">Screens</a></li>
+                            <li><a href="/services/#audio-visulas-02">Screens</a></li>
 
                         </ul>
                     </div>
@@ -1079,14 +1094,14 @@
                         <div class="forth-Column-01">
                             <h2>Resources</h2>
                             <ul>
-                                <li><a href="/blog/" rel="noopener noreferrer">Blog</a></li>
-                                <li><a href="/blog/" rel="noopener noreferrer">Projects</a></li>
-                                <li><a href="/blog/" rel="noopener noreferrer">Designs</a></li>
+                                <li><a href="/blog/">Blog</a></li>
+                                <li><a href="/blog/">Projects</a></li>
+                                <li><a href="/blog/">Designs</a></li>
                             </ul>
                         </div>
 
                         <div class="forth-Column-02">
-                            <h2><a href="contact.html" rel="noopener noreferrer">Contact Us</a></h2>
+                            <h2><a href="/contact/">Contact Us</a></h2>
                             <ul>
                                 <li><a href="tel:+2347010019643">Call Us: +234 (0) 701 001 9643</a></li>
                                 <li><a href="mailto:info@audiphonic.com" class="website-link">Email Us:
@@ -1103,10 +1118,10 @@
                                 rel="noopener noreferrer">Audiphonic</a>.
                             All
                             rights reserved |
-                            <a href="/site-documents/#terms-of-use-a" rel="noopener noreferrer">Terms of
-                                Use</a> | <a href="/site-documents/#privacy-policy-a" rel="noopener noreferrer">Privacy
-                                Policy</a> | <a href="/site-documents/" rel="noopener noreferrer">Cookie Settings</a> |
-                            <a href="/sitemap.xml" rel="noopener noreferrer">Sitemap</a>. Website designed and built by
+                            <a href="/site-documents/#terms-of-use-a">Terms of
+                                Use</a> | <a href="/site-documents/#privacy-policy-a">Privacy
+                                Policy</a> | <a href="/site-documents/">Cookie Settings</a> |
+                            <a href="/sitemap.xml">Sitemap</a>. Website designed and built by
                             <a href="https://crucibul.com" target="_blank" rel="noopener noreferrer">Crucibul</a>.
                         </p>
                     </div>
