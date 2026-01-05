@@ -454,7 +454,36 @@ body::-webkit-scrollbar-thumb {
 
 
 
+/* Featured Image Styles */
+.featured-image-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
+.featured-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .featured-image-container {
+        border-radius: 0;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .featured-image-container {
+        margin-bottom: 1rem;
+    }
+}
 
 
 
