@@ -1,13 +1,7 @@
-# As a condition of accessing this website, you agree to abide by the following content signals.
-# ANY RESTRICTIONS EXPRESSED VIA CONTENT SIGNALS ARE EXPRESS RESERVATIONS OF RIGHTS 
-# UNDER ARTICLE 4 OF THE EUROPEAN UNION DIRECTIVE 2019/790.
-
-# BEGIN Cloudflare Managed content
-# Content-signal: search=yes,ai-train=no (commented to prevent GSC syntax errors)
-
 User-agent: *
 Allow: /
 
+# AI Crawler Protections
 User-agent: Amazonbot
 Disallow: /
 
@@ -31,7 +25,5 @@ Disallow: /
 
 User-agent: meta-externalagent
 Disallow: /
-
-# END Cloudflare Managed Content
 
 Sitemap: https://www.audiphonic.com/sitemap.xml
