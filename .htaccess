@@ -1,0 +1,6 @@
+# Redirect HTML files to clean directory URLs
+Redirect 301 /about.html https://www.audiphonic.com/about/
+Redirect 301 /acoustic-control.html https://www.audiphonic.com/acoustic-control/
+Redirect 301 /audio-visual.html https://www.audiphonic.com/audio-visual/
+Redirect 301 /services.html https://www.audiphonic.com/services/
+Redirect 301 /site-documents.html https://www.audiphonic.com/site-documents/
