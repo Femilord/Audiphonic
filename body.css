@@ -501,7 +501,7 @@ body::-webkit-scrollbar-thumb {
     justify-content: space-between;
     align-items: center;
     padding: 0;
-    
+
 }
 
 
@@ -795,9 +795,9 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     /*  background-color: var(--background-light); 
     padding: var(--section-padding) 0; */
- /*   margin-top: var(--section-padding); */
+    /*   margin-top: var(--section-padding); */
 
- margin-top: 50px;
+    margin-top: 50px;
 }
 
 .blog-snippet-wrapper {
@@ -805,7 +805,7 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     padding: 0 var(--mobile-padding);
     border-top: 1px solid var(--border-gray);
-border-bottom: 1px solid var(--border-gray);
+    border-bottom: 1px solid var(--border-gray);
     border-left: 1px solid var(--border-gray);
     border-right: 1px solid var(--border-gray);
     box-sizing: border-box;
