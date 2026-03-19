@@ -28,10 +28,13 @@
         content="Nigeria's premier acoustic treatment and audio-visual integration experts." />
     <meta property="og:image" content="https://www.audiphonic.com/img/audiphonic-banner.webp" />
 
-    <script type="application/ld+json">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
       "@type": "WebSite",
+      "@id": "https://www.audiphonic.com/#website",
       "name": "Audiphonic",
       "alternateName": ["Audiphonic Nigeria", "Audiphonic AV", "audiphonic.com"],
       "url": "https://www.audiphonic.com/",
@@ -40,12 +43,8 @@
         "target": "https://www.audiphonic.com/search?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
-    }
-    </script>
-
-    <script type="application/ld+json">
+    },
     {
-      "@context": "https://schema.org",
       "@type": "Organization",
       "@id": "https://www.audiphonic.com/#organization",
       "name": "Audiphonic",
@@ -66,8 +65,22 @@
         "areaServed": "NG",
         "availableLanguage": "en"
       }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.audiphonic.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Audiphonic",
+          "item": "https://www.audiphonic.com/"
+        }
+      ]
     }
-    </script>
+  ]
+}
+</script>
 
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="body.css" />
